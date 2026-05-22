@@ -133,24 +133,6 @@ export default function DailyReport() {
         />
       </div>
 
-      {/* GMV趋势 */}
-      <div className="card-glass">
-        <h2 className="card-title">GMV 近30天趋势（全店合计）</h2>
-        {trend.length > 0 ? (
-          <ResponsiveContainer width="100%" height={280}>
-            <LineChart data={trend}>
-              <CartesianGrid {...chartGrid} />
-              <XAxis dataKey="date" {...chartAxis} />
-              <YAxis {...chartAxis} tickFormatter={v => formatMoney(v)} />
-              <Tooltip {...chartTooltip} />
-              <Line type="monotone" dataKey="net" stroke="#3b82f6" strokeWidth={2} dot={false} activeDot={{ r: 4, fill: '#60a5fa' }} />
-            </LineChart>
-          </ResponsiveContainer>
-        ) : (
-          <div className="empty-state">暂无趋势数据</div>
-        )}
-      </div>
-
       {/* 四个对比图表 */}
       <div className="chart-row">
         <div className="card-glass">
@@ -196,6 +178,24 @@ export default function DailyReport() {
             </BarChart>
           </ResponsiveContainer>
         </div>
+      </div>
+
+      {/* GMV趋势 */}
+      <div className="card-glass">
+        <h2 className="card-title">GMV 近30天趋势（全店合计）</h2>
+        {trend.length > 0 ? (
+          <ResponsiveContainer width="100%" height={280}>
+            <LineChart data={trend}>
+              <CartesianGrid {...chartGrid} />
+              <XAxis dataKey="date" {...chartAxis} />
+              <YAxis {...chartAxis} tickFormatter={v => formatMoney(v)} />
+              <Tooltip {...chartTooltip} />
+              <Line type="monotone" dataKey="net" stroke="#3b82f6" strokeWidth={2} dot={false} activeDot={{ r: 4, fill: '#60a5fa' }} />
+            </LineChart>
+          </ResponsiveContainer>
+        ) : (
+          <div className="empty-state">暂无趋势数据</div>
+        )}
       </div>
 
       {/* 店铺明细表 */}
