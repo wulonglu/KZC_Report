@@ -56,15 +56,19 @@ export default function DailyReport() {
     if (!metrics.length) return null
     const tv = metrics.reduce((a, m) => a + m.visitors, 0)
     const tb = metrics.reduce((a, m) => a + m.buyers, 0)
+    const net = metrics.reduce((a, m) => a + m.netGmv, 0)
+    const lastYear = metrics.reduce((a, m) => a + m.lastYearSame, 0)
     return {
       targetGmv: metrics.reduce((a, m) => a + m.targetGmv, 0),
-      netGmv: metrics.reduce((a, m) => a + m.netGmv, 0),
+      netGmv: net,
       pay: metrics.reduce((a, m) => a + m.paymentAmount, 0),
       refund: metrics.reduce((a, m) => a + m.refundAmount, 0),
       visitors: tv, buyers: tb,
       sales: metrics.reduce((a, m) => a + m.salesCount, 0),
       aov: metrics.length ? metrics.reduce((a, m) => a + m.avgOrderValue, 0) / metrics.length : 0,
       cvr: tv > 0 ? (tb / tv) * 100 : 0,
+      lastYear,
+      yoy: lastYear > 0 ? ((net - lastYear) / lastYear * 100) : 0,
     }
   }, [metrics])
   const hasData = metrics.length > 0
@@ -120,7 +124,8 @@ export default function DailyReport() {
           pct={totals ? Math.min(100, (totals.netGmv / 4000000) * 100) : 0}
           barColor="#0066cc"
           detail={`达成率 ${totals ? (totals.netGmv / 4000000 * 100).toFixed(1) : 0}%`}
-          extra={totals?.pay ? `支付 ¥${formatMoney(totals.pay)}` : ''}
+          lastYear={totals?.lastYear}
+          yoy={totals?.yoy}
         />
         <BigCard
           label="年累计去退GMV"
@@ -129,7 +134,8 @@ export default function DailyReport() {
           pct={totals ? Math.min(100, (totals.netGmv / 30000000) * 100) : 0}
           barColor="#e32934"
           detail={`达成率 ${totals ? (totals.netGmv / 30000000 * 100).toFixed(1) : 0}%`}
-          extra={totals?.pay ? `同比 +12.4%` : ''}
+          lastYear={totals?.lastYear}
+          yoy={totals?.yoy}
         />
       </div>
 
@@ -370,15 +376,23 @@ function MetricCard({ label, value, accent, sub }: { label: string; value: strin
   )
 }
 
-function BigCard({ label, value, target, pct, barColor, detail, extra }: {
-  label: string; value: string; target: string; pct: number; barColor: string; detail: string; extra: string;
+function BigCard({ label, value, target, pct, barColor, detail, lastYear, yoy }: {
+  label: string; value: string; target: string; pct: number; barColor: string; detail: string;
+  lastYear?: number; yoy?: number;
 }) {
+  const yoyStr = yoy !== undefined && yoy !== 0 ? `${yoy >= 0 ? '+' : ''}${yoy.toFixed(2)}%` : ''
+  const lastYearStr = lastYear && lastYear > 0 ? `vs 去年同期 ¥${formatMoney(lastYear)}` : ''
   return (
     <div className="card-glass" style={{ padding: '20px 24px' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 8 }}>
         <div>
           <div style={{ fontSize: 10, color: 'rgba(255,255,255,.3)', letterSpacing: '.5px', marginBottom: 4 }}>{label}</div>
           <div style={{ fontSize: 28, fontWeight: 800, color: '#fff', letterSpacing: '-.5px', lineHeight: 1 }}>{value}</div>
+          {lastYearStr && (
+            <div style={{ fontSize: 12, color: yoy && yoy >= 0 ? '#4ade80' : '#f87171', marginTop: 4 }}>
+              {yoyStr} {lastYearStr}
+            </div>
+          )}
         </div>
         <div style={{ textAlign: 'right' }}>
           <div style={{ fontSize: 9, color: 'rgba(255,255,255,.15)' }}>{target}</div>
@@ -389,7 +403,7 @@ function BigCard({ label, value, target, pct, barColor, detail, extra }: {
       </div>
       <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: 6, fontSize: 9 }}>
         <span style={{ color: 'rgba(255,255,255,.3)' }}>{detail}</span>
-        <span style={{ color: 'rgba(255,255,255,.15)' }}>{extra}</span>
+        <span style={{ color: 'rgba(255,255,255,.15)' }}>{target}</span>
       </div>
     </div>
   )
