@@ -68,10 +68,9 @@ export default function DailyReport() {
   }, [metrics])
   const hasData = metrics.length > 0
 
-  const sn = (n: string) => n.replace(/^(.{3}).*/, '$1...')
-  const emptyChart = STORES.map(s => ({ name: sn(s.name), netGmv: 0, targetGmv: 0, lastYear: 0, visitors: 0, buyers: 0 }))
+  const emptyChart = STORES.map(s => ({ name: s.name, netGmv: 0, targetGmv: 0, lastYear: 0, visitors: 0, buyers: 0 }))
   const chartData = hasData ? metrics.map(m => ({
-    name: sn(m.name), netGmv: m.netGmv, targetGmv: m.targetGmv, lastYear: m.lastYearSame, visitors: m.visitors, buyers: m.buyers,
+    name: m.name, netGmv: m.netGmv, targetGmv: m.targetGmv, lastYear: m.lastYearSame, visitors: m.visitors, buyers: m.buyers,
   })) : emptyChart
 
   return (
