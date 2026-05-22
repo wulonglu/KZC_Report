@@ -209,3 +209,27 @@ body {
 .td-blue { color: #93c5fd; font-weight: 600; }
 .td-green { color: #4ade80; }
 .td-red { color: #f87171; }
+
+/* Input cell */
+.input-cell {
+  width: 100%;
+  padding: 5px 8px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  text-align: right;
+  background: rgba(255,255,255,.03);
+  font-size: 13px;
+  outline: none;
+  color: #fff;
+  font-family: inherit;
+}
+.input-cell:hover { border-color: rgba(255,255,255,.1); }
+.input-cell:focus { border-color: rgba(0,102,204,.4); }
+
+/* Messages */
+.msg {
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-top: 12px;
+}
