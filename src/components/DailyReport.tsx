@@ -8,14 +8,16 @@ import { formatMoney, formatPercent, formatNumber, getToday } from '../lib/utils
 
 const chartGrid = { stroke: 'rgba(255,255,255,.04)', strokeDasharray: '3 3' }
 const chartAxis = {
-  tick: { fontSize: 10, fill: 'rgba(255,255,255,.25)' },
-  axisLine: { stroke: 'rgba(255,255,255,.06)' },
+  tick: { fontSize: 11, fill: 'rgba(255,255,255,.55)', fontWeight: 500 },
+  axisLine: { stroke: 'rgba(255,255,255,.1)' },
   tickLine: false,
 }
-const chartXAxis = { ...chartAxis, interval: 0, angle: -30, height: 60 }
+const chartXAxis = { ...chartAxis, interval: 0, angle: -30, height: 70 }
+const chartLegend = { wrapperStyle: { fontSize: 12, color: 'rgba(255,255,255,.6)', paddingTop: 8 }, iconType: 'rect' as const }
 const chartTooltip = {
-  contentStyle: { background: 'rgba(2,13,31,.95)', border: '1px solid rgba(255,255,255,.08)', borderRadius: 8, color: '#fff', fontSize: 12 },
-  labelStyle: { color: 'rgba(255,255,255,.5)' },
+  contentStyle: { background: 'rgba(4,24,50,.98)', border: '1px solid rgba(255,255,255,.12)', borderRadius: 8, color: '#e2e8f0', fontSize: 13 },
+  labelStyle: { color: 'rgba(255,255,255,.7)', fontWeight: 600, marginBottom: 4 },
+  itemStyle: { color: '#e2e8f0' },
 }
 
 export default function DailyReport() {
@@ -180,7 +182,7 @@ export default function DailyReport() {
           <ResponsiveContainer width="100%" height={220}>
             <BarChart data={chartData}>
               <CartesianGrid {...chartGrid} /><XAxis dataKey="name" {...chartXAxis} />
-              <YAxis {...chartAxis} tickFormatter={v => formatMoney(v)} /><Tooltip {...chartTooltip} /><Legend wrapperStyle={{ fontSize: 11 }} />
+              <YAxis {...chartAxis} tickFormatter={v => formatMoney(v)} /><Tooltip {...chartTooltip} /><Legend {...chartLegend} />
               <Bar dataKey="netGmv" name="去退GMV" fill="#0066cc" radius={[4, 4, 0, 0]} />
               <Bar dataKey="targetGmv" name="目标GMV" fill="rgba(255,255,255,.12)" radius={[4, 4, 0, 0]} />
             </BarChart>
@@ -191,7 +193,7 @@ export default function DailyReport() {
           <ResponsiveContainer width="100%" height={220}>
             <BarChart data={chartData}>
               <CartesianGrid {...chartGrid} /><XAxis dataKey="name" {...chartXAxis} />
-              <YAxis {...chartAxis} tickFormatter={v => formatMoney(v)} /><Tooltip {...chartTooltip} /><Legend wrapperStyle={{ fontSize: 11 }} />
+              <YAxis {...chartAxis} tickFormatter={v => formatMoney(v)} /><Tooltip {...chartTooltip} /><Legend {...chartLegend} />
               <Bar dataKey="netGmv" name="当日GMV" fill="#e32934" radius={[4, 4, 0, 0]} />
               <Bar dataKey="lastYear" name="去年同期" fill="rgba(255,255,255,.1)" radius={[4, 4, 0, 0]} />
             </BarChart>
@@ -202,7 +204,7 @@ export default function DailyReport() {
           <ResponsiveContainer width="100%" height={220}>
             <BarChart data={chartData}>
               <CartesianGrid {...chartGrid} /><XAxis dataKey="name" {...chartXAxis} />
-              <YAxis {...chartAxis} tickFormatter={v => formatNumber(v)} /><Tooltip {...chartTooltip} /><Legend wrapperStyle={{ fontSize: 11 }} />
+              <YAxis {...chartAxis} tickFormatter={v => formatNumber(v)} /><Tooltip {...chartTooltip} /><Legend {...chartLegend} />
               <Bar dataKey="visitors" name="访客数" fill="#0066cc" radius={[4, 4, 0, 0]} />
               <Bar dataKey="buyers" name="买家数" fill="#e32934" radius={[4, 4, 0, 0]} />
             </BarChart>
