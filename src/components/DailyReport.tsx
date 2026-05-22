@@ -12,6 +12,7 @@ const chartAxis = {
   axisLine: { stroke: 'rgba(255,255,255,.06)' },
   tickLine: false,
 }
+const chartXAxis = { ...chartAxis, interval: 0, angle: -30, height: 60 }
 const chartTooltip = {
   contentStyle: { background: 'rgba(2,13,31,.95)', border: '1px solid rgba(255,255,255,.08)', borderRadius: 8, color: '#fff', fontSize: 12 },
   labelStyle: { color: 'rgba(255,255,255,.5)' },
@@ -156,7 +157,7 @@ export default function DailyReport() {
           <h3 style={{ fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,.5)', marginBottom: 12 }}>去退GMV：实际 vs 目标</h3>
           <ResponsiveContainer width="100%" height={220}>
             <BarChart data={chartData}>
-              <CartesianGrid {...chartGrid} /><XAxis dataKey="name" {...chartAxis} />
+              <CartesianGrid {...chartGrid} /><XAxis dataKey="name" {...chartXAxis} />
               <YAxis {...chartAxis} tickFormatter={v => formatMoney(v)} /><Tooltip {...chartTooltip} /><Legend wrapperStyle={{ fontSize: 11 }} />
               <Bar dataKey="netGmv" name="去退GMV" fill="#0066cc" radius={[4, 4, 0, 0]} />
               <Bar dataKey="targetGmv" name="目标GMV" fill="rgba(255,255,255,.12)" radius={[4, 4, 0, 0]} />
@@ -167,7 +168,7 @@ export default function DailyReport() {
           <h3 style={{ fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,.5)', marginBottom: 12 }}>GMV同期对比</h3>
           <ResponsiveContainer width="100%" height={220}>
             <BarChart data={chartData}>
-              <CartesianGrid {...chartGrid} /><XAxis dataKey="name" {...chartAxis} />
+              <CartesianGrid {...chartGrid} /><XAxis dataKey="name" {...chartXAxis} />
               <YAxis {...chartAxis} tickFormatter={v => formatMoney(v)} /><Tooltip {...chartTooltip} /><Legend wrapperStyle={{ fontSize: 11 }} />
               <Bar dataKey="netGmv" name="当日GMV" fill="#e32934" radius={[4, 4, 0, 0]} />
               <Bar dataKey="lastYear" name="去年同期" fill="rgba(255,255,255,.1)" radius={[4, 4, 0, 0]} />
@@ -178,7 +179,7 @@ export default function DailyReport() {
           <h3 style={{ fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,.5)', marginBottom: 12 }}>访客数 & 买家数</h3>
           <ResponsiveContainer width="100%" height={220}>
             <BarChart data={chartData}>
-              <CartesianGrid {...chartGrid} /><XAxis dataKey="name" {...chartAxis} />
+              <CartesianGrid {...chartGrid} /><XAxis dataKey="name" {...chartXAxis} />
               <YAxis {...chartAxis} tickFormatter={v => formatNumber(v)} /><Tooltip {...chartTooltip} /><Legend wrapperStyle={{ fontSize: 11 }} />
               <Bar dataKey="visitors" name="访客数" fill="#0066cc" radius={[4, 4, 0, 0]} />
               <Bar dataKey="buyers" name="买家数" fill="#e32934" radius={[4, 4, 0, 0]} />
@@ -189,7 +190,7 @@ export default function DailyReport() {
           <h3 style={{ fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,.5)', marginBottom: 12 }}>月/年累计GMV趋势</h3>
           <ResponsiveContainer width="100%" height={220}>
             <BarChart data={chartData}>
-              <CartesianGrid {...chartGrid} /><XAxis dataKey="name" {...chartAxis} />
+              <CartesianGrid {...chartGrid} /><XAxis dataKey="name" {...chartXAxis} />
               <YAxis {...chartAxis} tickFormatter={v => formatMoney(v)} /><Tooltip {...chartTooltip} />
               <Bar dataKey="netGmv" name="去退GMV" fill="#10b981" radius={[4, 4, 0, 0]} />
             </BarChart>
