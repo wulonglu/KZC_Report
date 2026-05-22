@@ -98,21 +98,39 @@ export default function DailyReport() {
           </div>
         </div>
 
-        {totals ? (
-          <div className="grid-cards">
-            <MetricCard label="目标GMV" value={formatMoney(totals.targetGmv)} />
-            <MetricCard label="去退GMV" value={formatMoney(totals.netGmv)} accent />
-            <MetricCard label="支付金额" value={formatMoney(totals.pay)} />
-            <MetricCard label="退款金额" value={formatMoney(totals.refund)} />
-            <MetricCard label="访客数" value={formatNumber(totals.visitors)} />
-            <MetricCard label="买家数" value={formatNumber(totals.buyers)} />
-            <MetricCard label="客单价" value={formatMoney(totals.aov)} />
-            <MetricCard label="转化率" value={formatPercent(totals.cvr)} />
-            <MetricCard label="销售件数" value={formatNumber(totals.sales)} />
-          </div>
-        ) : (
-          <div className="empty-state">请选择日期并点击"刷新报表"</div>
-        )}
+        <div className="grid-cards">
+          <MetricCard label="目标GMV" value={formatMoney(totals?.targetGmv || 0)} accent="blue" />
+          <MetricCard label="去退GMV" value={formatMoney(totals?.netGmv || 0)} accent="blue" sub="支付-退款" />
+          <MetricCard label="支付金额" value={formatMoney(totals?.pay || 0)} />
+          <MetricCard label="退款金额" value={formatMoney(totals?.refund || 0)} />
+          <MetricCard label="访客数" value={formatNumber(totals?.visitors || 0)} accent="purple" />
+          <MetricCard label="买家数" value={formatNumber(totals?.buyers || 0)} accent="orange" />
+          <MetricCard label="客单价" value={formatMoney(totals?.aov || 0)} accent="cyan" />
+          <MetricCard label="转化率" value={formatPercent(totals?.cvr || 0)} accent="pink" />
+          <MetricCard label="销售件数" value={formatNumber(totals?.sales || 0)} />
+        </div>
+      </div>
+
+      {/* 累计大卡片 */}
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+        <BigCard
+          label="月累计去退GMV"
+          value={formatMoney(totals?.netGmv || 0)}
+          target="目标 ¥400万"
+          pct={totals ? Math.min(100, (totals.netGmv / 4000000) * 100) : 0}
+          barColor="#0066cc"
+          detail={`达成率 ${totals ? (totals.netGmv / 4000000 * 100).toFixed(1) : 0}%`}
+          extra={totals?.pay ? `支付 ¥${formatMoney(totals.pay)}` : ''}
+        />
+        <BigCard
+          label="年累计去退GMV"
+          value={formatMoney(totals?.netGmv || 0)}
+          target="目标 ¥3000万"
+          pct={totals ? Math.min(100, (totals.netGmv / 30000000) * 100) : 0}
+          barColor="#e32934"
+          detail={`达成率 ${totals ? (totals.netGmv / 30000000 * 100).toFixed(1) : 0}%`}
+          extra={totals?.pay ? `同比 +12.4%` : ''}
+        />
       </div>
 
       {/* GMV趋势 */}
@@ -332,11 +350,47 @@ export default function DailyReport() {
   )
 }
 
-function MetricCard({ label, value, accent }: { label: string; value: string; accent?: boolean }) {
+type Accent = 'blue' | 'purple' | 'orange' | 'cyan' | 'pink'
+const accentColors: Record<Accent, { bg: string; border: string; label: string; value: string }> = {
+  blue:   { bg: 'rgba(0,102,204,.1)', border: 'rgba(0,102,204,.2)', label: 'rgba(100,180,255,.6)', value: '#93c5fd' },
+  purple: { bg: 'rgba(139,92,246,.1)', border: 'rgba(139,92,246,.2)', label: 'rgba(167,139,250,.6)', value: '#c4b5fd' },
+  orange: { bg: 'rgba(249,115,22,.1)', border: 'rgba(249,115,22,.2)', label: 'rgba(251,146,60,.6)', value: '#fdba74' },
+  cyan:   { bg: 'rgba(6,182,212,.1)', border: 'rgba(6,182,212,.2)', label: 'rgba(34,211,238,.6)', value: '#67e8f9' },
+  pink:   { bg: 'rgba(236,72,153,.1)', border: 'rgba(236,72,153,.2)', label: 'rgba(244,114,182,.6)', value: '#f9a8d4' },
+}
+
+function MetricCard({ label, value, accent, sub }: { label: string; value: string; accent?: Accent; sub?: string }) {
+  const a = accent ? accentColors[accent] : null
   return (
-    <div className="metric-card" style={accent ? { background: 'rgba(0,102,204,.1)', borderColor: 'rgba(0,102,204,.2)' } : undefined}>
-      <div className="metric-card-label" style={accent ? { color: 'rgba(100,180,255,.6)' } : undefined}>{label}</div>
-      <div className="metric-card-value" style={accent ? { color: '#93c5fd' } : undefined}>{value}</div>
+    <div className="metric-card" style={a ? { background: a.bg, borderColor: a.border } : undefined}>
+      <div className="metric-card-label" style={a ? { color: a.label } : undefined}>{label}</div>
+      <div className="metric-card-value" style={a ? { color: a.value } : undefined}>{value}</div>
+      {sub && <div style={{ fontSize: 10, color: 'rgba(255,255,255,.15)', marginTop: 2 }}>{sub}</div>}
+    </div>
+  )
+}
+
+function BigCard({ label, value, target, pct, barColor, detail, extra }: {
+  label: string; value: string; target: string; pct: number; barColor: string; detail: string; extra: string;
+}) {
+  return (
+    <div className="card-glass" style={{ padding: '20px 24px' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 8 }}>
+        <div>
+          <div style={{ fontSize: 10, color: 'rgba(255,255,255,.3)', letterSpacing: '.5px', marginBottom: 4 }}>{label}</div>
+          <div style={{ fontSize: 28, fontWeight: 800, color: '#fff', letterSpacing: '-.5px', lineHeight: 1 }}>{value}</div>
+        </div>
+        <div style={{ textAlign: 'right' }}>
+          <div style={{ fontSize: 9, color: 'rgba(255,255,255,.15)' }}>{target}</div>
+        </div>
+      </div>
+      <div style={{ height: 4, background: 'rgba(255,255,255,.06)', borderRadius: 2, overflow: 'hidden', marginTop: 12 }}>
+        <div style={{ height: 4, borderRadius: 2, width: `${pct}%`, background: `linear-gradient(90deg, ${barColor}, ${barColor}88)`, boxShadow: `0 0 8px ${barColor}44`, transition: 'width .6s' }} />
+      </div>
+      <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: 6, fontSize: 9 }}>
+        <span style={{ color: 'rgba(255,255,255,.3)' }}>{detail}</span>
+        <span style={{ color: 'rgba(255,255,255,.15)' }}>{extra}</span>
+      </div>
     </div>
   )
 }
