@@ -56,8 +56,10 @@ export default function DailyReport() {
     const td: any[] = []
     for (let i = 29; i >= 0; i--) {
       const d = new Date(); d.setDate(d.getDate() - i)
+      const full = d.toISOString().substring(0, 10)
       td.push({
-        date: d.toISOString().substring(5, 10),
+        date: full,
+        label: d.toISOString().substring(5, 10),
         net: Math.round(Math.random() * 80000 + 120000 + (30 - i) * 1000),
       })
     }
@@ -76,7 +78,8 @@ export default function DailyReport() {
         const s = new Date(); s.setDate(s.getDate() - 29)
         const td = await loadDateRange(s.toISOString().substring(0, 10), end)
         setTrend(td.map(d => ({
-          date: d.date.substring(5),
+          date: d.date,
+          label: d.date.substring(5),
           net: d.stores.reduce((a: number, ss: StoreData) => a + ss.paymentAmount - ss.refundAmount, 0),
         })))
       } else {
@@ -239,9 +242,14 @@ export default function DailyReport() {
           <ResponsiveContainer width="100%" height={280}>
             <LineChart data={trend}>
               <CartesianGrid {...chartGrid} />
-              <XAxis dataKey="date" {...chartAxis} />
+              <XAxis dataKey="label" {...chartAxis} />
               <YAxis {...chartAxis} tickFormatter={v => formatMoney(v)} />
-              <Tooltip {...chartTooltip} />
+              <Tooltip
+                contentStyle={{ background: 'rgba(4,24,50,.98)', border: '1px solid rgba(255,255,255,.12)', borderRadius: 8, color: '#e2e8f0', fontSize: 13 }}
+                labelStyle={{ color: 'rgba(255,255,255,.7)', fontWeight: 600, marginBottom: 4 }}
+                labelFormatter={(v, p) => p?.[0]?.payload?.date || v}
+                formatter={(v: number) => ['¥' + formatMoney(v), '去退GMV']}
+              />
               <Line type="monotone" dataKey="net" stroke="#3b82f6" strokeWidth={2} dot={false} activeDot={{ r: 4, fill: '#60a5fa' }} />
             </LineChart>
           </ResponsiveContainer>
