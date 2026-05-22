@@ -75,11 +75,24 @@ export default function DataEntry() {
       {locked && (
         <div className="lock-overlay">
           <div className="lock-box">
-            <div style={{
-              width: 32, height: 32, borderRadius: '50%',
-              background: 'linear-gradient(180deg,#e32934 0%,#e32934 40%,#fff 40%,#fff 60%,#0066cc 60%,#0066cc 100%)',
-              border: '1.5px solid rgba(255,255,255,.25)', margin: '0 auto 16px',
-            }} />
+            <svg width="40" height="40" viewBox="0 0 100 100" style={{ margin: '0 auto 16px', display: 'block' }}>
+              <circle cx="50" cy="50" r="48" fill="#0066cc"/>
+              <circle cx="50" cy="50" r="48" fill="url(#lockGrad)"/>
+              <defs>
+                <clipPath id="lockClip"><circle cx="50" cy="50" r="46"/></clipPath>
+                <linearGradient id="lockGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stopColor="#0066cc"/>
+                  <stop offset="38%" stopColor="#0066cc"/>
+                  <stop offset="42%" stopColor="white"/>
+                  <stop offset="58%" stopColor="white"/>
+                  <stop offset="62%" stopColor="#e32934"/>
+                  <stop offset="100%" stopColor="#e32934"/>
+                </linearGradient>
+              </defs>
+              <g clipPath="url(#lockClip)">
+                <ellipse cx="45" cy="48" rx="55" ry="12" fill="white" transform="rotate(-5 50 50)"/>
+              </g>
+            </svg>
             <h2 style={{ fontSize: 20, color: '#fff', marginBottom: 4, fontWeight: 600 }}>需要授权才能编辑</h2>
             <p style={{ fontSize: 13, color: 'rgba(255,255,255,.4)', marginBottom: 20 }}>输入 GitHub Token 解锁（仅需 repo 权限）</p>
             <input
