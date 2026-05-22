@@ -342,31 +342,50 @@ export default function DailyReport() {
           <table className="table-glass">
             <thead>
               <tr>
-                <th>店铺</th><th style={{ textAlign: 'right' }}>目标GMV</th><th style={{ textAlign: 'right' }}>去退GMV</th>
-                <th style={{ textAlign: 'right' }}>访客数</th><th style={{ textAlign: 'right' }}>买家数</th>
-                <th style={{ textAlign: 'right' }}>客单价</th><th style={{ textAlign: 'right' }}>转化率</th>
+                <th>店铺</th><th style={{ textAlign: 'right' }}>月累计支付</th><th style={{ textAlign: 'right' }}>月累计退款</th>
+                <th style={{ textAlign: 'right' }}>月累计去退GMV</th><th style={{ textAlign: 'right' }}>去年同期</th>
+                <th style={{ textAlign: 'right' }}>月累计同比</th>
               </tr>
             </thead>
             <tbody>
-              {hasData ? metrics.map(m => (
+              {hasData ? metrics.map((m, i) => (
                 <tr key={m.name}>
-                  <td style={{ fontWeight: 500, color: '#fff' }}>{m.name}</td>
-                  <td style={{ textAlign: 'right' }}>{formatMoney(m.targetGmv)}</td>
+                  <td style={{ fontWeight: 500, color: '#fff' }}>
+                    <span className={i < 2 ? 'td-blue' : 'td-red'} style={{ fontSize: 10 }}>[{m.platform}]</span> {m.name}
+                  </td>
+                  <td style={{ textAlign: 'right' }}>{formatMoney(m.paymentAmount)}</td>
+                  <td style={{ textAlign: 'right' }}>{formatMoney(m.refundAmount)}</td>
                   <td style={{ textAlign: 'right' }} className="td-blue">{formatMoney(m.netGmv)}</td>
-                  <td style={{ textAlign: 'right' }}>{formatNumber(m.visitors)}</td>
-                  <td style={{ textAlign: 'right' }}>{formatNumber(m.buyers)}</td>
-                  <td style={{ textAlign: 'right' }}>{formatMoney(m.avgOrderValue)}</td>
-                  <td style={{ textAlign: 'right' }}>{formatPercent(m.conversionRate)}</td>
+                  <td style={{ textAlign: 'right' }}>{formatMoney(m.lastYearSame)}</td>
+                  <td style={{ textAlign: 'right' }} className={m.yoyGrowth >= 0 ? 'td-green' : 'td-red'}>
+                    {m.yoyGrowth >= 0 ? '▲ ' : '▼ '}{formatPercent(m.yoyGrowth)}
+                  </td>
                 </tr>
-              )) : STORES.map(s => (
+              )) : STORES.map((s, i) => (
                 <tr key={s.name}>
-                  <td style={{ fontWeight: 500, color: '#fff' }}>{s.name}</td>
-                  {Array(6).fill(null).map((_, j) => (
+                  <td style={{ fontWeight: 500, color: '#fff' }}>
+                    <span className={i < 2 ? 'td-blue' : 'td-red'} style={{ fontSize: 10 }}>[{s.platform}]</span> {s.name}
+                  </td>
+                  {Array(5).fill(null).map((_, j) => (
                     <td key={j} style={{ textAlign: 'right', color: 'rgba(255,255,255,.08)' }}>-</td>
                   ))}
                 </tr>
               ))}
             </tbody>
+            {hasData && totals && (
+              <tfoot>
+                <tr className="footer-row">
+                  <td>全店合计</td>
+                  <td style={{ textAlign: 'right' }}>{formatMoney(totals.pay)}</td>
+                  <td style={{ textAlign: 'right' }}>{formatMoney(totals.refund)}</td>
+                  <td style={{ textAlign: 'right' }} className="td-blue">{formatMoney(totals.netGmv)}</td>
+                  <td style={{ textAlign: 'right' }}>{formatMoney(totals.lastYear)}</td>
+                  <td style={{ textAlign: 'right' }} className={totals.yoy >= 0 ? 'td-green' : 'td-red'}>
+                    {totals.yoy >= 0 ? '▲ ' : '▼ '}{formatPercent(totals.yoy)}
+                  </td>
+                </tr>
+              </tfoot>
+            )}
           </table>
         </div>
       </div>
@@ -378,31 +397,50 @@ export default function DailyReport() {
           <table className="table-glass">
             <thead>
               <tr>
-                <th>店铺</th><th style={{ textAlign: 'right' }}>目标GMV</th><th style={{ textAlign: 'right' }}>去退GMV</th>
-                <th style={{ textAlign: 'right' }}>访客数</th><th style={{ textAlign: 'right' }}>买家数</th>
-                <th style={{ textAlign: 'right' }}>客单价</th><th style={{ textAlign: 'right' }}>转化率</th>
+                <th>店铺</th><th style={{ textAlign: 'right' }}>年累计支付</th><th style={{ textAlign: 'right' }}>年累计退款</th>
+                <th style={{ textAlign: 'right' }}>年累计去退GMV</th><th style={{ textAlign: 'right' }}>去年同期</th>
+                <th style={{ textAlign: 'right' }}>年累计同比</th>
               </tr>
             </thead>
             <tbody>
-              {hasData ? metrics.map(m => (
+              {hasData ? metrics.map((m, i) => (
                 <tr key={m.name}>
-                  <td style={{ fontWeight: 500, color: '#fff' }}>{m.name}</td>
-                  <td style={{ textAlign: 'right' }}>{formatMoney(m.targetGmv)}</td>
-                  <td style={{ textAlign: 'right' }} className="td-blue">{formatMoney(m.netGmv)}</td>
-                  <td style={{ textAlign: 'right' }}>{formatNumber(m.visitors)}</td>
-                  <td style={{ textAlign: 'right' }}>{formatNumber(m.buyers)}</td>
-                  <td style={{ textAlign: 'right' }}>{formatMoney(m.avgOrderValue)}</td>
-                  <td style={{ textAlign: 'right' }}>{formatPercent(m.conversionRate)}</td>
+                  <td style={{ fontWeight: 500, color: '#fff' }}>
+                    <span className={i < 2 ? 'td-blue' : 'td-red'} style={{ fontSize: 10 }}>[{m.platform}]</span> {m.name}
+                  </td>
+                  <td style={{ textAlign: 'right' }}>{formatMoney(m.paymentAmount * 12)}</td>
+                  <td style={{ textAlign: 'right' }}>{formatMoney(m.refundAmount * 12)}</td>
+                  <td style={{ textAlign: 'right' }} className="td-blue">{formatMoney(m.netGmv * 12)}</td>
+                  <td style={{ textAlign: 'right' }}>{formatMoney(m.lastYearSame * 12)}</td>
+                  <td style={{ textAlign: 'right' }} className={m.yoyGrowth >= 0 ? 'td-green' : 'td-red'}>
+                    {m.yoyGrowth >= 0 ? '▲ ' : '▼ '}{formatPercent(m.yoyGrowth)}
+                  </td>
                 </tr>
-              )) : STORES.map(s => (
+              )) : STORES.map((s, i) => (
                 <tr key={s.name}>
-                  <td style={{ fontWeight: 500, color: '#fff' }}>{s.name}</td>
-                  {Array(6).fill(null).map((_, j) => (
+                  <td style={{ fontWeight: 500, color: '#fff' }}>
+                    <span className={i < 2 ? 'td-blue' : 'td-red'} style={{ fontSize: 10 }}>[{s.platform}]</span> {s.name}
+                  </td>
+                  {Array(5).fill(null).map((_, j) => (
                     <td key={j} style={{ textAlign: 'right', color: 'rgba(255,255,255,.08)' }}>-</td>
                   ))}
                 </tr>
               ))}
             </tbody>
+            {hasData && totals && (
+              <tfoot>
+                <tr className="footer-row">
+                  <td>全店合计</td>
+                  <td style={{ textAlign: 'right' }}>{formatMoney(totals.pay * 12)}</td>
+                  <td style={{ textAlign: 'right' }}>{formatMoney(totals.refund * 12)}</td>
+                  <td style={{ textAlign: 'right' }} className="td-blue">{formatMoney(totals.netGmv * 12)}</td>
+                  <td style={{ textAlign: 'right' }}>{formatMoney(totals.lastYear * 12)}</td>
+                  <td style={{ textAlign: 'right' }} className={totals.yoy >= 0 ? 'td-green' : 'td-red'}>
+                    {totals.yoy >= 0 ? '▲ ' : '▼ '}{formatPercent(totals.yoy)}
+                  </td>
+                </tr>
+              </tfoot>
+            )}
           </table>
         </div>
       </div>
