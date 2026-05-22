@@ -15,15 +15,19 @@ export default function App() {
     { key: 'history' as Tab, label: '历史查询', icon: History },
   ]
 
-  // 百事 Logo SVG
+  // 百事可乐 Logo
   const PepsiLogo = () => (
-    <div style={{
-      width: 28, height: 28, borderRadius: '50%',
-      background: 'linear-gradient(180deg, #e32934 0%, #e32934 40%, #fff 40%, #fff 60%, #0066cc 60%, #0066cc 100%)',
-      border: '1.5px solid rgba(255,255,255,.25)',
-      boxShadow: '0 0 12px rgba(0,102,204,.3)',
-      flexShrink: 0,
-    }} />
+    <svg width="32" height="32" viewBox="0 0 100 100" style={{ flexShrink: 0 }}>
+      <circle cx="50" cy="50" r="48" fill="none" stroke="rgba(255,255,255,.2)" strokeWidth="2"/>
+      <defs>
+        <clipPath id="pepsiClip"><circle cx="50" cy="50" r="46"/></clipPath>
+      </defs>
+      <g clipPath="url(#pepsiClip)">
+        <rect x="0" y="0" width="100" height="40" fill="#0066cc"/>
+        <path d="M0,40 Q25,55 50,40 Q75,25 100,40 L100,52 Q75,37 50,52 Q25,67 0,52 Z" fill="#ffffff"/>
+        <rect x="0" y="60" width="100" height="40" fill="#e32934"/>
+      </g>
+    </svg>
   )
 
   return (
@@ -44,8 +48,8 @@ export default function App() {
             <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
               <PepsiLogo />
               <div>
-                <h1 style={{ fontSize: 16, fontWeight: 700, color: '#fff', letterSpacing: '-.3px', margin: 0 }}>电商日报系统</h1>
-                <span style={{ fontSize: 10, color: 'rgba(255,255,255,.3)', letterSpacing: '.5px' }}>天猫/C店/拼多多 | wulonglu/KZC_Report</span>
+                <h1 style={{ fontSize: 16, fontWeight: 700, color: '#fff', letterSpacing: '-.3px', margin: 0 }}>百事可乐日报系统</h1>
+                <span style={{ fontSize: 10, color: 'rgba(255,255,255,.3)', letterSpacing: '.5px' }}>开发：吴龙录</span>
               </div>
             </div>
           </div>
