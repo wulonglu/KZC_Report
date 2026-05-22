@@ -337,7 +337,12 @@ export default function DailyReport() {
 
       {/* 月累计汇总 */}
       <div className="card-glass">
-        <h2 className="card-title">月累计汇总</h2>
+        <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, marginBottom: 16 }}>
+          <h2 className="card-title" style={{ marginBottom: 0 }}>月累计汇总</h2>
+          <span style={{ fontSize: 12, color: 'rgba(255,255,255,.2)', fontWeight: 400 }}>
+            {new Date(viewDate).getFullYear()}年{String(new Date(viewDate).getMonth() + 1).padStart(2, '0')}月
+          </span>
+        </div>
         <div style={{ overflowX: 'auto' }}>
           <table className="table-glass">
             <thead>
@@ -392,7 +397,12 @@ export default function DailyReport() {
 
       {/* 年累计汇总 */}
       <div className="card-glass">
-        <h2 className="card-title">年累计汇总</h2>
+        <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, marginBottom: 16 }}>
+          <h2 className="card-title" style={{ marginBottom: 0 }}>年累计汇总</h2>
+          <span style={{ fontSize: 12, color: 'rgba(255,255,255,.2)', fontWeight: 400 }}>
+            {new Date(viewDate).getFullYear()}年
+          </span>
+        </div>
         <div style={{ overflowX: 'auto' }}>
           <table className="table-glass">
             <thead>
