@@ -113,6 +113,13 @@ export default function DailyReport() {
   const chartData = hasData ? metrics.map(m => ({
     name: m.name, netGmv: m.netGmv, targetGmv: m.targetGmv, lastYear: m.lastYearSame, visitors: m.visitors, buyers: m.buyers,
   })) : emptyChart
+  const cumChartData = hasData ? metrics.map(m => ({
+    name: m.name,
+    monthNet: m.netGmv,
+    monthLast: m.lastYearSame,
+    yearNet: m.netGmv * 12,
+    yearLast: m.lastYearSame * 12,
+  })) : STORES.map(s => ({ name: s.name, monthNet: 0, monthLast: 0, yearNet: 0, yearLast: 0 }))
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
@@ -211,12 +218,15 @@ export default function DailyReport() {
           </ResponsiveContainer>
         </div>
         <div className="card-glass">
-          <h3 style={{ fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,.5)', marginBottom: 12 }}>月/年累计GMV趋势</h3>
-          <ResponsiveContainer width="100%" height={220}>
-            <BarChart data={chartData}>
+          <h3 style={{ fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,.5)', marginBottom: 12 }}>月/年累计GMV vs 去年同期</h3>
+          <ResponsiveContainer width="100%" height={280}>
+            <BarChart data={cumChartData}>
               <CartesianGrid {...chartGrid} /><XAxis dataKey="name" {...chartXAxis} />
-              <YAxis {...chartAxis} tickFormatter={v => formatMoney(v)} /><Tooltip {...chartTooltip} />
-              <Bar dataKey="netGmv" name="去退GMV" fill="#10b981" radius={[4, 4, 0, 0]} />
+              <YAxis {...chartAxis} tickFormatter={v => formatMoney(v)} /><Tooltip {...chartTooltip} /><Legend {...chartLegend} />
+              <Bar dataKey="monthNet" name="月GMV" fill="#0066cc" radius={[3,3,0,0]} />
+              <Bar dataKey="monthLast" name="月去年同期" fill="#60a5fa" radius={[3,3,0,0]} />
+              <Bar dataKey="yearNet" name="年GMV" fill="#e32934" radius={[3,3,0,0]} />
+              <Bar dataKey="yearLast" name="年去年同期" fill="#fca5a5" radius={[3,3,0,0]} />
             </BarChart>
           </ResponsiveContainer>
         </div>
