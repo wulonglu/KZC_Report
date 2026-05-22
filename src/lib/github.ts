@@ -1,0 +1,186 @@
+import { MonthlyData, DailyReport, monthKey } from '../types'
+
+interface GitHubFile {
+  sha: string
+  content?: string
+}
+
+const DEFAULT_REPO = 'wulonglu/KZC_Report'
+
+function getConfig() {
+  const token = localStorage.getItem('gh_token') || ''
+  const repo = localStorage.getItem('gh_repo') || DEFAULT_REPO
+  return { token, repo }
+}
+
+function apiUrl(path: string): string {
+  const { repo } = getConfig()
+  return `https://api.github.com/repos/${repo}/contents/${path}`
+}
+
+function headers(): Record<string, string> {
+  const { token } = getConfig()
+  return {
+    Authorization: `Bearer ${token}`,
+    Accept: 'application/vnd.github.v3+json',
+  }
+}
+
+export function isConfigured(): boolean {
+  const { repo } = getConfig()
+  return !!repo  // repo is built-in, token is optional for reading
+}
+
+// 公开读取：先尝试 raw URL（无需 Token），失败再走 API
+async function fetchPublic(path: string): Promise<Response> {
+  const { repo } = getConfig()
+  // Try raw URL first (public read, no token needed)
+  const rawUrl = `https://raw.githubusercontent.com/${repo}/main/${path}`
+  try {
+    const r = await fetch(rawUrl)
+    if (r.ok) return r
+  } catch {}
+  // Fallback to API
+  const apiUrl = `https://api.github.com/repos/${repo}/contents/${path}`
+  const { token } = getConfig()
+  return fetch(apiUrl, { headers: token ? headers() : { Accept: 'application/vnd.github.v3+json' } })
+}
+
+export function saveConfig(token: string, repo: string) {
+  localStorage.setItem('gh_token', token)
+  localStorage.setItem('gh_repo', repo)
+}
+
+export function clearConfig() {
+  localStorage.removeItem('gh_token')
+  localStorage.removeItem('gh_repo')
+}
+
+// 读取某月数据
+export async function loadMonth(dateStr: string): Promise<DailyReport[]> {
+  const key = monthKey(dateStr)
+  const resp = await fetchPublic(`data/${key}.json`)
+  if (resp.status === 404) return []
+  if (!resp.ok) throw new Error(`加载失败: ${resp.status}`)
+
+  // Handle different response formats (raw vs API)
+  const contentType = resp.headers.get('content-type') || ''
+  let data: MonthlyData
+  
+  if (contentType.includes('application/json') && !resp.url.includes('api.github.com')) {
+    // Raw URL response - direct JSON
+    data = await resp.json()
+  } else {
+    // GitHub API response
+    const file: GitHubFile = await resp.json()
+    if (!file.content) return []
+    const decoded = atob(file.content.replace(/\n/g, ''))
+    data = JSON.parse(decoded)
+  }
+  
+  return data.reports || []
+}
+
+// 保存某日数据
+export async function saveReport(report: DailyReport): Promise<void> {
+  const key = monthKey(report.date)
+  const path = `data/${key}.json`
+  const url = apiUrl(path)
+  const enc = new TextEncoder()
+
+  // 先尝试获取现有文件
+  let existing: DailyReport[] = []
+  let sha = ''
+
+  try {
+    const resp = await fetch(url, { headers: headers() })
+    if (resp.ok) {
+      const file: GitHubFile = await resp.json()
+      sha = file.sha
+      if (file.content) {
+        const decoded = atob(file.content.replace(/\n/g, ''))
+        const data: MonthlyData = JSON.parse(decoded)
+        existing = data.reports || []
+      }
+    }
+  } catch {
+    // 文件不存在，新建
+  }
+
+  // 更新或新增
+  const idx = existing.findIndex(r => r.date === report.date)
+  if (idx >= 0) {
+    existing[idx] = report
+  } else {
+    existing.push(report)
+  }
+  existing.sort((a, b) => a.date.localeCompare(b.date))
+
+  const content = btoa(String.fromCharCode(...enc.encode(JSON.stringify({ reports: existing }, null, 2))))
+
+  const body: Record<string, string> = {
+    message: `update ${report.date}`,
+    content,
+  }
+  if (sha) body.sha = sha
+
+  const resp = await fetch(url, {
+    method: 'PUT',
+    headers: { ...headers(), 'Content-Type': 'application/json' },
+    body: JSON.stringify(body),
+  })
+
+  if (!resp.ok) {
+    const err = await resp.json().catch(() => ({}))
+    throw new Error((err as any).message || `保存失败: ${resp.status}`)
+  }
+}
+
+// 获取所有有数据的日期列表
+export async function getAllDates(): Promise<string[]> {
+  const url = apiUrl('data/')
+  const resp = await fetch(url, { headers: headers() })
+  if (!resp.ok) return []
+
+  const files: { name: string }[] = await resp.json()
+  const dates: string[] = []
+
+  for (const file of files) {
+    try {
+      const contentsUrl = apiUrl(`data/${file.name}`)
+      const r = await fetch(contentsUrl, { headers: headers() })
+      if (!r.ok) continue
+      const f: GitHubFile = await r.json()
+      if (!f.content) continue
+      const decoded = atob(f.content.replace(/\n/g, ''))
+      const data: MonthlyData = JSON.parse(decoded)
+      data.reports?.forEach(r => dates.push(r.date))
+    } catch {
+      // skip
+    }
+  }
+
+  return dates.sort()
+}
+
+// 批量加载多日数据（用于历史查询、趋势图）
+export async function loadDateRange(start: string, end: string): Promise<DailyReport[]> {
+  const startM = monthKey(start)
+  const endM = monthKey(end)
+
+  const months: string[] = []
+  let cur = new Date(startM + '-01')
+  const endD = new Date(endM + '-01')
+  while (cur <= endD) {
+    months.push(cur.toISOString().substring(0, 7))
+    cur.setMonth(cur.getMonth() + 1)
+  }
+
+  const allReports: DailyReport[] = []
+  for (const m of months) {
+    const reports = await loadMonth(m + '-01')
+    allReports.push(...reports)
+  }
+
+  return allReports.filter(r => r.date >= start && r.date <= end)
+}
