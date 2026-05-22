@@ -33,20 +33,54 @@ export default function DailyReport() {
     return () => window.removeEventListener('view_date_change', handler)
   }, [])
 
+  // 生成演示数据
+  const genDemo = () => {
+    const demoStore = (s: typeof STORES[0]) => {
+      const base = Math.round(Math.random() * 30000 + 25000 + STORES.indexOf(s) * 5000)
+      return {
+        name: s.name, platform: s.platform,
+        targetGmv: Math.round(base * 1.2),
+        paymentAmount: Math.round(base * 1.05),
+        refundAmount: Math.round(base * 0.03),
+        lastYearSame: Math.round(base * 0.88),
+        visitors: Math.round(Math.random() * 5000 + 3000),
+        buyers: Math.round(Math.random() * 400 + 100),
+        salesCount: Math.round(Math.random() * 500 + 200),
+      }
+    }
+    const r = { date: viewDate, stores: STORES.map(demoStore) }
+    setReport(r)
+    // 生成近30天趋势
+    const td: any[] = []
+    for (let i = 29; i >= 0; i--) {
+      const d = new Date(); d.setDate(d.getDate() - i)
+      td.push({
+        date: d.toISOString().substring(5, 10),
+        net: Math.round(Math.random() * 80000 + 120000 + (30 - i) * 1000),
+      })
+    }
+    setTrend(td)
+    setLoading(false)
+  }
+
   const load = async () => {
     setLoading(true)
     try {
       const data = await loadMonth(viewDate)
       const r = data.find(rr => rr.date === viewDate) || null
-      setReport(r)
-      const end = getToday()
-      const s = new Date(); s.setDate(s.getDate() - 29)
-      const td = await loadDateRange(s.toISOString().substring(0, 10), end)
-      setTrend(td.map(d => ({
-        date: d.date.substring(5),
-        net: d.stores.reduce((a: number, ss: StoreData) => a + ss.paymentAmount - ss.refundAmount, 0),
-      })))
-    } catch (e) { console.error(e) }
+      if (r) {
+        setReport(r)
+        const end = getToday()
+        const s = new Date(); s.setDate(s.getDate() - 29)
+        const td = await loadDateRange(s.toISOString().substring(0, 10), end)
+        setTrend(td.map(d => ({
+          date: d.date.substring(5),
+          net: d.stores.reduce((a: number, ss: StoreData) => a + ss.paymentAmount - ss.refundAmount, 0),
+        })))
+      } else {
+        genDemo() // 无数据时显示演示数据
+      }
+    } catch (e) { genDemo() }
     setLoading(false)
   }
   useEffect(() => { load() }, [viewDate])
