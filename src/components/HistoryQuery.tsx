@@ -164,24 +164,6 @@ export default function HistoryQuery({ onViewDate }: Props) {
             </div>
           </div>
 
-          {/* 每日趋势 */}
-          <div className="card-glass">
-            <h2 className="card-title">每日去退GMV趋势</h2>
-            <ResponsiveContainer width="100%" height={260}>
-              <LineChart data={dailyTrend}>
-                <CartesianGrid {...chartGrid} />
-                <XAxis dataKey="date" {...chartAxis} />
-                <YAxis {...chartAxis} tickFormatter={v => formatMoney(v)} />
-                <Tooltip
-                  contentStyle={{ background: 'rgba(4,24,50,.98)', border: '1px solid rgba(255,255,255,.12)', borderRadius: 8, color: '#e2e8f0', fontSize: 13 }}
-                  labelFormatter={(v, p) => p?.[0]?.payload?.fullDate || v}
-                  formatter={(v: number) => ['¥' + formatMoney(v), '去退GMV']}
-                />
-                <Line type="monotone" dataKey="net" stroke="#3b82f6" strokeWidth={2} dot={{ r: 3, fill: '#60a5fa' }} />
-              </LineChart>
-            </ResponsiveContainer>
-          </div>
-
           {/* 店铺汇总表 */}
           <div className="card-glass">
             <h2 className="card-title">店铺区间汇总</h2>
@@ -193,7 +175,7 @@ export default function HistoryQuery({ onViewDate }: Props) {
                     <th style={{ textAlign: 'right' }}>去退GMV</th><th style={{ textAlign: 'right' }}>目标GMV</th>
                     <th style={{ textAlign: 'right' }}>达成率</th><th style={{ textAlign: 'right' }}>去年同期</th>
                     <th style={{ textAlign: 'right' }}>同比增长</th><th style={{ textAlign: 'right' }}>访客数</th>
-                    <th style={{ textAlign: 'right' }}>买家数</th><th>操作</th>
+                    <th style={{ textAlign: 'right' }}>买家数</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -213,10 +195,6 @@ export default function HistoryQuery({ onViewDate }: Props) {
                       </td>
                       <td style={{ textAlign: 'right' }}>{formatNumber(s.visitors)}</td>
                       <td style={{ textAlign: 'right' }}>{formatNumber(s.buyers)}</td>
-                      <td>
-                        <button className="btn-glass btn-outline" style={{ fontSize: 11 }}
-                          onClick={() => onViewDate(results[results.length - 1]?.date || start)}>查看详情</button>
-                      </td>
                     </tr>
                   ))}
                 </tbody>
@@ -234,54 +212,28 @@ export default function HistoryQuery({ onViewDate }: Props) {
                     </td>
                     <td style={{ textAlign: 'right' }}>{formatNumber(summary.totals.visitors)}</td>
                     <td style={{ textAlign: 'right' }}>{formatNumber(summary.totals.buyers)}</td>
-                    <td></td>
                   </tr>
                 </tfoot>
               </table>
             </div>
           </div>
 
-          {/* 原始数据明细表 */}
+          {/* 每日趋势 */}
           <div className="card-glass">
-            <h2 className="card-title">每日数据明细</h2>
-            <div style={{ overflowX: 'auto' }}>
-              <table className="table-glass">
-                <thead>
-                  <tr>
-                    <th>日期</th><th>店铺</th><th style={{ textAlign: 'right' }}>目标GMV</th><th style={{ textAlign: 'right' }}>支付金额</th>
-                    <th style={{ textAlign: 'right' }}>退款金额</th><th style={{ textAlign: 'right' }}>去退GMV</th>
-                    <th style={{ textAlign: 'right' }}>访客数</th><th style={{ textAlign: 'right' }}>买家数</th><th>操作</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {results.reduce((arr: any[], r) => {
-                    return arr.concat(r.stores.map((s: StoreData, si: number) => (
-                      <tr key={r.date + '-' + s.name}>
-                        {si === 0 && (
-                          <td rowSpan={r.stores.length} style={{ fontWeight: 600, color: '#60a5fa', cursor: 'pointer', verticalAlign: 'top' }}
-                            onClick={() => onViewDate(r.date)}>{r.date}</td>
-                        )}
-                        <td style={{ color: '#fff' }}>
-                          <span style={{ color: 'rgba(255,255,255,.25)', fontSize: 11 }}>[{s.platform}]</span> {s.name}
-                        </td>
-                        <td style={{ textAlign: 'right' }}>{formatMoney(s.targetGmv)}</td>
-                        <td style={{ textAlign: 'right' }}>{formatMoney(s.paymentAmount)}</td>
-                        <td style={{ textAlign: 'right' }}>{formatMoney(s.refundAmount)}</td>
-                        <td style={{ textAlign: 'right' }} className="td-blue">{formatMoney(s.paymentAmount - s.refundAmount)}</td>
-                        <td style={{ textAlign: 'right' }}>{formatNumber(s.visitors)}</td>
-                        <td style={{ textAlign: 'right' }}>{formatNumber(s.buyers)}</td>
-                        {si === 0 && (
-                          <td style={{ verticalAlign: 'top' }}>
-                            <button className="btn-glass btn-outline" style={{ fontSize: 11 }}
-                              onClick={() => onViewDate(r.date)}>查看详情</button>
-                          </td>
-                        )}
-                      </tr>
-                    )))
-                  }, [] as any[])}
-                </tbody>
-              </table>
-            </div>
+            <h2 className="card-title">每日去退GMV趋势</h2>
+            <ResponsiveContainer width="100%" height={260}>
+              <LineChart data={dailyTrend}>
+                <CartesianGrid {...chartGrid} />
+                <XAxis dataKey="date" {...chartAxis} />
+                <YAxis {...chartAxis} tickFormatter={v => formatMoney(v)} />
+                <Tooltip
+                  contentStyle={{ background: 'rgba(4,24,50,.98)', border: '1px solid rgba(255,255,255,.12)', borderRadius: 8, color: '#e2e8f0', fontSize: 13 }}
+                  labelFormatter={(v, p) => p?.[0]?.payload?.fullDate || v}
+                  formatter={(v: number) => ['¥' + formatMoney(v), '去退GMV']}
+                />
+                <Line type="monotone" dataKey="net" stroke="#3b82f6" strokeWidth={2} dot={{ r: 3, fill: '#60a5fa' }} />
+              </LineChart>
+            </ResponsiveContainer>
           </div>
         </>
       )}
