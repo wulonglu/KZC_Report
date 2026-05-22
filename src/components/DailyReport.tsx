@@ -142,9 +142,9 @@ export default function DailyReport() {
               metrics.forEach(m => {
                 csv += `${m.name},${m.platform},${m.targetGmv},${m.paymentAmount},${m.refundAmount},${m.netGmv},${m.lastYearSame},${m.yoyGrowth.toFixed(2)}%,${m.achievementRate.toFixed(2)}%,${m.visitors},${m.buyers},${m.salesCount},${m.avgOrderValue.toFixed(2)},${m.conversionRate.toFixed(2)}%\n`
               })
-              const b = new Blob([csv], { type: 'text/csv;charset=utf-8' })
-              const a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = `日报_${viewDate}.csv`; a.click()
-            }}>导出CSV</button>
+              const b = new Blob([csv], { type: 'application/vnd.ms-excel' })
+              const a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = `日报_${viewDate}.xls`; a.click()
+            }}>导出Excel</button>
           </div>
         </div>
 

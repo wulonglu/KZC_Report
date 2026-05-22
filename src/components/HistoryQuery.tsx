@@ -48,9 +48,9 @@ export default function HistoryQuery({ onViewDate }: Props) {
                 csv += `${r.date},${s.name},${s.platform},${s.targetGmv},${s.paymentAmount},${s.refundAmount},${s.lastYearSame},${s.visitors},${s.buyers},${s.salesCount}\n`
               })
             })
-            const b = new Blob([csv], { type: 'text/csv;charset=utf-8' })
-            const a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = `历史_${start}_${end}.csv`; a.click()
-          }}>导出CSV</button>
+            const b = new Blob([csv], { type: 'application/vnd.ms-excel' })
+            const a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = `历史_${start}_${end}.xls`; a.click()
+          }}>导出Excel</button>
         </div>
       </div>
 
