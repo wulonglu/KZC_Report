@@ -151,7 +151,7 @@ export default function DailyReport() {
           target="目标 4,000,000"
           pct={totals ? Math.min(100, (totals.netGmv / 4000000) * 100) : 0}
           barColor="#0066cc"
-          detail={`达成率 ${totals ? (totals.netGmv / 4000000 * 100).toFixed(1) : 0}%`}
+          detail={`达成率 ${totals ? (totals.netGmv / 4000000 * 100).toFixed(1) : 0}`}
           lastYear={totals?.lastYear}
           yoy={totals?.yoy}
         />
@@ -161,7 +161,7 @@ export default function DailyReport() {
           target="目标 30,000,000"
           pct={totals ? Math.min(100, (totals.netGmv / 30000000) * 100) : 0}
           barColor="#e32934"
-          detail={`达成率 ${totals ? (totals.netGmv / 30000000 * 100).toFixed(1) : 0}%`}
+          detail={`达成率 ${totals ? (totals.netGmv / 30000000 * 100).toFixed(1) : 0}`}
           lastYear={totals?.lastYear}
           yoy={totals?.yoy}
         />
@@ -464,8 +464,8 @@ function BigCard({ label, value, target, pct, barColor, detail, lastYear, yoy }:
   label: string; value: string; target: string; pct: number; barColor: string; detail: string;
   lastYear?: number; yoy?: number;
 }) {
-  const yoyStr = yoy !== undefined && yoy !== 0 ? `${yoy >= 0 ? '+' : ''}${yoy.toFixed(2)}%` : ''
-  const lastYearStr = lastYear && lastYear > 0 ? `vs 去年同期 ${formatMoney(lastYear)}` : ''
+  const yoyStr = yoy !== undefined && yoy !== 0 ? `${yoy >= 0 ? '+' : ''}${yoy.toFixed(2)}` : ''
+  const lastYearStr = lastYear && lastYear > 0 ? `去年同期 ${formatMoney(lastYear)}` : ''
   return (
     <div className="card-glass" style={{ padding: '20px 24px' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 8 }}>
