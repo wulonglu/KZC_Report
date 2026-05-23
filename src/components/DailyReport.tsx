@@ -12,7 +12,7 @@ const chartAxis = {
   axisLine: { stroke: 'rgba(255,255,255,.1)' },
   tickLine: false,
 }
-const chartXAxis = { ...chartAxis, interval: 0, angle: -30, height: 70 }
+const chartXAxis = { ...chartAxis, interval: 0, angle: -45, height: 90, tickMargin: 8 }
 const chartLegend = { wrapperStyle: { fontSize: 12, color: 'rgba(255,255,255,.6)', paddingTop: 8 }, iconType: 'rect' as const }
 const chartTooltip = {
   contentStyle: { background: 'rgba(4,24,50,.98)', border: '1px solid rgba(255,255,255,.12)', borderRadius: 8, color: '#e2e8f0', fontSize: 13 },
@@ -132,7 +132,7 @@ export default function DailyReport() {
 
         <div className="grid-cards">
           <MetricCard label="目标GMV" value={formatMoney(totals?.targetGmv || 0)} accent="blue" />
-          <MetricCard label="去退GMV" value={formatMoney(totals?.netGmv || 0)} accent="blue" sub="支付-退款" />
+          <MetricCard label="去退GMV" value={formatMoney(totals?.netGmv || 0)} accent="blue" />
           <MetricCard label="支付金额" value={formatMoney(totals?.pay || 0)} />
           <MetricCard label="退款金额" value={formatMoney(totals?.refund || 0)} />
           <MetricCard label="访客数" value={formatNumber(totals?.visitors || 0)} accent="purple" />

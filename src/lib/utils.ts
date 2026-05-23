@@ -1,5 +1,5 @@
 export function formatMoney(n: number): string {
-  return Math.round(n).toLocaleString('zh-CN')
+  return n.toLocaleString('zh-CN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
 }
 
 export function formatPercent(n: number): string {
@@ -7,7 +7,7 @@ export function formatPercent(n: number): string {
 }
 
 export function formatNumber(n: number): string {
-  return Math.round(n).toLocaleString('zh-CN')
+  return n.toLocaleString('zh-CN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
 }
 
 export function getToday(): string {
