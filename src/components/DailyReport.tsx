@@ -12,7 +12,7 @@ const chartAxis = {
   axisLine: { stroke: 'rgba(255,255,255,.1)' },
   tickLine: false,
 }
-const chartXAxis = { ...chartAxis, interval: 0, angle: -45, height: 90, tickMargin: 8 }
+const chartXAxis = { ...chartAxis, interval: 0, angle: -35, height: 100, tickMargin: 12 }
 const chartLegend = { wrapperStyle: { fontSize: 12, color: 'rgba(255,255,255,.6)', paddingTop: 8 }, iconType: 'rect' as const }
 const chartTooltip = {
   contentStyle: { background: 'rgba(4,24,50,.98)', border: '1px solid rgba(255,255,255,.12)', borderRadius: 8, color: '#e2e8f0', fontSize: 13 },
@@ -25,8 +25,8 @@ export default function DailyReport() {
   const [report, setReport] = useState<any>(null)
   const [trend, setTrend] = useState<any[]>([])
   const [loading, setLoading] = useState(false)
-  const [monthCum, setMonthCum] = useState<{ net: number; lastYear: number; pay: number; refund: number }>({ net: 0, lastYear: 0, pay: 0, refund: 0 })
-  const [yearCum, setYearCum] = useState<{ net: number; lastYear: number; pay: number; refund: number }>({ net: 0, lastYear: 0, pay: 0, refund: 0 })
+  const [monthCum, setMonthCum] = useState<{ net: number; lastYear: number; pay: number; refund: number; stores: any[] }>({ net: 0, lastYear: 0, pay: 0, refund: 0, stores: [] })
+  const [yearCum, setYearCum] = useState<{ net: number; lastYear: number; pay: number; refund: number; stores: any[] }>({ net: 0, lastYear: 0, pay: 0, refund: 0, stores: [] })
 
   useEffect(() => {
     const handler = () => {
@@ -54,7 +54,13 @@ export default function DailyReport() {
       const mLastYear = lastMonthData
         .filter(d => d.date <= lastMonth + '-' + actualLastDay)
         .reduce((a, d) => a + d.stores.reduce((b, s) => b + s.paymentAmount - s.refundAmount, 0), 0)
-      setMonthCum({ net: mNet, lastYear: mLastYear, pay: mPay, refund: mRefund })
+      // 店铺级月累计
+      const monthStores = STORES.map(st => {
+        const cur = data.reduce((a, d) => { const ss = d.stores.find(s => s.name === st.name); return a + (ss ? ss.paymentAmount - ss.refundAmount : 0); }, 0)
+        const ly = lastMonthData.filter(d => d.date <= lastMonth + '-' + actualLastDay).reduce((a, d) => { const ss = d.stores.find(s => s.name === st.name); return a + (ss ? ss.paymentAmount - ss.refundAmount : 0); }, 0)
+        return { name: st.name, platform: st.platform, net: cur, pay: data.reduce((a,d) => {const ss=d.stores.find(s=>s.name===st.name); return a+(ss?ss.paymentAmount:0)},0), refund: data.reduce((a,d) => {const ss=d.stores.find(s=>s.name===st.name); return a+(ss?ss.refundAmount:0)},0), lastYear: ly }
+      })
+      setMonthCum({ net: mNet, lastYear: mLastYear, pay: mPay, refund: mRefund, stores: monthStores })
       // 年累计（加载全年数据）
       const yearStart = `${y}-01-01`
       const yearData = await loadDateRange(yearStart, viewDate)
@@ -67,7 +73,13 @@ export default function DailyReport() {
       const lyEnd = `${Number(y)-1}-${yearActualLastDay}`
       const lastYearData = await loadDateRange(lyStart, lyEnd)
       const yLastYear = lastYearData.reduce((a, d) => a + d.stores.reduce((b, s) => b + s.paymentAmount - s.refundAmount, 0), 0)
-      setYearCum({ net: yNet, lastYear: yLastYear, pay: yPay, refund: yRefund })
+      // 店铺级年累计
+      const yearStores = STORES.map(st => {
+        const cur = yearData.reduce((a, d) => { const ss = d.stores.find(s => s.name === st.name); return a + (ss ? ss.paymentAmount - ss.refundAmount : 0); }, 0)
+        const ly = lastYearData.reduce((a, d) => { const ss = d.stores.find(s => s.name === st.name); return a + (ss ? ss.paymentAmount - ss.refundAmount : 0); }, 0)
+        return { name: st.name, platform: st.platform, net: cur, pay: yearData.reduce((a,d)=>{const ss=d.stores.find(s=>s.name===st.name); return a+(ss?ss.paymentAmount:0)},0), refund: yearData.reduce((a,d)=>{const ss=d.stores.find(s=>s.name===st.name); return a+(ss?ss.refundAmount:0)},0), lastYear: ly }
+      })
+      setYearCum({ net: yNet, lastYear: yLastYear, pay: yPay, refund: yRefund, stores: yearStores })
       if (r) {
         setReport(r)
         const end = getToday()
@@ -363,20 +375,22 @@ export default function DailyReport() {
               </tr>
             </thead>
             <tbody>
-              {hasData ? metrics.map((m, i) => (
-                <tr key={m.name}>
+              {monthCum.stores.length > 0 ? monthCum.stores.map((s: any, i: number) => {
+                const yoy = s.lastYear > 0 ? ((s.net - s.lastYear) / s.lastYear * 100) : 0
+                return (
+                <tr key={s.name}>
                   <td style={{ fontWeight: 500, color: '#fff' }}>
-                    <span className={i < 2 ? 'td-blue' : 'td-red'} style={{ fontSize: 10 }}>[{m.platform}]</span> {m.name}
+                    <span className={i < 2 ? 'td-blue' : 'td-red'} style={{ fontSize: 10 }}>[{s.platform}]</span> {s.name}
                   </td>
-                  <td style={{ textAlign: 'right' }}>{formatMoney(m.paymentAmount)}</td>
-                  <td style={{ textAlign: 'right' }}>{formatMoney(m.refundAmount)}</td>
-                  <td style={{ textAlign: 'right' }} className="td-blue">{formatMoney(m.netGmv)}</td>
-                  <td style={{ textAlign: 'right' }}>{formatMoney(m.lastYearSame)}</td>
-                  <td style={{ textAlign: 'right' }} className={m.yoyGrowth >= 0 ? 'td-green' : 'td-red'}>
-                    {formatPercent(m.yoyGrowth)}
+                  <td style={{ textAlign: 'right' }}>{formatMoney(s.pay)}</td>
+                  <td style={{ textAlign: 'right' }}>{formatMoney(s.refund)}</td>
+                  <td style={{ textAlign: 'right' }} className="td-blue">{formatMoney(s.net)}</td>
+                  <td style={{ textAlign: 'right' }}>{formatMoney(s.lastYear)}</td>
+                  <td style={{ textAlign: 'right' }} className={yoy >= 0 ? 'td-green' : 'td-red'}>
+                    {formatPercent(yoy)}
                   </td>
                 </tr>
-              )) : STORES.map((s, i) => (
+              )}) : STORES.map((s, i) => (
                 <tr key={s.name}>
                   <td style={{ fontWeight: 500, color: '#fff' }}>
                     <span className={i < 2 ? 'td-blue' : 'td-red'} style={{ fontSize: 10 }}>[{s.platform}]</span> {s.name}
@@ -387,20 +401,18 @@ export default function DailyReport() {
                 </tr>
               ))}
             </tbody>
-            {hasData && totals && (
-              <tfoot>
+            <tfoot>
                 <tr className="footer-row">
                   <td>全店合计</td>
-                  <td style={{ textAlign: 'right' }}>{formatMoney(totals.pay)}</td>
-                  <td style={{ textAlign: 'right' }}>{formatMoney(totals.refund)}</td>
-                  <td style={{ textAlign: 'right' }} className="td-blue">{formatMoney(totals.netGmv)}</td>
-                  <td style={{ textAlign: 'right' }}>{formatMoney(totals.lastYear)}</td>
-                  <td style={{ textAlign: 'right' }} className={totals.yoy >= 0 ? 'td-green' : 'td-red'}>
-                    {formatPercent(totals.yoy)}
+                  <td style={{ textAlign: 'right' }}>{formatMoney(monthCum.pay)}</td>
+                  <td style={{ textAlign: 'right' }}>{formatMoney(monthCum.refund)}</td>
+                  <td style={{ textAlign: 'right' }} className="td-blue">{formatMoney(monthCum.net)}</td>
+                  <td style={{ textAlign: 'right' }}>{formatMoney(monthCum.lastYear)}</td>
+                  <td style={{ textAlign: 'right' }} className={monthCum.lastYear > 0 && ((monthCum.net - monthCum.lastYear) / monthCum.lastYear * 100) >= 0 ? 'td-green' : 'td-red'}>
+                    {monthCum.lastYear > 0 ? formatPercent((monthCum.net - monthCum.lastYear) / monthCum.lastYear * 100) : '0.00'}
                   </td>
                 </tr>
-              </tfoot>
-            )}
+            </tfoot>
           </table>
         </div>
       </div>
@@ -423,20 +435,22 @@ export default function DailyReport() {
               </tr>
             </thead>
             <tbody>
-              {hasData ? metrics.map((m, i) => (
-                <tr key={m.name}>
+              {yearCum.stores.length > 0 ? yearCum.stores.map((s: any, i: number) => {
+                const yoy = s.lastYear > 0 ? ((s.net - s.lastYear) / s.lastYear * 100) : 0
+                return (
+                <tr key={s.name}>
                   <td style={{ fontWeight: 500, color: '#fff' }}>
-                    <span className={i < 2 ? 'td-blue' : 'td-red'} style={{ fontSize: 10 }}>[{m.platform}]</span> {m.name}
+                    <span className={i < 2 ? 'td-blue' : 'td-red'} style={{ fontSize: 10 }}>[{s.platform}]</span> {s.name}
                   </td>
-                  <td style={{ textAlign: 'right' }}>{formatMoney(m.paymentAmount * 12)}</td>
-                  <td style={{ textAlign: 'right' }}>{formatMoney(m.refundAmount * 12)}</td>
-                  <td style={{ textAlign: 'right' }} className="td-blue">{formatMoney(m.netGmv * 12)}</td>
-                  <td style={{ textAlign: 'right' }}>{formatMoney(m.lastYearSame * 12)}</td>
-                  <td style={{ textAlign: 'right' }} className={m.yoyGrowth >= 0 ? 'td-green' : 'td-red'}>
-                    {formatPercent(m.yoyGrowth)}
+                  <td style={{ textAlign: 'right' }}>{formatMoney(s.pay)}</td>
+                  <td style={{ textAlign: 'right' }}>{formatMoney(s.refund)}</td>
+                  <td style={{ textAlign: 'right' }} className="td-blue">{formatMoney(s.net)}</td>
+                  <td style={{ textAlign: 'right' }}>{formatMoney(s.lastYear)}</td>
+                  <td style={{ textAlign: 'right' }} className={yoy >= 0 ? 'td-green' : 'td-red'}>
+                    {formatPercent(yoy)}
                   </td>
                 </tr>
-              )) : STORES.map((s, i) => (
+              )}) : STORES.map((s, i) => (
                 <tr key={s.name}>
                   <td style={{ fontWeight: 500, color: '#fff' }}>
                     <span className={i < 2 ? 'td-blue' : 'td-red'} style={{ fontSize: 10 }}>[{s.platform}]</span> {s.name}
@@ -447,20 +461,18 @@ export default function DailyReport() {
                 </tr>
               ))}
             </tbody>
-            {hasData && totals && (
-              <tfoot>
+            <tfoot>
                 <tr className="footer-row">
                   <td>全店合计</td>
-                  <td style={{ textAlign: 'right' }}>{formatMoney(totals.pay * 12)}</td>
-                  <td style={{ textAlign: 'right' }}>{formatMoney(totals.refund * 12)}</td>
-                  <td style={{ textAlign: 'right' }} className="td-blue">{formatMoney(totals.netGmv * 12)}</td>
-                  <td style={{ textAlign: 'right' }}>{formatMoney(totals.lastYear * 12)}</td>
-                  <td style={{ textAlign: 'right' }} className={totals.yoy >= 0 ? 'td-green' : 'td-red'}>
-                    {formatPercent(totals.yoy)}
+                  <td style={{ textAlign: 'right' }}>{formatMoney(yearCum.pay)}</td>
+                  <td style={{ textAlign: 'right' }}>{formatMoney(yearCum.refund)}</td>
+                  <td style={{ textAlign: 'right' }} className="td-blue">{formatMoney(yearCum.net)}</td>
+                  <td style={{ textAlign: 'right' }}>{formatMoney(yearCum.lastYear)}</td>
+                  <td style={{ textAlign: 'right' }} className={yearCum.lastYear > 0 && ((yearCum.net - yearCum.lastYear) / yearCum.lastYear * 100) >= 0 ? 'td-green' : 'td-red'}>
+                    {yearCum.lastYear > 0 ? formatPercent((yearCum.net - yearCum.lastYear) / yearCum.lastYear * 100) : '0.00'}
                   </td>
                 </tr>
-              </tfoot>
-            )}
+            </tfoot>
           </table>
         </div>
       </div>
