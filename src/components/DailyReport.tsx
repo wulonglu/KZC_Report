@@ -357,9 +357,13 @@ export default function DailyReport() {
                   <td style={{ textAlign: 'right' }}>{formatMoney(totals.pay)}</td>
                   <td style={{ textAlign: 'right' }}>{formatMoney(totals.refund)}</td>
                   <td style={{ textAlign: 'right' }} className="td-blue">{formatMoney(totals.netGmv)}</td>
-                  <td style={{ textAlign: 'right' }}>-</td>
-                  <td style={{ textAlign: 'right' }}>-</td>
-                  <td style={{ textAlign: 'right' }}>-</td>
+                  <td style={{ textAlign: 'right' }}>{formatMoney(totals.lastYear)}</td>
+                  <td style={{ textAlign: 'right' }} className={totals.yoy >= 0 ? 'td-green' : 'td-red'}>
+                    {formatPercent(totals.yoy)}
+                  </td>
+                  <td style={{ textAlign: 'right' }} className={totals.targetGmv > 0 && (totals.netGmv / totals.targetGmv * 100) >= 100 ? 'td-green' : 'td-red'}>
+                    {totals.targetGmv > 0 ? formatPercent(totals.netGmv / totals.targetGmv * 100) : '0.00%'}
+                  </td>
                   <td style={{ textAlign: 'right' }}>{formatNumber(totals.visitors)}</td>
                   <td style={{ textAlign: 'right' }}>{formatNumber(totals.buyers)}</td>
                   <td style={{ textAlign: 'right' }}>{formatNumber(totals.sales)}</td>
