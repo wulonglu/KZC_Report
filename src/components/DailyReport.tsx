@@ -5,7 +5,7 @@ import {
 import { computeMetrics, StoreMetrics, StoreData, STORES } from '../types'
 import { loadMonth, loadDateRange } from '../lib/github'
 import { formatMoney, formatPercent, formatNumber, getToday } from '../lib/utils'
-import { exportCSV, exportScreenshot } from '../lib/export'
+import { exportExcel, exportJPG } from '../lib/export'
 
 const chartGrid = { stroke: 'rgba(255,255,255,.04)', strokeDasharray: '3 3' }
 const chartAxis = {
@@ -182,12 +182,12 @@ export default function DailyReport() {
               const mRows = monthCum.stores.map((s: any) => [s.name, String(s.pay), String(s.refund), String(s.net), String(s.lastYear), (s.lastYear>0?((s.net-s.lastYear)/s.lastYear*100):0).toFixed(2)])
               const yh = ['店铺','年累计支付','年累计退款','年累计去退GMV','去年同期','年累计同比(%)']
               const yRows = yearCum.stores.map((s: any) => [s.name, String(s.pay), String(s.refund), String(s.net), String(s.lastYear), (s.lastYear>0?((s.net-s.lastYear)/s.lastYear*100):0).toFixed(2)])
-              exportCSV([
+              exportExcel([
                 { title: `店铺明细日报表 - ${viewDate}`, headers: h, rows: dailyRows },
                 { title: `月累计汇总 - ${viewDate.substring(0,7)}`, headers: mh, rows: mRows },
                 { title: `年累计汇总 - ${viewDate.substring(0,4)}`, headers: yh, rows: yRows },
               ], `日报_${viewDate}.xls`)
-              exportScreenshot()
+              exportJPG()
             }}>导出</button>
           </div>
         </div>
