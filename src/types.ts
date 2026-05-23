@@ -54,7 +54,8 @@ export function emptyStore(name: string, platform: StoreData['platform']): Store
 
 export function computeMetrics(store: StoreData): StoreMetrics {
   const netGmv = store.paymentAmount - store.refundAmount
-  const yoyGrowth = store.lastYearSame > 0 ? ((netGmv - store.lastYearSame) / store.lastYearSame) * 100 : 0
+  const lastYearVal = (store as any)._lastYearNet ?? store.lastYearSame
+  const yoyGrowth = lastYearVal > 0 ? ((netGmv - lastYearVal) / lastYearVal) * 100 : 0
   const achievementRate = store.targetGmv > 0 ? (netGmv / store.targetGmv) * 100 : 0
   const avgOrderValue = store.buyers > 0 ? store.paymentAmount / store.buyers : 0
   const conversionRate = store.visitors > 0 ? (store.buyers / store.visitors) * 100 : 0
