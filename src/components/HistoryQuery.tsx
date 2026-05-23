@@ -81,7 +81,7 @@ export default function HistoryQuery({ onViewDate }: Props) {
         rate: totalTarget > 0 ? (totalNet / totalTarget * 100) : 0,
       },
     }
-  }, [results])
+  }, [results, lyResults])
 
   // 每日趋势
   const dailyTrend = useMemo(() => {
