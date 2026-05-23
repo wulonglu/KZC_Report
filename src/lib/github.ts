@@ -50,9 +50,18 @@ function fetchWithTimeout(url: string, opts?: RequestInit, ms = 5000): Promise<R
   return fetch(url, { ...opts, signal: ctrl.signal }).finally(() => clearTimeout(timer))
 }
 
-// 公开读取：同源优先（快），其次 raw CDN（最新），最后 API
+// 公开读取：保存后2分钟内API直读，否则同源优先→raw CDN→API
 async function fetchPublic(path: string): Promise<Response> {
-  const { repo } = getConfig()
+  const { repo, token } = getConfig()
+  // 如果刚刚保存过数据（2分钟内），直接走 API 避免 CDN 缓存
+  const lastSave = Number(localStorage.getItem('last_saved_at') || '0')
+  const apiUrl = `https://api.github.com/repos/${repo}/contents/${path}`
+  if (Date.now() - lastSave < 120000) {
+    const r = await fetchWithTimeout(apiUrl, {
+      headers: token ? headers() : { Accept: 'application/vnd.github.v3+json' },
+    }, 6000)
+    if (r.ok) return r
+  }
   // 1. Same-origin (fastest, Pages CDN)
   try {
     const r = await fetchWithTimeout('./' + path, undefined, 2000)
@@ -65,9 +74,14 @@ async function fetchPublic(path: string): Promise<Response> {
     if (r.ok) return r
   } catch {}
   // 3. Fallback to API
-  const apiUrl = `https://api.github.com/repos/${repo}/contents/${path}`
-  const { token } = getConfig()
-  return fetchWithTimeout(apiUrl, { headers: token ? headers() : { Accept: 'application/vnd.github.v3+json' } }, 6000)
+  return fetchWithTimeout(apiUrl, {
+    headers: token ? headers() : { Accept: 'application/vnd.github.v3+json' },
+  }, 6000)
+}
+
+// 标记刚刚保存过数据
+export function markSaved() {
+  localStorage.setItem('last_saved_at', Date.now().toString())
 }
 
 export function saveConfig(token: string, repo: string) {

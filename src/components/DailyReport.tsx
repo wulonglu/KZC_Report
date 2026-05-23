@@ -1,9 +1,9 @@
-import { useState, useEffect, useMemo, useRef } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import {
   LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend,
 } from 'recharts'
 import { computeMetrics, StoreMetrics, StoreData, STORES } from '../types'
-import { loadMonth, loadMonthFresh, loadDateRange } from '../lib/github'
+import { loadMonth, loadDateRange } from '../lib/github'
 import { formatMoney, formatPercent, formatNumber, getToday } from '../lib/utils'
 import { exportExcel, exportJPG } from '../lib/export'
 
@@ -29,14 +29,13 @@ export default function DailyReport() {
   const [monthCum, setMonthCum] = useState<{ net: number; lastYear: number; pay: number; refund: number; stores: any[] }>({ net: 0, lastYear: 0, pay: 0, refund: 0, stores: [] })
   const [yearCum, setYearCum] = useState<{ net: number; lastYear: number; pay: number; refund: number; stores: any[] }>({ net: 0, lastYear: 0, pay: 0, refund: 0, stores: [] })
   const [refreshKey, setRefreshKey] = useState(0)
-  const freshLoad = useRef(false)
 
   useEffect(() => {
     const handler = () => {
       const d = localStorage.getItem('view_date')
       if (d) { setViewDate(d); localStorage.removeItem('view_date') }
     }
-    const savedHandler = () => { freshLoad.current = true; setRefreshKey(k => k + 1) }
+    const savedHandler = () => setRefreshKey(k => k + 1)
     window.addEventListener('view_date_change', handler)
     window.addEventListener('data_saved', savedHandler)
     return () => {
@@ -48,9 +47,7 @@ export default function DailyReport() {
   const load = async () => {
     setLoading(true)
     try {
-      const useFresh = freshLoad.current
-      freshLoad.current = false
-      const data = useFresh ? await loadMonthFresh(viewDate) : await loadMonth(viewDate)
+      const data = await loadMonth(viewDate)
       const r = data.find(rr => rr.date === viewDate) || null
       // 月累计：当月有数据且 <= viewDate 的全部加总
       const mData = data.filter(d => d.date <= viewDate)

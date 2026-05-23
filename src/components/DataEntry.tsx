@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { StoreData, DailyReport, STORES, emptyStore } from '../types'
-import { saveReport, loadMonth } from '../lib/github'
+import { saveReport, loadMonth, markSaved } from '../lib/github'
 import { getToday } from '../lib/utils'
 
 function getToken() { return localStorage.getItem('gh_token') || '' }
@@ -68,6 +68,7 @@ export default function DataEntry() {
         })),
       })
       setMsg('保存成功！')
+      markSaved()
       // 通知日报/历史查询刷新
       window.dispatchEvent(new Event('data_saved'))
     } catch (e: any) { setMsg('保存失败：' + e.message) }
