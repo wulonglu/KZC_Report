@@ -37,6 +37,10 @@ export function exportExcel(sections: { title: string; headers: string[]; rows: 
 // 截取页面为JPG并下载
 export async function exportJPG() {
   try {
+    // 等待字体加载完成，html2canvas 需要字体就绪才能正确渲染中文
+    if (document.fonts && document.fonts.ready) {
+      await document.fonts.ready
+    }
     const { default: html2canvas } = await import('html2canvas')
     const container = document.querySelector('main') || document.body
     const scrollWidth = document.documentElement.scrollWidth
@@ -46,8 +50,15 @@ export async function exportJPG() {
       scale: 2,
       useCORS: true,
       logging: false,
+      allowTaint: false,
       windowWidth: scrollWidth,
       windowHeight: scrollHeight,
+      onclone: (clonedDoc: Document) => {
+        // 在克隆文档中强制使用系统自带中文字体，避免 html2canvas 字型缺失
+        const style = clonedDoc.createElement('style')
+        style.textContent = `* { font-family: "Microsoft YaHei", "PingFang SC", "SimHei", "Noto Sans SC", sans-serif !important; }`
+        clonedDoc.head.appendChild(style)
+      },
     } as any)
     canvas.toBlob(blob => {
       if (!blob) return
