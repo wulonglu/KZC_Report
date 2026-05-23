@@ -25,6 +25,8 @@ export default function DailyReport() {
   const [report, setReport] = useState<any>(null)
   const [trend, setTrend] = useState<any[]>([])
   const [loading, setLoading] = useState(false)
+  const [monthCum, setMonthCum] = useState<{ net: number; lastYear: number; pay: number; refund: number }>({ net: 0, lastYear: 0, pay: 0, refund: 0 })
+  const [yearCum, setYearCum] = useState<{ net: number; lastYear: number; pay: number; refund: number }>({ net: 0, lastYear: 0, pay: 0, refund: 0 })
 
   useEffect(() => {
     const handler = () => {
@@ -40,6 +42,21 @@ export default function DailyReport() {
     try {
       const data = await loadMonth(viewDate)
       const r = data.find(rr => rr.date === viewDate) || null
+      // 计算月累计（当月有数据的全部加总）
+      const mNet = data.reduce((a, d) => a + d.stores.reduce((b, s) => b + s.paymentAmount - s.refundAmount, 0), 0)
+      const mPay = data.reduce((a, d) => a + d.stores.reduce((b, s) => b + s.paymentAmount, 0), 0)
+      const mRefund = data.reduce((a, d) => a + d.stores.reduce((b, s) => b + s.refundAmount, 0), 0)
+      const mLastYear = data.reduce((a, d) => a + d.stores.reduce((b, s) => b + s.lastYearSame, 0), 0)
+      setMonthCum({ net: mNet, lastYear: mLastYear, pay: mPay, refund: mRefund })
+      // 年累计（加载全年数据）
+      const yearStart = `${viewDate.substring(0,4)}-01-01`
+      const yearEnd = viewDate
+      const yearData = await loadDateRange(yearStart, yearEnd)
+      const yNet = yearData.reduce((a, d) => a + d.stores.reduce((b, s) => b + s.paymentAmount - s.refundAmount, 0), 0)
+      const yPay = yearData.reduce((a, d) => a + d.stores.reduce((b, s) => b + s.paymentAmount, 0), 0)
+      const yRefund = yearData.reduce((a, d) => a + d.stores.reduce((b, s) => b + s.refundAmount, 0), 0)
+      const yLastYear = yearData.reduce((a, d) => a + d.stores.reduce((b, s) => b + s.lastYearSame, 0), 0)
+      setYearCum({ net: yNet, lastYear: yLastYear, pay: yPay, refund: yRefund })
       if (r) {
         setReport(r)
         const end = getToday()
@@ -147,23 +164,23 @@ export default function DailyReport() {
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
         <BigCard
           label="月累计去退GMV"
-          value={formatMoney(totals?.netGmv || 0)}
+          value={formatMoney(monthCum.net)}
           target="目标 4,000,000"
-          pct={totals ? Math.min(100, (totals.netGmv / 4000000) * 100) : 0}
+          pct={Math.min(100, (monthCum.net / 4000000) * 100)}
           barColor="#0066cc"
-          detail={`达成率 ${totals ? (totals.netGmv / 4000000 * 100).toFixed(1) : 0}`}
-          lastYear={totals?.lastYear}
-          yoy={totals?.yoy}
+          detail={`达成率 ${(monthCum.net / 4000000 * 100).toFixed(1)}`}
+          lastYear={monthCum.lastYear}
+          yoy={monthCum.lastYear > 0 ? ((monthCum.net - monthCum.lastYear) / monthCum.lastYear * 100) : 0}
         />
         <BigCard
           label="年累计去退GMV"
-          value={formatMoney(totals?.netGmv || 0)}
+          value={formatMoney(yearCum.net)}
           target="目标 30,000,000"
-          pct={totals ? Math.min(100, (totals.netGmv / 30000000) * 100) : 0}
+          pct={Math.min(100, (yearCum.net / 30000000) * 100)}
           barColor="#e32934"
-          detail={`达成率 ${totals ? (totals.netGmv / 30000000 * 100).toFixed(1) : 0}`}
-          lastYear={totals?.lastYear}
-          yoy={totals?.yoy}
+          detail={`达成率 ${(yearCum.net / 30000000 * 100).toFixed(1)}`}
+          lastYear={yearCum.lastYear}
+          yoy={yearCum.lastYear > 0 ? ((yearCum.net - yearCum.lastYear) / yearCum.lastYear * 100) : 0}
         />
       </div>
 
