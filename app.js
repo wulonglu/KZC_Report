@@ -241,7 +241,7 @@ function DailyReport(props){
             createElement('td',{className:'td-right'},'-'),createElement('td',{className:'td-right'},'-'),createElement('td',{className:'td-right'},'-'),
             createElement('td',{className:'td-right'},fmtNum(totals.visitors)),createElement('td',{className:'td-right'},fmtNum(totals.buyers)),
             createElement('td',{className:'td-right'},fmtNum(totals.sales)),createElement('td',{className:'td-right'},fmtMoney(totals.aov)),
-            createElement('td',{className:'td-right'},fmtPct(totals.cvr)))):null)))),
+            createElement('td',{className:'td-right'},fmtPct(totals.cvr)))):null))),
 
     // 月累计汇总
     createElement('div',{className:'card'},createElement('h2',{className:'card-title'},'月累计汇总'),createElement('div',{style:{overflowX:'auto'}},
@@ -253,7 +253,7 @@ function DailyReport(props){
     createElement('div',{className:'card'},createElement('h2',{className:'card-title'},'年累计汇总'),createElement('div',{style:{overflowX:'auto'}},
       createElement('table',null,
         createElement('thead',null,createElement('tr',null,createElement('th',null,'店铺'),createElement('th',{className:'td-right'},'目标GMV'),createElement('th',{className:'td-right'},'去退GMV'),createElement('th',{className:'td-right'},'访客数'),createElement('th',{className:'td-right'},'买家数'),createElement('th',{className:'td-right'},'客单价'),createElement('th',{className:'td-right'},'转化率'))),
-        createElement('tbody',null,hasData?metrics.map(function(m){return createElement('tr',{key:m.name},createElement('td',{style:{fontWeight:500,color:'#fff'}},m.name),createElement('td',{className:'td-right'},fmtMoney(m.targetGmv)),createElement('td',{className:'td-right td-blue'},fmtMoney(m.netGmv)),createElement('td',{className:'td-right'},fmtNum(m.visitors)),createElement('td',{className:'td-right'},fmtNum(m.buyers)),createElement('td',{className:'td-right'},fmtMoney(m.avgOrderValue)),createElement('td',{className:'td-right'},fmtPct(m.conversionRate)))}):STORES.map(function(s){return createElement('tr',{key:s.name},createElement('td',{style:{fontWeight:500,color:'#fff'}},s.name),Array(6).fill(null).map(function(_,j){return createElement('td',{key:j,className:'td-right',style:{color:'rgba(255,255,255,.08)'}},'-')}))})))))
+        createElement('tbody',null,hasData?metrics.map(function(m){return createElement('tr',{key:m.name},createElement('td',{style:{fontWeight:500,color:'#fff'}},m.name),createElement('td',{className:'td-right'},fmtMoney(m.targetGmv)),createElement('td',{className:'td-right td-blue'},fmtMoney(m.netGmv)),createElement('td',{className:'td-right'},fmtNum(m.visitors)),createElement('td',{className:'td-right'},fmtNum(m.buyers)),createElement('td',{className:'td-right'},fmtMoney(m.avgOrderValue)),createElement('td',{className:'td-right'},fmtPct(m.conversionRate)))}):STORES.map(function(s){return createElement('tr',{key:s.name},createElement('td',{style:{fontWeight:500,color:'#fff'}},s.name),Array(6).fill(null).map(function(_,j){return createElement('td',{key:j,className:'td-right',style:{color:'rgba(255,255,255,.08)'}},'-')}))}))))),
   );
 }
 
@@ -303,7 +303,7 @@ function App(){
           createElement('div',{className:'tabs'},
             createElement('button',{className:'tab'+(tab==='entry'?' active':''),onClick:function(){setTab('entry')}},'数据录入'),
             createElement('button',{className:'tab'+(tab==='report'?' active':''),onClick:function(){setTab('report')}},'日报查看'),
-            createElement('button',{className:'tab'+(tab==='history'?' active':''),onClick:function(){setTab('history')}},'历史查询')))),
+            createElement('button',{className:'tab'+(tab==='history'?' active':''),onClick:function(){setTab('history')}},'历史查询'))))),
     createElement('div',{className:'content'},
       tab==='entry'?createElement(DataEntry,null):null,
       tab==='report'?createElement(DailyReport,{viewDate:viewDate,setViewDate:setViewDate}):null,
