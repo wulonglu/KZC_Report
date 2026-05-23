@@ -54,10 +54,31 @@ export async function exportJPG() {
       windowWidth: scrollWidth,
       windowHeight: scrollHeight,
       onclone: (clonedDoc: Document) => {
-        // 在克隆文档中强制使用系统自带中文字体，避免 html2canvas 字型缺失
+        // 1. 强制系统中文字体
         const style = clonedDoc.createElement('style')
-        style.textContent = `* { font-family: "Microsoft YaHei", "PingFang SC", "SimHei", "Noto Sans SC", sans-serif !important; }`
+        style.textContent = [
+          `* { font-family: "Microsoft YaHei", "PingFang SC", "SimHei", "Noto Sans SC", sans-serif !important; }`,
+          `.h2c-input { display:inline-block; padding:6px 12px; border:1px solid rgba(255,255,255,.1); border-radius:8px; font-size:13px; color:#fff; background:rgba(255,255,255,.06); }`,
+          `.h2c-btn { display:inline-flex; align-items:center; padding:7px 16px; border-radius:8px; font-size:13px; font-weight:500; border:1px solid; }`,
+          `.h2c-input-cell { width:100%; padding:5px 8px; border:1px solid rgba(255,255,255,.07); border-radius:4px; text-align:right; font-size:13px; color:#fff; background:rgba(255,255,255,.03); }`,
+        ].join('\n')
         clonedDoc.head.appendChild(style)
+
+        // 2. 将原生表单控件替换为样式化的 span，html2canvas 无法正确渲染 input/select
+        const replace = (el: Element, className: string) => {
+          const span = clonedDoc.createElement('span')
+          span.className = className
+          span.textContent = (el as HTMLInputElement).value || (el as HTMLSelectElement).options[(el as HTMLSelectElement).selectedIndex]?.text || el.textContent || ''
+          el.parentNode?.replaceChild(span, el)
+        }
+        clonedDoc.querySelectorAll('input[type="date"]').forEach(el => replace(el, 'h2c-input'))
+        clonedDoc.querySelectorAll('input:not([type="date"])').forEach(el => replace(el, 'h2c-input-cell'))
+        clonedDoc.querySelectorAll('select').forEach(el => replace(el, 'h2c-input'))
+        clonedDoc.querySelectorAll('textarea').forEach(el => replace(el, 'h2c-input-cell'))
+        // 按钮保持但不改变外观
+        clonedDoc.querySelectorAll('button').forEach(btn => {
+          btn.classList.add('h2c-btn')
+        })
       },
     } as any)
     canvas.toBlob(blob => {
