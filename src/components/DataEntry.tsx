@@ -34,9 +34,9 @@ export default function DataEntry() {
     })
   }, [date])
 
-  const fields: (keyof StoreData)[] = ['targetGmv', 'paymentAmount', 'refundAmount', 'visitors', 'buyers', 'salesCount']
+  const fields: (keyof StoreData)[] = ['paymentAmount', 'refundAmount', 'visitors', 'buyers', 'salesCount']
   const labels: Record<string, string> = {
-    targetGmv: '目标GMV', paymentAmount: '支付金额', refundAmount: '退款金额',
+    paymentAmount: '支付金额', refundAmount: '退款金额',
     visitors: '访客数', buyers: '买家数', salesCount: '销售件数',
   }
 
