@@ -1,6 +1,6 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState } from 'react'
 import { StoreData, DailyReport, STORES, emptyStore } from '../types'
-import { saveReport, loadMonth } from '../lib/github'
+import { saveReport } from '../lib/github'
 import { getToday } from '../lib/utils'
 
 function getToken() { return localStorage.getItem('gh_token') || '' }
@@ -15,37 +15,11 @@ export default function DataEntry() {
   )
   const [saving, setSaving] = useState(false)
   const [msg, setMsg] = useState('')
-  const [loadingLastYear, setLoadingLastYear] = useState(false)
 
-  // 选择日期后自动加载去年同期数据
-  const autoFillLastYear = useCallback(async (d: string) => {
-    const [y, rest] = [d.substring(0, 4), d.substring(4)]
-    const lyDate = `${Number(y) - 1}${rest}`
-    setLoadingLastYear(true)
-    try {
-      const lyData = await loadMonth(lyDate)
-      const lyReport = lyData.find(r => r.date === lyDate)
-      if (lyReport) {
-        setStores(prev => prev.map(s => {
-          const lyStore = lyReport.stores.find(ls => ls.name === s.name)
-          const lyNet = lyStore ? (lyStore.paymentAmount || 0) - (lyStore.refundAmount || 0) : 0
-          return { ...s, lastYearSame: lyNet }
-        }))
-        setMsg('去年同期数据已自动填充')
-      }
-    } catch { /* 加载失败不影响使用 */ }
-    setLoadingLastYear(false)
-  }, [])
-
-  useEffect(() => {
-    setMsg('')
-    autoFillLastYear(date)
-  }, [date, autoFillLastYear])
-
-  const fields: (keyof StoreData)[] = ['targetGmv', 'paymentAmount', 'refundAmount', 'lastYearSame', 'visitors', 'buyers', 'salesCount']
+  const fields: (keyof StoreData)[] = ['targetGmv', 'paymentAmount', 'refundAmount', 'visitors', 'buyers', 'salesCount']
   const labels: Record<string, string> = {
     targetGmv: '目标GMV', paymentAmount: '支付金额', refundAmount: '退款金额',
-    lastYearSame: '去年同期', visitors: '访客数', buyers: '买家数', salesCount: '销售件数',
+    visitors: '访客数', buyers: '买家数', salesCount: '销售件数',
   }
 
   const unlock = () => {
@@ -159,11 +133,7 @@ export default function DataEntry() {
                         value={(s as any)[f]}
                         onChange={e => update(i, f, e.target.value)}
                         className="input-cell"
-                        placeholder={f === 'lastYearSame' ? '自动填充' : '0'}
-                        style={f === 'lastYearSame' && (s as any)[f] ? {
-                          background: 'rgba(0,102,204,.1)',
-                          borderColor: 'rgba(0,102,204,.2)',
-                        } : undefined}
+                        placeholder="0"
                       />
                     </td>
                   ))}
