@@ -50,24 +50,24 @@ function fetchWithTimeout(url: string, opts?: RequestInit, ms = 5000): Promise<R
   return fetch(url, { ...opts, signal: ctrl.signal }).finally(() => clearTimeout(timer))
 }
 
-// 公开读取：优先 raw CDN（最新），其次同源（快），最后 API
+// 公开读取：同源优先（快），其次 raw CDN（最新），最后 API
 async function fetchPublic(path: string): Promise<Response> {
   const { repo } = getConfig()
-  // 1. Try raw CDN (always has latest repo data)
-  const rawUrl = `https://raw.githubusercontent.com/${repo}/main/${path}?t=${Date.now()}`
+  // 1. Same-origin (fastest, Pages CDN)
   try {
-    const r = await fetchWithTimeout(rawUrl, undefined, 5000)
+    const r = await fetchWithTimeout('./' + path, undefined, 2000)
     if (r.ok) return r
   } catch {}
-  // 2. Try same-origin (data/ is copied to dist/, fast fallback)
+  // 2. Raw CDN (latest repo data)
+  const rawUrl = `https://raw.githubusercontent.com/${repo}/main/${path}?t=${Date.now()}`
   try {
-    const r = await fetchWithTimeout('./' + path, undefined, 3000)
+    const r = await fetchWithTimeout(rawUrl, undefined, 4000)
     if (r.ok) return r
   } catch {}
   // 3. Fallback to API
   const apiUrl = `https://api.github.com/repos/${repo}/contents/${path}`
   const { token } = getConfig()
-  return fetchWithTimeout(apiUrl, { headers: token ? headers() : { Accept: 'application/vnd.github.v3+json' } }, 8000)
+  return fetchWithTimeout(apiUrl, { headers: token ? headers() : { Accept: 'application/vnd.github.v3+json' } }, 6000)
 }
 
 export function saveConfig(token: string, repo: string) {

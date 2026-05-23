@@ -68,6 +68,8 @@ export default function DataEntry() {
         })),
       })
       setMsg('保存成功！')
+      // 通知日报/历史查询刷新
+      window.dispatchEvent(new Event('data_saved'))
     } catch (e: any) { setMsg('保存失败：' + e.message) }
     setSaving(false)
   }

@@ -28,14 +28,20 @@ export default function DailyReport() {
   const [loading, setLoading] = useState(false)
   const [monthCum, setMonthCum] = useState<{ net: number; lastYear: number; pay: number; refund: number; stores: any[] }>({ net: 0, lastYear: 0, pay: 0, refund: 0, stores: [] })
   const [yearCum, setYearCum] = useState<{ net: number; lastYear: number; pay: number; refund: number; stores: any[] }>({ net: 0, lastYear: 0, pay: 0, refund: 0, stores: [] })
+  const [refreshKey, setRefreshKey] = useState(0)
 
   useEffect(() => {
     const handler = () => {
       const d = localStorage.getItem('view_date')
       if (d) { setViewDate(d); localStorage.removeItem('view_date') }
     }
+    const savedHandler = () => setRefreshKey(k => k + 1)
     window.addEventListener('view_date_change', handler)
-    return () => window.removeEventListener('view_date_change', handler)
+    window.addEventListener('data_saved', savedHandler)
+    return () => {
+      window.removeEventListener('view_date_change', handler)
+      window.removeEventListener('data_saved', savedHandler)
+    }
   }, [])
 
   const load = async () => {
@@ -126,7 +132,7 @@ export default function DailyReport() {
     } catch (e) { setReport(null); setTrend([]) }
     setLoading(false)
   }
-  useEffect(() => { load() }, [viewDate])
+  useEffect(() => { load() }, [viewDate, refreshKey])
 
   const metrics: StoreMetrics[] = useMemo(() => report ? report.stores.map(computeMetrics) : [], [report])
   const totals = useMemo(() => {
