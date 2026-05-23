@@ -31,18 +31,18 @@ export function isConfigured(): boolean {
   return !!repo  // repo is built-in, token is optional for reading
 }
 
-// 公开读取：优先 raw CDN，再同源，最后 API
+// 公开读取：优先同源（data/已打包），再 raw CDN，最后 API
 async function fetchPublic(path: string): Promise<Response> {
   const { repo } = getConfig()
-  // 1. Try raw CDN (always works, public read)
+  // 1. Try same-origin (data/ is copied to dist/)
+  try {
+    const r = await fetch('./' + path)
+    if (r.ok) return r
+  } catch {}
+  // 2. Try raw CDN
   const rawUrl = `https://raw.githubusercontent.com/${repo}/main/${path}`
   try {
     const r = await fetch(rawUrl)
-    if (r.ok) return r
-  } catch {}
-  // 2. Try same-origin
-  try {
-    const r = await fetch('./' + path)
     if (r.ok) return r
   } catch {}
   // 3. Fallback to API
