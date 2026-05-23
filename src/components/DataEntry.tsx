@@ -33,22 +33,6 @@ export default function DataEntry() {
     setStores(prev => { const n = [...prev]; n[i] = { ...n[i], [f]: v }; return n })
   }
 
-  const fillDemo = () => {
-    setStores(STORES.map(s => {
-      const b = Math.round(Math.random() * 30000 + 20000)
-      return {
-        ...emptyStore(s.name, s.platform),
-        targetGmv: String(Math.round(b * 1.2)),
-        paymentAmount: String(Math.round(b * 1.05)),
-        refundAmount: String(Math.round(b * 0.03)),
-        lastYearSame: String(Math.round(b * 0.9)),
-        visitors: String(Math.round(Math.random() * 5000 + 2000)),
-        buyers: String(Math.round(Math.random() * 300 + 80)),
-        salesCount: String(Math.round(Math.random() * 400 + 150)),
-      } as any
-    }))
-  }
-
   const save = async () => {
     setSaving(true); setMsg('')
     try {
@@ -122,7 +106,6 @@ export default function DataEntry() {
           <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
             <span style={{ fontSize: 12, color: 'rgba(255,255,255,.4)' }}>选择日期：</span>
             <input type="date" value={date} onChange={e => setDate(e.target.value)} className="input-dark" />
-            <button className="btn-glass btn-outline" onClick={fillDemo}>填充示例数据</button>
             <button className="btn-glass btn-primary" onClick={save} disabled={saving}>
               {saving ? '保存中...' : '保存数据'}
             </button>

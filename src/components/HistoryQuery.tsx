@@ -16,45 +16,13 @@ export default function HistoryQuery({ onViewDate }: Props) {
   const [results, setResults] = useState<DailyReport[]>([])
   const [loading, setLoading] = useState(false)
 
-  const genDemo = () => {
-    const days: DailyReport[] = []
-    const s = new Date(start); s.setHours(0, 0, 0, 0)
-    const e = new Date(end); e.setHours(0, 0, 0, 0)
-    const cur = new Date(s)
-    while (cur <= e) {
-      const dateStr = cur.toISOString().substring(0, 10)
-      days.push({
-        date: dateStr,
-        stores: STORES.map(st => {
-          const base = Math.round(Math.random() * 30000 + 25000 + STORES.indexOf(st) * 5000 + cur.getDate() * 200)
-          return {
-            name: st.name, platform: st.platform,
-            targetGmv: Math.round(base * 1.2),
-            paymentAmount: Math.round(base * 1.05),
-            refundAmount: Math.round(base * 0.03),
-            lastYearSame: Math.round(base * 0.88),
-            visitors: Math.round(Math.random() * 5000 + 3000),
-            buyers: Math.round(Math.random() * 400 + 100),
-            salesCount: Math.round(Math.random() * 500 + 200),
-          }
-        }),
-      })
-      cur.setDate(cur.getDate() + 1)
-    }
-    setResults(days)
-    setLoading(false)
-  }
-
   const query = async () => {
     setLoading(true)
     try {
       const data = await loadDateRange(start, end)
-      if (data.length > 0) { setResults(data) } else { genDemo() }
-    } catch (e) { genDemo() }
+      setResults(data)
+    } catch (e) { setResults([]) }
   }
-
-  // 首次进入自动用演示数据展示
-  useEffect(() => { genDemo() }, [])
 
   // 汇总所有店铺数据
   const summary = useMemo(() => {
