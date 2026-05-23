@@ -7,6 +7,18 @@ interface GitHubFile {
 
 const DEFAULT_REPO = 'wulonglu/KZC_Report'
 
+// UTF-8 安全 Base64 编解码
+function utf8ToBase64(str: string): string {
+  const bytes = new TextEncoder().encode(str)
+  const bin = Array.from(bytes, b => String.fromCharCode(b)).join('')
+  return btoa(bin)
+}
+function base64ToUtf8(b64: string): string {
+  const bin = atob(b64.replace(/\n/g, ''))
+  const bytes = Uint8Array.from(bin, c => c.charCodeAt(0))
+  return new TextDecoder().decode(bytes)
+}
+
 function getConfig() {
   const token = localStorage.getItem('gh_token') || ''
   const repo = localStorage.getItem('gh_repo') || DEFAULT_REPO
@@ -79,8 +91,7 @@ export async function loadMonth(dateStr: string): Promise<DailyReport[]> {
     // GitHub API response
     const file: GitHubFile = await resp.json()
     if (!file.content) return []
-    const decoded = atob(file.content.replace(/\n/g, ''))
-    data = JSON.parse(decoded)
+    data = JSON.parse(base64ToUtf8(file.content))
   }
   
   return data.reports || []
@@ -91,7 +102,6 @@ export async function saveReport(report: DailyReport): Promise<void> {
   const key = monthKey(report.date)
   const path = `data/${key}.json`
   const url = apiUrl(path)
-  const enc = new TextEncoder()
 
   // 先尝试获取现有文件
   let existing: DailyReport[] = []
@@ -103,8 +113,7 @@ export async function saveReport(report: DailyReport): Promise<void> {
       const file: GitHubFile = await resp.json()
       sha = file.sha
       if (file.content) {
-        const decoded = atob(file.content.replace(/\n/g, ''))
-        const data: MonthlyData = JSON.parse(decoded)
+        const data: MonthlyData = JSON.parse(base64ToUtf8(file.content))
         existing = data.reports || []
       }
     }
@@ -121,7 +130,7 @@ export async function saveReport(report: DailyReport): Promise<void> {
   }
   existing.sort((a, b) => a.date.localeCompare(b.date))
 
-  const content = btoa(String.fromCharCode(...enc.encode(JSON.stringify({ reports: existing }, null, 2))))
+  const content = utf8ToBase64(JSON.stringify({ reports: existing }, null, 2))
 
   const body: Record<string, string> = {
     message: `update ${report.date}`,
@@ -157,8 +166,7 @@ export async function getAllDates(): Promise<string[]> {
       if (!r.ok) continue
       const f: GitHubFile = await r.json()
       if (!f.content) continue
-      const decoded = atob(f.content.replace(/\n/g, ''))
-      const data: MonthlyData = JSON.parse(decoded)
+      const data: MonthlyData = JSON.parse(base64ToUtf8(f.content))
       data.reports?.forEach(r => dates.push(r.date))
     } catch {
       // skip
