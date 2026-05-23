@@ -33,8 +33,22 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Swap HTML entry
-        run: mv index.html index-standalone.html && mv index-vite.html index.html
+      - name: Prepare Vite entry
+        run: |
+          cat > index.html << 'EOF'
+          <!doctype html>
+          <html lang="zh-CN">
+            <head>
+              <meta charset="UTF-8" />
+              <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+              <title>百事可乐日报系统</title>
+            </head>
+            <body>
+              <div id="root"></div>
+              <script type="module" src="/src/main.tsx"></script>
+            </body>
+          </html>
+          EOF
 
       - name: Build
         run: npm run build
