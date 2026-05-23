@@ -136,10 +136,13 @@ body {
   margin-bottom: 6px;
 }
 .metric-card-value {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 800;
   color: #fff;
   letter-spacing: -.4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /* Messages */
