@@ -31,16 +31,21 @@ export function isConfigured(): boolean {
   return !!repo  // repo is built-in, token is optional for reading
 }
 
-// 公开读取：先尝试 raw URL（无需 Token），失败再走 API
+// 公开读取：优先同源（Pages部署），再尝试 raw CDN，最后 API
 async function fetchPublic(path: string): Promise<Response> {
   const { repo } = getConfig()
-  // Try raw URL first (public read, no token needed)
+  // 1. Try same-origin (works for GitHub Pages deployment)
+  try {
+    const r = await fetch('./' + path)
+    if (r.ok) return r
+  } catch {}
+  // 2. Try raw CDN
   const rawUrl = `https://raw.githubusercontent.com/${repo}/main/${path}`
   try {
     const r = await fetch(rawUrl)
     if (r.ok) return r
   } catch {}
-  // Fallback to API
+  // 3. Fallback to API
   const apiUrl = `https://api.github.com/repos/${repo}/contents/${path}`
   const { token } = getConfig()
   return fetch(apiUrl, { headers: token ? headers() : { Accept: 'application/vnd.github.v3+json' } })
