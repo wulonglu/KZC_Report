@@ -3,6 +3,7 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 import { DailyReport, StoreData, computeMetrics, STORES, StoreMetrics } from '../types'
 import { loadDateRange } from '../lib/github'
 import { getToday, getDateRange, formatMoney, formatPercent, formatNumber } from '../lib/utils'
+import { exportCSV, exportScreenshot } from '../lib/export'
 
 const RANGE_PRESETS = ['今日', '昨日', '本周', '上周', '本月', '上月']
 const chartGrid = { stroke: 'rgba(255,255,255,.04)', strokeDasharray: '3 3' }
@@ -113,16 +114,17 @@ export default function HistoryQuery({ onViewDate }: Props) {
             {loading ? '查询中...' : '查询'}
           </button>
           <button className="btn-glass btn-outline" onClick={() => {
-            if (!results.length) return
-            let csv = '\uFEFF日期,店铺,平台,目标GMV,支付金额,退款金额,去年同期,访客数,买家数,销售件数\n'
-            results.forEach(r => {
-              r.stores.forEach((s: StoreData) => {
-                csv += `${r.date},${s.name},${s.platform},${s.targetGmv},${s.paymentAmount},${s.refundAmount},${s.lastYearSame},${s.visitors},${s.buyers},${s.salesCount}\n`
-              })
-            })
-            const b = new Blob([csv], { type: 'application/vnd.ms-excel' })
-            const a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = `历史_${start}_${end}.xls`; a.click()
-          }}>导出Excel</button>
+            if (!results.length || !summary) return
+            const sh = ['店铺','平台','支付金额','退款金额','去退GMV','目标GMV','达成率(%)','去年同期','同比增长(%)','访客数','买家数']
+            const sRows = summary.stores.map((s: any) => [s.name, s.platform, String(s.pay), String(s.refund), String(s.netGmv), String(s.target), s.rate.toFixed(2), String(s.lastYear), s.yoy.toFixed(2), String(s.visitors), String(s.buyers)])
+            const dh = ['日期','店铺','平台','目标GMV','支付金额','退款金额','去退GMV','访客数','买家数','销售件数']
+            const dRows = results.flatMap(r => r.stores.map(s => [r.date, s.name, s.platform, String(s.targetGmv), String(s.paymentAmount), String(s.refundAmount), String(s.paymentAmount - s.refundAmount), String(s.visitors), String(s.buyers), String(s.salesCount)]))
+            exportCSV([
+              { title: `店铺区间汇总 - ${start} ~ ${end}`, headers: sh, rows: sRows },
+              { title: `分天明细 - ${start} ~ ${end}`, headers: dh, rows: dRows },
+            ], `历史_${start}_${end}.xls`)
+            exportScreenshot()
+          }}>导出</button>
         </div>
       </div>
 

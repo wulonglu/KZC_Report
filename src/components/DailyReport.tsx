@@ -5,6 +5,7 @@ import {
 import { computeMetrics, StoreMetrics, StoreData, STORES } from '../types'
 import { loadMonth, loadDateRange } from '../lib/github'
 import { formatMoney, formatPercent, formatNumber, getToday } from '../lib/utils'
+import { exportCSV, exportScreenshot } from '../lib/export'
 
 const chartGrid = { stroke: 'rgba(255,255,255,.04)', strokeDasharray: '3 3' }
 const chartAxis = {
@@ -175,13 +176,19 @@ export default function DailyReport() {
             </button>
             <button className="btn-glass btn-outline" onClick={() => {
               if (!hasData) return
-              let csv = '\uFEFF店铺,平台,目标GMV,支付金额,退款金额,去退GMV,去年同期,同比增长,达成率,访客数,买家数,销售件数,客单价,转化率\n'
-              metrics.forEach(m => {
-                csv += `${m.name},${m.platform},${m.targetGmv},${m.paymentAmount},${m.refundAmount},${m.netGmv},${(m as any)._lastYearNet || m.lastYearSame},${m.yoyGrowth.toFixed(2)}%,${m.achievementRate.toFixed(2)}%,${m.visitors},${m.buyers},${m.salesCount},${m.avgOrderValue.toFixed(2)},${m.conversionRate.toFixed(2)}%\n`
-              })
-              const b = new Blob([csv], { type: 'application/vnd.ms-excel' })
-              const a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = `日报_${viewDate}.xls`; a.click()
-            }}>导出Excel</button>
+              const h = ['店铺','平台','目标GMV','支付金额','退款金额','去退GMV','去年同期','同比增长(%)','达成率(%)','访客数','买家数','销售件数','客单价','转化率(%)']
+              const dailyRows = metrics.map(m => [m.name, m.platform, String(m.targetGmv), String(m.paymentAmount), String(m.refundAmount), String(m.netGmv), String((m as any)._lastYearNet || m.lastYearSame), m.yoyGrowth.toFixed(2), m.achievementRate.toFixed(2), String(m.visitors), String(m.buyers), String(m.salesCount), m.avgOrderValue.toFixed(2), m.conversionRate.toFixed(2)])
+              const mh = ['店铺','月累计支付','月累计退款','月累计去退GMV','去年同期','月累计同比(%)']
+              const mRows = monthCum.stores.map((s: any) => [s.name, String(s.pay), String(s.refund), String(s.net), String(s.lastYear), (s.lastYear>0?((s.net-s.lastYear)/s.lastYear*100):0).toFixed(2)])
+              const yh = ['店铺','年累计支付','年累计退款','年累计去退GMV','去年同期','年累计同比(%)']
+              const yRows = yearCum.stores.map((s: any) => [s.name, String(s.pay), String(s.refund), String(s.net), String(s.lastYear), (s.lastYear>0?((s.net-s.lastYear)/s.lastYear*100):0).toFixed(2)])
+              exportCSV([
+                { title: `店铺明细日报表 - ${viewDate}`, headers: h, rows: dailyRows },
+                { title: `月累计汇总 - ${viewDate.substring(0,7)}`, headers: mh, rows: mRows },
+                { title: `年累计汇总 - ${viewDate.substring(0,4)}`, headers: yh, rows: yRows },
+              ], `日报_${viewDate}.xls`)
+              exportScreenshot()
+            }}>导出</button>
           </div>
         </div>
 
