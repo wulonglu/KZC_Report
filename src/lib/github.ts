@@ -102,6 +102,21 @@ export async function loadMonth(dateStr: string): Promise<DailyReport[]> {
   return data.reports || []
 }
 
+// 通过 API 直读（无缓存，保存后立即可用）
+export async function loadMonthFresh(dateStr: string): Promise<DailyReport[]> {
+  const key = monthKey(dateStr)
+  const { repo, token } = getConfig()
+  const apiUrl = `https://api.github.com/repos/${repo}/contents/data/${key}.json`
+  const resp = await fetchWithTimeout(apiUrl, {
+    headers: token ? headers() : { Accept: 'application/vnd.github.v3+json' },
+  }, 6000)
+  if (resp.status === 404) return []
+  if (!resp.ok) throw new Error(`加载失败: ${resp.status}`)
+  const file: GitHubFile = await resp.json()
+  if (!file.content) return []
+  return JSON.parse(base64ToUtf8(file.content)).reports || []
+}
+
 // 保存某日数据
 export async function saveReport(report: DailyReport): Promise<void> {
   const key = monthKey(report.date)
