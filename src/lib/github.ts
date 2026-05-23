@@ -87,15 +87,13 @@ export async function loadMonth(dateStr: string): Promise<DailyReport[]> {
   if (resp.status === 404) return []
   if (!resp.ok) throw new Error(`加载失败: ${resp.status}`)
 
-  // Handle different response formats (raw vs API)
-  const contentType = resp.headers.get('content-type') || ''
+  // 判断数据来源：raw CDN / 同源 → 直接JSON；API → base64解码
+  const isRaw = resp.url.includes('raw.githubusercontent.com') || resp.url.includes(window.location.origin)
   let data: MonthlyData
   
-  if (contentType.includes('application/json') && !resp.url.includes('api.github.com')) {
-    // Raw URL response - direct JSON
+  if (isRaw) {
     data = await resp.json()
   } else {
-    // GitHub API response
     const file: GitHubFile = await resp.json()
     if (!file.content) return []
     data = JSON.parse(base64ToUtf8(file.content))
