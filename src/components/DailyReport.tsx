@@ -122,7 +122,7 @@ export default function DailyReport() {
               if (!hasData) return
               let csv = '\uFEFF店铺,平台,目标GMV,支付金额,退款金额,去退GMV,去年同期,同比增长,达成率,访客数,买家数,销售件数,客单价,转化率\n'
               metrics.forEach(m => {
-                csv += `${m.name},${m.platform},${m.targetGmv},${m.paymentAmount},${m.refundAmount},${m.netGmv},${m.lastYearSame},${m.yoyGrowth.toFixed(2)}%,${m.achievementRate.toFixed(2)}%,${m.visitors},${m.buyers},${m.salesCount},${m.avgOrderValue.toFixed(2)},${m.conversionRate.toFixed(2)}%\n`
+                csv += `${m.name},${m.platform},${m.targetGmv},${m.paymentAmount},${m.refundAmount},${m.netGmv},${m.lastYearSame},${m.yoyGrowth.toFixed(2)},${m.achievementRate.toFixed(2)},${m.visitors},${m.buyers},${m.salesCount},${m.avgOrderValue.toFixed(2)},${m.conversionRate.toFixed(2)}\n`
               })
               const b = new Blob([csv], { type: 'application/vnd.ms-excel' })
               const a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = `日报_${viewDate}.xls`; a.click()
@@ -148,7 +148,7 @@ export default function DailyReport() {
         <BigCard
           label="月累计去退GMV"
           value={formatMoney(totals?.netGmv || 0)}
-          target="目标 ¥400万"
+          target="目标 4,000,000"
           pct={totals ? Math.min(100, (totals.netGmv / 4000000) * 100) : 0}
           barColor="#0066cc"
           detail={`达成率 ${totals ? (totals.netGmv / 4000000 * 100).toFixed(1) : 0}%`}
@@ -158,7 +158,7 @@ export default function DailyReport() {
         <BigCard
           label="年累计去退GMV"
           value={formatMoney(totals?.netGmv || 0)}
-          target="目标 ¥3000万"
+          target="目标 30,000,000"
           pct={totals ? Math.min(100, (totals.netGmv / 30000000) * 100) : 0}
           barColor="#e32934"
           detail={`达成率 ${totals ? (totals.netGmv / 30000000 * 100).toFixed(1) : 0}%`}
@@ -230,7 +230,7 @@ export default function DailyReport() {
                 contentStyle={{ background: 'rgba(4,24,50,.98)', border: '1px solid rgba(255,255,255,.12)', borderRadius: 8, color: '#e2e8f0', fontSize: 13 }}
                 labelStyle={{ color: 'rgba(255,255,255,.7)', fontWeight: 600, marginBottom: 4 }}
                 labelFormatter={(v, p) => p?.[0]?.payload?.date || v}
-                formatter={(v: number) => ['¥' + formatMoney(v), '去退GMV']}
+                formatter={(v: number) => [formatMoney(v), '去退GMV']}
               />
               <Line type="monotone" dataKey="net" stroke="#3b82f6" strokeWidth={2} dot={false} activeDot={{ r: 4, fill: '#60a5fa' }} />
             </LineChart>
@@ -271,7 +271,7 @@ export default function DailyReport() {
                   <td style={{ textAlign: 'right' }} className="td-blue">{formatMoney(m.netGmv)}</td>
                   <td style={{ textAlign: 'right' }}>{formatMoney(m.lastYearSame)}</td>
                   <td style={{ textAlign: 'right' }} className={m.yoyGrowth >= 0 ? 'td-green' : 'td-red'}>
-                    {m.yoyGrowth >= 0 ? '▲ ' : '▼ '}{formatPercent(m.yoyGrowth)}
+                    {formatPercent(m.yoyGrowth)}
                   </td>
                   <td style={{ textAlign: 'right' }} className={m.achievementRate >= 100 ? 'td-green' : 'td-red'}>
                     {formatPercent(m.achievementRate)}
@@ -345,7 +345,7 @@ export default function DailyReport() {
                   <td style={{ textAlign: 'right' }} className="td-blue">{formatMoney(m.netGmv)}</td>
                   <td style={{ textAlign: 'right' }}>{formatMoney(m.lastYearSame)}</td>
                   <td style={{ textAlign: 'right' }} className={m.yoyGrowth >= 0 ? 'td-green' : 'td-red'}>
-                    {m.yoyGrowth >= 0 ? '▲ ' : '▼ '}{formatPercent(m.yoyGrowth)}
+                    {formatPercent(m.yoyGrowth)}
                   </td>
                 </tr>
               )) : STORES.map((s, i) => (
@@ -368,7 +368,7 @@ export default function DailyReport() {
                   <td style={{ textAlign: 'right' }} className="td-blue">{formatMoney(totals.netGmv)}</td>
                   <td style={{ textAlign: 'right' }}>{formatMoney(totals.lastYear)}</td>
                   <td style={{ textAlign: 'right' }} className={totals.yoy >= 0 ? 'td-green' : 'td-red'}>
-                    {totals.yoy >= 0 ? '▲ ' : '▼ '}{formatPercent(totals.yoy)}
+                    {formatPercent(totals.yoy)}
                   </td>
                 </tr>
               </tfoot>
@@ -405,7 +405,7 @@ export default function DailyReport() {
                   <td style={{ textAlign: 'right' }} className="td-blue">{formatMoney(m.netGmv * 12)}</td>
                   <td style={{ textAlign: 'right' }}>{formatMoney(m.lastYearSame * 12)}</td>
                   <td style={{ textAlign: 'right' }} className={m.yoyGrowth >= 0 ? 'td-green' : 'td-red'}>
-                    {m.yoyGrowth >= 0 ? '▲ ' : '▼ '}{formatPercent(m.yoyGrowth)}
+                    {formatPercent(m.yoyGrowth)}
                   </td>
                 </tr>
               )) : STORES.map((s, i) => (
@@ -428,7 +428,7 @@ export default function DailyReport() {
                   <td style={{ textAlign: 'right' }} className="td-blue">{formatMoney(totals.netGmv * 12)}</td>
                   <td style={{ textAlign: 'right' }}>{formatMoney(totals.lastYear * 12)}</td>
                   <td style={{ textAlign: 'right' }} className={totals.yoy >= 0 ? 'td-green' : 'td-red'}>
-                    {totals.yoy >= 0 ? '▲ ' : '▼ '}{formatPercent(totals.yoy)}
+                    {formatPercent(totals.yoy)}
                   </td>
                 </tr>
               </tfoot>
@@ -465,7 +465,7 @@ function BigCard({ label, value, target, pct, barColor, detail, lastYear, yoy }:
   lastYear?: number; yoy?: number;
 }) {
   const yoyStr = yoy !== undefined && yoy !== 0 ? `${yoy >= 0 ? '+' : ''}${yoy.toFixed(2)}%` : ''
-  const lastYearStr = lastYear && lastYear > 0 ? `vs 去年同期 ¥${formatMoney(lastYear)}` : ''
+  const lastYearStr = lastYear && lastYear > 0 ? `vs 去年同期 ${formatMoney(lastYear)}` : ''
   return (
     <div className="card-glass" style={{ padding: '20px 24px' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 8 }}>

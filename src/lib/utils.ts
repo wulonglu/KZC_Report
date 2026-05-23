@@ -1,16 +1,13 @@
 export function formatMoney(n: number): string {
-  if (n >= 10000) {
-    return (n / 10000).toFixed(2) + '万'
-  }
-  return n.toFixed(2)
+  return Math.round(n).toLocaleString('zh-CN')
 }
 
 export function formatPercent(n: number): string {
-  return n.toFixed(2) + '%'
+  return n.toFixed(2)
 }
 
 export function formatNumber(n: number): string {
-  return n.toLocaleString('zh-CN')
+  return Math.round(n).toLocaleString('zh-CN')
 }
 
 export function getToday(): string {

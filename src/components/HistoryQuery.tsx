@@ -159,7 +159,7 @@ export default function HistoryQuery({ onViewDate }: Props) {
                       <td style={{ textAlign: 'right' }} className={s.rate >= 100 ? 'td-green' : 'td-red'}>{formatPercent(s.rate)}</td>
                       <td style={{ textAlign: 'right' }}>{formatMoney(s.lastYear)}</td>
                       <td style={{ textAlign: 'right' }} className={s.yoy >= 0 ? 'td-green' : 'td-red'}>
-                        {s.yoy >= 0 ? '▲ ' : '▼ '}{formatPercent(s.yoy)}
+                        {formatPercent(s.yoy)}
                       </td>
                       <td style={{ textAlign: 'right' }}>{formatNumber(s.visitors)}</td>
                       <td style={{ textAlign: 'right' }}>{formatNumber(s.buyers)}</td>
@@ -176,7 +176,7 @@ export default function HistoryQuery({ onViewDate }: Props) {
                     <td style={{ textAlign: 'right' }} className={summary.totals.rate >= 100 ? 'td-green' : 'td-red'}>{formatPercent(summary.totals.rate)}</td>
                     <td style={{ textAlign: 'right' }}>{formatMoney(summary.totals.lastYear)}</td>
                     <td style={{ textAlign: 'right' }} className={summary.totals.yoy >= 0 ? 'td-green' : 'td-red'}>
-                      {summary.totals.yoy >= 0 ? '▲ ' : '▼ '}{formatPercent(summary.totals.yoy)}
+                      {formatPercent(summary.totals.yoy)}
                     </td>
                     <td style={{ textAlign: 'right' }}>{formatNumber(summary.totals.visitors)}</td>
                     <td style={{ textAlign: 'right' }}>{formatNumber(summary.totals.buyers)}</td>
@@ -197,7 +197,7 @@ export default function HistoryQuery({ onViewDate }: Props) {
                 <Tooltip
                   contentStyle={{ background: 'rgba(4,24,50,.98)', border: '1px solid rgba(255,255,255,.12)', borderRadius: 8, color: '#e2e8f0', fontSize: 13 }}
                   labelFormatter={(v, p) => p?.[0]?.payload?.fullDate || v}
-                  formatter={(v: number) => ['¥' + formatMoney(v), '去退GMV']}
+                  formatter={(v: number) => [formatMoney(v), '去退GMV']}
                 />
                 <Line type="monotone" dataKey="net" stroke="#3b82f6" strokeWidth={2} dot={{ r: 3, fill: '#60a5fa' }} />
               </LineChart>
