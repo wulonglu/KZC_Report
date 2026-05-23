@@ -1,1 +1,1407 @@
-{"reports": [{"date": "2026-05-01", "stores": [{"name": "百事天猫旗舰店", "platform": "天猫", "targetGmv": 25737.5, "paymentAmount": 23022.88, "refundAmount": 2239.47, "lastYearSame": 0, "visitors": 18354, "buyers": 763, "salesCount": 907}, {"name": "佳得乐天猫旗舰店", "platform": "天猫", "targetGmv": 0.0, "paymentAmount": 0, "refundAmount": 0, "lastYearSame": 0, "visitors": 0, "buyers": 0, "salesCount": 0}, {"name": "C店-康智", "platform": "C店", "targetGmv": 6000.0, "paymentAmount": 1362.4, "refundAmount": 263, "lastYearSame": 0, "visitors": 330, "buyers": 49, "salesCount": 56}, {"name": "C店-特好买", "platform": "C店", "targetGmv": 6000.0, "paymentAmount": 384.6, "refundAmount": 71.9, "lastYearSame": 0, "visitors": 293, "buyers": 18, "salesCount": 19}, {"name": "拼多多-水饮专卖店", "platform": "拼多多", "targetGmv": 18064.52, "paymentAmount": 57462.23, "refundAmount": 10235.06, "lastYearSame": 0, "visitors": 17094, "buyers": 2181, "salesCount": 2791}, {"name": "拼多多-劲爽专卖店", "platform": "拼多多", "targetGmv": 7741.94, "paymentAmount": 24626.67, "refundAmount": 4386.46, "lastYearSame": 0, "visitors": 7326, "buyers": 934, "salesCount": 1196}]}, {"date": "2026-05-02", "stores": [{"name": "百事天猫旗舰店", "platform": "天猫", "targetGmv": 25737.5, "paymentAmount": 22382.66, "refundAmount": 1238.23, "lastYearSame": 0, "visitors": 16345, "buyers": 723, "salesCount": 901}, {"name": "C店-康智", "platform": "C店", "targetGmv": 6000.0, "paymentAmount": 836.5, "refundAmount": 0.0, "lastYearSame": 0, "visitors": 345, "buyers": 33, "salesCount": 35}, {"name": "C店-特好买", "platform": "C店", "targetGmv": 6000.0, "paymentAmount": 208.6, "refundAmount": 10.5, "lastYearSame": 0, "visitors": 238, "buyers": 15, "salesCount": 16}, {"name": "拼多多-水饮专卖店", "platform": "拼多多", "targetGmv": 18064.52, "paymentAmount": 49335.68, "refundAmount": 8095.91, "lastYearSame": 0, "visitors": 15934, "buyers": 1859, "salesCount": 2379}, {"name": "拼多多-劲爽专卖店", "platform": "拼多多", "targetGmv": 7741.94, "paymentAmount": 21143.86, "refundAmount": 3469.67, "lastYearSame": 0, "visitors": 6828, "buyers": 796, "salesCount": 1019}]}, {"date": "2026-05-03", "stores": [{"name": "百事天猫旗舰店", "platform": "天猫", "targetGmv": 25737.5, "paymentAmount": 20239.6, "refundAmount": 1482.19, "lastYearSame": 0, "visitors": 14739, "buyers": 686, "salesCount": 801}, {"name": "C店-康智", "platform": "C店", "targetGmv": 6000.0, "paymentAmount": 418.3, "refundAmount": 0.0, "lastYearSame": 0, "visitors": 488, "buyers": 14, "salesCount": 17}, {"name": "C店-特好买", "platform": "C店", "targetGmv": 6000.0, "paymentAmount": 272.3, "refundAmount": 21.0, "lastYearSame": 0, "visitors": 231, "buyers": 21, "salesCount": 24}, {"name": "拼多多-水饮专卖店", "platform": "拼多多", "targetGmv": 18064.52, "paymentAmount": 50735.16, "refundAmount": 12195.33, "lastYearSame": 0, "visitors": 15624, "buyers": 1936, "salesCount": 2479}, {"name": "拼多多-劲爽专卖店", "platform": "拼多多", "targetGmv": 7741.94, "paymentAmount": 21743.64, "refundAmount": 5226.57, "lastYearSame": 0, "visitors": 6696, "buyers": 830, "salesCount": 1062}]}, {"date": "2026-05-04", "stores": [{"name": "百事天猫旗舰店", "platform": "天猫", "targetGmv": 25737.5, "paymentAmount": 24200.47, "refundAmount": 2183.77, "lastYearSame": 0, "visitors": 42690, "buyers": 743, "salesCount": 903}, {"name": "C店-康智", "platform": "C店", "targetGmv": 6000.0, "paymentAmount": 812.6, "refundAmount": 98.01, "lastYearSame": 0, "visitors": 502, "buyers": 25, "salesCount": 34}, {"name": "C店-特好买", "platform": "C店", "targetGmv": 6000.0, "paymentAmount": 249.2, "refundAmount": 22.75, "lastYearSame": 0, "visitors": 225, "buyers": 13, "salesCount": 16}, {"name": "拼多多-水饮专卖店", "platform": "拼多多", "targetGmv": 18064.52, "paymentAmount": 27272.21, "refundAmount": 14147.14, "lastYearSame": 0, "visitors": 7465, "buyers": 1140, "salesCount": 1459}, {"name": "拼多多-劲爽专卖店", "platform": "拼多多", "targetGmv": 7741.94, "paymentAmount": 11688.09, "refundAmount": 6063.06, "lastYearSame": 0, "visitors": 3199, "buyers": 488, "salesCount": 625}]}, {"date": "2026-05-05", "stores": [{"name": "百事天猫旗舰店", "platform": "天猫", "targetGmv": 25737.5, "paymentAmount": 24014.49, "refundAmount": 1443.14, "lastYearSame": 0, "visitors": 20636, "buyers": 777, "salesCount": 901}, {"name": "C店-康智", "platform": "C店", "targetGmv": 6000.0, "paymentAmount": 717.0, "refundAmount": 58.76, "lastYearSame": 0, "visitors": 307, "buyers": 23, "salesCount": 30}, {"name": "C店-特好买", "platform": "C店", "targetGmv": 6000.0, "paymentAmount": 254.70000000000002, "refundAmount": 31.5, "lastYearSame": 0, "visitors": 255, "buyers": 15, "salesCount": 18}, {"name": "拼多多-水饮专卖店", "platform": "拼多多", "targetGmv": 18064.52, "paymentAmount": 21099.75, "refundAmount": 12435.18, "lastYearSame": 0, "visitors": 6657, "buyers": 879, "salesCount": 1125}, {"name": "拼多多-劲爽专卖店", "platform": "拼多多", "targetGmv": 7741.94, "paymentAmount": 9042.75, "refundAmount": 5329.36, "lastYearSame": 0, "visitors": 2853, "buyers": 376, "salesCount": 482}]}, {"date": "2026-05-06", "stores": [{"name": "百事天猫旗舰店", "platform": "天猫", "targetGmv": 25737.5, "paymentAmount": 63256.55, "refundAmount": 5831.97, "lastYearSame": 0, "visitors": 14022, "buyers": 1289, "salesCount": 2058}, {"name": "C店-康智", "platform": "C店", "targetGmv": 6000.0, "paymentAmount": 987.6, "refundAmount": 0.0, "lastYearSame": 0, "visitors": 225, "buyers": 14, "salesCount": 24}, {"name": "C店-特好买", "platform": "C店", "targetGmv": 6000.0, "paymentAmount": 252.0, "refundAmount": 0.0, "lastYearSame": 0, "visitors": 336, "buyers": 22, "salesCount": 24}, {"name": "拼多多-水饮专卖店", "platform": "拼多多", "targetGmv": 18064.52, "paymentAmount": 19779.97, "refundAmount": 11632.28, "lastYearSame": 0, "visitors": 6418, "buyers": 843, "salesCount": 1079}, {"name": "拼多多-劲爽专卖店", "platform": "拼多多", "targetGmv": 7741.94, "paymentAmount": 8477.13, "refundAmount": 4985.26, "lastYearSame": 0, "visitors": 2750, "buyers": 361, "salesCount": 462}]}, {"date": "2026-05-07", "stores": [{"name": "百事天猫旗舰店", "platform": "天猫", "targetGmv": 25737.5, "paymentAmount": 30208.86, "refundAmount": 3811.73, "lastYearSame": 0, "visitors": 11058, "buyers": 957, "salesCount": 1194}, {"name": "C店-康智", "platform": "C店", "targetGmv": 6000.0, "paymentAmount": 1003.8, "refundAmount": 95.6, "lastYearSame": 0, "visitors": 427, "buyers": 30, "salesCount": 42}, {"name": "C店-特好买", "platform": "C店", "targetGmv": 6000.0, "paymentAmount": 334.6, "refundAmount": 21.0, "lastYearSame": 0, "visitors": 332, "buyers": 24, "salesCount": 28}, {"name": "拼多多-水饮专卖店", "platform": "拼多多", "targetGmv": 18064.52, "paymentAmount": 20604.5, "refundAmount": 12764.92, "lastYearSame": 0, "visitors": 7100, "buyers": 882, "salesCount": 1128}, {"name": "拼多多-劲爽专卖店", "platform": "拼多多", "targetGmv": 7741.94, "paymentAmount": 8830.5, "refundAmount": 5470.68, "lastYearSame": 0, "visitors": 3042, "buyers": 378, "salesCount": 483}]}, {"date": "2026-05-08", "stores": [{"name": "百事天猫旗舰店", "platform": "天猫", "targetGmv": 25737.5, "paymentAmount": 33703.12, "refundAmount": 4809.91, "lastYearSame": 0, "visitors": 13393, "buyers": 880, "salesCount": 1172}, {"name": "C店-康智", "platform": "C店", "targetGmv": 6000.0, "paymentAmount": 693.1, "refundAmount": 23.9, "lastYearSame": 0, "visitors": 272, "buyers": 21, "salesCount": 29}, {"name": "C店-特好买", "platform": "C店", "targetGmv": 6000.0, "paymentAmount": 282.8, "refundAmount": 31.5, "lastYearSame": 0, "visitors": 267, "buyers": 24, "salesCount": 25}, {"name": "拼多多-水饮专卖店", "platform": "拼多多", "targetGmv": 18064.52, "paymentAmount": 18375.41, "refundAmount": 11290.43, "lastYearSame": 0, "visitors": 6426, "buyers": 797, "salesCount": 1020}, {"name": "拼多多-劲爽专卖店", "platform": "拼多多", "targetGmv": 7741.94, "paymentAmount": 7875.18, "refundAmount": 4838.76, "lastYearSame": 0, "visitors": 2754, "buyers": 341, "salesCount": 437}]}, {"date": "2026-05-09", "stores": [{"name": "百事天猫旗舰店", "platform": "天猫", "targetGmv": 25737.5, "paymentAmount": 29587.69, "refundAmount": 3381.13, "lastYearSame": 0, "visitors": 11615, "buyers": 902, "salesCount": 1164}, {"name": "佳得乐天猫旗舰店", "platform": "天猫", "targetGmv": 0.0, "paymentAmount": 0.0, "refundAmount": 0.0, "lastYearSame": 0, "visitors": 1, "buyers": 0, "salesCount": 0}, {"name": "C店-康智", "platform": "C店", "targetGmv": 6000.0, "paymentAmount": 669.2, "refundAmount": 23.9, "lastYearSame": 0, "visitors": 277, "buyers": 25, "salesCount": 28}, {"name": "C店-特好买", "platform": "C店", "targetGmv": 6000.0, "paymentAmount": 306.5, "refundAmount": 6.0, "lastYearSame": 0, "visitors": 298, "buyers": 21, "salesCount": 21}, {"name": "拼多多-水饮专卖店", "platform": "拼多多", "targetGmv": 18064.52, "paymentAmount": 20580.55, "refundAmount": 9233.96, "lastYearSame": 0, "visitors": 7464, "buyers": 842, "salesCount": 1077}, {"name": "拼多多-劲爽专卖店", "platform": "拼多多", "targetGmv": 7741.94, "paymentAmount": 8820.23, "refundAmount": 3957.41, "lastYearSame": 0, "visitors": 3199, "buyers": 360, "salesCount": 461}]}, {"date": "2026-05-10", "stores": [{"name": "百事天猫旗舰店", "platform": "天猫", "targetGmv": 25737.5, "paymentAmount": 31405.91, "refundAmount": 2756.37, "lastYearSame": 0, "visitors": 12072, "buyers": 989, "salesCount": 1246}, {"name": "C店-康智", "platform": "C店", "targetGmv": 6000.0, "paymentAmount": 764.8, "refundAmount": 0.0, "lastYearSame": 0, "visitors": 276, "buyers": 28, "salesCount": 32}, {"name": "C店-特好买", "platform": "C店", "targetGmv": 6000.0, "paymentAmount": 262.5, "refundAmount": 0.0, "lastYearSame": 0, "visitors": 334, "buyers": 22, "salesCount": 25}, {"name": "拼多多-水饮专卖店", "platform": "拼多多", "targetGmv": 18064.52, "paymentAmount": 17457.64, "refundAmount": 6936.62, "lastYearSame": 0, "visitors": 7775, "buyers": 729, "salesCount": 933}, {"name": "拼多多-劲爽专卖店", "platform": "拼多多", "targetGmv": 7741.94, "paymentAmount": 7481.84, "refundAmount": 2972.84, "lastYearSame": 0, "visitors": 3332, "buyers": 312, "salesCount": 400}]}, {"date": "2026-05-11", "stores": [{"name": "百事天猫旗舰店", "platform": "天猫", "targetGmv": 25737.5, "paymentAmount": 32949.07, "refundAmount": 3231.56, "lastYearSame": 0, "visitors": 46926, "buyers": 1056, "salesCount": 1318}, {"name": "佳得乐天猫旗舰店", "platform": "天猫", "targetGmv": 0.0, "paymentAmount": 99.0, "refundAmount": 99.0, "lastYearSame": 0, "visitors": 4, "buyers": 1, "salesCount": 1}, {"name": "C店-康智", "platform": "C店", "targetGmv": 6000.0, "paymentAmount": 836.5, "refundAmount": 71.7, "lastYearSame": 0, "visitors": 283, "buyers": 27, "salesCount": 35}, {"name": "C店-特好买", "platform": "C店", "targetGmv": 6000.0, "paymentAmount": 335.3, "refundAmount": 27.0, "lastYearSame": 0, "visitors": 320, "buyers": 29, "salesCount": 30}, {"name": "拼多多-水饮专卖店", "platform": "拼多多", "targetGmv": 18064.52, "paymentAmount": 14344.25, "refundAmount": 1691.46, "lastYearSame": 0, "visitors": 5609, "buyers": 533, "salesCount": 682}, {"name": "拼多多-劲爽专卖店", "platform": "拼多多", "targetGmv": 7741.94, "paymentAmount": 6147.54, "refundAmount": 724.91, "lastYearSame": 0, "visitors": 2404, "buyers": 228, "salesCount": 292}]}, {"date": "2026-05-12", "stores": [{"name": "百事天猫旗舰店", "platform": "天猫", "targetGmv": 25737.5, "paymentAmount": 35517.19, "refundAmount": 2930.23, "lastYearSame": 0, "visitors": 27199, "buyers": 1154, "salesCount": 1393}, {"name": "佳得乐天猫旗舰店", "platform": "天猫", "targetGmv": 0.0, "paymentAmount": 0.0, "refundAmount": 0.0, "lastYearSame": 0, "visitors": 5, "buyers": 0, "salesCount": 0}, {"name": "C店-康智", "platform": "C店", "targetGmv": 6000.0, "paymentAmount": 1434.0, "refundAmount": 167.3, "lastYearSame": 0, "visitors": 375, "buyers": 46, "salesCount": 60}, {"name": "C店-特好买", "platform": "C店", "targetGmv": 6000.0, "paymentAmount": 375.7, "refundAmount": 45.0, "lastYearSame": 0, "visitors": 345, "buyers": 26, "salesCount": 30}, {"name": "拼多多-水饮专卖店", "platform": "拼多多", "targetGmv": 18064.52, "paymentAmount": 35654.35, "refundAmount": 10575.89, "lastYearSame": 0, "visitors": 8715, "buyers": 1390, "salesCount": 1780}, {"name": "拼多多-劲爽专卖店", "platform": "拼多多", "targetGmv": 7741.94, "paymentAmount": 15280.43, "refundAmount": 4532.53, "lastYearSame": 0, "visitors": 3735, "buyers": 596, "salesCount": 763}]}, {"date": "2026-05-13", "stores": [{"name": "百事天猫旗舰店", "platform": "天猫", "targetGmv": 25737.5, "paymentAmount": 55756.68, "refundAmount": 5661.8, "lastYearSame": 0, "visitors": 20330, "buyers": 1679, "salesCount": 2181}, {"name": "佳得乐天猫旗舰店", "platform": "天猫", "targetGmv": 0.0, "paymentAmount": 0.0, "refundAmount": 0.0, "lastYearSame": 0, "visitors": 10, "buyers": 0, "salesCount": 0}, {"name": "C店-康智", "platform": "C店", "targetGmv": 6000.0, "paymentAmount": 3007.9, "refundAmount": 281.7, "lastYearSame": 0, "visitors": 518, "buyers": 55, "salesCount": 75}, {"name": "C店-特好买", "platform": "C店", "targetGmv": 6000.0, "paymentAmount": 335.3, "refundAmount": 24.0, "lastYearSame": 0, "visitors": 447, "buyers": 30, "salesCount": 30}, {"name": "拼多多-水饮专卖店", "platform": "拼多多", "targetGmv": 18064.52, "paymentAmount": 29559.62, "refundAmount": 12284.1, "lastYearSame": 0, "visitors": 5782, "buyers": 1172, "salesCount": 1500}, {"name": "拼多多-劲爽专卖店", "platform": "拼多多", "targetGmv": 7741.94, "paymentAmount": 12668.41, "refundAmount": 5264.62, "lastYearSame": 0, "visitors": 2478, "buyers": 502, "salesCount": 643}]}, {"date": "2026-05-14", "stores": [{"name": "百事天猫旗舰店", "platform": "天猫", "targetGmv": 25737.5, "paymentAmount": 42834.09, "refundAmount": 3908.31, "lastYearSame": 0, "visitors": 14657, "buyers": 1339, "salesCount": 1664}, {"name": "佳得乐天猫旗舰店", "platform": "天猫", "targetGmv": 0.0, "paymentAmount": 55.9, "refundAmount": 0.0, "lastYearSame": 0, "visitors": 13, "buyers": 1, "salesCount": 1}, {"name": "C店-康智", "platform": "C店", "targetGmv": 6000.0, "paymentAmount": 3383.2, "refundAmount": 258.65, "lastYearSame": 0, "visitors": 503, "buyers": 52, "salesCount": 67}, {"name": "C店-特好买", "platform": "C店", "targetGmv": 6000.0, "paymentAmount": 241.5, "refundAmount": 10.5, "lastYearSame": 0, "visitors": 379, "buyers": 20, "salesCount": 23}, {"name": "拼多多-水饮专卖店", "platform": "拼多多", "targetGmv": 18064.52, "paymentAmount": 23182.14, "refundAmount": 6464.87, "lastYearSame": 0, "visitors": 5187, "buyers": 812, "salesCount": 1040}, {"name": "拼多多-劲爽专卖店", "platform": "拼多多", "targetGmv": 7741.94, "paymentAmount": 9935.2, "refundAmount": 2770.66, "lastYearSame": 0, "visitors": 2223, "buyers": 348, "salesCount": 445}]}, {"date": "2026-05-15", "stores": [{"name": "百事天猫旗舰店", "platform": "天猫", "targetGmv": 25737.5, "paymentAmount": 43870.93, "refundAmount": 3666.47, "lastYearSame": 0, "visitors": 13794, "buyers": 1259, "salesCount": 1672}, {"name": "佳得乐天猫旗舰店", "platform": "天猫", "targetGmv": 0.0, "paymentAmount": 0.0, "refundAmount": 0.0, "lastYearSame": 0, "visitors": 4, "buyers": 0, "salesCount": 0}, {"name": "C店-康智", "platform": "C店", "targetGmv": 6000.0, "paymentAmount": 3296.6000000000004, "refundAmount": 91.0, "lastYearSame": 0, "visitors": 486, "buyers": 40, "salesCount": 47}, {"name": "C店-特好买", "platform": "C店", "targetGmv": 6000.0, "paymentAmount": 383.59999999999997, "refundAmount": 21.0, "lastYearSame": 0, "visitors": 375, "buyers": 23, "salesCount": 23}, {"name": "拼多多-水饮专卖店", "platform": "拼多多", "targetGmv": 18064.52, "paymentAmount": 15008.58, "refundAmount": 1275.06, "lastYearSame": 0, "visitors": 5700, "buyers": 459, "salesCount": 587}, {"name": "拼多多-劲爽专卖店", "platform": "拼多多", "targetGmv": 7741.94, "paymentAmount": 6432.25, "refundAmount": 546.46, "lastYearSame": 0, "visitors": 2443, "buyers": 196, "salesCount": 251}]}, {"date": "2026-05-16", "stores": [{"name": "百事天猫旗舰店", "platform": "天猫", "targetGmv": 104672.5, "paymentAmount": 49641.84, "refundAmount": 4889.29, "lastYearSame": 0, "visitors": 19963, "buyers": 1431, "salesCount": 1830}, {"name": "佳得乐天猫旗舰店", "platform": "天猫", "targetGmv": 0.0, "paymentAmount": 0.0, "refundAmount": 0.0, "lastYearSame": 0, "visitors": 13, "buyers": 0, "salesCount": 0}, {"name": "C店-康智", "platform": "C店", "targetGmv": 30000.0, "paymentAmount": 4327.5, "refundAmount": 200.28000000000003, "lastYearSame": 0, "visitors": 386, "buyers": 45, "salesCount": 53}, {"name": "C店-特好买", "platform": "C店", "targetGmv": 30000.0, "paymentAmount": 262.5, "refundAmount": 10.5, "lastYearSame": 0, "visitors": 393, "buyers": 24, "salesCount": 25}, {"name": "拼多多-水饮专卖店", "platform": "拼多多", "targetGmv": 18064.52, "paymentAmount": 14860.01, "refundAmount": 931.69, "lastYearSame": 0, "visitors": 5561, "buyers": 462, "salesCount": 592}, {"name": "拼多多-劲爽专卖店", "platform": "拼多多", "targetGmv": 7741.94, "paymentAmount": 6368.57, "refundAmount": 399.29, "lastYearSame": 0, "visitors": 2383, "buyers": 198, "salesCount": 253}]}, {"date": "2026-05-17", "stores": [{"name": "百事天猫旗舰店", "platform": "天猫", "targetGmv": 101535.0, "paymentAmount": 45209.91, "refundAmount": 4554.83, "lastYearSame": 0, "visitors": 14963, "buyers": 1403, "salesCount": 1756}, {"name": "佳得乐天猫旗舰店", "platform": "天猫", "targetGmv": 0.0, "paymentAmount": 0.0, "refundAmount": 0.0, "lastYearSame": 0, "visitors": 17, "buyers": 0, "salesCount": 0}, {"name": "C店-康智", "platform": "C店", "targetGmv": 30000.0, "paymentAmount": 5062.4, "refundAmount": 134.93, "lastYearSame": 0, "visitors": 380, "buyers": 41, "salesCount": 51}, {"name": "C店-特好买", "platform": "C店", "targetGmv": 30000.0, "paymentAmount": 303.8, "refundAmount": 21.0, "lastYearSame": 0, "visitors": 377, "buyers": 22, "salesCount": 27}, {"name": "拼多多-水饮专卖店", "platform": "拼多多", "targetGmv": 18064.52, "paymentAmount": 14562.16, "refundAmount": 893.14, "lastYearSame": 0, "visitors": 4385, "buyers": 447, "salesCount": 572}, {"name": "拼多多-劲爽专卖店", "platform": "拼多多", "targetGmv": 7741.94, "paymentAmount": 6240.93, "refundAmount": 382.78, "lastYearSame": 0, "visitors": 1879, "buyers": 191, "salesCount": 245}]}, {"date": "2026-05-18", "stores": [{"name": "百事天猫旗舰店", "platform": "天猫", "targetGmv": 63930.0, "paymentAmount": 44288.75, "refundAmount": 4523.08, "lastYearSame": 0, "visitors": 18137, "buyers": 1325, "salesCount": 1689}, {"name": "佳得乐天猫旗舰店", "platform": "天猫", "targetGmv": 0.0, "paymentAmount": 0.0, "refundAmount": 0.0, "lastYearSame": 0, "visitors": 6, "buyers": 0, "salesCount": 0}, {"name": "C店-康智", "platform": "C店", "targetGmv": 18000.0, "paymentAmount": 2868.6, "refundAmount": 134.88, "lastYearSame": 0, "visitors": 27, "buyers": 0, "salesCount": 0}, {"name": "C店-特好买", "platform": "C店", "targetGmv": 18000.0, "paymentAmount": 1107.2, "refundAmount": 150.1, "lastYearSame": 0, "visitors": 674, "buyers": 48, "salesCount": 58}, {"name": "拼多多-水饮专卖店", "platform": "拼多多", "targetGmv": 18064.52, "paymentAmount": 41215.43, "refundAmount": 14433.17, "lastYearSame": 0, "visitors": 8999, "buyers": 1519, "salesCount": 1945}, {"name": "拼多多-劲爽专卖店", "platform": "拼多多", "targetGmv": 7741.94, "paymentAmount": 17663.76, "refundAmount": 6185.65, "lastYearSame": 0, "visitors": 3856, "buyers": 651, "salesCount": 833}]}, {"date": "2026-05-19", "stores": [{"name": "百事天猫旗舰店", "platform": "天猫", "targetGmv": 63930.0, "paymentAmount": 43271.19, "refundAmount": 6813.84, "lastYearSame": 0, "visitors": 16990, "buyers": 1242, "salesCount": 1605}, {"name": "佳得乐天猫旗舰店", "platform": "天猫", "targetGmv": 0.0, "paymentAmount": 5.7, "refundAmount": 0.0, "lastYearSame": 0, "visitors": 22, "buyers": 3, "salesCount": 3}, {"name": "C店-康智", "platform": "C店", "targetGmv": 18000.0, "paymentAmount": 4746.5, "refundAmount": 234.8, "lastYearSame": 0, "visitors": 316, "buyers": 27, "salesCount": 33}, {"name": "C店-特好买", "platform": "C店", "targetGmv": 18000.0, "paymentAmount": 461.59999999999997, "refundAmount": 2.0, "lastYearSame": 0, "visitors": 422, "buyers": 35, "salesCount": 38}, {"name": "拼多多-水饮专卖店", "platform": "拼多多", "targetGmv": 18064.52, "paymentAmount": 66016.52, "refundAmount": 30159.6, "lastYearSame": 0, "visitors": 16793, "buyers": 2580, "salesCount": 3303}, {"name": "拼多多-劲爽专卖店", "platform": "拼多多", "targetGmv": 7741.94, "paymentAmount": 28292.8, "refundAmount": 12925.55, "lastYearSame": 0, "visitors": 7197, "buyers": 1106, "salesCount": 1415}]}, {"date": "2026-05-20", "stores": [{"name": "百事天猫旗舰店", "platform": "天猫", "targetGmv": 25737.5, "paymentAmount": 22382.66, "refundAmount": 1238.23, "lastYearSame": 0, "visitors": 16345, "buyers": 723, "salesCount": 901}, {"name": "佳得乐天猫旗舰店", "platform": "天猫", "targetGmv": 0, "paymentAmount": 0, "refundAmount": 0, "lastYearSame": 0, "visitors": 3, "buyers": 0, "salesCount": 0}, {"name": "C店-康智", "platform": "C店", "targetGmv": 6000, "paymentAmount": 836.5, "refundAmount": 0, "lastYearSame": 0, "visitors": 345, "buyers": 33, "salesCount": 35}, {"name": "C店-特好买", "platform": "C店", "targetGmv": 6000, "paymentAmount": 208.6, "refundAmount": 10.5, "lastYearSame": 0, "visitors": 238, "buyers": 15, "salesCount": 16}, {"name": "拼多多-水饮专卖店", "platform": "拼多多", "targetGmv": 18064.52, "paymentAmount": 49335.68, "refundAmount": 8095.91, "lastYearSame": 0, "visitors": 15934, "buyers": 1859, "salesCount": 2379}, {"name": "拼多多-劲爽专卖店", "platform": "拼多多", "targetGmv": 7741.94, "paymentAmount": 21143.86, "refundAmount": 3469.67, "lastYearSame": 0, "visitors": 6828, "buyers": 796, "salesCount": 1019}]}, {"date": "2026-05-21", "stores": [{"name": "百事天猫旗舰店", "platform": "天猫", "targetGmv": 100391, "paymentAmount": 56801.84, "refundAmount": 6143.75, "lastYearSame": 0, "visitors": 16899, "buyers": 1465, "salesCount": 1636}, {"name": "佳得乐天猫旗舰店", "platform": "天猫", "targetGmv": 1000, "paymentAmount": 0, "refundAmount": 0, "lastYearSame": 0, "visitors": 9, "buyers": 0, "salesCount": 0}, {"name": "C店-康智", "platform": "C店", "targetGmv": 30000, "paymentAmount": 392.3, "refundAmount": 65.4, "lastYearSame": 0, "visitors": 165, "buyers": 12, "salesCount": 17}, {"name": "C店-特好买", "platform": "C店", "targetGmv": 30000, "paymentAmount": 511.2, "refundAmount": 21, "lastYearSame": 0, "visitors": 525, "buyers": 31, "salesCount": 34}, {"name": "拼多多-水饮专卖店", "platform": "拼多多", "targetGmv": 18065, "paymentAmount": 65346.94, "refundAmount": 39610.24, "lastYearSame": 0, "visitors": 18853, "buyers": 2781, "salesCount": 2842}, {"name": "拼多多-劲爽专卖店", "platform": "拼多多", "targetGmv": 7742, "paymentAmount": 15371.46, "refundAmount": 2155.6, "lastYearSame": 0, "visitors": 4761, "buyers": 438, "salesCount": 449}]}]}
+{
+  "reports": [
+    {
+      "date": "2026-05-01",
+      "stores": [
+        {
+          "name": "ç¾äºå¤©ç«æè°åº",
+          "platform": "å¤©ç«",
+          "targetGmv": 25737.5,
+          "paymentAmount": 23022.88,
+          "refundAmount": 2239.47,
+          "lastYearSame": 0,
+          "visitors": 18354,
+          "buyers": 763,
+          "salesCount": 907
+        },
+        {
+          "name": "ä½³å¾ä¹å¤©ç«æè°åº",
+          "platform": "å¤©ç«",
+          "targetGmv": 0,
+          "paymentAmount": 0,
+          "refundAmount": 0,
+          "lastYearSame": 0,
+          "visitors": 0,
+          "buyers": 0,
+          "salesCount": 0
+        },
+        {
+          "name": "Cåº-åº·æº",
+          "platform": "Cåº",
+          "targetGmv": 6000,
+          "paymentAmount": 1362.4,
+          "refundAmount": 263,
+          "lastYearSame": 0,
+          "visitors": 330,
+          "buyers": 49,
+          "salesCount": 56
+        },
+        {
+          "name": "Cåº-ç¹å¥½ä¹°",
+          "platform": "Cåº",
+          "targetGmv": 6000,
+          "paymentAmount": 384.6,
+          "refundAmount": 71.9,
+          "lastYearSame": 0,
+          "visitors": 293,
+          "buyers": 18,
+          "salesCount": 19
+        },
+        {
+          "name": "æ¼å¤å¤-æ°´é¥®ä¸ååº",
+          "platform": "æ¼å¤å¤",
+          "targetGmv": 18064.52,
+          "paymentAmount": 57462.23,
+          "refundAmount": 10235.06,
+          "lastYearSame": 0,
+          "visitors": 17094,
+          "buyers": 2181,
+          "salesCount": 2791
+        },
+        {
+          "name": "æ¼å¤å¤-å²ç½ä¸ååº",
+          "platform": "æ¼å¤å¤",
+          "targetGmv": 7741.94,
+          "paymentAmount": 24626.67,
+          "refundAmount": 4386.46,
+          "lastYearSame": 0,
+          "visitors": 7326,
+          "buyers": 934,
+          "salesCount": 1196
+        }
+      ]
+    },
+    {
+      "date": "2026-05-02",
+      "stores": [
+        {
+          "name": "ç¾äºå¤©ç«æè°åº",
+          "platform": "å¤©ç«",
+          "targetGmv": 25737.5,
+          "paymentAmount": 22382.66,
+          "refundAmount": 1238.23,
+          "lastYearSame": 0,
+          "visitors": 16345,
+          "buyers": 723,
+          "salesCount": 901
+        },
+        {
+          "name": "Cåº-åº·æº",
+          "platform": "Cåº",
+          "targetGmv": 6000,
+          "paymentAmount": 836.5,
+          "refundAmount": 0,
+          "lastYearSame": 0,
+          "visitors": 345,
+          "buyers": 33,
+          "salesCount": 35
+        },
+        {
+          "name": "Cåº-ç¹å¥½ä¹°",
+          "platform": "Cåº",
+          "targetGmv": 6000,
+          "paymentAmount": 208.6,
+          "refundAmount": 10.5,
+          "lastYearSame": 0,
+          "visitors": 238,
+          "buyers": 15,
+          "salesCount": 16
+        },
+        {
+          "name": "æ¼å¤å¤-æ°´é¥®ä¸ååº",
+          "platform": "æ¼å¤å¤",
+          "targetGmv": 18064.52,
+          "paymentAmount": 49335.68,
+          "refundAmount": 8095.91,
+          "lastYearSame": 0,
+          "visitors": 15934,
+          "buyers": 1859,
+          "salesCount": 2379
+        },
+        {
+          "name": "æ¼å¤å¤-å²ç½ä¸ååº",
+          "platform": "æ¼å¤å¤",
+          "targetGmv": 7741.94,
+          "paymentAmount": 21143.86,
+          "refundAmount": 3469.67,
+          "lastYearSame": 0,
+          "visitors": 6828,
+          "buyers": 796,
+          "salesCount": 1019
+        }
+      ]
+    },
+    {
+      "date": "2026-05-03",
+      "stores": [
+        {
+          "name": "ç¾äºå¤©ç«æè°åº",
+          "platform": "å¤©ç«",
+          "targetGmv": 25737.5,
+          "paymentAmount": 20239.6,
+          "refundAmount": 1482.19,
+          "lastYearSame": 0,
+          "visitors": 14739,
+          "buyers": 686,
+          "salesCount": 801
+        },
+        {
+          "name": "Cåº-åº·æº",
+          "platform": "Cåº",
+          "targetGmv": 6000,
+          "paymentAmount": 418.3,
+          "refundAmount": 0,
+          "lastYearSame": 0,
+          "visitors": 488,
+          "buyers": 14,
+          "salesCount": 17
+        },
+        {
+          "name": "Cåº-ç¹å¥½ä¹°",
+          "platform": "Cåº",
+          "targetGmv": 6000,
+          "paymentAmount": 272.3,
+          "refundAmount": 21,
+          "lastYearSame": 0,
+          "visitors": 231,
+          "buyers": 21,
+          "salesCount": 24
+        },
+        {
+          "name": "æ¼å¤å¤-æ°´é¥®ä¸ååº",
+          "platform": "æ¼å¤å¤",
+          "targetGmv": 18064.52,
+          "paymentAmount": 50735.16,
+          "refundAmount": 12195.33,
+          "lastYearSame": 0,
+          "visitors": 15624,
+          "buyers": 1936,
+          "salesCount": 2479
+        },
+        {
+          "name": "æ¼å¤å¤-å²ç½ä¸ååº",
+          "platform": "æ¼å¤å¤",
+          "targetGmv": 7741.94,
+          "paymentAmount": 21743.64,
+          "refundAmount": 5226.57,
+          "lastYearSame": 0,
+          "visitors": 6696,
+          "buyers": 830,
+          "salesCount": 1062
+        }
+      ]
+    },
+    {
+      "date": "2026-05-04",
+      "stores": [
+        {
+          "name": "ç¾äºå¤©ç«æè°åº",
+          "platform": "å¤©ç«",
+          "targetGmv": 25737.5,
+          "paymentAmount": 24200.47,
+          "refundAmount": 2183.77,
+          "lastYearSame": 0,
+          "visitors": 42690,
+          "buyers": 743,
+          "salesCount": 903
+        },
+        {
+          "name": "Cåº-åº·æº",
+          "platform": "Cåº",
+          "targetGmv": 6000,
+          "paymentAmount": 812.6,
+          "refundAmount": 98.01,
+          "lastYearSame": 0,
+          "visitors": 502,
+          "buyers": 25,
+          "salesCount": 34
+        },
+        {
+          "name": "Cåº-ç¹å¥½ä¹°",
+          "platform": "Cåº",
+          "targetGmv": 6000,
+          "paymentAmount": 249.2,
+          "refundAmount": 22.75,
+          "lastYearSame": 0,
+          "visitors": 225,
+          "buyers": 13,
+          "salesCount": 16
+        },
+        {
+          "name": "æ¼å¤å¤-æ°´é¥®ä¸ååº",
+          "platform": "æ¼å¤å¤",
+          "targetGmv": 18064.52,
+          "paymentAmount": 27272.21,
+          "refundAmount": 14147.14,
+          "lastYearSame": 0,
+          "visitors": 7465,
+          "buyers": 1140,
+          "salesCount": 1459
+        },
+        {
+          "name": "æ¼å¤å¤-å²ç½ä¸ååº",
+          "platform": "æ¼å¤å¤",
+          "targetGmv": 7741.94,
+          "paymentAmount": 11688.09,
+          "refundAmount": 6063.06,
+          "lastYearSame": 0,
+          "visitors": 3199,
+          "buyers": 488,
+          "salesCount": 625
+        }
+      ]
+    },
+    {
+      "date": "2026-05-05",
+      "stores": [
+        {
+          "name": "ç¾äºå¤©ç«æè°åº",
+          "platform": "å¤©ç«",
+          "targetGmv": 25737.5,
+          "paymentAmount": 24014.49,
+          "refundAmount": 1443.14,
+          "lastYearSame": 0,
+          "visitors": 20636,
+          "buyers": 777,
+          "salesCount": 901
+        },
+        {
+          "name": "Cåº-åº·æº",
+          "platform": "Cåº",
+          "targetGmv": 6000,
+          "paymentAmount": 717,
+          "refundAmount": 58.76,
+          "lastYearSame": 0,
+          "visitors": 307,
+          "buyers": 23,
+          "salesCount": 30
+        },
+        {
+          "name": "Cåº-ç¹å¥½ä¹°",
+          "platform": "Cåº",
+          "targetGmv": 6000,
+          "paymentAmount": 254.70000000000002,
+          "refundAmount": 31.5,
+          "lastYearSame": 0,
+          "visitors": 255,
+          "buyers": 15,
+          "salesCount": 18
+        },
+        {
+          "name": "æ¼å¤å¤-æ°´é¥®ä¸ååº",
+          "platform": "æ¼å¤å¤",
+          "targetGmv": 18064.52,
+          "paymentAmount": 21099.75,
+          "refundAmount": 12435.18,
+          "lastYearSame": 0,
+          "visitors": 6657,
+          "buyers": 879,
+          "salesCount": 1125
+        },
+        {
+          "name": "æ¼å¤å¤-å²ç½ä¸ååº",
+          "platform": "æ¼å¤å¤",
+          "targetGmv": 7741.94,
+          "paymentAmount": 9042.75,
+          "refundAmount": 5329.36,
+          "lastYearSame": 0,
+          "visitors": 2853,
+          "buyers": 376,
+          "salesCount": 482
+        }
+      ]
+    },
+    {
+      "date": "2026-05-06",
+      "stores": [
+        {
+          "name": "ç¾äºå¤©ç«æè°åº",
+          "platform": "å¤©ç«",
+          "targetGmv": 25737.5,
+          "paymentAmount": 63256.55,
+          "refundAmount": 5831.97,
+          "lastYearSame": 0,
+          "visitors": 14022,
+          "buyers": 1289,
+          "salesCount": 2058
+        },
+        {
+          "name": "Cåº-åº·æº",
+          "platform": "Cåº",
+          "targetGmv": 6000,
+          "paymentAmount": 987.6,
+          "refundAmount": 0,
+          "lastYearSame": 0,
+          "visitors": 225,
+          "buyers": 14,
+          "salesCount": 24
+        },
+        {
+          "name": "Cåº-ç¹å¥½ä¹°",
+          "platform": "Cåº",
+          "targetGmv": 6000,
+          "paymentAmount": 252,
+          "refundAmount": 0,
+          "lastYearSame": 0,
+          "visitors": 336,
+          "buyers": 22,
+          "salesCount": 24
+        },
+        {
+          "name": "æ¼å¤å¤-æ°´é¥®ä¸ååº",
+          "platform": "æ¼å¤å¤",
+          "targetGmv": 18064.52,
+          "paymentAmount": 19779.97,
+          "refundAmount": 11632.28,
+          "lastYearSame": 0,
+          "visitors": 6418,
+          "buyers": 843,
+          "salesCount": 1079
+        },
+        {
+          "name": "æ¼å¤å¤-å²ç½ä¸ååº",
+          "platform": "æ¼å¤å¤",
+          "targetGmv": 7741.94,
+          "paymentAmount": 8477.13,
+          "refundAmount": 4985.26,
+          "lastYearSame": 0,
+          "visitors": 2750,
+          "buyers": 361,
+          "salesCount": 462
+        }
+      ]
+    },
+    {
+      "date": "2026-05-07",
+      "stores": [
+        {
+          "name": "ç¾äºå¤©ç«æè°åº",
+          "platform": "å¤©ç«",
+          "targetGmv": 25737.5,
+          "paymentAmount": 30208.86,
+          "refundAmount": 3811.73,
+          "lastYearSame": 0,
+          "visitors": 11058,
+          "buyers": 957,
+          "salesCount": 1194
+        },
+        {
+          "name": "Cåº-åº·æº",
+          "platform": "Cåº",
+          "targetGmv": 6000,
+          "paymentAmount": 1003.8,
+          "refundAmount": 95.6,
+          "lastYearSame": 0,
+          "visitors": 427,
+          "buyers": 30,
+          "salesCount": 42
+        },
+        {
+          "name": "Cåº-ç¹å¥½ä¹°",
+          "platform": "Cåº",
+          "targetGmv": 6000,
+          "paymentAmount": 334.6,
+          "refundAmount": 21,
+          "lastYearSame": 0,
+          "visitors": 332,
+          "buyers": 24,
+          "salesCount": 28
+        },
+        {
+          "name": "æ¼å¤å¤-æ°´é¥®ä¸ååº",
+          "platform": "æ¼å¤å¤",
+          "targetGmv": 18064.52,
+          "paymentAmount": 20604.5,
+          "refundAmount": 12764.92,
+          "lastYearSame": 0,
+          "visitors": 7100,
+          "buyers": 882,
+          "salesCount": 1128
+        },
+        {
+          "name": "æ¼å¤å¤-å²ç½ä¸ååº",
+          "platform": "æ¼å¤å¤",
+          "targetGmv": 7741.94,
+          "paymentAmount": 8830.5,
+          "refundAmount": 5470.68,
+          "lastYearSame": 0,
+          "visitors": 3042,
+          "buyers": 378,
+          "salesCount": 483
+        }
+      ]
+    },
+    {
+      "date": "2026-05-08",
+      "stores": [
+        {
+          "name": "ç¾äºå¤©ç«æè°åº",
+          "platform": "å¤©ç«",
+          "targetGmv": 25737.5,
+          "paymentAmount": 33703.12,
+          "refundAmount": 4809.91,
+          "lastYearSame": 0,
+          "visitors": 13393,
+          "buyers": 880,
+          "salesCount": 1172
+        },
+        {
+          "name": "Cåº-åº·æº",
+          "platform": "Cåº",
+          "targetGmv": 6000,
+          "paymentAmount": 693.1,
+          "refundAmount": 23.9,
+          "lastYearSame": 0,
+          "visitors": 272,
+          "buyers": 21,
+          "salesCount": 29
+        },
+        {
+          "name": "Cåº-ç¹å¥½ä¹°",
+          "platform": "Cåº",
+          "targetGmv": 6000,
+          "paymentAmount": 282.8,
+          "refundAmount": 31.5,
+          "lastYearSame": 0,
+          "visitors": 267,
+          "buyers": 24,
+          "salesCount": 25
+        },
+        {
+          "name": "æ¼å¤å¤-æ°´é¥®ä¸ååº",
+          "platform": "æ¼å¤å¤",
+          "targetGmv": 18064.52,
+          "paymentAmount": 18375.41,
+          "refundAmount": 11290.43,
+          "lastYearSame": 0,
+          "visitors": 6426,
+          "buyers": 797,
+          "salesCount": 1020
+        },
+        {
+          "name": "æ¼å¤å¤-å²ç½ä¸ååº",
+          "platform": "æ¼å¤å¤",
+          "targetGmv": 7741.94,
+          "paymentAmount": 7875.18,
+          "refundAmount": 4838.76,
+          "lastYearSame": 0,
+          "visitors": 2754,
+          "buyers": 341,
+          "salesCount": 437
+        }
+      ]
+    },
+    {
+      "date": "2026-05-09",
+      "stores": [
+        {
+          "name": "ç¾äºå¤©ç«æè°åº",
+          "platform": "å¤©ç«",
+          "targetGmv": 25737.5,
+          "paymentAmount": 29587.69,
+          "refundAmount": 3381.13,
+          "lastYearSame": 0,
+          "visitors": 11615,
+          "buyers": 902,
+          "salesCount": 1164
+        },
+        {
+          "name": "ä½³å¾ä¹å¤©ç«æè°åº",
+          "platform": "å¤©ç«",
+          "targetGmv": 0,
+          "paymentAmount": 0,
+          "refundAmount": 0,
+          "lastYearSame": 0,
+          "visitors": 1,
+          "buyers": 0,
+          "salesCount": 0
+        },
+        {
+          "name": "Cåº-åº·æº",
+          "platform": "Cåº",
+          "targetGmv": 6000,
+          "paymentAmount": 669.2,
+          "refundAmount": 23.9,
+          "lastYearSame": 0,
+          "visitors": 277,
+          "buyers": 25,
+          "salesCount": 28
+        },
+        {
+          "name": "Cåº-ç¹å¥½ä¹°",
+          "platform": "Cåº",
+          "targetGmv": 6000,
+          "paymentAmount": 306.5,
+          "refundAmount": 6,
+          "lastYearSame": 0,
+          "visitors": 298,
+          "buyers": 21,
+          "salesCount": 21
+        },
+        {
+          "name": "æ¼å¤å¤-æ°´é¥®ä¸ååº",
+          "platform": "æ¼å¤å¤",
+          "targetGmv": 18064.52,
+          "paymentAmount": 20580.55,
+          "refundAmount": 9233.96,
+          "lastYearSame": 0,
+          "visitors": 7464,
+          "buyers": 842,
+          "salesCount": 1077
+        },
+        {
+          "name": "æ¼å¤å¤-å²ç½ä¸ååº",
+          "platform": "æ¼å¤å¤",
+          "targetGmv": 7741.94,
+          "paymentAmount": 8820.23,
+          "refundAmount": 3957.41,
+          "lastYearSame": 0,
+          "visitors": 3199,
+          "buyers": 360,
+          "salesCount": 461
+        }
+      ]
+    },
+    {
+      "date": "2026-05-10",
+      "stores": [
+        {
+          "name": "ç¾äºå¤©ç«æè°åº",
+          "platform": "å¤©ç«",
+          "targetGmv": 25737.5,
+          "paymentAmount": 31405.91,
+          "refundAmount": 2756.37,
+          "lastYearSame": 0,
+          "visitors": 12072,
+          "buyers": 989,
+          "salesCount": 1246
+        },
+        {
+          "name": "Cåº-åº·æº",
+          "platform": "Cåº",
+          "targetGmv": 6000,
+          "paymentAmount": 764.8,
+          "refundAmount": 0,
+          "lastYearSame": 0,
+          "visitors": 276,
+          "buyers": 28,
+          "salesCount": 32
+        },
+        {
+          "name": "Cåº-ç¹å¥½ä¹°",
+          "platform": "Cåº",
+          "targetGmv": 6000,
+          "paymentAmount": 262.5,
+          "refundAmount": 0,
+          "lastYearSame": 0,
+          "visitors": 334,
+          "buyers": 22,
+          "salesCount": 25
+        },
+        {
+          "name": "æ¼å¤å¤-æ°´é¥®ä¸ååº",
+          "platform": "æ¼å¤å¤",
+          "targetGmv": 18064.52,
+          "paymentAmount": 17457.64,
+          "refundAmount": 6936.62,
+          "lastYearSame": 0,
+          "visitors": 7775,
+          "buyers": 729,
+          "salesCount": 933
+        },
+        {
+          "name": "æ¼å¤å¤-å²ç½ä¸ååº",
+          "platform": "æ¼å¤å¤",
+          "targetGmv": 7741.94,
+          "paymentAmount": 7481.84,
+          "refundAmount": 2972.84,
+          "lastYearSame": 0,
+          "visitors": 3332,
+          "buyers": 312,
+          "salesCount": 400
+        }
+      ]
+    },
+    {
+      "date": "2026-05-11",
+      "stores": [
+        {
+          "name": "ç¾äºå¤©ç«æè°åº",
+          "platform": "å¤©ç«",
+          "targetGmv": 25737.5,
+          "paymentAmount": 32949.07,
+          "refundAmount": 3231.56,
+          "lastYearSame": 0,
+          "visitors": 46926,
+          "buyers": 1056,
+          "salesCount": 1318
+        },
+        {
+          "name": "ä½³å¾ä¹å¤©ç«æè°åº",
+          "platform": "å¤©ç«",
+          "targetGmv": 0,
+          "paymentAmount": 99,
+          "refundAmount": 99,
+          "lastYearSame": 0,
+          "visitors": 4,
+          "buyers": 1,
+          "salesCount": 1
+        },
+        {
+          "name": "Cåº-åº·æº",
+          "platform": "Cåº",
+          "targetGmv": 6000,
+          "paymentAmount": 836.5,
+          "refundAmount": 71.7,
+          "lastYearSame": 0,
+          "visitors": 283,
+          "buyers": 27,
+          "salesCount": 35
+        },
+        {
+          "name": "Cåº-ç¹å¥½ä¹°",
+          "platform": "Cåº",
+          "targetGmv": 6000,
+          "paymentAmount": 335.3,
+          "refundAmount": 27,
+          "lastYearSame": 0,
+          "visitors": 320,
+          "buyers": 29,
+          "salesCount": 30
+        },
+        {
+          "name": "æ¼å¤å¤-æ°´é¥®ä¸ååº",
+          "platform": "æ¼å¤å¤",
+          "targetGmv": 18064.52,
+          "paymentAmount": 14344.25,
+          "refundAmount": 1691.46,
+          "lastYearSame": 0,
+          "visitors": 5609,
+          "buyers": 533,
+          "salesCount": 682
+        },
+        {
+          "name": "æ¼å¤å¤-å²ç½ä¸ååº",
+          "platform": "æ¼å¤å¤",
+          "targetGmv": 7741.94,
+          "paymentAmount": 6147.54,
+          "refundAmount": 724.91,
+          "lastYearSame": 0,
+          "visitors": 2404,
+          "buyers": 228,
+          "salesCount": 292
+        }
+      ]
+    },
+    {
+      "date": "2026-05-12",
+      "stores": [
+        {
+          "name": "ç¾äºå¤©ç«æè°åº",
+          "platform": "å¤©ç«",
+          "targetGmv": 25737.5,
+          "paymentAmount": 35517.19,
+          "refundAmount": 2930.23,
+          "lastYearSame": 0,
+          "visitors": 27199,
+          "buyers": 1154,
+          "salesCount": 1393
+        },
+        {
+          "name": "ä½³å¾ä¹å¤©ç«æè°åº",
+          "platform": "å¤©ç«",
+          "targetGmv": 0,
+          "paymentAmount": 0,
+          "refundAmount": 0,
+          "lastYearSame": 0,
+          "visitors": 5,
+          "buyers": 0,
+          "salesCount": 0
+        },
+        {
+          "name": "Cåº-åº·æº",
+          "platform": "Cåº",
+          "targetGmv": 6000,
+          "paymentAmount": 1434,
+          "refundAmount": 167.3,
+          "lastYearSame": 0,
+          "visitors": 375,
+          "buyers": 46,
+          "salesCount": 60
+        },
+        {
+          "name": "Cåº-ç¹å¥½ä¹°",
+          "platform": "Cåº",
+          "targetGmv": 6000,
+          "paymentAmount": 375.7,
+          "refundAmount": 45,
+          "lastYearSame": 0,
+          "visitors": 345,
+          "buyers": 26,
+          "salesCount": 30
+        },
+        {
+          "name": "æ¼å¤å¤-æ°´é¥®ä¸ååº",
+          "platform": "æ¼å¤å¤",
+          "targetGmv": 18064.52,
+          "paymentAmount": 35654.35,
+          "refundAmount": 10575.89,
+          "lastYearSame": 0,
+          "visitors": 8715,
+          "buyers": 1390,
+          "salesCount": 1780
+        },
+        {
+          "name": "æ¼å¤å¤-å²ç½ä¸ååº",
+          "platform": "æ¼å¤å¤",
+          "targetGmv": 7741.94,
+          "paymentAmount": 15280.43,
+          "refundAmount": 4532.53,
+          "lastYearSame": 0,
+          "visitors": 3735,
+          "buyers": 596,
+          "salesCount": 763
+        }
+      ]
+    },
+    {
+      "date": "2026-05-13",
+      "stores": [
+        {
+          "name": "ç¾äºå¤©ç«æè°åº",
+          "platform": "å¤©ç«",
+          "targetGmv": 25737.5,
+          "paymentAmount": 55756.68,
+          "refundAmount": 5661.8,
+          "lastYearSame": 0,
+          "visitors": 20330,
+          "buyers": 1679,
+          "salesCount": 2181
+        },
+        {
+          "name": "ä½³å¾ä¹å¤©ç«æè°åº",
+          "platform": "å¤©ç«",
+          "targetGmv": 0,
+          "paymentAmount": 0,
+          "refundAmount": 0,
+          "lastYearSame": 0,
+          "visitors": 10,
+          "buyers": 0,
+          "salesCount": 0
+        },
+        {
+          "name": "Cåº-åº·æº",
+          "platform": "Cåº",
+          "targetGmv": 6000,
+          "paymentAmount": 3007.9,
+          "refundAmount": 281.7,
+          "lastYearSame": 0,
+          "visitors": 518,
+          "buyers": 55,
+          "salesCount": 75
+        },
+        {
+          "name": "Cåº-ç¹å¥½ä¹°",
+          "platform": "Cåº",
+          "targetGmv": 6000,
+          "paymentAmount": 335.3,
+          "refundAmount": 24,
+          "lastYearSame": 0,
+          "visitors": 447,
+          "buyers": 30,
+          "salesCount": 30
+        },
+        {
+          "name": "æ¼å¤å¤-æ°´é¥®ä¸ååº",
+          "platform": "æ¼å¤å¤",
+          "targetGmv": 18064.52,
+          "paymentAmount": 29559.62,
+          "refundAmount": 12284.1,
+          "lastYearSame": 0,
+          "visitors": 5782,
+          "buyers": 1172,
+          "salesCount": 1500
+        },
+        {
+          "name": "æ¼å¤å¤-å²ç½ä¸ååº",
+          "platform": "æ¼å¤å¤",
+          "targetGmv": 7741.94,
+          "paymentAmount": 12668.41,
+          "refundAmount": 5264.62,
+          "lastYearSame": 0,
+          "visitors": 2478,
+          "buyers": 502,
+          "salesCount": 643
+        }
+      ]
+    },
+    {
+      "date": "2026-05-14",
+      "stores": [
+        {
+          "name": "ç¾äºå¤©ç«æè°åº",
+          "platform": "å¤©ç«",
+          "targetGmv": 25737.5,
+          "paymentAmount": 42834.09,
+          "refundAmount": 3908.31,
+          "lastYearSame": 0,
+          "visitors": 14657,
+          "buyers": 1339,
+          "salesCount": 1664
+        },
+        {
+          "name": "ä½³å¾ä¹å¤©ç«æè°åº",
+          "platform": "å¤©ç«",
+          "targetGmv": 0,
+          "paymentAmount": 55.9,
+          "refundAmount": 0,
+          "lastYearSame": 0,
+          "visitors": 13,
+          "buyers": 1,
+          "salesCount": 1
+        },
+        {
+          "name": "Cåº-åº·æº",
+          "platform": "Cåº",
+          "targetGmv": 6000,
+          "paymentAmount": 3383.2,
+          "refundAmount": 258.65,
+          "lastYearSame": 0,
+          "visitors": 503,
+          "buyers": 52,
+          "salesCount": 67
+        },
+        {
+          "name": "Cåº-ç¹å¥½ä¹°",
+          "platform": "Cåº",
+          "targetGmv": 6000,
+          "paymentAmount": 241.5,
+          "refundAmount": 10.5,
+          "lastYearSame": 0,
+          "visitors": 379,
+          "buyers": 20,
+          "salesCount": 23
+        },
+        {
+          "name": "æ¼å¤å¤-æ°´é¥®ä¸ååº",
+          "platform": "æ¼å¤å¤",
+          "targetGmv": 18064.52,
+          "paymentAmount": 23182.14,
+          "refundAmount": 6464.87,
+          "lastYearSame": 0,
+          "visitors": 5187,
+          "buyers": 812,
+          "salesCount": 1040
+        },
+        {
+          "name": "æ¼å¤å¤-å²ç½ä¸ååº",
+          "platform": "æ¼å¤å¤",
+          "targetGmv": 7741.94,
+          "paymentAmount": 9935.2,
+          "refundAmount": 2770.66,
+          "lastYearSame": 0,
+          "visitors": 2223,
+          "buyers": 348,
+          "salesCount": 445
+        }
+      ]
+    },
+    {
+      "date": "2026-05-15",
+      "stores": [
+        {
+          "name": "ç¾äºå¤©ç«æè°åº",
+          "platform": "å¤©ç«",
+          "targetGmv": 25737.5,
+          "paymentAmount": 43870.93,
+          "refundAmount": 3666.47,
+          "lastYearSame": 0,
+          "visitors": 13794,
+          "buyers": 1259,
+          "salesCount": 1672
+        },
+        {
+          "name": "ä½³å¾ä¹å¤©ç«æè°åº",
+          "platform": "å¤©ç«",
+          "targetGmv": 0,
+          "paymentAmount": 0,
+          "refundAmount": 0,
+          "lastYearSame": 0,
+          "visitors": 4,
+          "buyers": 0,
+          "salesCount": 0
+        },
+        {
+          "name": "Cåº-åº·æº",
+          "platform": "Cåº",
+          "targetGmv": 6000,
+          "paymentAmount": 3296.6000000000004,
+          "refundAmount": 91,
+          "lastYearSame": 0,
+          "visitors": 486,
+          "buyers": 40,
+          "salesCount": 47
+        },
+        {
+          "name": "Cåº-ç¹å¥½ä¹°",
+          "platform": "Cåº",
+          "targetGmv": 6000,
+          "paymentAmount": 383.59999999999997,
+          "refundAmount": 21,
+          "lastYearSame": 0,
+          "visitors": 375,
+          "buyers": 23,
+          "salesCount": 23
+        },
+        {
+          "name": "æ¼å¤å¤-æ°´é¥®ä¸ååº",
+          "platform": "æ¼å¤å¤",
+          "targetGmv": 18064.52,
+          "paymentAmount": 15008.58,
+          "refundAmount": 1275.06,
+          "lastYearSame": 0,
+          "visitors": 5700,
+          "buyers": 459,
+          "salesCount": 587
+        },
+        {
+          "name": "æ¼å¤å¤-å²ç½ä¸ååº",
+          "platform": "æ¼å¤å¤",
+          "targetGmv": 7741.94,
+          "paymentAmount": 6432.25,
+          "refundAmount": 546.46,
+          "lastYearSame": 0,
+          "visitors": 2443,
+          "buyers": 196,
+          "salesCount": 251
+        }
+      ]
+    },
+    {
+      "date": "2026-05-16",
+      "stores": [
+        {
+          "name": "ç¾äºå¤©ç«æè°åº",
+          "platform": "å¤©ç«",
+          "targetGmv": 104672.5,
+          "paymentAmount": 49641.84,
+          "refundAmount": 4889.29,
+          "lastYearSame": 0,
+          "visitors": 19963,
+          "buyers": 1431,
+          "salesCount": 1830
+        },
+        {
+          "name": "ä½³å¾ä¹å¤©ç«æè°åº",
+          "platform": "å¤©ç«",
+          "targetGmv": 0,
+          "paymentAmount": 0,
+          "refundAmount": 0,
+          "lastYearSame": 0,
+          "visitors": 13,
+          "buyers": 0,
+          "salesCount": 0
+        },
+        {
+          "name": "Cåº-åº·æº",
+          "platform": "Cåº",
+          "targetGmv": 30000,
+          "paymentAmount": 4327.5,
+          "refundAmount": 200.28000000000003,
+          "lastYearSame": 0,
+          "visitors": 386,
+          "buyers": 45,
+          "salesCount": 53
+        },
+        {
+          "name": "Cåº-ç¹å¥½ä¹°",
+          "platform": "Cåº",
+          "targetGmv": 30000,
+          "paymentAmount": 262.5,
+          "refundAmount": 10.5,
+          "lastYearSame": 0,
+          "visitors": 393,
+          "buyers": 24,
+          "salesCount": 25
+        },
+        {
+          "name": "æ¼å¤å¤-æ°´é¥®ä¸ååº",
+          "platform": "æ¼å¤å¤",
+          "targetGmv": 18064.52,
+          "paymentAmount": 14860.01,
+          "refundAmount": 931.69,
+          "lastYearSame": 0,
+          "visitors": 5561,
+          "buyers": 462,
+          "salesCount": 592
+        },
+        {
+          "name": "æ¼å¤å¤-å²ç½ä¸ååº",
+          "platform": "æ¼å¤å¤",
+          "targetGmv": 7741.94,
+          "paymentAmount": 6368.57,
+          "refundAmount": 399.29,
+          "lastYearSame": 0,
+          "visitors": 2383,
+          "buyers": 198,
+          "salesCount": 253
+        }
+      ]
+    },
+    {
+      "date": "2026-05-17",
+      "stores": [
+        {
+          "name": "ç¾äºå¤©ç«æè°åº",
+          "platform": "å¤©ç«",
+          "targetGmv": 101535,
+          "paymentAmount": 45209.91,
+          "refundAmount": 4554.83,
+          "lastYearSame": 0,
+          "visitors": 14963,
+          "buyers": 1403,
+          "salesCount": 1756
+        },
+        {
+          "name": "ä½³å¾ä¹å¤©ç«æè°åº",
+          "platform": "å¤©ç«",
+          "targetGmv": 0,
+          "paymentAmount": 0,
+          "refundAmount": 0,
+          "lastYearSame": 0,
+          "visitors": 17,
+          "buyers": 0,
+          "salesCount": 0
+        },
+        {
+          "name": "Cåº-åº·æº",
+          "platform": "Cåº",
+          "targetGmv": 30000,
+          "paymentAmount": 5062.4,
+          "refundAmount": 134.93,
+          "lastYearSame": 0,
+          "visitors": 380,
+          "buyers": 41,
+          "salesCount": 51
+        },
+        {
+          "name": "Cåº-ç¹å¥½ä¹°",
+          "platform": "Cåº",
+          "targetGmv": 30000,
+          "paymentAmount": 303.8,
+          "refundAmount": 21,
+          "lastYearSame": 0,
+          "visitors": 377,
+          "buyers": 22,
+          "salesCount": 27
+        },
+        {
+          "name": "æ¼å¤å¤-æ°´é¥®ä¸ååº",
+          "platform": "æ¼å¤å¤",
+          "targetGmv": 18064.52,
+          "paymentAmount": 14562.16,
+          "refundAmount": 893.14,
+          "lastYearSame": 0,
+          "visitors": 4385,
+          "buyers": 447,
+          "salesCount": 572
+        },
+        {
+          "name": "æ¼å¤å¤-å²ç½ä¸ååº",
+          "platform": "æ¼å¤å¤",
+          "targetGmv": 7741.94,
+          "paymentAmount": 6240.93,
+          "refundAmount": 382.78,
+          "lastYearSame": 0,
+          "visitors": 1879,
+          "buyers": 191,
+          "salesCount": 245
+        }
+      ]
+    },
+    {
+      "date": "2026-05-18",
+      "stores": [
+        {
+          "name": "ç¾äºå¤©ç«æè°åº",
+          "platform": "å¤©ç«",
+          "targetGmv": 63930,
+          "paymentAmount": 44288.75,
+          "refundAmount": 4523.08,
+          "lastYearSame": 0,
+          "visitors": 18137,
+          "buyers": 1325,
+          "salesCount": 1689
+        },
+        {
+          "name": "ä½³å¾ä¹å¤©ç«æè°åº",
+          "platform": "å¤©ç«",
+          "targetGmv": 0,
+          "paymentAmount": 0,
+          "refundAmount": 0,
+          "lastYearSame": 0,
+          "visitors": 6,
+          "buyers": 0,
+          "salesCount": 0
+        },
+        {
+          "name": "Cåº-åº·æº",
+          "platform": "Cåº",
+          "targetGmv": 18000,
+          "paymentAmount": 2868.6,
+          "refundAmount": 134.88,
+          "lastYearSame": 0,
+          "visitors": 27,
+          "buyers": 0,
+          "salesCount": 0
+        },
+        {
+          "name": "Cåº-ç¹å¥½ä¹°",
+          "platform": "Cåº",
+          "targetGmv": 18000,
+          "paymentAmount": 1107.2,
+          "refundAmount": 150.1,
+          "lastYearSame": 0,
+          "visitors": 674,
+          "buyers": 48,
+          "salesCount": 58
+        },
+        {
+          "name": "æ¼å¤å¤-æ°´é¥®ä¸ååº",
+          "platform": "æ¼å¤å¤",
+          "targetGmv": 18064.52,
+          "paymentAmount": 41215.43,
+          "refundAmount": 14433.17,
+          "lastYearSame": 0,
+          "visitors": 8999,
+          "buyers": 1519,
+          "salesCount": 1945
+        },
+        {
+          "name": "æ¼å¤å¤-å²ç½ä¸ååº",
+          "platform": "æ¼å¤å¤",
+          "targetGmv": 7741.94,
+          "paymentAmount": 17663.76,
+          "refundAmount": 6185.65,
+          "lastYearSame": 0,
+          "visitors": 3856,
+          "buyers": 651,
+          "salesCount": 833
+        }
+      ]
+    },
+    {
+      "date": "2026-05-19",
+      "stores": [
+        {
+          "name": "ç¾äºå¤©ç«æè°åº",
+          "platform": "å¤©ç«",
+          "targetGmv": 63930,
+          "paymentAmount": 43271.19,
+          "refundAmount": 6813.84,
+          "lastYearSame": 0,
+          "visitors": 16990,
+          "buyers": 1242,
+          "salesCount": 1605
+        },
+        {
+          "name": "ä½³å¾ä¹å¤©ç«æè°åº",
+          "platform": "å¤©ç«",
+          "targetGmv": 0,
+          "paymentAmount": 5.7,
+          "refundAmount": 0,
+          "lastYearSame": 0,
+          "visitors": 22,
+          "buyers": 3,
+          "salesCount": 3
+        },
+        {
+          "name": "Cåº-åº·æº",
+          "platform": "Cåº",
+          "targetGmv": 18000,
+          "paymentAmount": 4746.5,
+          "refundAmount": 234.8,
+          "lastYearSame": 0,
+          "visitors": 316,
+          "buyers": 27,
+          "salesCount": 33
+        },
+        {
+          "name": "Cåº-ç¹å¥½ä¹°",
+          "platform": "Cåº",
+          "targetGmv": 18000,
+          "paymentAmount": 461.59999999999997,
+          "refundAmount": 2,
+          "lastYearSame": 0,
+          "visitors": 422,
+          "buyers": 35,
+          "salesCount": 38
+        },
+        {
+          "name": "æ¼å¤å¤-æ°´é¥®ä¸ååº",
+          "platform": "æ¼å¤å¤",
+          "targetGmv": 18064.52,
+          "paymentAmount": 66016.52,
+          "refundAmount": 30159.6,
+          "lastYearSame": 0,
+          "visitors": 16793,
+          "buyers": 2580,
+          "salesCount": 3303
+        },
+        {
+          "name": "æ¼å¤å¤-å²ç½ä¸ååº",
+          "platform": "æ¼å¤å¤",
+          "targetGmv": 7741.94,
+          "paymentAmount": 28292.8,
+          "refundAmount": 12925.55,
+          "lastYearSame": 0,
+          "visitors": 7197,
+          "buyers": 1106,
+          "salesCount": 1415
+        }
+      ]
+    },
+    {
+      "date": "2026-05-20",
+      "stores": [
+        {
+          "name": "ç¾äºå¤©ç«æè°åº",
+          "platform": "å¤©ç«",
+          "targetGmv": 25737.5,
+          "paymentAmount": 22382.66,
+          "refundAmount": 1238.23,
+          "lastYearSame": 0,
+          "visitors": 16345,
+          "buyers": 723,
+          "salesCount": 901
+        },
+        {
+          "name": "ä½³å¾ä¹å¤©ç«æè°åº",
+          "platform": "å¤©ç«",
+          "targetGmv": 0,
+          "paymentAmount": 0,
+          "refundAmount": 0,
+          "lastYearSame": 0,
+          "visitors": 3,
+          "buyers": 0,
+          "salesCount": 0
+        },
+        {
+          "name": "Cåº-åº·æº",
+          "platform": "Cåº",
+          "targetGmv": 6000,
+          "paymentAmount": 836.5,
+          "refundAmount": 0,
+          "lastYearSame": 0,
+          "visitors": 345,
+          "buyers": 33,
+          "salesCount": 35
+        },
+        {
+          "name": "Cåº-ç¹å¥½ä¹°",
+          "platform": "Cåº",
+          "targetGmv": 6000,
+          "paymentAmount": 208.6,
+          "refundAmount": 10.5,
+          "lastYearSame": 0,
+          "visitors": 238,
+          "buyers": 15,
+          "salesCount": 16
+        },
+        {
+          "name": "æ¼å¤å¤-æ°´é¥®ä¸ååº",
+          "platform": "æ¼å¤å¤",
+          "targetGmv": 18064.52,
+          "paymentAmount": 49335.68,
+          "refundAmount": 8095.91,
+          "lastYearSame": 0,
+          "visitors": 15934,
+          "buyers": 1859,
+          "salesCount": 2379
+        },
+        {
+          "name": "æ¼å¤å¤-å²ç½ä¸ååº",
+          "platform": "æ¼å¤å¤",
+          "targetGmv": 7741.94,
+          "paymentAmount": 21143.86,
+          "refundAmount": 3469.67,
+          "lastYearSame": 0,
+          "visitors": 6828,
+          "buyers": 796,
+          "salesCount": 1019
+        }
+      ]
+    },
+    {
+      "date": "2026-05-21",
+      "stores": [
+        {
+          "name": "百事天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 62780,
+          "paymentAmount": 43254.12,
+          "refundAmount": 5301.21,
+          "lastYearSame": 53640.520000000004,
+          "visitors": 15782,
+          "buyers": 1220,
+          "salesCount": 1704
+        },
+        {
+          "name": "佳得乐天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 0,
+          "paymentAmount": 0,
+          "refundAmount": 0,
+          "lastYearSame": 0,
+          "visitors": 0,
+          "buyers": 0,
+          "salesCount": 0
+        },
+        {
+          "name": "C店-康智",
+          "platform": "C店",
+          "targetGmv": 0,
+          "paymentAmount": 0,
+          "refundAmount": 0,
+          "lastYearSame": 15271.470000000001,
+          "visitors": 0,
+          "buyers": 0,
+          "salesCount": 0
+        },
+        {
+          "name": "C店-特好买",
+          "platform": "C店",
+          "targetGmv": 0,
+          "paymentAmount": 0,
+          "refundAmount": 0,
+          "lastYearSame": 1205.23,
+          "visitors": 0,
+          "buyers": 0,
+          "salesCount": 0
+        },
+        {
+          "name": "拼多多-水饮专卖店",
+          "platform": "拼多多",
+          "targetGmv": 0,
+          "paymentAmount": 0,
+          "refundAmount": 0,
+          "lastYearSame": 4772.56,
+          "visitors": 0,
+          "buyers": 0,
+          "salesCount": 0
+        },
+        {
+          "name": "拼多多-劲爽专卖店",
+          "platform": "拼多多",
+          "targetGmv": 0,
+          "paymentAmount": 0,
+          "refundAmount": 0,
+          "lastYearSame": 2045.38,
+          "visitors": 0,
+          "buyers": 0,
+          "salesCount": 0
+        }
+      ]
+    }
+  ]
+}
