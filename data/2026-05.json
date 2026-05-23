@@ -1420,7 +1420,7 @@
         {
           "name": "佳得乐天猫旗舰店",
           "platform": "天猫",
-          "targetGmv": 0,
+          "targetGmv": 1,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1432,7 +1432,7 @@
           "name": "C店-康智",
           "platform": "C店",
           "targetGmv": 0,
-          "paymentAmount": 0,
+          "paymentAmount": 1,
           "refundAmount": 0,
           "lastYearSame": 13364.31,
           "visitors": 0,
@@ -1444,7 +1444,7 @@
           "platform": "C店",
           "targetGmv": 0,
           "paymentAmount": 0,
-          "refundAmount": 0,
+          "refundAmount": 1,
           "lastYearSame": -256.5799999999999,
           "visitors": 0,
           "buyers": 0,
@@ -1453,8 +1453,8 @@
         {
           "name": "拼多多-水饮专卖店",
           "platform": "拼多多",
-          "targetGmv": 0,
-          "paymentAmount": 0,
+          "targetGmv": 1,
+          "paymentAmount": 1,
           "refundAmount": 0,
           "lastYearSame": 3177.89,
           "visitors": 0,
@@ -1468,7 +1468,7 @@
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 1361.96,
-          "visitors": 0,
+          "visitors": 1,
           "buyers": 0,
           "salesCount": 0
         }
