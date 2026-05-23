@@ -1,14 +1,79 @@
-<!doctype html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>百事可乐日报系统</title>
-    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
-    <script type="module" crossorigin src="./assets/index-pjicwRmq.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-Es1VaXCq.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
-</html>
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>电商日报系统</title>
+<style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,"Microsoft YaHei",sans-serif;background:radial-gradient(ellipse at 20% 0%,#0a2a5e 0%,#041832 50%,#020d1f 100%);color:#e2e8f0;min-height:100vh}
+
+.header{position:sticky;top:0;z-index:100;background:rgba(4,24,50,.85);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid rgba(255,255,255,.06)}
+.header-inner{max-width:1280px;margin:0 auto;padding:0 20px}
+.header-top{display:flex;align-items:center;justify-content:space-between;height:56px;gap:12px}
+.header-top h1{font-size:16px;font-weight:700;color:#fff;letter-spacing:-.3px}
+.header-sub{font-size:10px;color:rgba(255,255,255,.3);letter-spacing:.5px}
+
+.tabs{display:flex;gap:0;background:rgba(255,255,255,.06);border-radius:10px;padding:2px;margin-bottom:-1px}
+.tab{padding:7px 18px;font-size:11px;font-weight:500;border:none;background:none;cursor:pointer;border-radius:8px;color:rgba(255,255,255,.45);transition:all .2s;font-family:inherit}
+.tab:hover{color:rgba(255,255,255,.7)}
+.tab.active{background:rgba(255,255,255,.15);color:#fff}
+
+.content{max-width:1280px;margin:0 auto;padding:24px 20px}
+
+.card{background:rgba(255,255,255,.04);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:20px 24px;margin-bottom:16px}
+.card-title{font-size:14px;font-weight:600;color:rgba(255,255,255,.7);margin-bottom:16px}
+
+.form-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.form-row label{font-size:12px;color:rgba(255,255,255,.4)}
+.form-row input,.form-row select{padding:6px 12px;border:1px solid rgba(255,255,255,.1);border-radius:8px;font-size:13px;outline:none;font-family:inherit;background:rgba(255,255,255,.06);color:#fff}
+.form-row input:focus,.form-row select:focus{border-color:rgba(0,102,204,.5);box-shadow:0 0 0 2px rgba(0,102,204,.15)}
+
+.btn{padding:7px 16px;border-radius:8px;font-size:13px;font-weight:500;cursor:pointer;border:1px solid;display:inline-flex;align-items:center;gap:6px;transition:all .2s;font-family:inherit}
+.btn-primary{background:rgba(0,102,204,.8);color:#fff;border-color:rgba(0,102,204,.5)}.btn-primary:hover{background:rgba(0,102,204,.95)}
+.btn-outline{background:rgba(255,255,255,.05);color:rgba(255,255,255,.6);border-color:rgba(255,255,255,.1)}.btn-outline:hover{background:rgba(255,255,255,.1)}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+
+table{width:100%;border-collapse:collapse;font-size:12px}
+th{background:rgba(255,255,255,.03);text-align:left;padding:8px 12px;border:1px solid rgba(255,255,255,.05);font-weight:600;color:rgba(255,255,255,.4);font-size:11px}
+td{padding:8px 12px;border:1px solid rgba(255,255,255,.05);color:rgba(255,255,255,.7)}
+tr:nth-child(even){background:rgba(255,255,255,.015)}
+tr:hover{background:rgba(255,255,255,.04)}
+.td-right{text-align:right}
+.td-blue{color:#93c5fd;font-weight:600}
+.td-green{color:#4ade80}
+.td-red{color:#f87171}
+
+.input-cell{width:100%;padding:5px 8px;border:1px solid transparent;border-radius:4px;text-align:right;background:rgba(255,255,255,.03);font-size:13px;outline:none;font-family:inherit;color:#fff}.input-cell:hover{border-color:rgba(255,255,255,.1)}.input-cell:focus{border-color:rgba(0,102,204,.4)}
+
+.grid-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
+.mc{background:rgba(255,255,255,.05);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:14px;min-height:82px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}.mc::after{content:'';position:absolute;top:-12px;right:-12px;width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.015);pointer-events:none}
+.mcl{font-size:10px;color:rgba(255,255,255,.3);text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px;position:relative;z-index:1;line-height:1.3}
+.mcv{font-size:20px;font-weight:800;color:#fff;letter-spacing:-.4px;position:relative;z-index:1;line-height:1.25;word-break:break-all}
+.mcs{font-size:10px;color:rgba(255,255,255,.2);margin-top:2px}
+.mc-accent-blue{background:rgba(0,102,204,.1);border-color:rgba(0,102,204,.2)}.mc-accent-blue .mcl{color:rgba(100,180,255,.6)}.mc-accent-blue .mcv{color:#93c5fd}
+.mc-accent-red{background:rgba(227,41,52,.08);border-color:rgba(227,41,52,.15)}.mc-accent-red .mcl{color:rgba(255,150,150,.5)}.mc-accent-red .mcv{color:#ffcdd2}
+
+.big-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}@media(max-width:768px){.big-row{grid-template-columns:1fr}}
+.bc{background:rgba(255,255,255,.06);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:20px 24px}.bcl{font-size:10px;color:rgba(255,255,255,.3);letter-spacing:.5px;margin-bottom:4px}.bcv{font-size:32px;font-weight:800;color:#fff;letter-spacing:-.8px;line-height:1}.bcv-sub{font-size:16px;color:rgba(255,255,255,.25);font-weight:500}.bc-bar{height:4px;background:rgba(255,255,255,.06);border-radius:2px;margin-top:12px;overflow:hidden}.bc-bar-inner{height:4px;border-radius:2px;transition:width .5s}.bc-bar-blue{background:linear-gradient(90deg,#0066cc,#3b82f6,#60a5fa);box-shadow:0 0 8px rgba(59,130,246,.3)}.bc-bar-red{background:linear-gradient(90deg,#e32934,#f87171,#fca5a5);box-shadow:0 0 8px rgba(227,41,52,.3)}.bc-info{display:flex;justify-content:space-between;margin-top:6px;font-size:9px}.bc-info span:first-child{color:rgba(255,255,255,.3)}.bc-info span:last-child{color:rgba(255,255,255,.15)}
+
+.chart-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}@media(max-width:768px){.chart-row{grid-template-columns:1fr}}
+
+.msg{padding:8px 12px;border-radius:8px;font-size:13px;margin-top:12px}.msg-ok{background:rgba(34,197,94,.1);color:#4ade80;border:1px solid rgba(34,197,94,.2)}.msg-err{background:rgba(239,68,68,.1);color:#f87171;border:1px solid rgba(239,68,68,.2)}
+
+.lock-overlay{position:fixed;inset:0;background:rgba(2,13,31,.85);backdrop-filter:blur(8px);z-index:999;display:flex;align-items:center;justify-content:center}
+.lock-box{background:rgba(255,255,255,.06);backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:36px;width:420px;text-align:center}
+.lock-box h2{font-size:20px;color:#fff;margin-bottom:4px;font-weight:600}
+.lock-box p{font-size:13px;color:rgba(255,255,255,.4);margin-bottom:20px}
+.lock-box input{width:100%;padding:10px 14px;border:1px solid rgba(255,255,255,.1);border-radius:10px;font-size:14px;outline:none;margin-bottom:10px;font-family:inherit;background:rgba(255,255,255,.05);color:#fff}.lock-box input:focus{border-color:rgba(0,102,204,.5)}
+.lock-box .btn{width:100%;justify-content:center;padding:11px}
+
+.empty-state{text-align:center;padding:30px 0;color:rgba(255,255,255,.15);font-size:14px}
+.footer-row{background:rgba(255,255,255,.03);font-weight:600}
+.footer-row td{color:#fff}
+
+.version{text-align:center;padding:12px;font-size:10px;color:rgba(255,255,255,.1);letter-spacing:.5px}
+.detail-dot{width:8px;height:8px;border-radius:2px;margin-right:8px;display:inline-block}
+.dot-blue{background:#0066cc}.dot-red{background:#e32934}</style>
+</head><body><div id="root"></div>
+<div id="err" style="display:none;max-width:600px;margin:40px auto;padding:20px;background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.2);border-radius:12px;color:#f87171;font-size:13px;text-align:center"></div>
+<script>window.onerror=function(m,s,l,c,e){var el=document.getElementById('err');el.style.display='block';el.textContent=m+' ('+s.split('/').pop()+':'+l+')'}</script>
+<script src="libs.js"></script><script src="app.js"></script>
+<script>setTimeout(function(){var r=document.getElementById('root');if(!r||!r.innerHTML.trim()){var el=document.getElementById('err');el.style.display='block';el.textContent='React未渲染，请检查Console'}},3000)</script></body></html>
