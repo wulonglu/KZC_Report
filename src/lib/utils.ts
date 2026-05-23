@@ -3,7 +3,7 @@ export function formatMoney(n: number): string {
 }
 
 export function formatPercent(n: number): string {
-  return n.toFixed(2)
+  return n.toFixed(2) + '%'
 }
 
 export function formatNumber(n: number): string {

@@ -84,7 +84,19 @@ export default function DailyReport() {
       })
       setYearCum({ net: yNet, lastYear: yLastYear, pay: yPay, refund: yRefund, stores: yearStores })
       if (r) {
-        setReport(r)
+        // 加载去年同期同日数据，注入到每个店铺
+        const [y2] = viewDate.split('-')
+        const lyDate = `${Number(y2)-1}-${viewDate.substring(5)}`
+        const lyMonthData = await loadMonth(lyDate)
+        const lyReport = lyMonthData.find(rr => rr.date === lyDate)
+        const enrichedReport = {
+          ...r,
+          stores: r.stores.map(s => {
+            const lyStore = lyReport?.stores.find((ls: StoreData) => ls.name === s.name)
+            return { ...s, _lastYearNet: lyStore ? lyStore.paymentAmount - lyStore.refundAmount : 0 }
+          })
+        }
+        setReport(enrichedReport)
         const end = getToday()
         const s = new Date(); s.setDate(s.getDate() - 29)
         const td = await loadDateRange(s.toISOString().substring(0, 10), end)
@@ -121,7 +133,7 @@ export default function DailyReport() {
     const tv = metrics.reduce((a, m) => a + m.visitors, 0)
     const tb = metrics.reduce((a, m) => a + m.buyers, 0)
     const net = metrics.reduce((a, m) => a + m.netGmv, 0)
-    const lastYear = metrics.reduce((a, m) => a + m.lastYearSame, 0)
+    const lastYear = metrics.reduce((a, m) => a + ((m as any)._lastYearNet || m.lastYearSame), 0)
     return {
       targetGmv: metrics.reduce((a, m) => a + m.targetGmv, 0),
       netGmv: net,
@@ -139,14 +151,14 @@ export default function DailyReport() {
 
   const emptyChart = STORES.map(s => ({ name: s.name, netGmv: 0, targetGmv: 0, lastYear: 0, visitors: 0, buyers: 0 }))
   const chartData = hasData ? metrics.map(m => ({
-    name: m.name, netGmv: m.netGmv, targetGmv: m.targetGmv, lastYear: m.lastYearSame, visitors: m.visitors, buyers: m.buyers,
+    name: m.name, netGmv: m.netGmv, targetGmv: m.targetGmv, lastYear: (m as any)._lastYearNet || m.lastYearSame, visitors: m.visitors, buyers: m.buyers,
   })) : emptyChart
   const cumChartData = hasData ? metrics.map(m => ({
     name: m.name,
     monthNet: m.netGmv,
-    monthLast: m.lastYearSame,
+    monthLast: (m as any)._lastYearNet || m.lastYearSame,
     yearNet: m.netGmv * 12,
-    yearLast: m.lastYearSame * 12,
+    yearLast: ((m as any)._lastYearNet || m.lastYearSame) * 12,
   })) : STORES.map(s => ({ name: s.name, monthNet: 0, monthLast: 0, yearNet: 0, yearLast: 0 }))
 
   return (
@@ -165,7 +177,7 @@ export default function DailyReport() {
               if (!hasData) return
               let csv = '\uFEFF店铺,平台,目标GMV,支付金额,退款金额,去退GMV,去年同期,同比增长,达成率,访客数,买家数,销售件数,客单价,转化率\n'
               metrics.forEach(m => {
-                csv += `${m.name},${m.platform},${m.targetGmv},${m.paymentAmount},${m.refundAmount},${m.netGmv},${m.lastYearSame},${m.yoyGrowth.toFixed(2)},${m.achievementRate.toFixed(2)},${m.visitors},${m.buyers},${m.salesCount},${m.avgOrderValue.toFixed(2)},${m.conversionRate.toFixed(2)}\n`
+                csv += `${m.name},${m.platform},${m.targetGmv},${m.paymentAmount},${m.refundAmount},${m.netGmv},${(m as any)._lastYearNet || m.lastYearSame},${m.yoyGrowth.toFixed(2)}%,${m.achievementRate.toFixed(2)}%,${m.visitors},${m.buyers},${m.salesCount},${m.avgOrderValue.toFixed(2)},${m.conversionRate.toFixed(2)}%\n`
               })
               const b = new Blob([csv], { type: 'application/vnd.ms-excel' })
               const a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = `日报_${viewDate}.xls`; a.click()
@@ -194,7 +206,7 @@ export default function DailyReport() {
           target="目标 4,000,000"
           pct={Math.min(100, (monthCum.net / 4000000) * 100)}
           barColor="#0066cc"
-          detail={`达成率 ${(monthCum.net / 4000000 * 100).toFixed(1)}`}
+          detail={`达成率 ${(monthCum.net / 4000000 * 100).toFixed(1)}%`}
           lastYear={monthCum.lastYear}
           yoy={monthCum.lastYear > 0 ? ((monthCum.net - monthCum.lastYear) / monthCum.lastYear * 100) : 0}
         />
@@ -204,7 +216,7 @@ export default function DailyReport() {
           target="目标 30,000,000"
           pct={Math.min(100, (yearCum.net / 30000000) * 100)}
           barColor="#e32934"
-          detail={`达成率 ${(yearCum.net / 30000000 * 100).toFixed(1)}`}
+          detail={`达成率 ${(yearCum.net / 30000000 * 100).toFixed(1)}%`}
           lastYear={yearCum.lastYear}
           yoy={yearCum.lastYear > 0 ? ((yearCum.net - yearCum.lastYear) / yearCum.lastYear * 100) : 0}
         />
@@ -312,7 +324,7 @@ export default function DailyReport() {
                   <td style={{ textAlign: 'right' }}>{formatMoney(m.paymentAmount)}</td>
                   <td style={{ textAlign: 'right' }}>{formatMoney(m.refundAmount)}</td>
                   <td style={{ textAlign: 'right' }} className="td-blue">{formatMoney(m.netGmv)}</td>
-                  <td style={{ textAlign: 'right' }}>{formatMoney(m.lastYearSame)}</td>
+                  <td style={{ textAlign: 'right' }}>{formatMoney((m as any)._lastYearNet || m.lastYearSame)}</td>
                   <td style={{ textAlign: 'right' }} className={m.yoyGrowth >= 0 ? 'td-green' : 'td-red'}>
                     {formatPercent(m.yoyGrowth)}
                   </td>
@@ -507,7 +519,7 @@ function BigCard({ label, value, target, pct, barColor, detail, lastYear, yoy }:
   label: string; value: string; target: string; pct: number; barColor: string; detail: string;
   lastYear?: number; yoy?: number;
 }) {
-  const yoyStr = yoy !== undefined && yoy !== 0 ? `${yoy >= 0 ? '+' : ''}${yoy.toFixed(2)}` : ''
+  const yoyStr = yoy !== undefined && yoy !== 0 ? `${yoy >= 0 ? '+' : ''}${yoy.toFixed(2)}%` : ''
   const lastYearStr = lastYear && lastYear > 0 ? `去年同期 ${formatMoney(lastYear)}` : ''
   return (
     <div className="card-glass" style={{ padding: '20px 24px' }}>

@@ -14,6 +14,7 @@ export default function HistoryQuery({ onViewDate }: Props) {
   const [start, setStart] = useState(getToday())
   const [end, setEnd] = useState(getToday())
   const [results, setResults] = useState<DailyReport[]>([])
+  const [lyResults, setLyResults] = useState<DailyReport[]>([])
   const [loading, setLoading] = useState(false)
 
   const query = async () => {
@@ -21,23 +22,36 @@ export default function HistoryQuery({ onViewDate }: Props) {
     try {
       const data = await loadDateRange(start, end)
       setResults(data)
-    } catch (e) { setResults([]) }
+      // 去年同期
+      const [y] = start.split('-')
+      const lyStart = `${Number(y)-1}-${start.substring(5)}`
+      const lyEnd = `${Number(y)-1}-${end.substring(5)}`
+      const lyData = await loadDateRange(lyStart, lyEnd)
+      setLyResults(lyData)
+    } catch (e) { setResults([]); setLyResults([]) }
+    setLoading(false)
   }
 
   // 汇总所有店铺数据
   const summary = useMemo(() => {
     if (!results.length) return null
-    const storeMap: Record<string, { name: string; platform: string; pay: number; refund: number; target: number; lastYear: number; visitors: number; buyers: number; count: number }> = {}
+    const storeMap: Record<string, { name: string; platform: string; pay: number; refund: number; target: number; lastYear: number; visitors: number; buyers: number }> = {}
     results.forEach(r => {
       r.stores.forEach(s => {
-        if (!storeMap[s.name]) storeMap[s.name] = { name: s.name, platform: s.platform, pay: 0, refund: 0, target: 0, lastYear: 0, visitors: 0, buyers: 0, count: 0 }
+        if (!storeMap[s.name]) storeMap[s.name] = { name: s.name, platform: s.platform, pay: 0, refund: 0, target: 0, lastYear: 0, visitors: 0, buyers: 0 }
         storeMap[s.name].pay += s.paymentAmount
         storeMap[s.name].refund += s.refundAmount
         storeMap[s.name].target += s.targetGmv
-        storeMap[s.name].lastYear += s.lastYearSame
         storeMap[s.name].visitors += s.visitors
         storeMap[s.name].buyers += s.buyers
-        storeMap[s.name].count++
+      })
+    })
+    // 去年同期
+    lyResults.forEach(r => {
+      r.stores.forEach(s => {
+        const net = s.paymentAmount - s.refundAmount
+        if (!storeMap[s.name]) storeMap[s.name] = { name: s.name, platform: s.platform, pay: 0, refund: 0, target: 0, lastYear: 0, visitors: 0, buyers: 0 }
+        storeMap[s.name].lastYear += net
       })
     })
     const stores = Object.values(storeMap).map(s => {
