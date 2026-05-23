@@ -46,16 +46,25 @@ export default function DailyReport() {
       const mNet = data.reduce((a, d) => a + d.stores.reduce((b, s) => b + s.paymentAmount - s.refundAmount, 0), 0)
       const mPay = data.reduce((a, d) => a + d.stores.reduce((b, s) => b + s.paymentAmount, 0), 0)
       const mRefund = data.reduce((a, d) => a + d.stores.reduce((b, s) => b + s.refundAmount, 0), 0)
-      const mLastYear = data.reduce((a, d) => a + d.stores.reduce((b, s) => b + s.lastYearSame, 0), 0)
+      // 去年同期：从去年同月数据自动计算
+      const [y, m] = viewDate.split('-')
+      const lastMonth = `${Number(y)-1}-${m}`
+      const lastMonthData = await loadMonth(lastMonth + '-01')
+      const mLastYear = lastMonthData
+        .filter(d => d.date <= lastMonth + '-' + viewDate.substring(8))
+        .reduce((a, d) => a + d.stores.reduce((b, s) => b + s.paymentAmount - s.refundAmount, 0), 0)
       setMonthCum({ net: mNet, lastYear: mLastYear, pay: mPay, refund: mRefund })
       // 年累计（加载全年数据）
-      const yearStart = `${viewDate.substring(0,4)}-01-01`
-      const yearEnd = viewDate
-      const yearData = await loadDateRange(yearStart, yearEnd)
+      const yearStart = `${y}-01-01`
+      const yearData = await loadDateRange(yearStart, viewDate)
       const yNet = yearData.reduce((a, d) => a + d.stores.reduce((b, s) => b + s.paymentAmount - s.refundAmount, 0), 0)
       const yPay = yearData.reduce((a, d) => a + d.stores.reduce((b, s) => b + s.paymentAmount, 0), 0)
       const yRefund = yearData.reduce((a, d) => a + d.stores.reduce((b, s) => b + s.refundAmount, 0), 0)
-      const yLastYear = yearData.reduce((a, d) => a + d.stores.reduce((b, s) => b + s.lastYearSame, 0), 0)
+      // 去年同期年累计：去年1月1日到去年同月同日
+      const lyStart = `${Number(y)-1}-01-01`
+      const lyEnd = `${Number(y)-1}-${viewDate.substring(5)}`
+      const lastYearData = await loadDateRange(lyStart, lyEnd)
+      const yLastYear = lastYearData.reduce((a, d) => a + d.stores.reduce((b, s) => b + s.paymentAmount - s.refundAmount, 0), 0)
       setYearCum({ net: yNet, lastYear: yLastYear, pay: yPay, refund: yRefund })
       if (r) {
         setReport(r)
