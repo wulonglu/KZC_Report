@@ -115,10 +115,11 @@ export default function HistoryQuery({ onViewDate }: Props) {
           </button>
           <button className="btn-glass btn-outline" onClick={() => {
             if (!results.length || !summary) return
-            const sh = ['店铺','平台','支付金额','退款金额','去退GMV','目标GMV','达成率(%)','去年同期','同比增长(%)','访客数','买家数']
-            const sRows = summary.stores.map((s: any) => [s.name, s.platform, String(s.pay), String(s.refund), String(s.netGmv), String(s.target), s.rate.toFixed(2), String(s.lastYear), s.yoy.toFixed(2), String(s.visitors), String(s.buyers)])
+            const fm = (n: number) => n.toLocaleString('zh-CN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
+            const sh = ['店铺','平台','支付金额','退款金额','去退GMV','目标GMV','达成率','去年同期','同比增长','访客数','买家数']
+            const sRows = summary.stores.map((s: any) => [s.name, s.platform, fm(s.pay), fm(s.refund), fm(s.netGmv), fm(s.target), s.rate.toFixed(2)+'%', fm(s.lastYear), s.yoy.toFixed(2)+'%', fm(s.visitors), fm(s.buyers)])
             const dh = ['日期','店铺','平台','目标GMV','支付金额','退款金额','去退GMV','访客数','买家数','销售件数']
-            const dRows = results.flatMap(r => r.stores.map(s => [r.date, s.name, s.platform, String(s.targetGmv), String(s.paymentAmount), String(s.refundAmount), String(s.paymentAmount - s.refundAmount), String(s.visitors), String(s.buyers), String(s.salesCount)]))
+            const dRows = results.flatMap(r => r.stores.map(s => [r.date, s.name, s.platform, fm(s.targetGmv), fm(s.paymentAmount), fm(s.refundAmount), fm(s.paymentAmount - s.refundAmount), fm(s.visitors), fm(s.buyers), fm(s.salesCount)]))
             exportExcel([
               { title: `店铺区间汇总 - ${start} ~ ${end}`, headers: sh, rows: sRows },
               { title: `分天明细 - ${start} ~ ${end}`, headers: dh, rows: dRows },

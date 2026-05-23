@@ -39,11 +39,15 @@ export async function exportJPG() {
   try {
     const { default: html2canvas } = await import('html2canvas')
     const container = document.querySelector('main') || document.body
+    const scrollWidth = document.documentElement.scrollWidth
+    const scrollHeight = Math.max(document.documentElement.scrollHeight, container.scrollHeight)
     const canvas = await html2canvas(container as HTMLElement, {
       backgroundColor: '#020d1f',
       scale: 2,
       useCORS: true,
       logging: false,
+      windowWidth: scrollWidth,
+      windowHeight: scrollHeight,
     } as any)
     canvas.toBlob(blob => {
       if (!blob) return
