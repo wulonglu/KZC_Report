@@ -1,6 +1,6 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { StoreData, DailyReport, STORES, emptyStore } from '../types'
-import { saveReport } from '../lib/github'
+import { saveReport, loadMonth } from '../lib/github'
 import { getToday } from '../lib/utils'
 
 function getToken() { return localStorage.getItem('gh_token') || '' }
@@ -15,6 +15,24 @@ export default function DataEntry() {
   )
   const [saving, setSaving] = useState(false)
   const [msg, setMsg] = useState('')
+
+  // 切换日期时加载已有数据
+  useEffect(() => {
+    setMsg('')
+    loadMonth(date).then(data => {
+      const report = data.find(r => r.date === date)
+      if (report) {
+        setStores(STORES.map(s => {
+          const saved = report.stores.find(ss => ss.name === s.name)
+          return saved || emptyStore(s.name, s.platform)
+        }))
+      } else {
+        setStores(STORES.map(s => emptyStore(s.name, s.platform)))
+      }
+    }).catch(() => {
+      setStores(STORES.map(s => emptyStore(s.name, s.platform)))
+    })
+  }, [date])
 
   const fields: (keyof StoreData)[] = ['targetGmv', 'paymentAmount', 'refundAmount', 'visitors', 'buyers', 'salesCount']
   const labels: Record<string, string> = {
