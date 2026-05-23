@@ -1455,9 +1455,9 @@
           "platform": "拼多多",
           "targetGmv": 0,
           "paymentAmount": 0,
-          "refundAmount": 0,
+          "refundAmount": 666,
           "lastYearSame": 3177.89,
-          "visitors": 0,
+          "visitors": 666,
           "buyers": 0,
           "salesCount": 0
         },
@@ -1466,9 +1466,9 @@
           "platform": "拼多多",
           "targetGmv": 0,
           "paymentAmount": 0,
-          "refundAmount": 0,
+          "refundAmount": 666,
           "lastYearSame": 1361.96,
-          "visitors": 0,
+          "visitors": 666,
           "buyers": 0,
           "salesCount": 0
         }
