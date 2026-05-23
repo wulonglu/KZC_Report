@@ -12,7 +12,7 @@ const chartAxis = {
   axisLine: { stroke: 'rgba(255,255,255,.1)' },
   tickLine: false,
 }
-const chartXAxis = { ...chartAxis, interval: 0, angle: -35, height: 100, tickMargin: 12 }
+const chartXAxis = { ...chartAxis, interval: 0, angle: -30, height: 120, tickMargin: 16 }
 const chartLegend = { wrapperStyle: { fontSize: 12, color: 'rgba(255,255,255,.6)', paddingTop: 8 }, iconType: 'rect' as const }
 const chartTooltip = {
   contentStyle: { background: 'rgba(4,24,50,.98)', border: '1px solid rgba(255,255,255,.12)', borderRadius: 8, color: '#e2e8f0', fontSize: 13 },
@@ -42,42 +42,45 @@ export default function DailyReport() {
     try {
       const data = await loadMonth(viewDate)
       const r = data.find(rr => rr.date === viewDate) || null
-      // 计算月累计（当月有数据的全部加总）
-      const mNet = data.reduce((a, d) => a + d.stores.reduce((b, s) => b + s.paymentAmount - s.refundAmount, 0), 0)
-      const mPay = data.reduce((a, d) => a + d.stores.reduce((b, s) => b + s.paymentAmount, 0), 0)
-      const mRefund = data.reduce((a, d) => a + d.stores.reduce((b, s) => b + s.refundAmount, 0), 0)
-      // 去年同期：用当期数据的实际最后日期，确保同期对比天数一致
+      // 月累计：当月有数据且 <= viewDate 的全部加总
+      const mData = data.filter(d => d.date <= viewDate)
+      const mNet = mData.reduce((a, d) => a + d.stores.reduce((b, s) => b + s.paymentAmount - s.refundAmount, 0), 0)
+      const mPay = mData.reduce((a, d) => a + d.stores.reduce((b, s) => b + s.paymentAmount, 0), 0)
+      const mRefund = mData.reduce((a, d) => a + d.stores.reduce((b, s) => b + s.refundAmount, 0), 0)
+      // 去年同期：截止到同月同日
       const [y, m] = viewDate.split('-')
       const lastMonth = `${Number(y)-1}-${m}`
-      const actualLastDay = data.length > 0 ? data.map(d => d.date).sort().pop()!.substring(8) : viewDate.substring(8)
+      const lastMonthEnd = lastMonth + '-' + viewDate.substring(8)
       const lastMonthData = await loadMonth(lastMonth + '-01')
-      const mLastYear = lastMonthData
-        .filter(d => d.date <= lastMonth + '-' + actualLastDay)
-        .reduce((a, d) => a + d.stores.reduce((b, s) => b + s.paymentAmount - s.refundAmount, 0), 0)
+      const lyFiltered = lastMonthData.filter(d => d.date <= lastMonthEnd)
+      const mLastYear = lyFiltered.reduce((a, d) => a + d.stores.reduce((b, s) => b + s.paymentAmount - s.refundAmount, 0), 0)
       // 店铺级月累计
       const monthStores = STORES.map(st => {
-        const cur = data.reduce((a, d) => { const ss = d.stores.find(s => s.name === st.name); return a + (ss ? ss.paymentAmount - ss.refundAmount : 0); }, 0)
-        const ly = lastMonthData.filter(d => d.date <= lastMonth + '-' + actualLastDay).reduce((a, d) => { const ss = d.stores.find(s => s.name === st.name); return a + (ss ? ss.paymentAmount - ss.refundAmount : 0); }, 0)
-        return { name: st.name, platform: st.platform, net: cur, pay: data.reduce((a,d) => {const ss=d.stores.find(s=>s.name===st.name); return a+(ss?ss.paymentAmount:0)},0), refund: data.reduce((a,d) => {const ss=d.stores.find(s=>s.name===st.name); return a+(ss?ss.refundAmount:0)},0), lastYear: ly }
+        const cur = mData.reduce((a, d) => { const ss = d.stores.find(s => s.name === st.name); return a + (ss ? ss.paymentAmount - ss.refundAmount : 0); }, 0)
+        const pay = mData.reduce((a,d) => {const ss=d.stores.find(s=>s.name===st.name); return a+(ss?ss.paymentAmount:0)},0)
+        const refund = mData.reduce((a,d) => {const ss=d.stores.find(s=>s.name===st.name); return a+(ss?ss.refundAmount:0)},0)
+        const ly = lyFiltered.reduce((a, d) => { const ss = d.stores.find(s => s.name === st.name); return a + (ss ? ss.paymentAmount - ss.refundAmount : 0); }, 0)
+        return { name: st.name, platform: st.platform, net: cur, pay, refund, lastYear: ly }
       })
       setMonthCum({ net: mNet, lastYear: mLastYear, pay: mPay, refund: mRefund, stores: monthStores })
-      // 年累计（加载全年数据）
+      // 年累计（截止到 viewDate）
       const yearStart = `${y}-01-01`
       const yearData = await loadDateRange(yearStart, viewDate)
       const yNet = yearData.reduce((a, d) => a + d.stores.reduce((b, s) => b + s.paymentAmount - s.refundAmount, 0), 0)
       const yPay = yearData.reduce((a, d) => a + d.stores.reduce((b, s) => b + s.paymentAmount, 0), 0)
       const yRefund = yearData.reduce((a, d) => a + d.stores.reduce((b, s) => b + s.refundAmount, 0), 0)
-      // 去年同期年累计：用当期实际最后日期
-      const yearActualLastDay = yearData.length > 0 ? yearData.map(d => d.date).sort().pop()!.substring(5) : viewDate.substring(5)
+      // 去年同期年累计：截止到去年同月同日
       const lyStart = `${Number(y)-1}-01-01`
-      const lyEnd = `${Number(y)-1}-${yearActualLastDay}`
+      const lyEnd = `${Number(y)-1}-${viewDate.substring(5)}`
       const lastYearData = await loadDateRange(lyStart, lyEnd)
       const yLastYear = lastYearData.reduce((a, d) => a + d.stores.reduce((b, s) => b + s.paymentAmount - s.refundAmount, 0), 0)
       // 店铺级年累计
       const yearStores = STORES.map(st => {
         const cur = yearData.reduce((a, d) => { const ss = d.stores.find(s => s.name === st.name); return a + (ss ? ss.paymentAmount - ss.refundAmount : 0); }, 0)
+        const pay = yearData.reduce((a,d) => {const ss=d.stores.find(s=>s.name===st.name); return a+(ss?ss.paymentAmount:0)},0)
+        const refund = yearData.reduce((a,d) => {const ss=d.stores.find(s=>s.name===st.name); return a+(ss?ss.refundAmount:0)},0)
         const ly = lastYearData.reduce((a, d) => { const ss = d.stores.find(s => s.name === st.name); return a + (ss ? ss.paymentAmount - ss.refundAmount : 0); }, 0)
-        return { name: st.name, platform: st.platform, net: cur, pay: yearData.reduce((a,d)=>{const ss=d.stores.find(s=>s.name===st.name); return a+(ss?ss.paymentAmount:0)},0), refund: yearData.reduce((a,d)=>{const ss=d.stores.find(s=>s.name===st.name); return a+(ss?ss.refundAmount:0)},0), lastYear: ly }
+        return { name: st.name, platform: st.platform, net: cur, pay, refund, lastYear: ly }
       })
       setYearCum({ net: yNet, lastYear: yLastYear, pay: yPay, refund: yRefund, stores: yearStores })
       if (r) {
