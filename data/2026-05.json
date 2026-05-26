@@ -1509,12 +1509,12 @@
           "name": "佳得乐天猫旗舰店",
           "platform": "天猫",
           "targetGmv": 1000,
-          "paymentAmount": 83.2,
+          "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
-          "visitors": 28,
-          "buyers": 1,
-          "salesCount": 2
+          "visitors": 39,
+          "buyers": 0,
+          "salesCount": 0
         },
         {
           "name": "C店-康智",
