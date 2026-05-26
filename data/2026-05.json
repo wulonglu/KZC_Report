@@ -146,20 +146,20 @@
       "date": "2026-05-03",
       "stores": [
         {
-          "name": "拼多多-水饮专卖店",
-          "platform": "拼多多",
-          "targetGmv": 18064.52,
-          "paymentAmount": 21743.64,
-          "refundAmount": 5226.57,
+          "name": "百事天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 25737.5,
+          "paymentAmount": 20239.6,
+          "refundAmount": 1482.19,
           "lastYearSame": 0,
-          "visitors": 6696,
-          "buyers": 830,
-          "salesCount": 1062
+          "visitors": 14739,
+          "buyers": 686,
+          "salesCount": 801
         },
         {
-          "name": "拼多多-劲爽专卖店",
-          "platform": "拼多多",
-          "targetGmv": 7741.94,
+          "name": "佳得乐天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 6000,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -190,26 +190,26 @@
           "salesCount": 2479
         },
         {
-          "name": "佳得乐天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 6000,
-          "paymentAmount": 418.3,
-          "refundAmount": 0,
+          "name": "拼多多-水饮专卖店",
+          "platform": "拼多多",
+          "targetGmv": 18064.52,
+          "paymentAmount": 21743.64,
+          "refundAmount": 5226.57,
           "lastYearSame": 0,
-          "visitors": 488,
-          "buyers": 14,
-          "salesCount": 17
+          "visitors": 6696,
+          "buyers": 830,
+          "salesCount": 1062
         },
         {
-          "name": "百事天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 25737.5,
-          "paymentAmount": 20239.6,
-          "refundAmount": 1482.19,
+          "name": "拼多多-劲爽专卖店",
+          "platform": "拼多多",
+          "targetGmv": 7741.94,
+          "paymentAmount": 0,
+          "refundAmount": 0,
           "lastYearSame": 0,
-          "visitors": 14739,
-          "buyers": 686,
-          "salesCount": 801
+          "visitors": 0,
+          "buyers": 0,
+          "salesCount": 0
         }
       ]
     },
