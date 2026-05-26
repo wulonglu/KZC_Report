@@ -1353,26 +1353,26 @@
       "date": "2026-05-20",
       "stores": [
         {
-          "name": "拼多多-水饮专卖店",
-          "platform": "拼多多",
-          "targetGmv": 18064.52,
-          "paymentAmount": 49335.68,
-          "refundAmount": 8095.91,
+          "name": "百事天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 71829,
+          "paymentAmount": 40599.13,
+          "refundAmount": 4535.83,
           "lastYearSame": 0,
-          "visitors": 15934,
-          "buyers": 1859,
-          "salesCount": 2379
+          "visitors": 15942,
+          "buyers": 1206,
+          "salesCount": 1560
         },
         {
-          "name": "拼多多-劲爽专卖店",
-          "platform": "拼多多",
-          "targetGmv": 7741.94,
-          "paymentAmount": 21143.86,
-          "refundAmount": 3469.67,
+          "name": "佳得乐天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 0,
+          "paymentAmount": 0,
+          "refundAmount": 0,
           "lastYearSame": 0,
-          "visitors": 6828,
-          "buyers": 796,
-          "salesCount": 1019
+          "visitors": 3,
+          "buyers": 0,
+          "salesCount": 0
         },
         {
           "name": "C店-康智",
@@ -1397,26 +1397,26 @@
           "salesCount": 16
         },
         {
-          "name": "佳得乐天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 0,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "name": "拼多多-水饮专卖店",
+          "platform": "拼多多",
+          "targetGmv": 18064.52,
+          "paymentAmount": 49335.68,
+          "refundAmount": 8095.91,
           "lastYearSame": 0,
-          "visitors": 3,
-          "buyers": 0,
-          "salesCount": 0
+          "visitors": 15934,
+          "buyers": 1859,
+          "salesCount": 2379
         },
         {
-          "name": "百事天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 71829,
-          "paymentAmount": 22382.66,
-          "refundAmount": 1238.23,
+          "name": "拼多多-劲爽专卖店",
+          "platform": "拼多多",
+          "targetGmv": 7741.94,
+          "paymentAmount": 21143.86,
+          "refundAmount": 3469.67,
           "lastYearSame": 0,
-          "visitors": 16345,
-          "buyers": 723,
-          "salesCount": 901
+          "visitors": 6828,
+          "buyers": 796,
+          "salesCount": 1019
         }
       ]
     },
