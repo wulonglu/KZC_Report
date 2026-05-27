@@ -171,6 +171,17 @@
           "name": "C店-康智",
           "platform": "C店",
           "targetGmv": 6000,
+          "paymentAmount": 418.3,
+          "refundAmount": 0,
+          "lastYearSame": 0,
+          "visitors": 488,
+          "buyers": 14,
+          "salesCount": 17
+        },
+        {
+          "name": "C店-特好买",
+          "platform": "C店",
+          "targetGmv": 6000,
           "paymentAmount": 272.3,
           "refundAmount": 21,
           "lastYearSame": 0,
@@ -179,9 +190,9 @@
           "salesCount": 24
         },
         {
-          "name": "C店-特好买",
-          "platform": "C店",
-          "targetGmv": 6000,
+          "name": "拼多多-水饮专卖店",
+          "platform": "拼多多",
+          "targetGmv": 18064.52,
           "paymentAmount": 50735.16,
           "refundAmount": 12195.33,
           "lastYearSame": 0,
@@ -190,26 +201,15 @@
           "salesCount": 2479
         },
         {
-          "name": "拼多多-水饮专卖店",
+          "name": "拼多多-劲爽专卖店",
           "platform": "拼多多",
-          "targetGmv": 18064.52,
+          "targetGmv": 7741.94,
           "paymentAmount": 21743.64,
           "refundAmount": 5226.57,
           "lastYearSame": 0,
           "visitors": 6696,
           "buyers": 830,
           "salesCount": 1062
-        },
-        {
-          "name": "拼多多-劲爽专卖店",
-          "platform": "拼多多",
-          "targetGmv": 7741.94,
-          "paymentAmount": 0,
-          "refundAmount": 0,
-          "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0
         }
       ]
     },
