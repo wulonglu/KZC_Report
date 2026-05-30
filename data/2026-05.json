@@ -2122,9 +2122,9 @@
           "platform": "天猫",
           "targetGmv": 67130,
           "paymentAmount": 0,
-          "refundAmount": 0,
+          "refundAmount": 3308.0,
           "lastYearSame": 0,
-          "visitors": 0,
+          "visitors": 3308,
           "buyers": 0,
           "salesCount": 0
         }
