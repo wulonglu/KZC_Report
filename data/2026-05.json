@@ -2017,23 +2017,23 @@
           "name": "C店-康智",
           "platform": "C店",
           "targetGmv": 18000,
-          "paymentAmount": 3494,
-          "refundAmount": 208.81,
+          "paymentAmount": 0,
+          "refundAmount": 0,
           "lastYearSame": 0,
-          "visitors": 744,
-          "buyers": 54,
-          "salesCount": 116
+          "visitors": 0,
+          "buyers": 0,
+          "salesCount": 0
         },
         {
           "name": "C店-特好买",
           "platform": "C店",
           "targetGmv": 18000,
-          "paymentAmount": 40917.7,
-          "refundAmount": 2210.5,
+          "paymentAmount": 0,
+          "refundAmount": 0,
           "lastYearSame": 0,
-          "visitors": 349,
-          "buyers": 18,
-          "salesCount": 1498
+          "visitors": 0,
+          "buyers": 0,
+          "salesCount": 0
         },
         {
           "name": "拼多多-水饮专卖店",
