@@ -62,12 +62,12 @@
           "name": "百事天猫旗舰店",
           "platform": "天猫",
           "targetGmv": 67130.0,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 39198.98,
+          "refundAmount": 23665.94,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0
+          "visitors": 21136,
+          "buyers": 21136,
+          "salesCount": 531
         }
       ]
     },
