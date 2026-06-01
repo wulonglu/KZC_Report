@@ -79,11 +79,11 @@
           "platform": "天猫",
           "targetGmv": 25737.5,
           "paymentAmount": 278701.94,
-          "refundAmount": 278701.94,
+          "refundAmount": 165430.78,
           "lastYearSame": 0,
-          "visitors": 31770,
-          "buyers": 9542,
-          "salesCount": 31770
+          "visitors": 278701,
+          "buyers": 165430,
+          "salesCount": 11
         },
         {
           "name": "佳得乐天猫旗舰店",
