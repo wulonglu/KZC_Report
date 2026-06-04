@@ -182,12 +182,12 @@
           "name": "C店-特好买",
           "platform": "C店",
           "targetGmv": 18000,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 18.9,
+          "refundAmount": 0.0,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0
+          "visitors": 91,
+          "buyers": 1,
+          "salesCount": 1
         },
         {
           "name": "拼多多-水饮专卖店",
