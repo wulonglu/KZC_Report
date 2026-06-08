@@ -359,26 +359,26 @@
       "date": "2026-06-06",
       "stores": [
         {
-          "name": "拼多多-水饮专卖店",
-          "platform": "拼多多",
-          "targetGmv": 23333.33,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "name": "百事天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 62383,
+          "paymentAmount": 46023.88,
+          "refundAmount": 20737.81,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0
+          "visitors": 20030,
+          "buyers": 1250,
+          "salesCount": 1684
         },
         {
-          "name": "拼多多-劲爽专卖店",
-          "platform": "拼多多",
-          "targetGmv": 10000,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "name": "佳得乐天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 1500,
+          "paymentAmount": 754,
+          "refundAmount": 111.8,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0
+          "visitors": 265,
+          "buyers": 13,
+          "salesCount": 14
         },
         {
           "name": "C店-康智",
@@ -403,26 +403,26 @@
           "salesCount": 1
         },
         {
-          "name": "佳得乐天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 1500,
-          "paymentAmount": 754,
-          "refundAmount": 111.8,
+          "name": "拼多多-水饮专卖店",
+          "platform": "拼多多",
+          "targetGmv": 23333.33,
+          "paymentAmount": 55376.43,
+          "refundAmount": 20261.31,
           "lastYearSame": 0,
-          "visitors": 265,
-          "buyers": 13,
-          "salesCount": 14
+          "visitors": 13862,
+          "buyers": 2188,
+          "salesCount": 2240
         },
         {
-          "name": "百事天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 62383,
-          "paymentAmount": 46023.88,
-          "refundAmount": 20737.81,
+          "name": "拼多多-劲爽专卖店",
+          "platform": "拼多多",
+          "targetGmv": 10000,
+          "paymentAmount": 14623.92,
+          "refundAmount": 1207.13,
           "lastYearSame": 0,
-          "visitors": 20030,
-          "buyers": 1250,
-          "salesCount": 1684
+          "visitors": 3710,
+          "buyers": 374,
+          "salesCount": 395
         }
       ]
     },
