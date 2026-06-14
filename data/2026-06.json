@@ -881,12 +881,12 @@
           "name": "C店-康智",
           "platform": "C店",
           "targetGmv": 18000,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 561.7,
+          "refundAmount": 70.72,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0
+          "visitors": 197,
+          "buyers": 19,
+          "salesCount": 23
         },
         {
           "name": "C店-特好买",
