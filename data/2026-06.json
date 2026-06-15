@@ -952,12 +952,12 @@
           "name": "C店-康智",
           "platform": "C店",
           "targetGmv": 18000,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 585.6,
+          "refundAmount": 72.08,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0
+          "visitors": 208,
+          "buyers": 24,
+          "salesCount": 24
         },
         {
           "name": "C店-特好买",
