@@ -963,12 +963,12 @@
           "name": "C店-特好买",
           "platform": "C店",
           "targetGmv": 18000,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 203.5,
+          "refundAmount": 44.9,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0
+          "visitors": 30,
+          "buyers": 3,
+          "salesCount": 4
         },
         {
           "name": "佳得乐天猫旗舰店",
