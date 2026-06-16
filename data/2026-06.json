@@ -1035,7 +1035,7 @@
           "platform": "C店",
           "targetGmv": 18000,
           "paymentAmount": 168.6,
-          "refundAmount": 0,
+          "refundAmount": 0.0,
           "lastYearSame": 0,
           "visitors": 33,
           "buyers": 5,
