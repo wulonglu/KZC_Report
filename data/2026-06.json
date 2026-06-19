@@ -1236,12 +1236,12 @@
           "name": "C店-康智",
           "platform": "C店",
           "targetGmv": 30000,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 860.4,
+          "refundAmount": 167.16,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0
+          "visitors": 386,
+          "buyers": 31,
+          "salesCount": 36
         },
         {
           "name": "C店-特好买",
