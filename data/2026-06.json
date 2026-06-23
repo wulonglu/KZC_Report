@@ -1531,12 +1531,12 @@
           "name": "C店-特好买",
           "platform": "C店",
           "targetGmv": 6000,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 287.4,
+          "refundAmount": 11.0,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0
+          "visitors": 37,
+          "buyers": 5,
+          "salesCount": 9
         },
         {
           "name": "拼多多-水饮专卖店",
