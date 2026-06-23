@@ -1520,12 +1520,12 @@
           "name": "C店-康智",
           "platform": "C店",
           "targetGmv": 6000,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 1601.3,
+          "refundAmount": 119.5,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0
+          "visitors": 335,
+          "buyers": 57,
+          "salesCount": 67
         },
         {
           "name": "C店-特好买",
