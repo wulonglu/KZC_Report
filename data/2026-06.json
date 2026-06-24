@@ -1602,12 +1602,12 @@
           "name": "C店-特好买",
           "platform": "C店",
           "targetGmv": 6000,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 22.0,
+          "refundAmount": 26704.0,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0
+          "visitors": 31,
+          "buyers": 2,
+          "salesCount": 2
         },
         {
           "name": "佳得乐天猫旗舰店",
