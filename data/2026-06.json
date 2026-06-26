@@ -1733,12 +1733,12 @@
           "name": "C店-康智",
           "platform": "C店",
           "targetGmv": 6000,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 1195.0,
+          "refundAmount": 47.51,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0
+          "visitors": 270,
+          "buyers": 44,
+          "salesCount": 50
         },
         {
           "name": "C店-特好买",
