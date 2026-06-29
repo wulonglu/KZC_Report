@@ -1850,26 +1850,26 @@
       "date": "2026-06-27",
       "stores": [
         {
-          "name": "拼多多-水饮专卖店",
-          "platform": "拼多多",
-          "targetGmv": 23333.33,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "name": "百事天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 20760.8,
+          "paymentAmount": 35340.060000000005,
+          "refundAmount": 5116.280000000001,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0
+          "visitors": 23993,
+          "buyers": 981,
+          "salesCount": 1106
         },
         {
-          "name": "拼多多-劲爽专卖店",
-          "platform": "拼多多",
-          "targetGmv": 10000,
-          "paymentAmount": 0,
+          "name": "佳得乐天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 1500,
+          "paymentAmount": 1141.9,
           "refundAmount": 0,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0
+          "visitors": 324,
+          "buyers": 17,
+          "salesCount": 21
         },
         {
           "name": "C店-康智",
@@ -1894,26 +1894,26 @@
           "salesCount": 4601
         },
         {
-          "name": "佳得乐天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 1500,
-          "paymentAmount": 1141.9,
+          "name": "拼多多-水饮专卖店",
+          "platform": "拼多多",
+          "targetGmv": 23333.33,
+          "paymentAmount": 34540.14,
           "refundAmount": 0,
           "lastYearSame": 0,
-          "visitors": 324,
-          "buyers": 17,
-          "salesCount": 21
+          "visitors": 7218,
+          "buyers": 1448,
+          "salesCount": 1490
         },
         {
-          "name": "百事天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 20760.8,
-          "paymentAmount": 35340.060000000005,
-          "refundAmount": 5116.280000000001,
+          "name": "拼多多-劲爽专卖店",
+          "platform": "拼多多",
+          "targetGmv": 10000,
+          "paymentAmount": 0,
+          "refundAmount": 0,
           "lastYearSame": 0,
-          "visitors": 23993,
-          "buyers": 981,
-          "salesCount": 1106
+          "visitors": 0,
+          "buyers": 0,
+          "salesCount": 0
         }
       ]
     },
