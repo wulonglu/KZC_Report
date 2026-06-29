@@ -1826,23 +1826,23 @@
           "name": "拼多多-水饮专卖店",
           "platform": "拼多多",
           "targetGmv": 23333.33,
-          "paymentAmount": 0,
+          "paymentAmount": 31366.51,
           "refundAmount": 0,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0
+          "visitors": 7081,
+          "buyers": 1282,
+          "salesCount": 1313
         },
         {
           "name": "拼多多-劲爽专卖店",
           "platform": "拼多多",
           "targetGmv": 10000,
-          "paymentAmount": 0,
+          "paymentAmount": 16808.4,
           "refundAmount": 0,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0
+          "visitors": 3812,
+          "buyers": 450,
+          "salesCount": 462
         }
       ]
     },
