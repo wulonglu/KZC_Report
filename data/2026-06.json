@@ -1957,12 +1957,12 @@
           "name": "C店-特好买",
           "platform": "C店",
           "targetGmv": 6000,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 22584.9,
+          "refundAmount": 33.0,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0
+          "visitors": 47,
+          "buyers": 6,
+          "salesCount": 1006
         },
         {
           "name": "佳得乐天猫旗舰店",
