@@ -1782,39 +1782,50 @@
           "name": "百事天猫旗舰店",
           "platform": "天猫",
           "targetGmv": 20760.8,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 37120.43,
+          "refundAmount": 6600.4,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0
+          "visitors": 24894,
+          "buyers": 919,
+          "salesCount": 1072
         },
         {
           "name": "佳得乐天猫旗舰店",
           "platform": "天猫",
           "targetGmv": 1500,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 2443.5,
+          "refundAmount": 53.9,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0
+          "visitors": 295,
+          "buyers": 18,
+          "salesCount": 45
         },
         {
           "name": "C店-康智",
           "platform": "C店",
           "targetGmv": 6000,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 1266.7,
+          "refundAmount": 53.28,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0
+          "visitors": 277,
+          "buyers": 40,
+          "salesCount": 53
         },
         {
           "name": "C店-特好买",
           "platform": "C店",
           "targetGmv": 6000,
+          "paymentAmount": 117944,
+          "refundAmount": 20800,
+          "lastYearSame": 0,
+          "visitors": 35,
+          "buyers": 5,
+          "salesCount": 5244
+        },
+        {
+          "name": "拼多多-水饮专卖店",
+          "platform": "拼多多",
+          "targetGmv": 23333.33,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1823,26 +1834,15 @@
           "salesCount": 0
         },
         {
-          "name": "拼多多-水饮专卖店",
-          "platform": "拼多多",
-          "targetGmv": 23333.33,
-          "paymentAmount": 31366.51,
-          "refundAmount": 14974.26,
-          "lastYearSame": 0,
-          "visitors": 7081,
-          "buyers": 1282,
-          "salesCount": 1313
-        },
-        {
           "name": "拼多多-劲爽专卖店",
           "platform": "拼多多",
           "targetGmv": 10000,
-          "paymentAmount": 16808.4,
-          "refundAmount": 990.89,
+          "paymentAmount": 0,
+          "refundAmount": 0,
           "lastYearSame": 0,
-          "visitors": 3812,
-          "buyers": 450,
-          "salesCount": 462
+          "visitors": 0,
+          "buyers": 0,
+          "salesCount": 0
         }
       ]
     },
