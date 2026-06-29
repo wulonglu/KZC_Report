@@ -1935,12 +1935,12 @@
           "name": "佳得乐天猫旗舰店",
           "platform": "天猫",
           "targetGmv": 1500,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 1405.4,
+          "refundAmount": 153.7,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0
+          "visitors": 360,
+          "buyers": 25,
+          "salesCount": 26
         },
         {
           "name": "C店-康智",
@@ -1968,12 +1968,12 @@
           "name": "拼多多-水饮专卖店",
           "platform": "拼多多",
           "targetGmv": 23333.33,
-          "paymentAmount": 18917.22,
+          "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
-          "visitors": 4832,
-          "buyers": 778,
-          "salesCount": 796
+          "visitors": 0,
+          "buyers": 0,
+          "salesCount": 0
         },
         {
           "name": "拼多多-劲爽专卖店",
