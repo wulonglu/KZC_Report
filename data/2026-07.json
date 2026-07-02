@@ -13,6 +13,17 @@
           "visitors": 33016,
           "buyers": 1422,
           "salesCount": 1733
+        },
+        {
+          "name": "佳得乐天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 0,
+          "paymentAmount": 2460.5000000000005,
+          "refundAmount": 157.7,
+          "lastYearSame": 0,
+          "visitors": 451,
+          "buyers": 23,
+          "salesCount": 46
         }
       ]
     }
