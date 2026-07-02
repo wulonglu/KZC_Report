@@ -24,6 +24,17 @@
           "visitors": 451,
           "buyers": 23,
           "salesCount": 46
+        },
+        {
+          "name": "C店-康智",
+          "platform": "C店",
+          "targetGmv": 0,
+          "paymentAmount": 2318.3,
+          "refundAmount": 271.32,
+          "lastYearSame": 0,
+          "visitors": 481,
+          "buyers": 68,
+          "salesCount": 97
         }
       ]
     }
