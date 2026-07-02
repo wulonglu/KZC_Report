@@ -36,22 +36,23 @@ export default function HistoryQuery({ onViewDate }: Props) {
   // 汇总所有店铺数据
   const summary = useMemo(() => {
     if (!results.length) return null
-    const storeMap: Record<string, { name: string; platform: string; pay: number; refund: number; target: number; lastYear: number; visitors: number; buyers: number }> = {}
+    const storeMap: Record<string, { name: string; platform: string; pay: number; refund: number; target: number; lastYear: number; visitors: number; buyers: number; newCustomers: number }> = {}
     results.forEach(r => {
       r.stores.forEach(s => {
-        if (!storeMap[s.name]) storeMap[s.name] = { name: s.name, platform: s.platform, pay: 0, refund: 0, target: 0, lastYear: 0, visitors: 0, buyers: 0 }
+        if (!storeMap[s.name]) storeMap[s.name] = { name: s.name, platform: s.platform, pay: 0, refund: 0, target: 0, lastYear: 0, visitors: 0, buyers: 0, newCustomers: 0 }
         storeMap[s.name].pay += s.paymentAmount
         storeMap[s.name].refund += s.refundAmount
         storeMap[s.name].target += s.targetGmv
         storeMap[s.name].visitors += s.visitors
         storeMap[s.name].buyers += s.buyers
+        storeMap[s.name].newCustomers += (s.newCustomers || 0)
       })
     })
     // 去年同期
     lyResults.forEach(r => {
       r.stores.forEach(s => {
         const net = s.paymentAmount - s.refundAmount
-        if (!storeMap[s.name]) storeMap[s.name] = { name: s.name, platform: s.platform, pay: 0, refund: 0, target: 0, lastYear: 0, visitors: 0, buyers: 0 }
+        if (!storeMap[s.name]) storeMap[s.name] = { name: s.name, platform: s.platform, pay: 0, refund: 0, target: 0, lastYear: 0, visitors: 0, buyers: 0, newCustomers: 0 }
         storeMap[s.name].lastYear += net
       })
     })
@@ -60,7 +61,8 @@ export default function HistoryQuery({ onViewDate }: Props) {
       return {
         name: s.name, platform: s.platform,
         pay: s.pay, refund: s.refund, netGmv: net, target: s.target, lastYear: s.lastYear,
-        visitors: s.visitors, buyers: s.buyers,
+        visitors: s.visitors, buyers: s.buyers, newCustomers: s.newCustomers,
+        newCustomerRate: s.buyers > 0 ? (s.newCustomers / s.buyers * 100) : 0,
         yoy: s.lastYear > 0 ? ((net - s.lastYear) / s.lastYear * 100) : 0,
         rate: s.target > 0 ? (net / s.target * 100) : 0,
       }
@@ -72,12 +74,15 @@ export default function HistoryQuery({ onViewDate }: Props) {
     const totalRefund = stores.reduce((a, s) => a + s.refund, 0)
     const totalVisitors = stores.reduce((a, s) => a + s.visitors, 0)
     const totalBuyers = stores.reduce((a, s) => a + s.buyers, 0)
+    const totalNewCustomers = stores.reduce((a, s) => a + s.newCustomers, 0)
     return {
       days: results.length,
       stores,
       totals: {
         netGmv: totalNet, target: totalTarget, pay: totalPay, refund: totalRefund,
         lastYear: totalLastYear, visitors: totalVisitors, buyers: totalBuyers,
+        newCustomers: totalNewCustomers,
+        newCustomerRate: totalBuyers > 0 ? (totalNewCustomers / totalBuyers * 100) : 0,
         yoy: totalLastYear > 0 ? ((totalNet - totalLastYear) / totalLastYear * 100) : 0,
         rate: totalTarget > 0 ? (totalNet / totalTarget * 100) : 0,
       },
@@ -116,10 +121,10 @@ export default function HistoryQuery({ onViewDate }: Props) {
           <button className="btn-glass btn-outline" onClick={() => {
             if (!results.length || !summary) return
             const fm = (n: number) => n.toLocaleString('zh-CN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
-            const sh = ['店铺','平台','支付金额','退款金额','去退GMV','目标GMV','达成率','去年同期','同比增长','访客数','买家数']
-            const sRows = summary.stores.map((s: any) => [s.name, s.platform, fm(s.pay), fm(s.refund), fm(s.netGmv), fm(s.target), s.rate.toFixed(2)+'%', fm(s.lastYear), s.yoy.toFixed(2)+'%', fm(s.visitors), fm(s.buyers)])
-            const dh = ['日期','店铺','平台','目标GMV','支付金额','退款金额','去退GMV','访客数','买家数','销售件数']
-            const dRows = results.flatMap(r => r.stores.map(s => [r.date, s.name, s.platform, fm(s.targetGmv), fm(s.paymentAmount), fm(s.refundAmount), fm(s.paymentAmount - s.refundAmount), fm(s.visitors), fm(s.buyers), fm(s.salesCount)]))
+            const sh = ['店铺','平台','支付金额','退款金额','去退GMV','目标GMV','达成率','去年同期','同比增长','访客数','买家数','新客数','新客占比']
+            const sRows = summary.stores.map((s: any) => [s.name, s.platform, fm(s.pay), fm(s.refund), fm(s.netGmv), fm(s.target), s.rate.toFixed(2)+'%', fm(s.lastYear), s.yoy.toFixed(2)+'%', fm(s.visitors), fm(s.buyers), fm(s.newCustomers), (s.buyers>0?(s.newCustomers/s.buyers*100):0).toFixed(2)+'%'])
+            const dh = ['日期','店铺','平台','目标GMV','支付金额','退款金额','去退GMV','访客数','买家数','新客数','销售件数']
+            const dRows = results.flatMap(r => r.stores.map(s => [r.date, s.name, s.platform, fm(s.targetGmv), fm(s.paymentAmount), fm(s.refundAmount), fm(s.paymentAmount - s.refundAmount), fm(s.visitors), fm(s.buyers), fm(s.newCustomers || 0), fm(s.salesCount)]))
             exportExcel([
               { title: `店铺区间汇总 - ${start} ~ ${end}`, headers: sh, rows: sRows },
               { title: `分天明细 - ${start} ~ ${end}`, headers: dh, rows: dRows },
@@ -146,6 +151,8 @@ export default function HistoryQuery({ onViewDate }: Props) {
               <MetricCard label="同比增长" value={formatPercent(summary.totals.yoy)} accent={summary.totals.yoy >= 0 ? 'blue' : 'pink'} />
               <MetricCard label="访客数" value={formatNumber(summary.totals.visitors)} accent="purple" />
               <MetricCard label="买家数" value={formatNumber(summary.totals.buyers)} accent="orange" />
+              <MetricCard label="新客数" value={formatNumber(summary.totals.newCustomers)} accent="green" />
+              <MetricCard label="新客占比" value={formatPercent(summary.totals.newCustomerRate)} accent="green" />
             </div>
           </div>
 
@@ -161,6 +168,8 @@ export default function HistoryQuery({ onViewDate }: Props) {
                     <th style={{ textAlign: 'right' }}>达成率</th><th style={{ textAlign: 'right' }}>去年同期</th>
                     <th style={{ textAlign: 'right' }}>同比增长</th><th style={{ textAlign: 'right' }}>访客数</th>
                     <th style={{ textAlign: 'right' }}>买家数</th>
+                    <th style={{ textAlign: 'right' }}>新客数</th>
+                    <th style={{ textAlign: 'right' }}>新客占比</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -180,6 +189,8 @@ export default function HistoryQuery({ onViewDate }: Props) {
                       </td>
                       <td style={{ textAlign: 'right' }}>{formatNumber(s.visitors)}</td>
                       <td style={{ textAlign: 'right' }}>{formatNumber(s.buyers)}</td>
+                      <td style={{ textAlign: 'right' }}>{formatNumber(s.newCustomers)}</td>
+                      <td style={{ textAlign: 'right' }}>{formatPercent(s.newCustomerRate)}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -232,13 +243,14 @@ export default function HistoryQuery({ onViewDate }: Props) {
   )
 }
 
-type Accent = 'blue' | 'purple' | 'orange' | 'cyan' | 'pink'
+type Accent = 'blue' | 'purple' | 'orange' | 'cyan' | 'pink' | 'green'
 const accentColors: Record<Accent, { bg: string; border: string; label: string; value: string }> = {
   blue:   { bg: 'rgba(0,102,204,.1)', border: 'rgba(0,102,204,.2)', label: 'rgba(100,180,255,.6)', value: '#93c5fd' },
   purple: { bg: 'rgba(139,92,246,.1)', border: 'rgba(139,92,246,.2)', label: 'rgba(167,139,250,.6)', value: '#c4b5fd' },
   orange: { bg: 'rgba(249,115,22,.1)', border: 'rgba(249,115,22,.2)', label: 'rgba(251,146,60,.6)', value: '#fdba74' },
   cyan:   { bg: 'rgba(6,182,212,.1)', border: 'rgba(6,182,212,.2)', label: 'rgba(34,211,238,.6)', value: '#67e8f9' },
   pink:   { bg: 'rgba(236,72,153,.1)', border: 'rgba(236,72,153,.2)', label: 'rgba(244,114,182,.6)', value: '#f9a8d4' },
+  green:  { bg: 'rgba(16,185,129,.1)', border: 'rgba(16,185,129,.2)', label: 'rgba(52,211,153,.6)', value: '#6ee7b7' },
 }
 
 function MetricCard({ label, value, accent }: { label: string; value: string; accent?: Accent }) {

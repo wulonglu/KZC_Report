@@ -9,6 +9,7 @@ export interface StoreData {
   visitors: number
   buyers: number
   salesCount: number
+  newCustomers: number
 }
 
 export interface DailyReport {
@@ -27,13 +28,14 @@ export interface StoreMetrics extends StoreData {
   achievementRate: number // 达成率 = netGmv / targetGmv * 100
   avgOrderValue: number // 客单价 = paymentAmount / buyers
   conversionRate: number // 转化率 = buyers / visitors * 100
+  newCustomerRate: number // 新客占比 = newCustomers / buyers * 100
 }
 
 export const STORES = [
   { name: '百事天猫旗舰店', platform: '天猫' as const },
   { name: '佳得乐天猫旗舰店', platform: '天猫' as const },
   { name: 'C店-康智', platform: 'C店' as const },
-  { name: 'C店-特好买', platform: 'C店' as const },
+  { name: 'C店-特好卖', platform: 'C店' as const },
   { name: '拼多多-水饮专卖店', platform: '拼多多' as const },
   { name: '拼多多-劲爽专卖店', platform: '拼多多' as const },
   { name: '淘宝农场', platform: '淘宝' as const },
@@ -61,6 +63,7 @@ export function emptyStore(name: string, platform: StoreData['platform']): Store
     visitors: 0,
     buyers: 0,
     salesCount: 0,
+    newCustomers: 0,
   }
 }
 
@@ -71,8 +74,9 @@ export function computeMetrics(store: StoreData): StoreMetrics {
   const achievementRate = store.targetGmv > 0 ? (netGmv / store.targetGmv) * 100 : 0
   const avgOrderValue = store.buyers > 0 ? store.paymentAmount / store.buyers : 0
   const conversionRate = store.visitors > 0 ? (store.buyers / store.visitors) * 100 : 0
+  const newCustomerRate = store.buyers > 0 ? ((store.newCustomers || 0) / store.buyers) * 100 : 0
 
-  return { ...store, netGmv, yoyGrowth, achievementRate, avgOrderValue, conversionRate }
+  return { ...store, netGmv, yoyGrowth, achievementRate, avgOrderValue, conversionRate, newCustomerRate }
 }
 
 export function monthKey(date: string): string {

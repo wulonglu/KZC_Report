@@ -34,10 +34,10 @@ export default function DataEntry() {
     })
   }, [date])
 
-  const fields: (keyof StoreData)[] = ['paymentAmount', 'refundAmount', 'visitors', 'buyers', 'salesCount']
+  const fields: (keyof StoreData)[] = ['paymentAmount', 'refundAmount', 'visitors', 'buyers', 'salesCount', 'newCustomers']
   const labels: Record<string, string> = {
     paymentAmount: '支付金额', refundAmount: '退款金额',
-    visitors: '访客数', buyers: '买家数', salesCount: '销售件数',
+    visitors: '访客数', buyers: '买家数', salesCount: '销售件数', newCustomers: '新客数',
   }
 
   const unlock = () => {
@@ -65,6 +65,7 @@ export default function DataEntry() {
           visitors: Number(s.visitors) || 0,
           buyers: Number(s.buyers) || 0,
           salesCount: Number(s.salesCount) || 0,
+          newCustomers: Number(s.newCustomers) || 0,
         })),
       })
       setMsg('保存成功！')

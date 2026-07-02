@@ -148,6 +148,8 @@ export default function DailyReport() {
       refund: metrics.reduce((a, m) => a + m.refundAmount, 0),
       visitors: tv, buyers: tb,
       sales: metrics.reduce((a, m) => a + m.salesCount, 0),
+      newCustom: metrics.reduce((a, m) => a + (m.newCustomers || 0), 0),
+      newCustomRate: tb > 0 ? (metrics.reduce((a, m) => a + (m.newCustomers || 0), 0) / tb) * 100 : 0,
       aov: metrics.length ? metrics.reduce((a, m) => a + m.avgOrderValue, 0) / metrics.length : 0,
       cvr: tv > 0 ? (tb / tv) * 100 : 0,
       lastYear,
@@ -183,8 +185,8 @@ export default function DailyReport() {
             <button className="btn-glass btn-outline" onClick={() => {
               if (!hasData) return
               const fm = (n: number) => n.toLocaleString('zh-CN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
-              const h = ['店铺','平台','目标GMV','支付金额','退款金额','去退GMV','去年同期','同比增长','达成率','访客数','买家数','销售件数','客单价','转化率']
-              const dailyRows = metrics.map(m => [m.name, m.platform, fm(m.targetGmv), fm(m.paymentAmount), fm(m.refundAmount), fm(m.netGmv), fm((m as any)._lastYearNet || m.lastYearSame), m.yoyGrowth.toFixed(2)+'%', m.achievementRate.toFixed(2)+'%', fm(m.visitors), fm(m.buyers), fm(m.salesCount), fm(m.avgOrderValue), m.conversionRate.toFixed(2)+'%'])
+              const h = ['店铺','平台','目标GMV','支付金额','退款金额','去退GMV','去年同期','同比增长','达成率','访客数','买家数','新客数','新客占比','销售件数','客单价','转化率']
+              const dailyRows = metrics.map(m => [m.name, m.platform, fm(m.targetGmv), fm(m.paymentAmount), fm(m.refundAmount), fm(m.netGmv), fm((m as any)._lastYearNet || m.lastYearSame), m.yoyGrowth.toFixed(2)+'%', m.achievementRate.toFixed(2)+'%', fm(m.visitors), fm(m.buyers), fm(m.newCustomers), m.newCustomerRate.toFixed(2)+'%', fm(m.salesCount), fm(m.avgOrderValue), m.conversionRate.toFixed(2)+'%'])
               const mh = ['店铺','月累计支付','月累计退款','月累计去退GMV','去年同期','月累计同比']
               const mRows = monthCum.stores.map((s: any) => [s.name, fm(s.pay), fm(s.refund), fm(s.net), fm(s.lastYear), (s.lastYear>0?((s.net-s.lastYear)/s.lastYear*100):0).toFixed(2)+'%'])
               const yh = ['店铺','年累计支付','年累计退款','年累计去退GMV','去年同期','年累计同比']
@@ -206,6 +208,8 @@ export default function DailyReport() {
           <MetricCard label="退款金额" value={formatMoney(totals?.refund || 0)} />
           <MetricCard label="访客数" value={formatNumber(totals?.visitors || 0)} accent="purple" />
           <MetricCard label="买家数" value={formatNumber(totals?.buyers || 0)} accent="orange" />
+          <MetricCard label="新客数" value={formatNumber(totals?.newCustom || 0)} accent="green" />
+          <MetricCard label="新客占比" value={formatPercent(totals?.newCustomRate || 0)} accent="green" />
           <MetricCard label="客单价" value={formatMoney(totals?.aov || 0)} accent="cyan" />
           <MetricCard label="转化率" value={formatPercent(totals?.cvr || 0)} accent="pink" />
           <MetricCard label="销售件数" value={formatNumber(totals?.sales || 0)} />
@@ -323,7 +327,8 @@ export default function DailyReport() {
                 <th style={{ textAlign: 'right' }}>退款金额</th><th style={{ textAlign: 'right' }}>去退GMV</th>
                 <th style={{ textAlign: 'right' }}>去年同期</th><th style={{ textAlign: 'right' }}>同比增长</th>
                 <th style={{ textAlign: 'right' }}>达成率</th><th style={{ textAlign: 'right' }}>访客数</th>
-                <th style={{ textAlign: 'right' }}>买家数</th><th style={{ textAlign: 'right' }}>销售件数</th>
+                <th style={{ textAlign: 'right' }}>买家数</th><th style={{ textAlign: 'right' }}>新客数</th>
+                <th style={{ textAlign: 'right' }}>新客占比</th><th style={{ textAlign: 'right' }}>销售件数</th>
                 <th style={{ textAlign: 'right' }}>客单价</th><th style={{ textAlign: 'right' }}>转化率</th>
               </tr>
             </thead>
@@ -347,6 +352,8 @@ export default function DailyReport() {
                   </td>
                   <td style={{ textAlign: 'right' }}>{formatNumber(m.visitors)}</td>
                   <td style={{ textAlign: 'right' }}>{formatNumber(m.buyers)}</td>
+                  <td style={{ textAlign: 'right' }}>{formatNumber(m.newCustomers)}</td>
+                  <td style={{ textAlign: 'right' }}>{formatPercent(m.newCustomerRate)}</td>
                   <td style={{ textAlign: 'right' }}>{formatNumber(m.salesCount)}</td>
                   <td style={{ textAlign: 'right' }}>{formatMoney(m.avgOrderValue)}</td>
                   <td style={{ textAlign: 'right' }}>{formatPercent(m.conversionRate)}</td>
@@ -357,7 +364,7 @@ export default function DailyReport() {
                     <span style={{ display: 'inline-block', width: 8, height: 8, borderRadius: 2, marginRight: 8, background: storeColor(s.platform).bg }} />
                     <span style={{ color: 'rgba(255,255,255,.25)', fontSize: 11 }}>[{s.platform}]</span> {s.name}
                   </td>
-                  {Array(12).fill(null).map((_, j) => (
+                  {Array(14).fill(null).map((_, j) => (
                     <td key={j} style={{ textAlign: 'right', color: 'rgba(255,255,255,.08)' }}>-</td>
                   ))}
                 </tr>
@@ -380,6 +387,8 @@ export default function DailyReport() {
                   </td>
                   <td style={{ textAlign: 'right' }}>{formatNumber(totals.visitors)}</td>
                   <td style={{ textAlign: 'right' }}>{formatNumber(totals.buyers)}</td>
+                  <td style={{ textAlign: 'right' }}>{formatNumber(totals.newCustom)}</td>
+                  <td style={{ textAlign: 'right' }}>{formatPercent(totals.newCustomRate)}</td>
                   <td style={{ textAlign: 'right' }}>{formatNumber(totals.sales)}</td>
                   <td style={{ textAlign: 'right' }}>{formatMoney(totals.aov)}</td>
                   <td style={{ textAlign: 'right' }}>{formatPercent(totals.cvr)}</td>
@@ -513,13 +522,14 @@ export default function DailyReport() {
   )
 }
 
-type Accent = 'blue' | 'purple' | 'orange' | 'cyan' | 'pink'
+type Accent = 'blue' | 'purple' | 'orange' | 'cyan' | 'pink' | 'green'
 const accentColors: Record<Accent, { bg: string; border: string; label: string; value: string }> = {
   blue:   { bg: 'rgba(0,102,204,.1)', border: 'rgba(0,102,204,.2)', label: 'rgba(100,180,255,.6)', value: '#93c5fd' },
   purple: { bg: 'rgba(139,92,246,.1)', border: 'rgba(139,92,246,.2)', label: 'rgba(167,139,250,.6)', value: '#c4b5fd' },
   orange: { bg: 'rgba(249,115,22,.1)', border: 'rgba(249,115,22,.2)', label: 'rgba(251,146,60,.6)', value: '#fdba74' },
   cyan:   { bg: 'rgba(6,182,212,.1)', border: 'rgba(6,182,212,.2)', label: 'rgba(34,211,238,.6)', value: '#67e8f9' },
   pink:   { bg: 'rgba(236,72,153,.1)', border: 'rgba(236,72,153,.2)', label: 'rgba(244,114,182,.6)', value: '#f9a8d4' },
+  green:  { bg: 'rgba(16,185,129,.1)', border: 'rgba(16,185,129,.2)', label: 'rgba(52,211,153,.6)', value: '#6ee7b7' },
 }
 
 function MetricCard({ label, value, accent, sub }: { label: string; value: string; accent?: Accent; sub?: string }) {

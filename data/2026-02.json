@@ -12,7 +12,8 @@
           "lastYearSame": 0,
           "visitors": 13138,
           "buyers": 1028,
-          "salesCount": 1610
+          "salesCount": 1610,
+          "newCustomers": 0
         },
         {
           "name": "C店-康智",
@@ -23,10 +24,11 @@
           "lastYearSame": 0,
           "visitors": 45,
           "buyers": 1,
-          "salesCount": 1
+          "salesCount": 1,
+          "newCustomers": 0
         },
         {
-          "name": "C店-特好买",
+          "name": "C店-特好卖",
           "platform": "C店",
           "targetGmv": 0,
           "paymentAmount": 4112.8,
@@ -34,7 +36,8 @@
           "lastYearSame": 0,
           "visitors": 31,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-水饮专卖店",
@@ -45,7 +48,8 @@
           "lastYearSame": 0,
           "visitors": 3655,
           "buyers": 210,
-          "salesCount": 269
+          "salesCount": 269,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-劲爽专卖店",
@@ -56,7 +60,8 @@
           "lastYearSame": 0,
           "visitors": 1566,
           "buyers": 90,
-          "salesCount": 115
+          "salesCount": 115,
+          "newCustomers": 0
         },
         {
           "name": "淘宝农场",
@@ -67,7 +72,8 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         }
       ]
     },
@@ -83,7 +89,8 @@
           "lastYearSame": 0,
           "visitors": 14478,
           "buyers": 1102,
-          "salesCount": 1603
+          "salesCount": 1603,
+          "newCustomers": 0
         },
         {
           "name": "C店-康智",
@@ -94,10 +101,11 @@
           "lastYearSame": 0,
           "visitors": 77,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         },
         {
-          "name": "C店-特好买",
+          "name": "C店-特好卖",
           "platform": "C店",
           "targetGmv": 0,
           "paymentAmount": 6539.0,
@@ -105,7 +113,8 @@
           "lastYearSame": 0,
           "visitors": 39,
           "buyers": 1,
-          "salesCount": 1
+          "salesCount": 1,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-水饮专卖店",
@@ -116,7 +125,8 @@
           "lastYearSame": 0,
           "visitors": 7080,
           "buyers": 511,
-          "salesCount": 654
+          "salesCount": 654,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-劲爽专卖店",
@@ -127,7 +137,8 @@
           "lastYearSame": 0,
           "visitors": 3034,
           "buyers": 219,
-          "salesCount": 280
+          "salesCount": 280,
+          "newCustomers": 0
         },
         {
           "name": "淘宝农场",
@@ -138,7 +149,8 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         }
       ]
     },
@@ -154,7 +166,8 @@
           "lastYearSame": 0,
           "visitors": 17994,
           "buyers": 980,
-          "salesCount": 1405
+          "salesCount": 1405,
+          "newCustomers": 0
         },
         {
           "name": "C店-康智",
@@ -165,10 +178,11 @@
           "lastYearSame": 0,
           "visitors": 42,
           "buyers": 1,
-          "salesCount": 1
+          "salesCount": 1,
+          "newCustomers": 0
         },
         {
-          "name": "C店-特好买",
+          "name": "C店-特好卖",
           "platform": "C店",
           "targetGmv": 0,
           "paymentAmount": 15608.1,
@@ -176,7 +190,8 @@
           "lastYearSame": 0,
           "visitors": 41,
           "buyers": 2,
-          "salesCount": 3
+          "salesCount": 3,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-水饮专卖店",
@@ -187,7 +202,8 @@
           "lastYearSame": 0,
           "visitors": 1932,
           "buyers": 138,
-          "salesCount": 177
+          "salesCount": 177,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-劲爽专卖店",
@@ -198,7 +214,8 @@
           "lastYearSame": 0,
           "visitors": 828,
           "buyers": 59,
-          "salesCount": 76
+          "salesCount": 76,
+          "newCustomers": 0
         },
         {
           "name": "淘宝农场",
@@ -209,7 +226,8 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         }
       ]
     },
@@ -225,7 +243,8 @@
           "lastYearSame": 0,
           "visitors": 21836,
           "buyers": 755,
-          "salesCount": 1040
+          "salesCount": 1040,
+          "newCustomers": 0
         },
         {
           "name": "C店-康智",
@@ -236,10 +255,11 @@
           "lastYearSame": 0,
           "visitors": 520,
           "buyers": 1,
-          "salesCount": 1
+          "salesCount": 1,
+          "newCustomers": 0
         },
         {
-          "name": "C店-特好买",
+          "name": "C店-特好卖",
           "platform": "C店",
           "targetGmv": 0,
           "paymentAmount": 357.3,
@@ -247,7 +267,8 @@
           "lastYearSame": 0,
           "visitors": 19,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-水饮专卖店",
@@ -258,7 +279,8 @@
           "lastYearSame": 0,
           "visitors": 2032,
           "buyers": 174,
-          "salesCount": 223
+          "salesCount": 223,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-劲爽专卖店",
@@ -269,7 +291,8 @@
           "lastYearSame": 0,
           "visitors": 871,
           "buyers": 74,
-          "salesCount": 95
+          "salesCount": 95,
+          "newCustomers": 0
         },
         {
           "name": "淘宝农场",
@@ -280,7 +303,8 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         }
       ]
     },
@@ -296,7 +320,8 @@
           "lastYearSame": 0,
           "visitors": 20965,
           "buyers": 886,
-          "salesCount": 1341
+          "salesCount": 1341,
+          "newCustomers": 0
         },
         {
           "name": "C店-康智",
@@ -307,10 +332,11 @@
           "lastYearSame": 0,
           "visitors": 54,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         },
         {
-          "name": "C店-特好买",
+          "name": "C店-特好卖",
           "platform": "C店",
           "targetGmv": 0,
           "paymentAmount": 0.0,
@@ -318,7 +344,8 @@
           "lastYearSame": 0,
           "visitors": 18,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-水饮专卖店",
@@ -329,7 +356,8 @@
           "lastYearSame": 0,
           "visitors": 5646,
           "buyers": 472,
-          "salesCount": 604
+          "salesCount": 604,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-劲爽专卖店",
@@ -340,7 +368,8 @@
           "lastYearSame": 0,
           "visitors": 2419,
           "buyers": 202,
-          "salesCount": 259
+          "salesCount": 259,
+          "newCustomers": 0
         },
         {
           "name": "淘宝农场",
@@ -351,7 +380,8 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         }
       ]
     },
@@ -367,7 +397,8 @@
           "lastYearSame": 0,
           "visitors": 24103,
           "buyers": 1055,
-          "salesCount": 1362
+          "salesCount": 1362,
+          "newCustomers": 0
         },
         {
           "name": "C店-康智",
@@ -378,10 +409,11 @@
           "lastYearSame": 0,
           "visitors": 41,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         },
         {
-          "name": "C店-特好买",
+          "name": "C店-特好卖",
           "platform": "C店",
           "targetGmv": 0,
           "paymentAmount": 55500.0,
@@ -389,7 +421,8 @@
           "lastYearSame": 0,
           "visitors": 18,
           "buyers": 1,
-          "salesCount": 1000
+          "salesCount": 1000,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-水饮专卖店",
@@ -400,7 +433,8 @@
           "lastYearSame": 0,
           "visitors": 15924,
           "buyers": 963,
-          "salesCount": 1233
+          "salesCount": 1233,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-劲爽专卖店",
@@ -411,7 +445,8 @@
           "lastYearSame": 0,
           "visitors": 6824,
           "buyers": 413,
-          "salesCount": 528
+          "salesCount": 528,
+          "newCustomers": 0
         },
         {
           "name": "淘宝农场",
@@ -422,7 +457,8 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         }
       ]
     },
@@ -438,7 +474,8 @@
           "lastYearSame": 0,
           "visitors": 22094,
           "buyers": 1100,
-          "salesCount": 1492
+          "salesCount": 1492,
+          "newCustomers": 0
         },
         {
           "name": "C店-康智",
@@ -449,10 +486,11 @@
           "lastYearSame": 0,
           "visitors": 37,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         },
         {
-          "name": "C店-特好买",
+          "name": "C店-特好卖",
           "platform": "C店",
           "targetGmv": 0,
           "paymentAmount": 0.0,
@@ -460,7 +498,8 @@
           "lastYearSame": 0,
           "visitors": 12,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-水饮专卖店",
@@ -471,7 +510,8 @@
           "lastYearSame": 0,
           "visitors": 10485,
           "buyers": 642,
-          "salesCount": 822
+          "salesCount": 822,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-劲爽专卖店",
@@ -482,7 +522,8 @@
           "lastYearSame": 0,
           "visitors": 4493,
           "buyers": 275,
-          "salesCount": 352
+          "salesCount": 352,
+          "newCustomers": 0
         },
         {
           "name": "淘宝农场",
@@ -493,7 +534,8 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         }
       ]
     },
@@ -509,7 +551,8 @@
           "lastYearSame": 0,
           "visitors": 22725,
           "buyers": 1155,
-          "salesCount": 1581
+          "salesCount": 1581,
+          "newCustomers": 0
         },
         {
           "name": "C店-康智",
@@ -520,10 +563,11 @@
           "lastYearSame": 0,
           "visitors": 33,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         },
         {
-          "name": "C店-特好买",
+          "name": "C店-特好卖",
           "platform": "C店",
           "targetGmv": 0,
           "paymentAmount": 0.0,
@@ -531,7 +575,8 @@
           "lastYearSame": 0,
           "visitors": 12,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-水饮专卖店",
@@ -542,7 +587,8 @@
           "lastYearSame": 0,
           "visitors": 9286,
           "buyers": 619,
-          "salesCount": 792
+          "salesCount": 792,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-劲爽专卖店",
@@ -553,7 +599,8 @@
           "lastYearSame": 0,
           "visitors": 3979,
           "buyers": 265,
-          "salesCount": 339
+          "salesCount": 339,
+          "newCustomers": 0
         },
         {
           "name": "淘宝农场",
@@ -564,7 +611,8 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         }
       ]
     },
@@ -580,7 +628,8 @@
           "lastYearSame": 0,
           "visitors": 29965,
           "buyers": 952,
-          "salesCount": 1421
+          "salesCount": 1421,
+          "newCustomers": 0
         },
         {
           "name": "C店-康智",
@@ -591,10 +640,11 @@
           "lastYearSame": 0,
           "visitors": 16,
           "buyers": 1,
-          "salesCount": 2
+          "salesCount": 2,
+          "newCustomers": 0
         },
         {
-          "name": "C店-特好买",
+          "name": "C店-特好卖",
           "platform": "C店",
           "targetGmv": 0,
           "paymentAmount": 3779.2,
@@ -602,7 +652,8 @@
           "lastYearSame": 0,
           "visitors": 29,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-水饮专卖店",
@@ -613,7 +664,8 @@
           "lastYearSame": 0,
           "visitors": 9525,
           "buyers": 970,
-          "salesCount": 1241
+          "salesCount": 1241,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-劲爽专卖店",
@@ -624,7 +676,8 @@
           "lastYearSame": 0,
           "visitors": 4082,
           "buyers": 415,
-          "salesCount": 532
+          "salesCount": 532,
+          "newCustomers": 0
         },
         {
           "name": "淘宝农场",
@@ -635,7 +688,8 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         }
       ]
     },
@@ -651,7 +705,8 @@
           "lastYearSame": 0,
           "visitors": 26820,
           "buyers": 347,
-          "salesCount": 508
+          "salesCount": 508,
+          "newCustomers": 0
         },
         {
           "name": "C店-康智",
@@ -662,10 +717,11 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         },
         {
-          "name": "C店-特好买",
+          "name": "C店-特好卖",
           "platform": "C店",
           "targetGmv": 0,
           "paymentAmount": 0.0,
@@ -673,7 +729,8 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-水饮专卖店",
@@ -684,7 +741,8 @@
           "lastYearSame": 0,
           "visitors": 8782,
           "buyers": 732,
-          "salesCount": 937
+          "salesCount": 937,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-劲爽专卖店",
@@ -695,7 +753,8 @@
           "lastYearSame": 0,
           "visitors": 3764,
           "buyers": 313,
-          "salesCount": 401
+          "salesCount": 401,
+          "newCustomers": 0
         },
         {
           "name": "淘宝农场",
@@ -706,7 +765,8 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         }
       ]
     },
@@ -722,7 +782,8 @@
           "lastYearSame": 0,
           "visitors": 14431,
           "buyers": 264,
-          "salesCount": 355
+          "salesCount": 355,
+          "newCustomers": 0
         },
         {
           "name": "C店-康智",
@@ -733,10 +794,11 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         },
         {
-          "name": "C店-特好买",
+          "name": "C店-特好卖",
           "platform": "C店",
           "targetGmv": 0,
           "paymentAmount": 0.0,
@@ -744,7 +806,8 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-水饮专卖店",
@@ -755,7 +818,8 @@
           "lastYearSame": 0,
           "visitors": 6121,
           "buyers": 500,
-          "salesCount": 640
+          "salesCount": 640,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-劲爽专卖店",
@@ -766,7 +830,8 @@
           "lastYearSame": 0,
           "visitors": 2623,
           "buyers": 214,
-          "salesCount": 274
+          "salesCount": 274,
+          "newCustomers": 0
         },
         {
           "name": "淘宝农场",
@@ -777,7 +842,8 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         }
       ]
     },
@@ -793,7 +859,8 @@
           "lastYearSame": 0,
           "visitors": 32057,
           "buyers": 328,
-          "salesCount": 398
+          "salesCount": 398,
+          "newCustomers": 0
         },
         {
           "name": "C店-康智",
@@ -804,10 +871,11 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         },
         {
-          "name": "C店-特好买",
+          "name": "C店-特好卖",
           "platform": "C店",
           "targetGmv": 0,
           "paymentAmount": 0.0,
@@ -815,7 +883,8 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-水饮专卖店",
@@ -826,7 +895,8 @@
           "lastYearSame": 0,
           "visitors": 5174,
           "buyers": 357,
-          "salesCount": 456
+          "salesCount": 456,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-劲爽专卖店",
@@ -837,7 +907,8 @@
           "lastYearSame": 0,
           "visitors": 2217,
           "buyers": 153,
-          "salesCount": 195
+          "salesCount": 195,
+          "newCustomers": 0
         },
         {
           "name": "淘宝农场",
@@ -848,7 +919,8 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         }
       ]
     },
@@ -864,7 +936,8 @@
           "lastYearSame": 0,
           "visitors": 18177,
           "buyers": 225,
-          "salesCount": 256
+          "salesCount": 256,
+          "newCustomers": 0
         },
         {
           "name": "C店-康智",
@@ -875,10 +948,11 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         },
         {
-          "name": "C店-特好买",
+          "name": "C店-特好卖",
           "platform": "C店",
           "targetGmv": 0,
           "paymentAmount": 0.0,
@@ -886,7 +960,8 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-水饮专卖店",
@@ -897,7 +972,8 @@
           "lastYearSame": 0,
           "visitors": 4261,
           "buyers": 266,
-          "salesCount": 340
+          "salesCount": 340,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-劲爽专卖店",
@@ -908,7 +984,8 @@
           "lastYearSame": 0,
           "visitors": 1826,
           "buyers": 114,
-          "salesCount": 145
+          "salesCount": 145,
+          "newCustomers": 0
         },
         {
           "name": "淘宝农场",
@@ -919,7 +996,8 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         }
       ]
     },
@@ -935,7 +1013,8 @@
           "lastYearSame": 0,
           "visitors": 18993,
           "buyers": 111,
-          "salesCount": 130
+          "salesCount": 130,
+          "newCustomers": 0
         },
         {
           "name": "C店-康智",
@@ -946,10 +1025,11 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         },
         {
-          "name": "C店-特好买",
+          "name": "C店-特好卖",
           "platform": "C店",
           "targetGmv": 0,
           "paymentAmount": 0.0,
@@ -957,7 +1037,8 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-水饮专卖店",
@@ -968,7 +1049,8 @@
           "lastYearSame": 0,
           "visitors": 3936,
           "buyers": 205,
-          "salesCount": 262
+          "salesCount": 262,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-劲爽专卖店",
@@ -979,7 +1061,8 @@
           "lastYearSame": 0,
           "visitors": 1687,
           "buyers": 87,
-          "salesCount": 112
+          "salesCount": 112,
+          "newCustomers": 0
         },
         {
           "name": "淘宝农场",
@@ -990,7 +1073,8 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         }
       ]
     },
@@ -1006,7 +1090,8 @@
           "lastYearSame": 0,
           "visitors": 21440,
           "buyers": 108,
-          "salesCount": 114
+          "salesCount": 114,
+          "newCustomers": 0
         },
         {
           "name": "C店-康智",
@@ -1017,10 +1102,11 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         },
         {
-          "name": "C店-特好买",
+          "name": "C店-特好卖",
           "platform": "C店",
           "targetGmv": 0,
           "paymentAmount": 0.0,
@@ -1028,7 +1114,8 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-水饮专卖店",
@@ -1039,7 +1126,8 @@
           "lastYearSame": 0,
           "visitors": 3193,
           "buyers": 154,
-          "salesCount": 197
+          "salesCount": 197,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-劲爽专卖店",
@@ -1050,7 +1138,8 @@
           "lastYearSame": 0,
           "visitors": 1368,
           "buyers": 66,
-          "salesCount": 84
+          "salesCount": 84,
+          "newCustomers": 0
         },
         {
           "name": "淘宝农场",
@@ -1061,7 +1150,8 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         }
       ]
     },
@@ -1077,7 +1167,8 @@
           "lastYearSame": 0,
           "visitors": 17137,
           "buyers": 75,
-          "salesCount": 96
+          "salesCount": 96,
+          "newCustomers": 0
         },
         {
           "name": "C店-康智",
@@ -1088,10 +1179,11 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         },
         {
-          "name": "C店-特好买",
+          "name": "C店-特好卖",
           "platform": "C店",
           "targetGmv": 0,
           "paymentAmount": 0.0,
@@ -1099,7 +1191,8 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-水饮专卖店",
@@ -1110,7 +1203,8 @@
           "lastYearSame": 0,
           "visitors": 2641,
           "buyers": 126,
-          "salesCount": 161
+          "salesCount": 161,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-劲爽专卖店",
@@ -1121,7 +1215,8 @@
           "lastYearSame": 0,
           "visitors": 1132,
           "buyers": 54,
-          "salesCount": 69
+          "salesCount": 69,
+          "newCustomers": 0
         },
         {
           "name": "淘宝农场",
@@ -1132,7 +1227,8 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         }
       ]
     },
@@ -1148,7 +1244,8 @@
           "lastYearSame": 0,
           "visitors": 14595,
           "buyers": 77,
-          "salesCount": 83
+          "salesCount": 83,
+          "newCustomers": 0
         },
         {
           "name": "C店-康智",
@@ -1159,10 +1256,11 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         },
         {
-          "name": "C店-特好买",
+          "name": "C店-特好卖",
           "platform": "C店",
           "targetGmv": 0,
           "paymentAmount": 0.0,
@@ -1170,7 +1268,8 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-水饮专卖店",
@@ -1181,7 +1280,8 @@
           "lastYearSame": 0,
           "visitors": 2322,
           "buyers": 109,
-          "salesCount": 140
+          "salesCount": 140,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-劲爽专卖店",
@@ -1192,7 +1292,8 @@
           "lastYearSame": 0,
           "visitors": 995,
           "buyers": 47,
-          "salesCount": 60
+          "salesCount": 60,
+          "newCustomers": 0
         },
         {
           "name": "淘宝农场",
@@ -1203,7 +1304,8 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         }
       ]
     },
@@ -1219,7 +1321,8 @@
           "lastYearSame": 0,
           "visitors": 13314,
           "buyers": 99,
-          "salesCount": 125
+          "salesCount": 125,
+          "newCustomers": 0
         },
         {
           "name": "C店-康智",
@@ -1230,10 +1333,11 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         },
         {
-          "name": "C店-特好买",
+          "name": "C店-特好卖",
           "platform": "C店",
           "targetGmv": 0,
           "paymentAmount": 0.0,
@@ -1241,7 +1345,8 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-水饮专卖店",
@@ -1252,7 +1357,8 @@
           "lastYearSame": 0,
           "visitors": 1720,
           "buyers": 95,
-          "salesCount": 122
+          "salesCount": 122,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-劲爽专卖店",
@@ -1263,7 +1369,8 @@
           "lastYearSame": 0,
           "visitors": 737,
           "buyers": 41,
-          "salesCount": 52
+          "salesCount": 52,
+          "newCustomers": 0
         },
         {
           "name": "淘宝农场",
@@ -1274,7 +1381,8 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         }
       ]
     },
@@ -1290,7 +1398,8 @@
           "lastYearSame": 0,
           "visitors": 13387,
           "buyers": 98,
-          "salesCount": 127
+          "salesCount": 127,
+          "newCustomers": 0
         },
         {
           "name": "C店-康智",
@@ -1301,10 +1410,11 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         },
         {
-          "name": "C店-特好买",
+          "name": "C店-特好卖",
           "platform": "C店",
           "targetGmv": 0,
           "paymentAmount": 0.0,
@@ -1312,7 +1422,8 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-水饮专卖店",
@@ -1323,7 +1434,8 @@
           "lastYearSame": 0,
           "visitors": 738,
           "buyers": 52,
-          "salesCount": 67
+          "salesCount": 67,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-劲爽专卖店",
@@ -1334,7 +1446,8 @@
           "lastYearSame": 0,
           "visitors": 316,
           "buyers": 22,
-          "salesCount": 28
+          "salesCount": 28,
+          "newCustomers": 0
         },
         {
           "name": "淘宝农场",
@@ -1345,7 +1458,8 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         }
       ]
     },
@@ -1361,7 +1475,8 @@
           "lastYearSame": 0,
           "visitors": 3321,
           "buyers": 156,
-          "salesCount": 200
+          "salesCount": 200,
+          "newCustomers": 0
         },
         {
           "name": "C店-康智",
@@ -1372,10 +1487,11 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         },
         {
-          "name": "C店-特好买",
+          "name": "C店-特好卖",
           "platform": "C店",
           "targetGmv": 0,
           "paymentAmount": 0.0,
@@ -1383,7 +1499,8 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-水饮专卖店",
@@ -1394,7 +1511,8 @@
           "lastYearSame": 0,
           "visitors": 684,
           "buyers": 47,
-          "salesCount": 60
+          "salesCount": 60,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-劲爽专卖店",
@@ -1405,7 +1523,8 @@
           "lastYearSame": 0,
           "visitors": 293,
           "buyers": 20,
-          "salesCount": 26
+          "salesCount": 26,
+          "newCustomers": 0
         },
         {
           "name": "淘宝农场",
@@ -1416,7 +1535,8 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         }
       ]
     },
@@ -1432,7 +1552,8 @@
           "lastYearSame": 0,
           "visitors": 3467,
           "buyers": 182,
-          "salesCount": 251
+          "salesCount": 251,
+          "newCustomers": 0
         },
         {
           "name": "C店-康智",
@@ -1443,10 +1564,11 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         },
         {
-          "name": "C店-特好买",
+          "name": "C店-特好卖",
           "platform": "C店",
           "targetGmv": 0,
           "paymentAmount": 0.0,
@@ -1454,7 +1576,8 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-水饮专卖店",
@@ -1465,7 +1588,8 @@
           "lastYearSame": 0,
           "visitors": 3920,
           "buyers": 381,
-          "salesCount": 488
+          "salesCount": 488,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-劲爽专卖店",
@@ -1476,7 +1600,8 @@
           "lastYearSame": 0,
           "visitors": 1680,
           "buyers": 163,
-          "salesCount": 209
+          "salesCount": 209,
+          "newCustomers": 0
         },
         {
           "name": "淘宝农场",
@@ -1487,7 +1612,8 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         }
       ]
     },
@@ -1503,7 +1629,8 @@
           "lastYearSame": 0,
           "visitors": 3618,
           "buyers": 206,
-          "salesCount": 232
+          "salesCount": 232,
+          "newCustomers": 0
         },
         {
           "name": "C店-康智",
@@ -1514,10 +1641,11 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         },
         {
-          "name": "C店-特好买",
+          "name": "C店-特好卖",
           "platform": "C店",
           "targetGmv": 0,
           "paymentAmount": 0.0,
@@ -1525,7 +1653,8 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-水饮专卖店",
@@ -1536,7 +1665,8 @@
           "lastYearSame": 0,
           "visitors": 6737,
           "buyers": 505,
-          "salesCount": 646
+          "salesCount": 646,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-劲爽专卖店",
@@ -1547,7 +1677,8 @@
           "lastYearSame": 0,
           "visitors": 2887,
           "buyers": 216,
-          "salesCount": 277
+          "salesCount": 277,
+          "newCustomers": 0
         },
         {
           "name": "淘宝农场",
@@ -1558,7 +1689,8 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         }
       ]
     },
@@ -1574,7 +1706,8 @@
           "lastYearSame": 0,
           "visitors": 3239,
           "buyers": 246,
-          "salesCount": 284
+          "salesCount": 284,
+          "newCustomers": 0
         },
         {
           "name": "C店-康智",
@@ -1585,10 +1718,11 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         },
         {
-          "name": "C店-特好买",
+          "name": "C店-特好卖",
           "platform": "C店",
           "targetGmv": 0,
           "paymentAmount": 0.0,
@@ -1596,7 +1730,8 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-水饮专卖店",
@@ -1607,7 +1742,8 @@
           "lastYearSame": 0,
           "visitors": 4674,
           "buyers": 311,
-          "salesCount": 398
+          "salesCount": 398,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-劲爽专卖店",
@@ -1618,7 +1754,8 @@
           "lastYearSame": 0,
           "visitors": 2003,
           "buyers": 133,
-          "salesCount": 170
+          "salesCount": 170,
+          "newCustomers": 0
         },
         {
           "name": "淘宝农场",
@@ -1629,7 +1766,8 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         }
       ]
     },
@@ -1645,7 +1783,8 @@
           "lastYearSame": 0,
           "visitors": 4288,
           "buyers": 902,
-          "salesCount": 1303
+          "salesCount": 1303,
+          "newCustomers": 0
         },
         {
           "name": "C店-康智",
@@ -1656,10 +1795,11 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         },
         {
-          "name": "C店-特好买",
+          "name": "C店-特好卖",
           "platform": "C店",
           "targetGmv": 0,
           "paymentAmount": 0.0,
@@ -1667,7 +1807,8 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-水饮专卖店",
@@ -1678,7 +1819,8 @@
           "lastYearSame": 0,
           "visitors": 8338,
           "buyers": 900,
-          "salesCount": 1152
+          "salesCount": 1152,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-劲爽专卖店",
@@ -1689,7 +1831,8 @@
           "lastYearSame": 0,
           "visitors": 3573,
           "buyers": 385,
-          "salesCount": 493
+          "salesCount": 493,
+          "newCustomers": 0
         },
         {
           "name": "淘宝农场",
@@ -1700,7 +1843,8 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         }
       ]
     },
@@ -1716,7 +1860,8 @@
           "lastYearSame": 0,
           "visitors": 5629,
           "buyers": 782,
-          "salesCount": 1073
+          "salesCount": 1073,
+          "newCustomers": 0
         },
         {
           "name": "C店-康智",
@@ -1727,10 +1872,11 @@
           "lastYearSame": 0,
           "visitors": 186,
           "buyers": 50,
-          "salesCount": 58
+          "salesCount": 58,
+          "newCustomers": 0
         },
         {
-          "name": "C店-特好买",
+          "name": "C店-特好卖",
           "platform": "C店",
           "targetGmv": 0,
           "paymentAmount": 5400.0,
@@ -1738,7 +1884,8 @@
           "lastYearSame": 0,
           "visitors": 39,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-水饮专卖店",
@@ -1749,7 +1896,8 @@
           "lastYearSame": 0,
           "visitors": 12816,
           "buyers": 1434,
-          "salesCount": 1835
+          "salesCount": 1835,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-劲爽专卖店",
@@ -1760,7 +1908,8 @@
           "lastYearSame": 0,
           "visitors": 5492,
           "buyers": 614,
-          "salesCount": 786
+          "salesCount": 786,
+          "newCustomers": 0
         },
         {
           "name": "淘宝农场",
@@ -1771,7 +1920,8 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         }
       ]
     },
@@ -1787,7 +1937,8 @@
           "lastYearSame": 0,
           "visitors": 7271,
           "buyers": 991,
-          "salesCount": 1378
+          "salesCount": 1378,
+          "newCustomers": 0
         },
         {
           "name": "C店-康智",
@@ -1798,10 +1949,11 @@
           "lastYearSame": 0,
           "visitors": 271,
           "buyers": 32,
-          "salesCount": 48
+          "salesCount": 48,
+          "newCustomers": 0
         },
         {
-          "name": "C店-特好买",
+          "name": "C店-特好卖",
           "platform": "C店",
           "targetGmv": 0,
           "paymentAmount": 13518.8,
@@ -1809,7 +1961,8 @@
           "lastYearSame": 0,
           "visitors": 87,
           "buyers": 1,
-          "salesCount": 3
+          "salesCount": 3,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-水饮专卖店",
@@ -1820,7 +1973,8 @@
           "lastYearSame": 0,
           "visitors": 10222,
           "buyers": 1069,
-          "salesCount": 1369
+          "salesCount": 1369,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-劲爽专卖店",
@@ -1831,7 +1985,8 @@
           "lastYearSame": 0,
           "visitors": 4381,
           "buyers": 458,
-          "salesCount": 586
+          "salesCount": 586,
+          "newCustomers": 0
         },
         {
           "name": "淘宝农场",
@@ -1842,7 +1997,8 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         }
       ]
     },
@@ -1858,7 +2014,8 @@
           "lastYearSame": 0,
           "visitors": 6871,
           "buyers": 802,
-          "salesCount": 1083
+          "salesCount": 1083,
+          "newCustomers": 0
         },
         {
           "name": "C店-康智",
@@ -1869,10 +2026,11 @@
           "lastYearSame": 0,
           "visitors": 346,
           "buyers": 38,
-          "salesCount": 50
+          "salesCount": 50,
+          "newCustomers": 0
         },
         {
-          "name": "C店-特好买",
+          "name": "C店-特好卖",
           "platform": "C店",
           "targetGmv": 0,
           "paymentAmount": 9039.7,
@@ -1880,7 +2038,8 @@
           "lastYearSame": 0,
           "visitors": 61,
           "buyers": 1,
-          "salesCount": 1
+          "salesCount": 1,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-水饮专卖店",
@@ -1891,7 +2050,8 @@
           "lastYearSame": 0,
           "visitors": 7849,
           "buyers": 728,
-          "salesCount": 931
+          "salesCount": 931,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-劲爽专卖店",
@@ -1902,7 +2062,8 @@
           "lastYearSame": 0,
           "visitors": 3364,
           "buyers": 312,
-          "salesCount": 399
+          "salesCount": 399,
+          "newCustomers": 0
         },
         {
           "name": "淘宝农场",
@@ -1913,7 +2074,8 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         }
       ]
     },
@@ -1929,7 +2091,8 @@
           "lastYearSame": 0,
           "visitors": 17198,
           "buyers": 679,
-          "salesCount": 1061
+          "salesCount": 1061,
+          "newCustomers": 0
         },
         {
           "name": "C店-康智",
@@ -1940,10 +2103,11 @@
           "lastYearSame": 0,
           "visitors": 389,
           "buyers": 58,
-          "salesCount": 77
+          "salesCount": 77,
+          "newCustomers": 0
         },
         {
-          "name": "C店-特好买",
+          "name": "C店-特好卖",
           "platform": "C店",
           "targetGmv": 0,
           "paymentAmount": 73379.4,
@@ -1951,7 +2115,8 @@
           "lastYearSame": 0,
           "visitors": 86,
           "buyers": 1,
-          "salesCount": 1400
+          "salesCount": 1400,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-水饮专卖店",
@@ -1962,7 +2127,8 @@
           "lastYearSame": 0,
           "visitors": 7975,
           "buyers": 867,
-          "salesCount": 1110
+          "salesCount": 1110,
+          "newCustomers": 0
         },
         {
           "name": "拼多多-劲爽专卖店",
@@ -1973,7 +2139,8 @@
           "lastYearSame": 0,
           "visitors": 3418,
           "buyers": 371,
-          "salesCount": 475
+          "salesCount": 475,
+          "newCustomers": 0
         },
         {
           "name": "淘宝农场",
@@ -1984,7 +2151,8 @@
           "lastYearSame": 0,
           "visitors": 0,
           "buyers": 0,
-          "salesCount": 0
+          "salesCount": 0,
+          "newCustomers": 0
         }
       ]
     }
