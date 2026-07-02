@@ -1,7 +1,7 @@
 // 店铺定义
 export interface StoreData {
   name: string
-  platform: '天猫' | 'C店' | '拼多多'
+  platform: '天猫' | 'C店' | '拼多多' | '淘宝'
   targetGmv: number
   paymentAmount: number
   refundAmount: number
@@ -36,7 +36,19 @@ export const STORES = [
   { name: 'C店-特好买', platform: 'C店' as const },
   { name: '拼多多-水饮专卖店', platform: '拼多多' as const },
   { name: '拼多多-劲爽专卖店', platform: '拼多多' as const },
+  { name: '淘宝农场', platform: '淘宝' as const },
 ]
+
+// 平台颜色：天猫蓝、淘宝绿、C店橙、拼多多元
+const platformColors: Record<string, { bg: string; cls: string }> = {
+  '天猫': { bg: '#0066cc', cls: 'td-blue' },
+  '淘宝': { bg: '#10b981', cls: 'td-green' },
+  'C店':   { bg: '#f97316', cls: 'td-orange' },
+  '拼多多': { bg: '#e32934', cls: 'td-red' },
+}
+export function storeColor(platform: string) {
+  return platformColors[platform] || { bg: '#888', cls: '' }
+}
 
 export function emptyStore(name: string, platform: StoreData['platform']): StoreData {
   return {

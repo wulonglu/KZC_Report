@@ -2,7 +2,7 @@ import { useState, useEffect, useMemo } from 'react'
 import {
   LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend,
 } from 'recharts'
-import { computeMetrics, StoreMetrics, StoreData, STORES } from '../types'
+import { computeMetrics, StoreMetrics, StoreData, STORES, storeColor } from '../types'
 import { loadMonth, loadDateRange } from '../lib/github'
 import { formatMoney, formatPercent, formatNumber, getToday } from '../lib/utils'
 import { exportExcel, exportJPG } from '../lib/export'
@@ -331,7 +331,7 @@ export default function DailyReport() {
               {hasData ? metrics.map((m, i) => (
                 <tr key={m.name}>
                   <td style={{ fontWeight: 500, color: '#fff' }}>
-                    <span style={{ display: 'inline-block', width: 8, height: 8, borderRadius: 2, marginRight: 8, background: i < 2 ? '#0066cc' : '#e32934', opacity: 1 - i * .3 }} />
+                    <span style={{ display: 'inline-block', width: 8, height: 8, borderRadius: 2, marginRight: 8, background: storeColor(m.platform).bg }} />
                     <span style={{ color: 'rgba(255,255,255,.25)', fontSize: 11 }}>[{m.platform}]</span> {m.name}
                   </td>
                   <td style={{ textAlign: 'right' }}>{formatMoney(m.targetGmv)}</td>
@@ -354,7 +354,7 @@ export default function DailyReport() {
               )) : STORES.map((s, i) => (
                 <tr key={s.name}>
                   <td style={{ fontWeight: 500, color: '#fff' }}>
-                    <span style={{ display: 'inline-block', width: 8, height: 8, borderRadius: 2, marginRight: 8, background: i < 2 ? '#0066cc' : '#e32934', opacity: 1 - i * .3 }} />
+                    <span style={{ display: 'inline-block', width: 8, height: 8, borderRadius: 2, marginRight: 8, background: storeColor(s.platform).bg }} />
                     <span style={{ color: 'rgba(255,255,255,.25)', fontSize: 11 }}>[{s.platform}]</span> {s.name}
                   </td>
                   {Array(12).fill(null).map((_, j) => (
@@ -413,7 +413,7 @@ export default function DailyReport() {
                 return (
                 <tr key={s.name}>
                   <td style={{ fontWeight: 500, color: '#fff' }}>
-                    <span className={i < 2 ? 'td-blue' : 'td-red'} style={{ fontSize: 10 }}>[{s.platform}]</span> {s.name}
+                    <span className={storeColor(s.platform).cls} style={{ fontSize: 10 }}>[{s.platform}]</span> {s.name}
                   </td>
                   <td style={{ textAlign: 'right' }}>{formatMoney(s.pay)}</td>
                   <td style={{ textAlign: 'right' }}>{formatMoney(s.refund)}</td>
@@ -426,7 +426,7 @@ export default function DailyReport() {
               )}) : STORES.map((s, i) => (
                 <tr key={s.name}>
                   <td style={{ fontWeight: 500, color: '#fff' }}>
-                    <span className={i < 2 ? 'td-blue' : 'td-red'} style={{ fontSize: 10 }}>[{s.platform}]</span> {s.name}
+                    <span className={storeColor(s.platform).cls} style={{ fontSize: 10 }}>[{s.platform}]</span> {s.name}
                   </td>
                   {Array(5).fill(null).map((_, j) => (
                     <td key={j} style={{ textAlign: 'right', color: 'rgba(255,255,255,.08)' }}>-</td>
@@ -473,7 +473,7 @@ export default function DailyReport() {
                 return (
                 <tr key={s.name}>
                   <td style={{ fontWeight: 500, color: '#fff' }}>
-                    <span className={i < 2 ? 'td-blue' : 'td-red'} style={{ fontSize: 10 }}>[{s.platform}]</span> {s.name}
+                    <span className={storeColor(s.platform).cls} style={{ fontSize: 10 }}>[{s.platform}]</span> {s.name}
                   </td>
                   <td style={{ textAlign: 'right' }}>{formatMoney(s.pay)}</td>
                   <td style={{ textAlign: 'right' }}>{formatMoney(s.refund)}</td>
@@ -486,7 +486,7 @@ export default function DailyReport() {
               )}) : STORES.map((s, i) => (
                 <tr key={s.name}>
                   <td style={{ fontWeight: 500, color: '#fff' }}>
-                    <span className={i < 2 ? 'td-blue' : 'td-red'} style={{ fontSize: 10 }}>[{s.platform}]</span> {s.name}
+                    <span className={storeColor(s.platform).cls} style={{ fontSize: 10 }}>[{s.platform}]</span> {s.name}
                   </td>
                   {Array(5).fill(null).map((_, j) => (
                     <td key={j} style={{ textAlign: 'right', color: 'rgba(255,255,255,.08)' }}>-</td>

@@ -1,6 +1,6 @@
 import { useState, useMemo, useEffect } from 'react'
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
-import { DailyReport, StoreData, computeMetrics, STORES, StoreMetrics } from '../types'
+import { DailyReport, StoreData, computeMetrics, STORES, StoreMetrics, storeColor } from '../types'
 import { loadDateRange } from '../lib/github'
 import { getToday, getDateRange, formatMoney, formatPercent, formatNumber } from '../lib/utils'
 import { exportExcel, exportJPG } from '../lib/export'
@@ -167,7 +167,7 @@ export default function HistoryQuery({ onViewDate }: Props) {
                   {summary.stores.map((s, i) => (
                     <tr key={s.name}>
                       <td style={{ fontWeight: 500, color: '#fff' }}>
-                        <span className={i < 2 ? 'td-blue' : 'td-red'} style={{ fontSize: 10 }}>[{s.platform}]</span> {s.name}
+                        <span className={storeColor(s.platform).cls} style={{ fontSize: 10 }}>[{s.platform}]</span> {s.name}
                       </td>
                       <td style={{ textAlign: 'right' }}>{formatMoney(s.pay)}</td>
                       <td style={{ textAlign: 'right' }}>{formatMoney(s.refund)}</td>
