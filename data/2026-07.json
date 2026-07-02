@@ -1,0 +1,20 @@
+{
+  "reports": [
+    {
+      "date": "2026-07-01",
+      "stores": [
+        {
+          "name": "百事天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 0,
+          "paymentAmount": 45091.17,
+          "refundAmount": 4381.549999999999,
+          "lastYearSame": 0,
+          "visitors": 33016,
+          "buyers": 1422,
+          "salesCount": 1733
+        }
+      ]
+    }
+  ]
+}
