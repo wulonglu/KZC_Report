@@ -35,6 +35,17 @@
           "visitors": 481,
           "buyers": 68,
           "salesCount": 97
+        },
+        {
+          "name": "C店-特好买",
+          "platform": "C店",
+          "targetGmv": 0,
+          "paymentAmount": 40614.700000000004,
+          "refundAmount": 0.0,
+          "lastYearSame": 0,
+          "visitors": 30,
+          "buyers": 4,
+          "salesCount": 1803
         }
       ]
     }
