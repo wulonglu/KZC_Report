@@ -4,27 +4,27 @@
       "date": "2026-07-01",
       "stores": [
         {
-          "name": "百事天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 37032.45,
-          "paymentAmount": 45091.17,
-          "refundAmount": 4381.549999999999,
+          "name": "拼多多-水饮专卖店",
+          "platform": "拼多多",
+          "targetGmv": 29030.1,
+          "paymentAmount": 60686.42,
+          "refundAmount": 36713.33,
           "lastYearSame": 0,
-          "visitors": 33016,
-          "buyers": 1422,
-          "salesCount": 1733,
+          "visitors": 18966,
+          "buyers": 2525,
+          "salesCount": 2586,
           "newCustomers": 0
         },
         {
-          "name": "佳得乐天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 1612.9,
-          "paymentAmount": 2460.5000000000005,
-          "refundAmount": 157.7,
+          "name": "拼多多-劲爽专卖店",
+          "platform": "拼多多",
+          "targetGmv": 23751.9,
+          "paymentAmount": 1026.91,
+          "refundAmount": 182.22,
           "lastYearSame": 0,
-          "visitors": 451,
-          "buyers": 23,
-          "salesCount": 46,
+          "visitors": 270,
+          "buyers": 25,
+          "salesCount": 27,
           "newCustomers": 0
         },
         {
@@ -52,27 +52,27 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-水饮专卖店",
-          "platform": "拼多多",
-          "targetGmv": 34420.1,
-          "paymentAmount": 60686.42,
-          "refundAmount": 36713.33,
+          "name": "佳得乐天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 1612.9,
+          "paymentAmount": 2460.5000000000005,
+          "refundAmount": 157.7,
           "lastYearSame": 0,
-          "visitors": 18966,
-          "buyers": 2525,
-          "salesCount": 2586,
+          "visitors": 451,
+          "buyers": 23,
+          "salesCount": 46,
           "newCustomers": 0
         },
         {
-          "name": "拼多多-劲爽专卖店",
-          "platform": "拼多多",
-          "targetGmv": 28161.9,
-          "paymentAmount": 1026.91,
-          "refundAmount": 182.22,
+          "name": "百事天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 37032.45,
+          "paymentAmount": 45091.17,
+          "refundAmount": 4381.549999999999,
           "lastYearSame": 0,
-          "visitors": 270,
-          "buyers": 25,
-          "salesCount": 27,
+          "visitors": 33016,
+          "buyers": 1422,
+          "salesCount": 1733,
           "newCustomers": 0
         },
         {
@@ -93,9 +93,9 @@
       "date": "2026-07-02",
       "stores": [
         {
-          "name": "百事天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 37032.45,
+          "name": "拼多多-水饮专卖店",
+          "platform": "拼多多",
+          "targetGmv": 29652.68,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -105,9 +105,9 @@
           "newCustomers": 0
         },
         {
-          "name": "佳得乐天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 1612.9,
+          "name": "拼多多-劲爽专卖店",
+          "platform": "拼多多",
+          "targetGmv": 24261.28,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -141,9 +141,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-水饮专卖店",
-          "platform": "拼多多",
-          "targetGmv": 32402.68,
+          "name": "佳得乐天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 1612.9,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -153,9 +153,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-劲爽专卖店",
-          "platform": "拼多多",
-          "targetGmv": 26511.28,
+          "name": "百事天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 37032.45,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -182,9 +182,9 @@
       "date": "2026-07-03",
       "stores": [
         {
-          "name": "百事天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 37032.45,
+          "name": "拼多多-水饮专卖店",
+          "platform": "拼多多",
+          "targetGmv": 27531.29,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -194,9 +194,9 @@
           "newCustomers": 0
         },
         {
-          "name": "佳得乐天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 1612.9,
+          "name": "拼多多-劲爽专卖店",
+          "platform": "拼多多",
+          "targetGmv": 22525.6,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -230,9 +230,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-水饮专卖店",
-          "platform": "拼多多",
-          "targetGmv": 30281.29,
+          "name": "佳得乐天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 1612.9,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -242,9 +242,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-劲爽专卖店",
-          "platform": "拼多多",
-          "targetGmv": 24775.6,
+          "name": "百事天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 37032.45,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -271,9 +271,9 @@
       "date": "2026-07-04",
       "stores": [
         {
-          "name": "百事天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 37032.45,
+          "name": "拼多多-水饮专卖店",
+          "platform": "拼多多",
+          "targetGmv": 10312.56,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -283,9 +283,9 @@
           "newCustomers": 0
         },
         {
-          "name": "佳得乐天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 1612.9,
+          "name": "拼多多-劲爽专卖店",
+          "platform": "拼多多",
+          "targetGmv": 8437.54,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -319,9 +319,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-水饮专卖店",
-          "platform": "拼多多",
-          "targetGmv": 10312.56,
+          "name": "佳得乐天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 1612.9,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -331,9 +331,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-劲爽专卖店",
-          "platform": "拼多多",
-          "targetGmv": 8437.55,
+          "name": "百事天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 37032.45,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -360,9 +360,9 @@
       "date": "2026-07-05",
       "stores": [
         {
-          "name": "百事天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 37032.45,
+          "name": "拼多多-水饮专卖店",
+          "platform": "拼多多",
+          "targetGmv": 6807.87,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -372,9 +372,9 @@
           "newCustomers": 0
         },
         {
-          "name": "佳得乐天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 1612.9,
+          "name": "拼多多-劲爽专卖店",
+          "platform": "拼多多",
+          "targetGmv": 5570.08,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -408,9 +408,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-水饮专卖店",
-          "platform": "拼多多",
-          "targetGmv": 6807.87,
+          "name": "佳得乐天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 1612.9,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -420,9 +420,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-劲爽专卖店",
-          "platform": "拼多多",
-          "targetGmv": 5570.08,
+          "name": "百事天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 37032.45,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -449,9 +449,9 @@
       "date": "2026-07-06",
       "stores": [
         {
-          "name": "百事天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 37032.45,
+          "name": "拼多多-水饮专卖店",
+          "platform": "拼多多",
+          "targetGmv": 6401.75,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -461,9 +461,9 @@
           "newCustomers": 0
         },
         {
-          "name": "佳得乐天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 1612.9,
+          "name": "拼多多-劲爽专卖店",
+          "platform": "拼多多",
+          "targetGmv": 5237.8,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -497,9 +497,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-水饮专卖店",
-          "platform": "拼多多",
-          "targetGmv": 6401.75,
+          "name": "佳得乐天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 1612.9,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -509,9 +509,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-劲爽专卖店",
-          "platform": "拼多多",
-          "targetGmv": 5237.8,
+          "name": "百事天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 37032.45,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -538,9 +538,9 @@
       "date": "2026-07-07",
       "stores": [
         {
-          "name": "百事天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 37032.45,
+          "name": "拼多多-水饮专卖店",
+          "platform": "拼多多",
+          "targetGmv": 6159.67,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -550,9 +550,9 @@
           "newCustomers": 0
         },
         {
-          "name": "佳得乐天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 1612.9,
+          "name": "拼多多-劲爽专卖店",
+          "platform": "拼多多",
+          "targetGmv": 5039.73,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -586,9 +586,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-水饮专卖店",
-          "platform": "拼多多",
-          "targetGmv": 6159.67,
+          "name": "佳得乐天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 1612.9,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -598,9 +598,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-劲爽专卖店",
-          "platform": "拼多多",
-          "targetGmv": 5039.73,
+          "name": "百事天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 37032.45,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -627,9 +627,9 @@
       "date": "2026-07-08",
       "stores": [
         {
-          "name": "百事天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 52525.93,
+          "name": "拼多多-水饮专卖店",
+          "platform": "拼多多",
+          "targetGmv": 5566.77,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -639,9 +639,9 @@
           "newCustomers": 0
         },
         {
-          "name": "佳得乐天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 1612.9,
+          "name": "拼多多-劲爽专卖店",
+          "platform": "拼多多",
+          "targetGmv": 4554.63,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -675,9 +675,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-水饮专卖店",
-          "platform": "拼多多",
-          "targetGmv": 5566.77,
+          "name": "佳得乐天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 1612.9,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -687,9 +687,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-劲爽专卖店",
-          "platform": "拼多多",
-          "targetGmv": 4554.63,
+          "name": "百事天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 52525.93,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -716,9 +716,9 @@
       "date": "2026-07-09",
       "stores": [
         {
-          "name": "百事天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 52525.93,
+          "name": "拼多多-水饮专卖店",
+          "platform": "拼多多",
+          "targetGmv": 8915.18,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -728,9 +728,9 @@
           "newCustomers": 0
         },
         {
-          "name": "佳得乐天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 1612.9,
+          "name": "拼多多-劲爽专卖店",
+          "platform": "拼多多",
+          "targetGmv": 7294.23,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -764,9 +764,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-水饮专卖店",
-          "platform": "拼多多",
-          "targetGmv": 8915.18,
+          "name": "佳得乐天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 1612.9,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -776,9 +776,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-劲爽专卖店",
-          "platform": "拼多多",
-          "targetGmv": 7294.23,
+          "name": "百事天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 52525.93,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -805,9 +805,9 @@
       "date": "2026-07-10",
       "stores": [
         {
-          "name": "百事天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 52525.93,
+          "name": "拼多多-水饮专卖店",
+          "platform": "拼多多",
+          "targetGmv": 8266.51,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -817,9 +817,9 @@
           "newCustomers": 0
         },
         {
-          "name": "佳得乐天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 1612.9,
+          "name": "拼多多-劲爽专卖店",
+          "platform": "拼多多",
+          "targetGmv": 6763.51,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -853,9 +853,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-水饮专卖店",
-          "platform": "拼多多",
-          "targetGmv": 8266.51,
+          "name": "佳得乐天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 1612.9,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -865,9 +865,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-劲爽专卖店",
-          "platform": "拼多多",
-          "targetGmv": 6763.51,
+          "name": "百事天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 52525.93,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -894,9 +894,9 @@
       "date": "2026-07-11",
       "stores": [
         {
-          "name": "百事天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 52525.93,
+          "name": "拼多多-水饮专卖店",
+          "platform": "拼多多",
+          "targetGmv": 9941.48,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -906,9 +906,9 @@
           "newCustomers": 0
         },
         {
-          "name": "佳得乐天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 1612.9,
+          "name": "拼多多-劲爽专卖店",
+          "platform": "拼多多",
+          "targetGmv": 8133.94,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -942,9 +942,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-水饮专卖店",
-          "platform": "拼多多",
-          "targetGmv": 9941.48,
+          "name": "佳得乐天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 1612.9,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -954,9 +954,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-劲爽专卖店",
-          "platform": "拼多多",
-          "targetGmv": 8133.94,
+          "name": "百事天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 52525.93,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -983,9 +983,9 @@
       "date": "2026-07-12",
       "stores": [
         {
-          "name": "百事天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 52525.93,
+          "name": "拼多多-水饮专卖店",
+          "platform": "拼多多",
+          "targetGmv": 19704.5,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -995,9 +995,9 @@
           "newCustomers": 0
         },
         {
-          "name": "佳得乐天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 1612.9,
+          "name": "拼多多-劲爽专卖店",
+          "platform": "拼多多",
+          "targetGmv": 16121.86,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1031,9 +1031,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-水饮专卖店",
-          "platform": "拼多多",
-          "targetGmv": 19704.5,
+          "name": "佳得乐天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 1612.9,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1043,9 +1043,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-劲爽专卖店",
-          "platform": "拼多多",
-          "targetGmv": 16121.86,
+          "name": "百事天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 52525.93,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1072,9 +1072,9 @@
       "date": "2026-07-13",
       "stores": [
         {
-          "name": "百事天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 52525.93,
+          "name": "拼多多-水饮专卖店",
+          "platform": "拼多多",
+          "targetGmv": 13573.62,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1084,9 +1084,9 @@
           "newCustomers": 0
         },
         {
-          "name": "佳得乐天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 1612.9,
+          "name": "拼多多-劲爽专卖店",
+          "platform": "拼多多",
+          "targetGmv": 11105.69,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1120,9 +1120,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-水饮专卖店",
-          "platform": "拼多多",
-          "targetGmv": 13573.62,
+          "name": "佳得乐天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 1612.9,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1132,9 +1132,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-劲爽专卖店",
-          "platform": "拼多多",
-          "targetGmv": 11105.69,
+          "name": "百事天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 52525.93,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1161,9 +1161,9 @@
       "date": "2026-07-14",
       "stores": [
         {
-          "name": "百事天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 52525.93,
+          "name": "拼多多-水饮专卖店",
+          "platform": "拼多多",
+          "targetGmv": 13135.0,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1173,9 +1173,9 @@
           "newCustomers": 0
         },
         {
-          "name": "佳得乐天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 1612.9,
+          "name": "拼多多-劲爽专卖店",
+          "platform": "拼多多",
+          "targetGmv": 10746.81,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1209,9 +1209,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-水饮专卖店",
-          "platform": "拼多多",
-          "targetGmv": 13135.0,
+          "name": "佳得乐天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 1612.9,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1221,9 +1221,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-劲爽专卖店",
-          "platform": "拼多多",
-          "targetGmv": 10746.81,
+          "name": "百事天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 52525.93,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1250,9 +1250,9 @@
       "date": "2026-07-15",
       "stores": [
         {
-          "name": "百事天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 52525.93,
+          "name": "拼多多-水饮专卖店",
+          "platform": "拼多多",
+          "targetGmv": 10790.62,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1262,9 +1262,9 @@
           "newCustomers": 0
         },
         {
-          "name": "佳得乐天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 1612.9,
+          "name": "拼多多-劲爽专卖店",
+          "platform": "拼多多",
+          "targetGmv": 8828.69,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1298,9 +1298,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-水饮专卖店",
-          "platform": "拼多多",
-          "targetGmv": 10790.62,
+          "name": "佳得乐天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 1612.9,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1310,9 +1310,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-劲爽专卖店",
-          "platform": "拼多多",
-          "targetGmv": 8828.69,
+          "name": "百事天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 52525.93,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1339,9 +1339,9 @@
       "date": "2026-07-16",
       "stores": [
         {
-          "name": "百事天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 52525.93,
+          "name": "拼多多-水饮专卖店",
+          "platform": "拼多多",
+          "targetGmv": 10943.68,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1351,9 +1351,9 @@
           "newCustomers": 0
         },
         {
-          "name": "佳得乐天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 1612.9,
+          "name": "拼多多-劲爽专卖店",
+          "platform": "拼多多",
+          "targetGmv": 8953.92,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1387,9 +1387,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-水饮专卖店",
-          "platform": "拼多多",
-          "targetGmv": 10943.68,
+          "name": "佳得乐天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 1612.9,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1399,9 +1399,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-劲爽专卖店",
-          "platform": "拼多多",
-          "targetGmv": 8953.92,
+          "name": "百事天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 52525.93,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1428,9 +1428,9 @@
       "date": "2026-07-17",
       "stores": [
         {
-          "name": "百事天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 52525.93,
+          "name": "拼多多-水饮专卖店",
+          "platform": "拼多多",
+          "targetGmv": 10739.94,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1440,9 +1440,9 @@
           "newCustomers": 0
         },
         {
-          "name": "佳得乐天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 1612.9,
+          "name": "拼多多-劲爽专卖店",
+          "platform": "拼多多",
+          "targetGmv": 8787.23,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1476,9 +1476,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-水饮专卖店",
-          "platform": "拼多多",
-          "targetGmv": 10739.94,
+          "name": "佳得乐天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 1612.9,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1488,9 +1488,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-劲爽专卖店",
-          "platform": "拼多多",
-          "targetGmv": 8787.23,
+          "name": "百事天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 52525.93,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1517,9 +1517,9 @@
       "date": "2026-07-18",
       "stores": [
         {
-          "name": "百事天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 52525.93,
+          "name": "拼多多-水饮专卖店",
+          "platform": "拼多多",
+          "targetGmv": 21043.2,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1529,9 +1529,9 @@
           "newCustomers": 0
         },
         {
-          "name": "佳得乐天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 1612.9,
+          "name": "拼多多-劲爽专卖店",
+          "platform": "拼多多",
+          "targetGmv": 17217.17,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1565,9 +1565,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-水饮专卖店",
-          "platform": "拼多多",
-          "targetGmv": 21043.2,
+          "name": "佳得乐天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 1612.9,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1577,9 +1577,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-劲爽专卖店",
-          "platform": "拼多多",
-          "targetGmv": 17217.17,
+          "name": "百事天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 52525.93,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1606,9 +1606,9 @@
       "date": "2026-07-19",
       "stores": [
         {
-          "name": "百事天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 52525.93,
+          "name": "拼多多-水饮专卖店",
+          "platform": "拼多多",
+          "targetGmv": 28173.29,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1618,9 +1618,9 @@
           "newCustomers": 0
         },
         {
-          "name": "佳得乐天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 1612.9,
+          "name": "拼多多-劲爽专卖店",
+          "platform": "拼多多",
+          "targetGmv": 23050.88,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1654,9 +1654,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-水饮专卖店",
-          "platform": "拼多多",
-          "targetGmv": 28173.29,
+          "name": "佳得乐天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 1612.9,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1666,9 +1666,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-劲爽专卖店",
-          "platform": "拼多多",
-          "targetGmv": 23050.88,
+          "name": "百事天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 52525.93,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1695,9 +1695,9 @@
       "date": "2026-07-20",
       "stores": [
         {
-          "name": "百事天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 37032.45,
+          "name": "拼多多-水饮专卖店",
+          "platform": "拼多多",
+          "targetGmv": 17652.49,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1707,9 +1707,9 @@
           "newCustomers": 0
         },
         {
-          "name": "佳得乐天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 1612.9,
+          "name": "拼多多-劲爽专卖店",
+          "platform": "拼多多",
+          "targetGmv": 14442.95,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1743,9 +1743,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-水饮专卖店",
-          "platform": "拼多多",
-          "targetGmv": 17652.49,
+          "name": "佳得乐天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 1612.9,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1755,9 +1755,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-劲爽专卖店",
-          "platform": "拼多多",
-          "targetGmv": 14442.95,
+          "name": "百事天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 37032.45,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1784,9 +1784,9 @@
       "date": "2026-07-21",
       "stores": [
         {
-          "name": "百事天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 37032.45,
+          "name": "拼多多-水饮专卖店",
+          "platform": "拼多多",
+          "targetGmv": 21710.62,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1796,9 +1796,9 @@
           "newCustomers": 0
         },
         {
-          "name": "佳得乐天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 1612.9,
+          "name": "拼多多-劲爽专卖店",
+          "platform": "拼多多",
+          "targetGmv": 17763.24,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1832,9 +1832,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-水饮专卖店",
-          "platform": "拼多多",
-          "targetGmv": 21710.62,
+          "name": "佳得乐天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 1612.9,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1844,9 +1844,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-劲爽专卖店",
-          "platform": "拼多多",
-          "targetGmv": 17763.24,
+          "name": "百事天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 37032.45,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1873,9 +1873,9 @@
       "date": "2026-07-22",
       "stores": [
         {
-          "name": "百事天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 37032.45,
+          "name": "拼多多-水饮专卖店",
+          "platform": "拼多多",
+          "targetGmv": 24623.88,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1885,9 +1885,9 @@
           "newCustomers": 0
         },
         {
-          "name": "佳得乐天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 1612.9,
+          "name": "拼多多-劲爽专卖店",
+          "platform": "拼多多",
+          "targetGmv": 20146.81,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1921,9 +1921,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-水饮专卖店",
-          "platform": "拼多多",
-          "targetGmv": 24623.88,
+          "name": "佳得乐天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 1612.9,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1933,9 +1933,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-劲爽专卖店",
-          "platform": "拼多多",
-          "targetGmv": 20146.81,
+          "name": "百事天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 37032.45,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1962,9 +1962,9 @@
       "date": "2026-07-23",
       "stores": [
         {
-          "name": "百事天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 37032.45,
+          "name": "拼多多-水饮专卖店",
+          "platform": "拼多多",
+          "targetGmv": 23577.88,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1974,9 +1974,9 @@
           "newCustomers": 0
         },
         {
-          "name": "佳得乐天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 1612.9,
+          "name": "拼多多-劲爽专卖店",
+          "platform": "拼多多",
+          "targetGmv": 19291.0,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2010,9 +2010,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-水饮专卖店",
-          "platform": "拼多多",
-          "targetGmv": 23577.88,
+          "name": "佳得乐天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 1612.9,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2022,9 +2022,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-劲爽专卖店",
-          "platform": "拼多多",
-          "targetGmv": 19291.0,
+          "name": "百事天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 37032.45,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2051,9 +2051,9 @@
       "date": "2026-07-24",
       "stores": [
         {
-          "name": "百事天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 37032.45,
+          "name": "拼多多-水饮专卖店",
+          "platform": "拼多多",
+          "targetGmv": 22189.68,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2063,9 +2063,9 @@
           "newCustomers": 0
         },
         {
-          "name": "佳得乐天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 1612.9,
+          "name": "拼多多-劲爽专卖店",
+          "platform": "拼多多",
+          "targetGmv": 18155.2,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2099,9 +2099,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-水饮专卖店",
-          "platform": "拼多多",
-          "targetGmv": 22189.68,
+          "name": "佳得乐天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 1612.9,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2111,9 +2111,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-劲爽专卖店",
-          "platform": "拼多多",
-          "targetGmv": 18155.2,
+          "name": "百事天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 37032.45,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2140,9 +2140,9 @@
       "date": "2026-07-25",
       "stores": [
         {
-          "name": "百事天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 37032.45,
+          "name": "拼多多-水饮专卖店",
+          "platform": "拼多多",
+          "targetGmv": 24062.76,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2152,9 +2152,9 @@
           "newCustomers": 0
         },
         {
-          "name": "佳得乐天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 1612.9,
+          "name": "拼多多-劲爽专卖店",
+          "platform": "拼多多",
+          "targetGmv": 19687.71,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2188,9 +2188,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-水饮专卖店",
-          "platform": "拼多多",
-          "targetGmv": 24062.76,
+          "name": "佳得乐天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 1612.9,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2200,9 +2200,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-劲爽专卖店",
-          "platform": "拼多多",
-          "targetGmv": 19687.71,
+          "name": "百事天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 37032.45,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2229,9 +2229,9 @@
       "date": "2026-07-26",
       "stores": [
         {
-          "name": "百事天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 37032.45,
+          "name": "拼多多-水饮专卖店",
+          "platform": "拼多多",
+          "targetGmv": 26549.63,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2241,9 +2241,9 @@
           "newCustomers": 0
         },
         {
-          "name": "佳得乐天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 1612.9,
+          "name": "拼多多-劲爽专卖店",
+          "platform": "拼多多",
+          "targetGmv": 21722.42,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2277,9 +2277,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-水饮专卖店",
-          "platform": "拼多多",
-          "targetGmv": 26549.63,
+          "name": "佳得乐天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 1612.9,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2289,9 +2289,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-劲爽专卖店",
-          "platform": "拼多多",
-          "targetGmv": 21722.42,
+          "name": "百事天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 37032.45,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2318,9 +2318,9 @@
       "date": "2026-07-27",
       "stores": [
         {
-          "name": "百事天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 37032.45,
+          "name": "拼多多-水饮专卖店",
+          "platform": "拼多多",
+          "targetGmv": 26865.9,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2330,9 +2330,9 @@
           "newCustomers": 0
         },
         {
-          "name": "佳得乐天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 1612.9,
+          "name": "拼多多-劲爽专卖店",
+          "platform": "拼多多",
+          "targetGmv": 21981.19,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2366,9 +2366,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-水饮专卖店",
-          "platform": "拼多多",
-          "targetGmv": 26865.9,
+          "name": "佳得乐天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 1612.9,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2378,9 +2378,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-劲爽专卖店",
-          "platform": "拼多多",
-          "targetGmv": 21981.19,
+          "name": "百事天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 37032.45,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2407,9 +2407,9 @@
       "date": "2026-07-28",
       "stores": [
         {
-          "name": "百事天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 37032.45,
+          "name": "拼多多-水饮专卖店",
+          "platform": "拼多多",
+          "targetGmv": 25313.32,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2419,9 +2419,9 @@
           "newCustomers": 0
         },
         {
-          "name": "佳得乐天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 1612.9,
+          "name": "拼多多-劲爽专卖店",
+          "platform": "拼多多",
+          "targetGmv": 20710.9,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2455,9 +2455,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-水饮专卖店",
-          "platform": "拼多多",
-          "targetGmv": 25313.32,
+          "name": "佳得乐天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 1612.9,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2467,9 +2467,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-劲爽专卖店",
-          "platform": "拼多多",
-          "targetGmv": 20710.9,
+          "name": "百事天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 37032.45,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2496,9 +2496,9 @@
       "date": "2026-07-29",
       "stores": [
         {
-          "name": "百事天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 37032.45,
+          "name": "拼多多-水饮专卖店",
+          "platform": "拼多多",
+          "targetGmv": 27161.53,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2508,9 +2508,9 @@
           "newCustomers": 0
         },
         {
-          "name": "佳得乐天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 1612.9,
+          "name": "拼多多-劲爽专卖店",
+          "platform": "拼多多",
+          "targetGmv": 22223.07,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2544,9 +2544,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-水饮专卖店",
-          "platform": "拼多多",
-          "targetGmv": 27161.53,
+          "name": "佳得乐天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 1612.9,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2556,9 +2556,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-劲爽专卖店",
-          "platform": "拼多多",
-          "targetGmv": 22223.07,
+          "name": "百事天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 37032.45,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2585,9 +2585,9 @@
       "date": "2026-07-30",
       "stores": [
         {
-          "name": "百事天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 37032.45,
+          "name": "拼多多-水饮专卖店",
+          "platform": "拼多多",
+          "targetGmv": 22712.7,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2597,9 +2597,9 @@
           "newCustomers": 0
         },
         {
-          "name": "佳得乐天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 1612.9,
+          "name": "拼多多-劲爽专卖店",
+          "platform": "拼多多",
+          "targetGmv": 18583.12,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2633,9 +2633,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-水饮专卖店",
-          "platform": "拼多多",
-          "targetGmv": 22712.7,
+          "name": "佳得乐天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 1612.9,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2645,9 +2645,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-劲爽专卖店",
-          "platform": "拼多多",
-          "targetGmv": 18583.12,
+          "name": "百事天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 37032.45,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2674,9 +2674,9 @@
       "date": "2026-07-31",
       "stores": [
         {
-          "name": "百事天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 37032.45,
+          "name": "拼多多-水饮专卖店",
+          "platform": "拼多多",
+          "targetGmv": 10943.68,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2686,9 +2686,9 @@
           "newCustomers": 0
         },
         {
-          "name": "佳得乐天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 1612.9,
+          "name": "拼多多-劲爽专卖店",
+          "platform": "拼多多",
+          "targetGmv": 8953.92,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2722,9 +2722,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-水饮专卖店",
-          "platform": "拼多多",
-          "targetGmv": 0.0,
+          "name": "佳得乐天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 1612.9,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2734,9 +2734,9 @@
           "newCustomers": 0
         },
         {
-          "name": "拼多多-劲爽专卖店",
-          "platform": "拼多多",
-          "targetGmv": 0.0,
+          "name": "百事天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 37032.45,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
