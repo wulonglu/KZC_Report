@@ -13,7 +13,7 @@
           "visitors": 33016,
           "buyers": 1422,
           "salesCount": 1733,
-          "newCustomers": 1097
+          "newCustomers": 0
         },
         {
           "name": "佳得乐天猫旗舰店",
@@ -25,7 +25,7 @@
           "visitors": 451,
           "buyers": 23,
           "salesCount": 46,
-          "newCustomers": 21
+          "newCustomers": 0
         },
         {
           "name": "C店-康智",
@@ -37,7 +37,7 @@
           "visitors": 481,
           "buyers": 68,
           "salesCount": 97,
-          "newCustomers": 68
+          "newCustomers": 0
         },
         {
           "name": "C店-特好卖",
@@ -49,7 +49,7 @@
           "visitors": 30,
           "buyers": 4,
           "salesCount": 1803,
-          "newCustomers": 6
+          "newCustomers": 0
         },
         {
           "name": "拼多多-水饮专卖店",
@@ -79,12 +79,12 @@
           "name": "淘宝农场",
           "platform": "淘宝",
           "targetGmv": 170,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 179.57,
+          "refundAmount": 11.5,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0,
+          "visitors": 175,
+          "buyers": 6,
+          "salesCount": 6,
           "newCustomers": 0
         }
       ]
