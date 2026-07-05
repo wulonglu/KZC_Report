@@ -298,12 +298,12 @@
           "name": "C店-康智",
           "platform": "C店",
           "targetGmv": 1298.49,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 860.4,
+          "refundAmount": 54.98,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0,
+          "visitors": 411,
+          "buyers": 26,
+          "salesCount": 36,
           "newCustomers": 0
         },
         {
