@@ -453,6 +453,17 @@
           "buyers": 0,
           "salesCount": 0,
           "newCustomers": 0
+        },
+        {
+          "name": "C店-特好买",
+          "platform": "C店",
+          "targetGmv": 0,
+          "paymentAmount": 149.9,
+          "refundAmount": 55.0,
+          "lastYearSame": 0,
+          "visitors": 77,
+          "buyers": 7,
+          "salesCount": 7
         }
       ]
     },
