@@ -422,12 +422,12 @@
           "name": "佳得乐天猫旗舰店",
           "platform": "天猫",
           "targetGmv": 1612.9,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 2539.3,
+          "refundAmount": 407.2,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0,
+          "visitors": 315,
+          "buyers": 25,
+          "salesCount": 47,
           "newCustomers": 0
         },
         {
