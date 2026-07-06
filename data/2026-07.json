@@ -79,12 +79,12 @@
           "name": "淘宝农场",
           "platform": "淘宝",
           "targetGmv": 170,
-          "paymentAmount": 179.57,
-          "refundAmount": 11.5,
+          "paymentAmount": 0,
+          "refundAmount": 0,
           "lastYearSame": 0,
-          "visitors": 175,
-          "buyers": 6,
-          "salesCount": 6,
+          "visitors": 0,
+          "buyers": 0,
+          "salesCount": 0,
           "newCustomers": 0
         }
       ]
