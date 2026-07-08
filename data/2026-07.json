@@ -571,13 +571,13 @@
           "name": "C店-康智",
           "platform": "C店",
           "targetGmv": 1298.49,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 818.6,
+          "refundAmount": 138.05,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0,
-          "newCustomers": 0
+          "visitors": 353,
+          "buyers": 31,
+          "salesCount": 34,
+          "newCustomers": 26
         },
         {
           "name": "C店-特好卖",
