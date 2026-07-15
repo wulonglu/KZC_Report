@@ -1194,13 +1194,13 @@
           "name": "C店-康智",
           "platform": "C店",
           "targetGmv": 1298.49,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 788.7,
+          "refundAmount": 150.51,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0,
-          "newCustomers": 0
+          "visitors": 306,
+          "buyers": 27,
+          "salesCount": 33,
+          "newCustomers": 26
         },
         {
           "name": "C店-特好卖",
