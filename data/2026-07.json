@@ -1295,13 +1295,13 @@
           "name": "C店-特好卖",
           "platform": "C店",
           "targetGmv": 19636,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 25888.9,
+          "refundAmount": 103022.0,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0,
-          "newCustomers": 0
+          "visitors": 112,
+          "buyers": 7,
+          "salesCount": 1206,
+          "newCustomers": 5
         },
         {
           "name": "佳得乐天猫旗舰店",
