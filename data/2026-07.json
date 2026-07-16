@@ -1307,13 +1307,13 @@
           "name": "佳得乐天猫旗舰店",
           "platform": "天猫",
           "targetGmv": 1612.9,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 2553.3,
+          "refundAmount": 107.8,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0,
-          "newCustomers": 0
+          "visitors": 386,
+          "buyers": 23,
+          "salesCount": 47,
+          "newCustomers": 17
         },
         {
           "name": "百事天猫旗舰店",
