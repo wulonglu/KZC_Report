@@ -1664,7 +1664,7 @@
           "platform": "天猫",
           "targetGmv": 1612.9,
           "paymentAmount": 1359.5,
-          "refundAmount": 0,
+          "refundAmount": 0.0,
           "lastYearSame": 0,
           "visitors": 353,
           "buyers": 19,
