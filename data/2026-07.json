@@ -1064,11 +1064,11 @@
           "name": "淘宝农场",
           "platform": "淘宝",
           "targetGmv": 200,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 3604.6,
+          "refundAmount": 112.87,
           "lastYearSame": 0,
           "visitors": 0,
-          "buyers": 0,
+          "buyers": 112,
           "salesCount": 0,
           "newCustomers": 0
         }
@@ -1664,7 +1664,7 @@
           "platform": "天猫",
           "targetGmv": 1612.9,
           "paymentAmount": 1359.5,
-          "refundAmount": 0.0,
+          "refundAmount": 0,
           "lastYearSame": 0,
           "visitors": 353,
           "buyers": 19,
