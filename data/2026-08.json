@@ -156,13 +156,13 @@
           "name": "拼多多-劲爽专卖店",
           "platform": "拼多多",
           "targetGmv": 0,
-          "paymentAmount": 0,
+          "paymentAmount": 14436.24,
           "refundAmount": 0,
           "lastYearSame": 0,
           "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0,
-          "newCustomers": 0
+          "buyers": 359,
+          "salesCount": 365,
+          "newCustomers": 295
         },
         {
           "name": "淘宝农场",
