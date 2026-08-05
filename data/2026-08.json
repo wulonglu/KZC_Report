@@ -6,7 +6,7 @@
         {
           "name": "百事天猫旗舰店",
           "platform": "天猫",
-          "targetGmv": 0,
+          "targetGmv": 39342.3,
           "paymentAmount": 28633.45,
           "refundAmount": 2753.75,
           "lastYearSame": 0,
@@ -18,7 +18,7 @@
         {
           "name": "佳得乐天猫旗舰店",
           "platform": "天猫",
-          "targetGmv": 0,
+          "targetGmv": 1612.9,
           "paymentAmount": 1379.4,
           "refundAmount": 207.6,
           "lastYearSame": 0,
@@ -30,7 +30,7 @@
         {
           "name": "C店-康智",
           "platform": "C店",
-          "targetGmv": 0,
+          "targetGmv": 865.09,
           "paymentAmount": 1033.11,
           "refundAmount": 113.88,
           "lastYearSame": 0,
@@ -42,7 +42,7 @@
         {
           "name": "C店-特好卖",
           "platform": "C店",
-          "targetGmv": 0,
+          "targetGmv": 29545.7,
           "paymentAmount": 141.6,
           "refundAmount": 11.79,
           "lastYearSame": 0,
@@ -54,7 +54,7 @@
         {
           "name": "拼多多-水饮专卖店",
           "platform": "拼多多",
-          "targetGmv": 0,
+          "targetGmv": 21290.32,
           "paymentAmount": 37389.63,
           "refundAmount": 14960.52,
           "lastYearSame": 0,
@@ -66,7 +66,7 @@
         {
           "name": "拼多多-劲爽专卖店",
           "platform": "拼多多",
-          "targetGmv": 0,
+          "targetGmv": 17419.35,
           "paymentAmount": 15242.34,
           "refundAmount": 1113.19,
           "lastYearSame": 0,
@@ -78,7 +78,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 0,
+          "targetGmv": 170.0,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -95,7 +95,7 @@
         {
           "name": "百事天猫旗舰店",
           "platform": "天猫",
-          "targetGmv": 0,
+          "targetGmv": 39342.3,
           "paymentAmount": 31135.77,
           "refundAmount": 4449.530000000001,
           "lastYearSame": 0,
@@ -107,7 +107,7 @@
         {
           "name": "佳得乐天猫旗舰店",
           "platform": "天猫",
-          "targetGmv": 0,
+          "targetGmv": 1612.9,
           "paymentAmount": 1571.1000000000001,
           "refundAmount": 211.6,
           "lastYearSame": 0,
@@ -119,7 +119,7 @@
         {
           "name": "C店-康智",
           "platform": "C店",
-          "targetGmv": 0,
+          "targetGmv": 865.09,
           "paymentAmount": 627.4,
           "refundAmount": 23.9,
           "lastYearSame": 0,
@@ -131,7 +131,7 @@
         {
           "name": "C店-特好卖",
           "platform": "C店",
-          "targetGmv": 0,
+          "targetGmv": 29545.7,
           "paymentAmount": 29.9,
           "refundAmount": 46.2,
           "lastYearSame": 0,
@@ -143,7 +143,7 @@
         {
           "name": "拼多多-水饮专卖店",
           "platform": "拼多多",
-          "targetGmv": 0,
+          "targetGmv": 21290.32,
           "paymentAmount": 14497.49,
           "refundAmount": 6922.24,
           "lastYearSame": 0,
@@ -155,7 +155,7 @@
         {
           "name": "拼多多-劲爽专卖店",
           "platform": "拼多多",
-          "targetGmv": 0,
+          "targetGmv": 17419.35,
           "paymentAmount": 14436.24,
           "refundAmount": 1082.01,
           "lastYearSame": 0,
@@ -167,7 +167,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 0,
+          "targetGmv": 170.0,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -184,7 +184,7 @@
         {
           "name": "百事天猫旗舰店",
           "platform": "天猫",
-          "targetGmv": 0,
+          "targetGmv": 39342.3,
           "paymentAmount": 32830.979999999996,
           "refundAmount": 4361.75,
           "lastYearSame": 0,
@@ -196,7 +196,7 @@
         {
           "name": "佳得乐天猫旗舰店",
           "platform": "天猫",
-          "targetGmv": 0,
+          "targetGmv": 1612.9,
           "paymentAmount": 1585.1,
           "refundAmount": 55.9,
           "lastYearSame": 0,
@@ -208,7 +208,7 @@
         {
           "name": "C店-康智",
           "platform": "C店",
-          "targetGmv": 0,
+          "targetGmv": 865.09,
           "paymentAmount": 793.81,
           "refundAmount": 47.8,
           "lastYearSame": 0,
@@ -220,7 +220,7 @@
         {
           "name": "C店-特好卖",
           "platform": "C店",
-          "targetGmv": 0,
+          "targetGmv": 29545.7,
           "paymentAmount": 190.4,
           "refundAmount": 51.2,
           "lastYearSame": 0,
@@ -232,7 +232,7 @@
         {
           "name": "拼多多-水饮专卖店",
           "platform": "拼多多",
-          "targetGmv": 0,
+          "targetGmv": 21290.32,
           "paymentAmount": 5411.81,
           "refundAmount": 1923.78,
           "lastYearSame": 0,
@@ -244,7 +244,7 @@
         {
           "name": "拼多多-劲爽专卖店",
           "platform": "拼多多",
-          "targetGmv": 0,
+          "targetGmv": 17419.35,
           "paymentAmount": 17510.52,
           "refundAmount": 1225.49,
           "lastYearSame": 0,
@@ -256,7 +256,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 0,
+          "targetGmv": 170.0,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -273,7 +273,7 @@
         {
           "name": "百事天猫旗舰店",
           "platform": "天猫",
-          "targetGmv": 0,
+          "targetGmv": 39342.3,
           "paymentAmount": 43752.95999999999,
           "refundAmount": 5672.5599999999995,
           "lastYearSame": 0,
@@ -285,7 +285,7 @@
         {
           "name": "佳得乐天猫旗舰店",
           "platform": "天猫",
-          "targetGmv": 0,
+          "targetGmv": 1612.9,
           "paymentAmount": 2675.1,
           "refundAmount": 221.6,
           "lastYearSame": 0,
@@ -297,7 +297,7 @@
         {
           "name": "C店-康智",
           "platform": "C店",
-          "targetGmv": 0,
+          "targetGmv": 865.09,
           "paymentAmount": 669.2,
           "refundAmount": 99.48,
           "lastYearSame": 0,
@@ -309,7 +309,7 @@
         {
           "name": "C店-特好卖",
           "platform": "C店",
-          "targetGmv": 0,
+          "targetGmv": 29545.7,
           "paymentAmount": 70.8,
           "refundAmount": 32211,
           "lastYearSame": 0,
@@ -321,7 +321,7 @@
         {
           "name": "拼多多-水饮专卖店",
           "platform": "拼多多",
-          "targetGmv": 0,
+          "targetGmv": 21290.32,
           "paymentAmount": 14811.09,
           "refundAmount": 6650.98,
           "lastYearSame": 0,
@@ -333,7 +333,7 @@
         {
           "name": "拼多多-劲爽专卖店",
           "platform": "拼多多",
-          "targetGmv": 0,
+          "targetGmv": 17419.35,
           "paymentAmount": 18831.35,
           "refundAmount": 1118.15,
           "lastYearSame": 0,
@@ -345,7 +345,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 0,
+          "targetGmv": 170.0,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
