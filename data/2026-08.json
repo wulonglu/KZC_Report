@@ -78,7 +78,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 170.0,
+          "targetGmv": 170,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -167,7 +167,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 170.0,
+          "targetGmv": 170,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -256,7 +256,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 170.0,
+          "targetGmv": 170,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -345,7 +345,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 170.0,
+          "targetGmv": 170,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -360,28 +360,28 @@
       "date": "2026-08-05",
       "stores": [
         {
-          "name": "拼多多-水饮专卖店",
-          "platform": "拼多多",
-          "targetGmv": 21290.32,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "name": "百事天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 39342.3,
+          "paymentAmount": 47938.479999999996,
+          "refundAmount": 7204.25,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0,
-          "newCustomers": 0
+          "visitors": 28227,
+          "buyers": 1411,
+          "salesCount": 1908,
+          "newCustomers": 934
         },
         {
-          "name": "拼多多-劲爽专卖店",
-          "platform": "拼多多",
-          "targetGmv": 17419.35,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "name": "佳得乐天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 1612.9,
+          "paymentAmount": 1908.4,
+          "refundAmount": 111.8,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0,
-          "newCustomers": 0
+          "visitors": 396,
+          "buyers": 22,
+          "salesCount": 36,
+          "newCustomers": 21
         },
         {
           "name": "C店-康智",
@@ -400,7 +400,7 @@
           "platform": "C店",
           "targetGmv": 29545.7,
           "paymentAmount": 51.9,
-          "refundAmount": 0.0,
+          "refundAmount": 0,
           "lastYearSame": 0,
           "visitors": 47,
           "buyers": 3,
@@ -408,33 +408,33 @@
           "newCustomers": 2
         },
         {
-          "name": "佳得乐天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 1612.9,
-          "paymentAmount": 1908.4,
-          "refundAmount": 111.8,
+          "name": "拼多多-水饮专卖店",
+          "platform": "拼多多",
+          "targetGmv": 21290.32,
+          "paymentAmount": 40615.96,
+          "refundAmount": 0,
           "lastYearSame": 0,
-          "visitors": 396,
-          "buyers": 22,
-          "salesCount": 36,
-          "newCustomers": 21
+          "visitors": 10427,
+          "buyers": 1712,
+          "salesCount": 1757,
+          "newCustomers": 1335
         },
         {
-          "name": "百事天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 39342.3,
-          "paymentAmount": 47938.479999999996,
-          "refundAmount": 7204.25,
+          "name": "拼多多-劲爽专卖店",
+          "platform": "拼多多",
+          "targetGmv": 17419.35,
+          "paymentAmount": 16365.12,
+          "refundAmount": 0,
           "lastYearSame": 0,
-          "visitors": 28227,
-          "buyers": 1411,
-          "salesCount": 1908,
-          "newCustomers": 934
+          "visitors": 3713,
+          "buyers": 459,
+          "salesCount": 476,
+          "newCustomers": 195
         },
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 170.0,
+          "targetGmv": 170,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -523,7 +523,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 170.0,
+          "targetGmv": 170,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -612,7 +612,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 170.0,
+          "targetGmv": 170,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -701,7 +701,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 170.0,
+          "targetGmv": 170,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -790,7 +790,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 170.0,
+          "targetGmv": 170,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -879,7 +879,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 170.0,
+          "targetGmv": 170,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -968,7 +968,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 200.0,
+          "targetGmv": 200,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1057,7 +1057,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 200.0,
+          "targetGmv": 200,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1146,7 +1146,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 200.0,
+          "targetGmv": 200,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1235,7 +1235,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 200.0,
+          "targetGmv": 200,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1324,7 +1324,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 200.0,
+          "targetGmv": 200,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1413,7 +1413,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 200.0,
+          "targetGmv": 200,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1502,7 +1502,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 200.0,
+          "targetGmv": 200,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1591,7 +1591,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 200.0,
+          "targetGmv": 200,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1680,7 +1680,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 300.0,
+          "targetGmv": 300,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1769,7 +1769,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 300.0,
+          "targetGmv": 300,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1858,7 +1858,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 300.0,
+          "targetGmv": 300,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1947,7 +1947,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 300.0,
+          "targetGmv": 300,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2036,7 +2036,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 300.0,
+          "targetGmv": 300,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2125,7 +2125,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 300.0,
+          "targetGmv": 300,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2214,7 +2214,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 300.0,
+          "targetGmv": 300,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2303,7 +2303,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 300.0,
+          "targetGmv": 300,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2392,7 +2392,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 300.0,
+          "targetGmv": 300,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2481,7 +2481,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 300.0,
+          "targetGmv": 300,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2570,7 +2570,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 300.0,
+          "targetGmv": 300,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2659,7 +2659,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 300.0,
+          "targetGmv": 300,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2748,7 +2748,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 300.0,
+          "targetGmv": 300,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
