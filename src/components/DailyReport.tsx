@@ -364,7 +364,7 @@ export default function DailyReport() {
                     <span style={{ display: 'inline-block', width: 8, height: 8, borderRadius: 2, marginRight: 8, background: storeColor(s.platform).bg }} />
                     <span style={{ color: 'rgba(255,255,255,.25)', fontSize: 11 }}>[{s.platform}]</span> {s.name}
                   </td>
-                  {Array(14).fill(null).map((_, j) => (
+                  {Array(16).fill(null).map((_, j) => (
                     <td key={j} style={{ textAlign: 'right', color: 'rgba(255,255,255,.08)' }}>-</td>
                   ))}
                 </tr>
