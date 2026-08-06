@@ -329,6 +329,8 @@ export default function DailyReport() {
                 <th style={{ textAlign: 'right' }}>达成率</th><th style={{ textAlign: 'right' }}>访客数</th>
                 <th style={{ textAlign: 'right' }}>买家数</th><th style={{ textAlign: 'right' }}>新客数</th>
                 <th style={{ textAlign: 'right' }}>新客占比</th><th style={{ textAlign: 'right' }}>销售件数</th>
+                <th style={{ textAlign: 'right' }}>库存件数</th>
+                <th style={{ textAlign: 'right' }}>周转天数</th>
                 <th style={{ textAlign: 'right' }}>客单价</th><th style={{ textAlign: 'right' }}>转化率</th>
               </tr>
             </thead>
@@ -355,6 +357,8 @@ export default function DailyReport() {
                   <td style={{ textAlign: 'right' }}>{formatNumber(m.newCustomers)}</td>
                   <td style={{ textAlign: 'right' }}>{formatPercent(m.newCustomerRate)}</td>
                   <td style={{ textAlign: 'right' }}>{formatNumber(m.salesCount)}</td>
+                  <td style={{ textAlign: 'right' }}>{m.inventoryCount > 0 ? formatNumber(m.inventoryCount) : '-'}</td>
+                  <td style={{ textAlign: 'right' }}>{m.turnoverDays > 0 ? m.turnoverDays.toFixed(1) + '天' : '-'}</td>
                   <td style={{ textAlign: 'right' }}>{formatMoney(m.avgOrderValue)}</td>
                   <td style={{ textAlign: 'right' }}>{formatPercent(m.conversionRate)}</td>
                 </tr>
@@ -390,6 +394,8 @@ export default function DailyReport() {
                   <td style={{ textAlign: 'right' }}>{formatNumber(totals.newCustom)}</td>
                   <td style={{ textAlign: 'right' }}>{formatPercent(totals.newCustomRate)}</td>
                   <td style={{ textAlign: 'right' }}>{formatNumber(totals.sales)}</td>
+                  <td style={{ textAlign: 'right' }}>-</td>
+                  <td style={{ textAlign: 'right' }}>-</td>
                   <td style={{ textAlign: 'right' }}>{formatMoney(totals.aov)}</td>
                   <td style={{ textAlign: 'right' }}>{formatPercent(totals.cvr)}</td>
                 </tr>
