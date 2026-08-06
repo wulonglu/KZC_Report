@@ -34,11 +34,18 @@ export default function DataEntry() {
     })
   }, [date])
 
-  const fields: (keyof StoreData)[] = ['paymentAmount', 'refundAmount', 'visitors', 'buyers', 'salesCount', 'newCustomers']
+  // 常规店铺字段 / 库存型店铺字段
+  const normalFields: (keyof StoreData)[] = ['paymentAmount', 'refundAmount', 'visitors', 'buyers', 'salesCount', 'newCustomers']
+  const inventoryFields: (keyof StoreData)[] = ['salesCount', 'inventoryCount']
+
   const labels: Record<string, string> = {
     paymentAmount: '支付金额', refundAmount: '退款金额',
-    visitors: '访客数', buyers: '买家数', salesCount: '销售件数', newCustomers: '新客数',
+    visitors: '访客数', buyers: '买家数', salesCount: '支付件数', newCustomers: '新客数',
+    inventoryCount: '库存件数',
   }
+
+  // 合并所有可能的字段用于表头
+  const allFields: (keyof StoreData)[] = ['paymentAmount', 'refundAmount', 'visitors', 'buyers', 'salesCount', 'newCustomers', 'inventoryCount']
 
   const unlock = () => {
     if (pwd === 'admin888' || pwd.length >= 20) {
@@ -66,11 +73,11 @@ export default function DataEntry() {
           buyers: Number(s.buyers) || 0,
           salesCount: Number(s.salesCount) || 0,
           newCustomers: Number(s.newCustomers) || 0,
+          inventoryCount: Number(s.inventoryCount) || 0,
         })),
       })
       setMsg('保存成功！')
       markSaved()
-      // 通知日报/历史查询刷新
       window.dispatchEvent(new Event('data_saved'))
     } catch (e: any) { setMsg('保存失败：' + e.message) }
     setSaving(false)
@@ -139,28 +146,37 @@ export default function DataEntry() {
             <thead>
               <tr>
                 <th style={{ width: 180 }}>店铺</th>
-                {fields.map(f => <th key={f} style={{ textAlign: 'right' }}>{labels[f]}</th>)}
+                {allFields.map(f => <th key={f} style={{ textAlign: 'right' }}>{labels[f]}</th>)}
               </tr>
             </thead>
             <tbody>
-              {stores.map((s, i) => (
-                <tr key={s.name}>
-                  <td style={{ fontWeight: 500, color: '#fff' }}>
-                    <span style={{ color: 'rgba(255,255,255,.25)', fontSize: 11 }}>[{s.platform}]</span> {s.name}
-                  </td>
-                  {fields.map(f => (
-                    <td key={f}>
-                      <input
-                        type="number"
-                        value={(s as any)[f]}
-                        onChange={e => update(i, f, e.target.value)}
-                        className="input-cell"
-                        placeholder="0"
-                      />
+              {stores.map((s, i) => {
+                const isInventory = s.platform === '其他'
+                return (
+                  <tr key={s.name}>
+                    <td style={{ fontWeight: 500, color: '#fff' }}>
+                      <span style={{ color: 'rgba(255,255,255,.25)', fontSize: 11 }}>[{s.platform}]</span> {s.name}
                     </td>
-                  ))}
-                </tr>
-              ))}
+                    {allFields.map(f => {
+                      // 库存型店铺：仅 salesCount 和 inventoryCount 可编辑
+                      const disabled = isInventory && f !== 'salesCount' && f !== 'inventoryCount'
+                      return (
+                        <td key={f}>
+                          <input
+                            type="number"
+                            value={disabled ? '0' : (s as any)[f]}
+                            onChange={e => !disabled && update(i, f, e.target.value)}
+                            className="input-cell"
+                            placeholder="0"
+                            disabled={disabled}
+                            style={disabled ? { opacity: 0.3, cursor: 'not-allowed' } : undefined}
+                          />
+                        </td>
+                      )
+                    })}
+                  </tr>
+                )
+              })}
             </tbody>
           </table>
         </div>
