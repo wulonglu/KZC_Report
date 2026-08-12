@@ -1,7 +1,7 @@
 // 店铺定义
 export interface StoreData {
   name: string
-  platform: '天猫' | 'C店' | '拼多多' | '淘宝' | '其他'
+  platform: '天猫' | 'C店' | '拼多多' | '淘宝'
   targetGmv: number
   paymentAmount: number
   refundAmount: number
@@ -10,7 +10,6 @@ export interface StoreData {
   buyers: number
   salesCount: number
   newCustomers: number
-  inventoryCount: number
 }
 
 export interface DailyReport {
@@ -30,7 +29,6 @@ export interface StoreMetrics extends StoreData {
   avgOrderValue: number // 客单价 = paymentAmount / buyers
   conversionRate: number // 转化率 = buyers / visitors * 100
   newCustomerRate: number // 新客占比 = newCustomers / buyers * 100
-  turnoverDays: number // 周转天数 = inventoryCount / salesCount
 }
 
 export const STORES = [
@@ -41,17 +39,14 @@ export const STORES = [
   { name: '拼多多-水饮专卖店', platform: '拼多多' as const },
   { name: '拼多多-劲爽专卖店', platform: '拼多多' as const },
   { name: '淘宝农场', platform: '淘宝' as const },
-  { name: 'Sting', platform: '其他' as const },
-  { name: '维动力', platform: '其他' as const },
 ]
 
-// 平台颜色：天猫蓝、淘宝绿、C店橙、拼多多元、其他紫
+// 平台颜色：天猫蓝、淘宝绿、C店橙、拼多多元
 const platformColors: Record<string, { bg: string; cls: string }> = {
   '天猫': { bg: '#0066cc', cls: 'td-blue' },
   '淘宝': { bg: '#10b981', cls: 'td-green' },
   'C店':   { bg: '#f97316', cls: 'td-orange' },
   '拼多多': { bg: '#e32934', cls: 'td-red' },
-  '其他':  { bg: '#8b5cf6', cls: 'td-purple' },
 }
 export function storeColor(platform: string) {
   return platformColors[platform] || { bg: '#888', cls: '' }
@@ -69,7 +64,6 @@ export function emptyStore(name: string, platform: StoreData['platform']): Store
     buyers: 0,
     salesCount: 0,
     newCustomers: 0,
-    inventoryCount: 0,
   }
 }
 
@@ -81,9 +75,8 @@ export function computeMetrics(store: StoreData): StoreMetrics {
   const avgOrderValue = store.buyers > 0 ? store.paymentAmount / store.buyers : 0
   const conversionRate = store.visitors > 0 ? (store.buyers / store.visitors) * 100 : 0
   const newCustomerRate = store.buyers > 0 ? ((store.newCustomers || 0) / store.buyers) * 100 : 0
-  const turnoverDays = store.salesCount > 0 ? store.inventoryCount / store.salesCount : 0
 
-  return { ...store, netGmv, yoyGrowth, achievementRate, avgOrderValue, conversionRate, newCustomerRate, turnoverDays }
+  return { ...store, netGmv, yoyGrowth, achievementRate, avgOrderValue, conversionRate, newCustomerRate }
 }
 
 export function monthKey(date: string): string {
