@@ -9,9 +9,16 @@ interface InvProduct {
   inventory: number
   sales14d: number
 }
+interface InvWarehouse {
+  brand: string
+  product: string
+  warehouse: string
+  inventory: number
+}
 interface InvReport {
   date: string
   products: InvProduct[]
+  warehouses: InvWarehouse[]
 }
 interface InvData { reports: InvReport[] }
 
@@ -21,6 +28,28 @@ const DEFAULT_PRODUCTS: InvProduct[] = [
   { brand: 'Sting', name: '燃爆莓果味 PET350ml*12', inventory: 2199, sales14d: 271 },
   { brand: '维动力', name: '柠檬黄瓜 PET450ml*15', inventory: 762, sales14d: 79 },
   { brand: '维动力', name: '青柠葡萄柚 PET450ml*15', inventory: 744, sales14d: 99 },
+]
+const DEFAULT_WAREHOUSES: InvWarehouse[] = [
+  { brand: 'Sting', product: '燃爆莓果味 PET350ml*12', warehouse: '关畅_济南', inventory: 721 },
+  { brand: 'Sting', product: '燃爆莓果味 PET350ml*12', warehouse: '越程_广州仓', inventory: 509 },
+  { brand: 'Sting', product: '燃爆莓果味 PET350ml*12', warehouse: '华铂_沈阳', inventory: 313 },
+  { brand: 'Sting', product: '燃爆莓果味 PET350ml*12', warehouse: '越程_长沙仓', inventory: 279 },
+  { brand: 'Sting', product: '燃爆莓果味 PET350ml*12', warehouse: '顶通_成都仓', inventory: 228 },
+  { brand: 'Sting', product: '燃爆莓果味 PET350ml*12', warehouse: '顶通_西安仓', inventory: 149 },
+  { brand: '维动力', product: '柠檬黄瓜 PET450ml*15', warehouse: '越程_长沙仓', inventory: 193 },
+  { brand: '维动力', product: '柠檬黄瓜 PET450ml*15', warehouse: '关畅_济南', inventory: 161 },
+  { brand: '维动力', product: '柠檬黄瓜 PET450ml*15', warehouse: '越程_广州仓', inventory: 159 },
+  { brand: '维动力', product: '柠檬黄瓜 PET450ml*15', warehouse: '华铂_沈阳', inventory: 110 },
+  { brand: '维动力', product: '柠檬黄瓜 PET450ml*15', warehouse: '顶通_成都仓', inventory: 60 },
+  { brand: '维动力', product: '柠檬黄瓜 PET450ml*15', warehouse: '顶通_西安仓', inventory: 56 },
+  { brand: '维动力', product: '柠檬黄瓜 PET450ml*15', warehouse: '顶通_重庆仓', inventory: 23 },
+  { brand: '维动力', product: '青柠葡萄柚 PET450ml*15', warehouse: '关畅_济南', inventory: 158 },
+  { brand: '维动力', product: '青柠葡萄柚 PET450ml*15', warehouse: '越程_广州仓', inventory: 155 },
+  { brand: '维动力', product: '青柠葡萄柚 PET450ml*15', warehouse: '顶通_成都仓', inventory: 122 },
+  { brand: '维动力', product: '青柠葡萄柚 PET450ml*15', warehouse: '华铂_沈阳', inventory: 118 },
+  { brand: '维动力', product: '青柠葡萄柚 PET450ml*15', warehouse: '越程_长沙仓', inventory: 102 },
+  { brand: '维动力', product: '青柠葡萄柚 PET450ml*15', warehouse: '顶通_西安仓', inventory: 71 },
+  { brand: '维动力', product: '青柠葡萄柚 PET450ml*15', warehouse: '顶通_重庆仓', inventory: 18 },
 ]
 const GITHUB_REPO = 'wulonglu/KZC_Report'
 const DATA_PATH = 'data/inventory-analysis.json'
@@ -55,6 +84,8 @@ export default function InventoryAnalysis() {
   const [date, setDate] = useState(getToday())
   const [report, setReport] = useState<InvReport | null>(null)
   const [products, setProducts] = useState<InvProduct[]>(DEFAULT_PRODUCTS.map(p => ({ ...p })))
+  const [warehouses, setWarehouses] = useState<InvWarehouse[]>(DEFAULT_WAREHOUSES.map(w => ({ ...w })))
+  const [prevReport, setPrevReport] = useState<InvReport | null>(null)
   const [loading, setLoading] = useState(false)
   const [saving, setSaving] = useState(false)
   const [msg, setMsg] = useState('')
@@ -170,16 +201,48 @@ export default function InventoryAnalysis() {
     })
   }, [products])
 
+  // 按品牌分组仓库数据
+  const warehouseByBrand = useMemo(() => {
+    const grouped: Record<string, Record<string, { items: InvWarehouse[], total: number }>> = {}
+    for (const w of warehouses) {
+      if (!grouped[w.brand]) grouped[w.brand] = {}
+      if (!grouped[w.brand][w.product]) grouped[w.brand][w.product] = { items: [], total: 0 }
+      grouped[w.brand][w.product].items.push(w)
+      grouped[w.brand][w.product].total += w.inventory
+    }
+    return grouped
+  }, [warehouses])
+
   const conclusions = useMemo(() => {
     const lines: string[] = []
+    // 当前数据告警
     for (const p of products) {
+      if (!p.name) continue
       const da = p.sales14d / 14
       const days = da > 0 ? Math.round(p.inventory / da * 10) / 10 : 0
       if (days > 60) lines.push(`${p.brand} ${p.name}：库存${p.inventory}箱，周转${days}天，严重偏高，建议加大促销力度。`)
       else if (days > 30) lines.push(`${p.brand} ${p.name}：库存${p.inventory}箱，周转${days}天，偏高，注意监控。`)
     }
+    // 与前一日对比
+    if (prevReport?.products) {
+      for (const p of products) {
+        if (!p.name) continue
+        const prev = prevReport.products.find(x => x.brand === p.brand && x.name === p.name)
+        if (!prev) continue
+        const invDiff = p.inventory - prev.inventory
+        const salesDiff = p.sales14d - prev.sales14d
+        if (Math.abs(invDiff) > 50) {
+          if (invDiff > 0) lines.push(`${p.brand} ${p.name}：库存较前一日增加 ${invDiff} 箱（${prev.inventory}→${p.inventory}）。`)
+          else lines.push(`${p.brand} ${p.name}：库存较前一日减少 ${Math.abs(invDiff)} 箱（${prev.inventory}→${p.inventory}），出货加速。`)
+        }
+        if (Math.abs(salesDiff) > 20) {
+          if (salesDiff > 0) lines.push(`${p.brand} ${p.name}：近14天销量较前一日增加 ${salesDiff} 箱（${prev.sales14d}→${p.sales14d}），销售回暖。`)
+          else lines.push(`${p.brand} ${p.name}：近14天销量较前一日减少 ${Math.abs(salesDiff)} 箱（${prev.sales14d}→${p.sales14d}），需要关注。`)
+        }
+      }
+    }
     return lines
-  }, [products])
+  }, [products, prevReport])
 
   // ---- Product management ----
   const addProduct = () => {
@@ -187,7 +250,26 @@ export default function InventoryAnalysis() {
   }
   const removeProduct = (i: number) => {
     if (products.length <= 1) return
+    const removed = products[i]
     setProducts(prev => prev.filter((_, idx) => idx !== i))
+    // 同时清理该产品的分仓数据
+    if (removed.name) {
+      setWarehouses(prev => prev.filter(w => !(w.brand === removed.brand && w.product === removed.name)))
+    }
+  }
+  const addWarehouse = () => {
+    const last = products[products.length - 1]
+    setWarehouses(prev => [...prev, { brand: last?.brand || '', product: last?.name || '', warehouse: '', inventory: 0 }])
+  }
+  const removeWarehouse = (i: number) => {
+    setWarehouses(prev => prev.filter((_, idx) => idx !== i))
+  }
+  const updateWarehouse = (i: number, field: keyof InvWarehouse, val: string) => {
+    setWarehouses(prev => {
+      const n = [...prev]
+      n[i] = { ...n[i], [field]: field === 'inventory' ? (Number(val) || 0) : val }
+      return n
+    })
   }
   const updateProduct = (i: number, field: keyof InvProduct, val: string) => {
     setProducts(prev => {
@@ -214,7 +296,7 @@ export default function InventoryAnalysis() {
           if (file.content) { const d: InvData = JSON.parse(base64ToUtf8(file.content)); existing = d.reports || [] }
         }
       } catch { /* new */ }
-      const nr: InvReport = { date, products: products.filter(p => p.name.trim()) }
+      const nr: InvReport = { date, products: products.filter(p => p.name.trim()), warehouses: warehouses.filter(w => w.product && w.warehouse) }
       const idx = existing.findIndex(r => r.date === date)
       if (idx >= 0) existing[idx] = nr
       else existing.push(nr)
@@ -331,6 +413,33 @@ export default function InventoryAnalysis() {
           <datalist id="brands">
             <option value="Sting" /><option value="维动力" /><option value="百事" /><option value="佳得乐" />
           </datalist>
+
+          {/* 分仓明细编辑 */}
+          <div style={{ marginTop: 20, paddingTop: 16, borderTop: '1px solid rgba(255,255,255,.06)' }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
+              <h4 style={{ fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,.7)', margin: 0 }}>📦 分仓明细（选填）</h4>
+              <button onClick={addWarehouse} className="btn-glass btn-outline" style={{ padding: '4px 10px', fontSize: 11, display: 'flex', alignItems: 'center', gap: 4 }}>
+                <Plus size={12} /> 添加仓库
+              </button>
+            </div>
+            <div style={{ overflowX: 'auto' }}>
+              <table className="table-glass" style={{ tableLayout: 'auto', width: 'auto', minWidth: '100%', whiteSpace: 'nowrap' }}>
+                <thead><tr><th style={{ width: 80 }}>品牌</th><th>产品</th><th>仓库</th><th style={{ textAlign: 'right', width: 90 }}>库存</th><th style={{ width: 28 }}></th></tr></thead>
+                <tbody>
+                  {warehouses.map((w, i) => (
+                    <tr key={i}>
+                      <td><input type="text" value={w.brand} onChange={e => updateWarehouse(i, 'brand', e.target.value)} className="input-cell" style={{ textAlign: 'left', width: 76 }} list="brands" /></td>
+                      <td><input type="text" value={w.product} onChange={e => updateWarehouse(i, 'product', e.target.value)} className="input-cell" style={{ textAlign: 'left', minWidth: 140 }} /></td>
+                      <td><input type="text" value={w.warehouse} onChange={e => updateWarehouse(i, 'warehouse', e.target.value)} className="input-cell" style={{ textAlign: 'left', minWidth: 120 }} placeholder="仓库名" /></td>
+                      <td><input type="number" value={w.inventory || ''} onChange={e => updateWarehouse(i, 'inventory', e.target.value)} className="input-cell" /></td>
+                      <td><button onClick={() => removeWarehouse(i)} style={{ background: 'none', border: 'none', color: 'rgba(255,255,255,.3)', cursor: 'pointer', padding: 2 }}><X size={14} /></button></td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
           <div style={{ marginTop: 12, display: 'flex', gap: 8, alignItems: 'center' }}>
             <button className="btn-glass btn-primary" onClick={save} disabled={saving} style={{ padding: '8px 20px' }}>{saving ? '保存中...' : '保存数据'}</button>
             {msg && <span style={{ fontSize: 13, color: msg.includes('成功') ? '#4ade80' : '#f87171' }}>{msg}</span>}
