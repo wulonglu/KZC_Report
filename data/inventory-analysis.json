@@ -1,0 +1,152 @@
+{
+  "reports": [
+    {
+      "date": "2026-08-12",
+      "products": [
+        {
+          "brand": "Sting",
+          "name": "燃爆莓果味 PET350ml*12",
+          "sku": "BSSTA61B0612PE",
+          "inventory": 2199,
+          "sales14d": 271
+        },
+        {
+          "brand": "维动力",
+          "name": "柠檬黄瓜 PET450ml*15",
+          "sku": "BSWDA62B0815PE",
+          "inventory": 762,
+          "sales14d": 79
+        },
+        {
+          "brand": "维动力",
+          "name": "青柠葡萄柚 PET450ml*15",
+          "sku": "BSWDA63B0815PE",
+          "inventory": 744,
+          "sales14d": 99
+        }
+      ],
+      "warehouses": [
+        {
+          "brand": "Sting",
+          "product": "燃爆莓果味 PET350ml*12",
+          "warehouse": "关畅_济南",
+          "inventory": 721
+        },
+        {
+          "brand": "Sting",
+          "product": "燃爆莓果味 PET350ml*12",
+          "warehouse": "越程_广州仓",
+          "inventory": 509
+        },
+        {
+          "brand": "Sting",
+          "product": "燃爆莓果味 PET350ml*12",
+          "warehouse": "华铂_沈阳",
+          "inventory": 313
+        },
+        {
+          "brand": "Sting",
+          "product": "燃爆莓果味 PET350ml*12",
+          "warehouse": "越程_长沙仓",
+          "inventory": 279
+        },
+        {
+          "brand": "Sting",
+          "product": "燃爆莓果味 PET350ml*12",
+          "warehouse": "顶通_成都仓",
+          "inventory": 228
+        },
+        {
+          "brand": "Sting",
+          "product": "燃爆莓果味 PET350ml*12",
+          "warehouse": "顶通_西安仓",
+          "inventory": 149
+        },
+        {
+          "brand": "维动力",
+          "product": "柠檬黄瓜 PET450ml*15",
+          "warehouse": "越程_长沙仓",
+          "inventory": 193
+        },
+        {
+          "brand": "维动力",
+          "product": "柠檬黄瓜 PET450ml*15",
+          "warehouse": "关畅_济南",
+          "inventory": 161
+        },
+        {
+          "brand": "维动力",
+          "product": "柠檬黄瓜 PET450ml*15",
+          "warehouse": "越程_广州仓",
+          "inventory": 159
+        },
+        {
+          "brand": "维动力",
+          "product": "柠檬黄瓜 PET450ml*15",
+          "warehouse": "华铂_沈阳",
+          "inventory": 110
+        },
+        {
+          "brand": "维动力",
+          "product": "柠檬黄瓜 PET450ml*15",
+          "warehouse": "顶通_成都仓",
+          "inventory": 60
+        },
+        {
+          "brand": "维动力",
+          "product": "柠檬黄瓜 PET450ml*15",
+          "warehouse": "顶通_西安仓",
+          "inventory": 56
+        },
+        {
+          "brand": "维动力",
+          "product": "柠檬黄瓜 PET450ml*15",
+          "warehouse": "顶通_重庆仓",
+          "inventory": 23
+        },
+        {
+          "brand": "维动力",
+          "product": "青柠葡萄柚 PET450ml*15",
+          "warehouse": "关畅_济南",
+          "inventory": 158
+        },
+        {
+          "brand": "维动力",
+          "product": "青柠葡萄柚 PET450ml*15",
+          "warehouse": "越程_广州仓",
+          "inventory": 155
+        },
+        {
+          "brand": "维动力",
+          "product": "青柠葡萄柚 PET450ml*15",
+          "warehouse": "顶通_成都仓",
+          "inventory": 122
+        },
+        {
+          "brand": "维动力",
+          "product": "青柠葡萄柚 PET450ml*15",
+          "warehouse": "华铂_沈阳",
+          "inventory": 118
+        },
+        {
+          "brand": "维动力",
+          "product": "青柠葡萄柚 PET450ml*15",
+          "warehouse": "越程_长沙仓",
+          "inventory": 102
+        },
+        {
+          "brand": "维动力",
+          "product": "青柠葡萄柚 PET450ml*15",
+          "warehouse": "顶通_西安仓",
+          "inventory": 71
+        },
+        {
+          "brand": "维动力",
+          "product": "青柠葡萄柚 PET450ml*15",
+          "warehouse": "顶通_重庆仓",
+          "inventory": 18
+        }
+      ]
+    }
+  ]
+}
