@@ -1,7 +1,7 @@
 import { useState, useEffect, useMemo, useRef } from 'react'
 import { Package, BarChart3, TrendingDown, AlertTriangle } from 'lucide-react'
-import { getToday } from './lib/utils'
-import { markSaved } from './lib/github'
+import { getToday } from '../lib/utils'
+import { markSaved } from '../lib/github'
 
 // ---- Types ----
 interface InvProduct {
