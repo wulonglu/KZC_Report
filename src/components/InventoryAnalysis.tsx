@@ -95,7 +95,8 @@ export default function InventoryAnalysis() {
   const [saving, setSaving] = useState(false)
   const [msg, setMsg] = useState('')
   const [editMode, setEditMode] = useState(false)
-  const [locked, setLocked] = useState(true)
+  const [authed, setAuthed] = useState(false)
+  const [showUnlock, setShowUnlock] = useState(false)
   const [pwd, setPwd] = useState('')
   const [pwdErr, setPwdErr] = useState(false)
   const chartRef1 = useRef<HTMLCanvasElement>(null)
@@ -215,7 +216,7 @@ export default function InventoryAnalysis() {
 
   // ---- Save ----
   const save = async () => {
-    if (locked) return
+    if (!authed) return
     setSaving(true); setMsg('')
     try {
       const { repo, token } = getConfig()
@@ -246,8 +247,16 @@ export default function InventoryAnalysis() {
   }
 
   const unlock = () => {
-    if (pwd === 'admin888' || pwd.length >= 20) { localStorage.setItem('gh_token', pwd); setLocked(false); setPwdErr(false) }
+    if (pwd === 'admin888' || pwd.length >= 20) { localStorage.setItem('gh_token', pwd); setAuthed(true); setShowUnlock(false); setPwdErr(false); setPwd(''); setEditMode(true) }
     else setPwdErr(true)
+  }
+
+  const handleEditClick = () => {
+    if (authed) {
+      setEditMode(!editMode)
+    } else {
+      setShowUnlock(true)
+    }
   }
 
   const updateProduct = (i: number, field: 'inventory' | 'sales14d', val: string) => {
@@ -257,16 +266,19 @@ export default function InventoryAnalysis() {
   // ---- Render ----
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-      {/* Lock overlay */}
-      {locked && (
-        <div style={{ position: 'fixed', inset: 0, top: 56, background: 'rgba(2,13,31,.85)', backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)', zIndex: 50, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <div style={{ background: 'rgba(255,255,255,.06)', backdropFilter: 'blur(24px)', border: '1px solid rgba(255,255,255,.1)', borderRadius: 20, padding: 36, width: 420, textAlign: 'center' }}>
-            <h2 style={{ fontSize: 20, color: '#fff', marginBottom: 4, fontWeight: 600 }}>需要授权才能编辑</h2>
-            <p style={{ fontSize: 13, color: 'rgba(255,255,255,.4)', marginBottom: 20 }}>输入 GitHub Token 解锁（仅需 repo 权限）</p>
+      {/* Unlock modal - only shown when clicking 录入数据 */}
+      {showUnlock && (
+        <div onClick={() => setShowUnlock(false)} style={{ position: 'fixed', inset: 0, background: 'rgba(2,13,31,.75)', backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)', zIndex: 100, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <div onClick={e => e.stopPropagation()} style={{ background: 'rgba(255,255,255,.08)', backdropFilter: 'blur(24px)', border: '1px solid rgba(255,255,255,.15)', borderRadius: 20, padding: 36, width: 420, textAlign: 'center' }}>
+            <h2 style={{ fontSize: 18, color: '#fff', marginBottom: 4, fontWeight: 600 }}>🔒 需要授权才能编辑</h2>
+            <p style={{ fontSize: 12, color: 'rgba(255,255,255,.4)', marginBottom: 20 }}>输入 GitHub Token 或 admin888</p>
             <input type="password" value={pwd} placeholder="ghp_xxxxxxxx (或 admin888)" onChange={e => { setPwd(e.target.value); setPwdErr(false) }} onKeyDown={e => e.key === 'Enter' && unlock()} autoFocus
-              style={{ width: '100%', padding: '10px 14px', border: '1px solid rgba(255,255,255,.1)', borderRadius: 10, fontSize: 14, outline: 'none', marginBottom: 10, background: 'rgba(255,255,255,.05)', color: '#fff', fontFamily: 'inherit' }} />
+              style={{ width: '100%', padding: '10px 14px', border: '1px solid rgba(255,255,255,.15)', borderRadius: 10, fontSize: 14, outline: 'none', marginBottom: 10, background: 'rgba(255,255,255,.05)', color: '#fff', fontFamily: 'inherit' }} />
             {pwdErr && <div style={{ color: '#f87171', fontSize: 13, marginBottom: 8 }}>密码错误</div>}
-            <button onClick={unlock} style={{ width: '100%', padding: 11, borderRadius: 10, border: 'none', background: 'rgba(0,102,204,.8)', color: '#fff', cursor: 'pointer', fontSize: 14, fontWeight: 600, fontFamily: 'inherit' }}>解锁</button>
+            <div style={{ display: 'flex', gap: 8 }}>
+              <button onClick={() => setShowUnlock(false)} style={{ flex: 1, padding: 11, borderRadius: 10, border: '1px solid rgba(255,255,255,.15)', background: 'transparent', color: 'rgba(255,255,255,.7)', cursor: 'pointer', fontSize: 14, fontFamily: 'inherit' }}>取消</button>
+              <button onClick={unlock} style={{ flex: 1, padding: 11, borderRadius: 10, border: 'none', background: 'rgba(0,102,204,.85)', color: '#fff', cursor: 'pointer', fontSize: 14, fontWeight: 600, fontFamily: 'inherit' }}>解锁</button>
+            </div>
           </div>
         </div>
       )}
@@ -284,11 +296,9 @@ export default function InventoryAnalysis() {
             <button className="btn-glass btn-outline" onClick={() => setDate(getToday())} disabled={loading} style={{ padding: '6px 12px', fontSize: 12 }}>
               {loading ? '...' : '刷新'}
             </button>
-            {!locked && (
-              <button className="btn-glass btn-primary" onClick={() => setEditMode(!editMode)} style={{ padding: '6px 14px', fontSize: 12 }}>
-                {editMode ? '取消' : '录入数据'}
-              </button>
-            )}
+            <button className="btn-glass btn-primary" onClick={handleEditClick} style={{ padding: '6px 14px', fontSize: 12 }}>
+              {authed && editMode ? '取消编辑' : authed ? '录入数据' : '🔒 录入数据'}
+            </button>
           </div>
         </div>
       </div>
