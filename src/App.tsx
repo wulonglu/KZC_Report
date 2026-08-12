@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react'
-import { Lock, Eye, History } from 'lucide-react'
+import { Lock, Eye, History, Package } from 'lucide-react'
 import DataEntry from './components/DataEntry'
 import DailyReport from './components/DailyReport'
 import HistoryQuery from './components/HistoryQuery'
+import InventoryAnalysis from './components/InventoryAnalysis'
 
-type Tab = 'entry' | 'report' | 'history'
+type Tab = 'entry' | 'report' | 'history' | 'inventory'
 
 export default function App() {
   const [tab, setTab] = useState<Tab>('report')
@@ -13,6 +14,7 @@ export default function App() {
     { key: 'entry' as Tab, label: '数据录入', icon: Lock },
     { key: 'report' as Tab, label: '日报查看', icon: Eye },
     { key: 'history' as Tab, label: '历史查询', icon: History },
+    { key: 'inventory' as Tab, label: '库存分析', icon: Package },
   ]
 
   // 百事可乐 Logo
@@ -91,6 +93,7 @@ export default function App() {
         {tab === 'entry' && <DataEntry />}
         {tab === 'report' && <DailyReport />}
         {tab === 'history' && <HistoryQuery onViewDate={(d) => { setTab('report'); localStorage.setItem('view_date', d); window.dispatchEvent(new Event('view_date_change')) }} />}
+        {tab === 'inventory' && <InventoryAnalysis />}
       </main>
     </div>
   )
