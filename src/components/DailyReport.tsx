@@ -320,7 +320,7 @@ export default function DailyReport() {
           <span style={{ fontSize: 10, color: 'rgba(255,255,255,.15)' }}>单位：元</span>
         </div>
         <div style={{ overflowX: 'auto' }}>
-          <table className="table-glass">
+          <table className="table-glass" style={{ width: 'auto', minWidth: '100%', whiteSpace: 'nowrap', tableLayout: 'auto' }}>
             <thead>
               <tr>
                 <th>店铺</th><th style={{ textAlign: 'right' }}>目标GMV</th><th style={{ textAlign: 'right' }}>支付金额</th>
