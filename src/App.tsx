@@ -14,7 +14,7 @@ export default function App() {
     { key: 'entry' as Tab, label: '数据录入', icon: Lock },
     { key: 'report' as Tab, label: '日报查看', icon: Eye },
     { key: 'history' as Tab, label: '历史查询', icon: History },
-    { key: 'inventory' as Tab, label: '库存分析', icon: Package },
+    { key: 'inventory' as Tab, label: '热品追踪', icon: Package },
   ]
 
   // 百事可乐 Logo
