@@ -414,6 +414,11 @@ export default function InventoryAnalysis() {
             <option value="Sting" /><option value="维动力" /><option value="百事" /><option value="佳得乐" />
           </datalist>
 
+          {/* datalist for brand suggestions */}
+          <datalist id="brands">
+            <option value="Sting" /><option value="维动力" /><option value="百事" /><option value="佳得乐" />
+          </datalist>
+
           {/* 分仓明细编辑 */}
           <div style={{ marginTop: 20, paddingTop: 16, borderTop: '1px solid rgba(255,255,255,.06)' }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
@@ -490,44 +495,6 @@ export default function InventoryAnalysis() {
         </div>
       )}
 
-      {/* 分仓库存明细 */}
-      {warehouses.length > 0 && Object.keys(warehouseByBrand).length > 0 && (
-        <div className="card-glass">
-          <h3 style={{ fontSize: 14, color: '#fff', marginBottom: 12 }}>分仓库存明细</h3>
-          <div style={{ overflowX: 'auto' }}>
-            <table className="table-glass" style={{ tableLayout: 'auto', width: 'auto', minWidth: '100%', whiteSpace: 'nowrap' }}>
-              <thead><tr><th>品牌</th><th>产品</th><th>仓库</th><th style={{ textAlign: 'right' }}>库存（箱）</th><th style={{ textAlign: 'right' }}>占比</th></tr></thead>
-              <tbody>
-                {Object.entries(warehouseByBrand).flatMap(([brand, prods]) =>
-                  Object.entries(prods).flatMap(([productName, group]) => [
-                    ...group.items.map((w, j) => {
-                      const pct = group.total > 0 ? (w.inventory / group.total * 100) : 0
-                      const barW = group.total > 0 ? Math.max(3, Math.round(w.inventory / group.total * 120)) : 0
-                      return (
-                        <tr key={brand + "-" + productName + "-" + j}>
-                          <td><span style={{ color: brandColors[brand] || '#888', fontWeight: 600 }}>{brand}</span></td>
-                          <td>{productName}</td>
-                          <td>{w.warehouse}</td>
-                          <td style={{ textAlign: 'right' }}>
-                            <span style={{ display: 'inline-block', height: 7, borderRadius: 3, marginRight: 6, verticalAlign: 'middle', background: brandColors[brand] || '#888', width: barW }} />
-                            {fmtNum(w.inventory)}
-                          </td>
-                          <td style={{ textAlign: 'right' }}>{pct.toFixed(1)}%</td>
-                        </tr>
-                      )
-                    }),
-                    <tr key={"sub-" + brand + "-" + productName} style={{ background: 'rgba(255,255,255,.04)' }}>
-                      <td colSpan={3} style={{ fontWeight: 700, color: '#fff' }}>{brand} {productName.replace(/PET\d+ml\*\d+/, "")} 小计</td>
-                      <td style={{ textAlign: 'right', fontWeight: 700, color: '#fff' }}>{fmtNum(group.total)}</td>
-                      <td style={{ textAlign: 'right', fontWeight: 700, color: '#fff' }}>100%</td>
-                    </tr>,
-                  ])
-                )}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      )}
     </div>
   )
 }
