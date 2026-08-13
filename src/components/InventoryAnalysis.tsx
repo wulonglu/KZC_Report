@@ -201,18 +201,6 @@ export default function InventoryAnalysis() {
     })
   }, [products])
 
-  // 按品牌分组仓库数据
-  const warehouseByBrand = useMemo(() => {
-    const grouped: Record<string, Record<string, { items: InvWarehouse[], total: number }>> = {}
-    for (const w of warehouses) {
-      if (!grouped[w.brand]) grouped[w.brand] = {}
-      if (!grouped[w.brand][w.product]) grouped[w.brand][w.product] = { items: [], total: 0 }
-      grouped[w.brand][w.product].items.push(w)
-      grouped[w.brand][w.product].total += w.inventory
-    }
-    return grouped
-  }, [warehouses])
-
   const conclusions = useMemo(() => {
     const lines: string[] = []
     // 当前数据告警
