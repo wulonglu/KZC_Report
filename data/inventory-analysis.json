@@ -26,6 +26,42 @@
         }
       ],
       "warehouses": []
+    },
+    {
+      "date": "2026-08-26",
+      "products": [
+        {
+          "brand": "Sting",
+          "name": "燃爆莓果味 PET350ml*12",
+          "inventory": 789,
+          "sales14d": 750
+        },
+        {
+          "brand": "维动力",
+          "name": "柠檬黄瓜 PET450ml*15",
+          "inventory": 1439,
+          "sales14d": 146
+        },
+        {
+          "brand": "维动力",
+          "name": "青柠葡萄柚 PET450ml*15",
+          "inventory": 1402,
+          "sales14d": 210
+        },
+        {
+          "brand": "新品",
+          "name": "百事益生元可乐常规罐330ml*12",
+          "inventory": 80,
+          "sales14d": 166
+        },
+        {
+          "brand": "新品",
+          "name": "百事益生元可乐常规瓶500ml*12",
+          "inventory": 189,
+          "sales14d": 97
+        }
+      ],
+      "warehouses": []
     }
   ]
 }
