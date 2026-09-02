@@ -20,7 +20,7 @@
           "platform": "天猫",
           "targetGmv": 0,
           "paymentAmount": 822.5,
-          "refundAmount": 0.0,
+          "refundAmount": 0,
           "lastYearSame": 0,
           "visitors": 312,
           "buyers": 15,
@@ -31,7 +31,7 @@
           "name": "C店-康智",
           "platform": "C店",
           "targetGmv": 0,
-          "paymentAmount": 1207.0,
+          "paymentAmount": 1207,
           "refundAmount": 93.91,
           "lastYearSame": 0,
           "visitors": 738,
@@ -44,12 +44,48 @@
           "platform": "C店",
           "targetGmv": 0,
           "paymentAmount": 199.70000000000002,
-          "refundAmount": 11.0,
+          "refundAmount": 11,
           "lastYearSame": 0,
           "visitors": 146,
           "buyers": 9,
           "salesCount": 13,
           "newCustomers": 9
+        },
+        {
+          "name": "拼多多-水饮专卖店",
+          "platform": "拼多多",
+          "targetGmv": 0,
+          "paymentAmount": 7797.8,
+          "refundAmount": 0,
+          "lastYearSame": 0,
+          "visitors": 1486,
+          "buyers": 345,
+          "salesCount": 354,
+          "newCustomers": 0
+        },
+        {
+          "name": "拼多多-劲爽专卖店",
+          "platform": "拼多多",
+          "targetGmv": 0,
+          "paymentAmount": 11939.25,
+          "refundAmount": 0,
+          "lastYearSame": 0,
+          "visitors": 1573,
+          "buyers": 278,
+          "salesCount": 285,
+          "newCustomers": 0
+        },
+        {
+          "name": "淘宝农场",
+          "platform": "淘宝",
+          "targetGmv": 0,
+          "paymentAmount": 0,
+          "refundAmount": 0,
+          "lastYearSame": 0,
+          "visitors": 0,
+          "buyers": 0,
+          "salesCount": 0,
+          "newCustomers": 0
         }
       ]
     }
