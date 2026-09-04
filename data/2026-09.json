@@ -221,13 +221,49 @@
           "name": "C店-特好卖",
           "platform": "C店",
           "targetGmv": 0,
-          "paymentAmount": 154.0,
-          "refundAmount": 33.0,
+          "paymentAmount": 154,
+          "refundAmount": 33,
           "lastYearSame": 0,
           "visitors": 168,
           "buyers": 13,
           "salesCount": 14,
           "newCustomers": 11
+        },
+        {
+          "name": "拼多多-水饮专卖店",
+          "platform": "拼多多",
+          "targetGmv": 0,
+          "paymentAmount": 20380.7,
+          "refundAmount": 0,
+          "lastYearSame": 0,
+          "visitors": 3977,
+          "buyers": 885,
+          "salesCount": 922,
+          "newCustomers": 0
+        },
+        {
+          "name": "拼多多-劲爽专卖店",
+          "platform": "拼多多",
+          "targetGmv": 0,
+          "paymentAmount": 8977.04,
+          "refundAmount": 0,
+          "lastYearSame": 0,
+          "visitors": 1311,
+          "buyers": 247,
+          "salesCount": 255,
+          "newCustomers": 0
+        },
+        {
+          "name": "淘宝农场",
+          "platform": "淘宝",
+          "targetGmv": 0,
+          "paymentAmount": 0,
+          "refundAmount": 0,
+          "lastYearSame": 0,
+          "visitors": 0,
+          "buyers": 0,
+          "salesCount": 0,
+          "newCustomers": 0
         }
       ]
     }
