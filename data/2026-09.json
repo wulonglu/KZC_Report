@@ -266,6 +266,59 @@
           "newCustomers": 0
         }
       ]
+    },
+    {
+      "date": "2026-09-04",
+      "stores": [
+        {
+          "name": "百事天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 0,
+          "paymentAmount": 27082.280000000002,
+          "refundAmount": 2702.58,
+          "lastYearSame": 0,
+          "visitors": 22210,
+          "buyers": 812,
+          "salesCount": 1027,
+          "newCustomers": 502
+        },
+        {
+          "name": "佳得乐天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 0,
+          "paymentAmount": 2154.1,
+          "refundAmount": 57.9,
+          "lastYearSame": 0,
+          "visitors": 348,
+          "buyers": 19,
+          "salesCount": 39,
+          "newCustomers": 15
+        },
+        {
+          "name": "C店-康智",
+          "platform": "C店",
+          "targetGmv": 0,
+          "paymentAmount": 3015.88,
+          "refundAmount": 217.76,
+          "lastYearSame": 0,
+          "visitors": 1404,
+          "buyers": 137,
+          "salesCount": 145,
+          "newCustomers": 119
+        },
+        {
+          "name": "C店-特好卖",
+          "platform": "C店",
+          "targetGmv": 0,
+          "paymentAmount": 304577.6,
+          "refundAmount": 118921.6,
+          "lastYearSame": 0,
+          "visitors": 132,
+          "buyers": 6,
+          "salesCount": 14605,
+          "newCustomers": 4
+        }
+      ]
     }
   ]
 }
