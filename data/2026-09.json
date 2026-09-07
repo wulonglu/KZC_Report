@@ -495,6 +495,42 @@
           "buyers": 19,
           "salesCount": 20,
           "newCustomers": 18
+        },
+        {
+          "name": "拼多多-水饮专卖店",
+          "platform": "拼多多",
+          "targetGmv": 0,
+          "paymentAmount": 18049.6,
+          "refundAmount": 0,
+          "lastYearSame": 0,
+          "visitors": 5210,
+          "buyers": 766,
+          "salesCount": 797,
+          "newCustomers": 0
+        },
+        {
+          "name": "拼多多-劲爽专卖店",
+          "platform": "拼多多",
+          "targetGmv": 0,
+          "paymentAmount": 6025.97,
+          "refundAmount": 0,
+          "lastYearSame": 0,
+          "visitors": 1061,
+          "buyers": 173,
+          "salesCount": 174,
+          "newCustomers": 0
+        },
+        {
+          "name": "淘宝农场",
+          "platform": "淘宝",
+          "targetGmv": 0,
+          "paymentAmount": 0,
+          "refundAmount": 0,
+          "lastYearSame": 0,
+          "visitors": 0,
+          "buyers": 0,
+          "salesCount": 0,
+          "newCustomers": 0
         }
       ]
     }
