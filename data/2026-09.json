@@ -66,7 +66,7 @@
         {
           "name": "拼多多-劲爽专卖店",
           "platform": "拼多多",
-          "targetGmv": 15000.0,
+          "targetGmv": 15000,
           "paymentAmount": 11939.25,
           "refundAmount": 539.4,
           "lastYearSame": 0,
@@ -78,7 +78,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 170.0,
+          "targetGmv": 170,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -155,7 +155,7 @@
         {
           "name": "拼多多-劲爽专卖店",
           "platform": "拼多多",
-          "targetGmv": 15000.0,
+          "targetGmv": 15000,
           "paymentAmount": 10914.14,
           "refundAmount": 548.19,
           "lastYearSame": 0,
@@ -167,7 +167,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 170.0,
+          "targetGmv": 170,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -244,7 +244,7 @@
         {
           "name": "拼多多-劲爽专卖店",
           "platform": "拼多多",
-          "targetGmv": 15000.0,
+          "targetGmv": 15000,
           "paymentAmount": 8977.04,
           "refundAmount": 328.08,
           "lastYearSame": 0,
@@ -256,7 +256,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 170.0,
+          "targetGmv": 170,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -333,7 +333,7 @@
         {
           "name": "拼多多-劲爽专卖店",
           "platform": "拼多多",
-          "targetGmv": 15000.0,
+          "targetGmv": 15000,
           "paymentAmount": 8298.87,
           "refundAmount": 643.59,
           "lastYearSame": 0,
@@ -345,7 +345,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 170.0,
+          "targetGmv": 170,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -422,7 +422,7 @@
         {
           "name": "拼多多-劲爽专卖店",
           "platform": "拼多多",
-          "targetGmv": 15000.0,
+          "targetGmv": 15000,
           "paymentAmount": 9227.38,
           "refundAmount": 361.58,
           "lastYearSame": 0,
@@ -434,7 +434,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 170.0,
+          "targetGmv": 170,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -511,7 +511,7 @@
         {
           "name": "拼多多-劲爽专卖店",
           "platform": "拼多多",
-          "targetGmv": 15000.0,
+          "targetGmv": 15000,
           "paymentAmount": 6025.97,
           "refundAmount": 452.6,
           "lastYearSame": 0,
@@ -523,7 +523,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 170.0,
+          "targetGmv": 170,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -600,7 +600,7 @@
         {
           "name": "拼多多-劲爽专卖店",
           "platform": "拼多多",
-          "targetGmv": 15000.0,
+          "targetGmv": 15000,
           "paymentAmount": 9386.7,
           "refundAmount": 344.5,
           "lastYearSame": 0,
@@ -612,7 +612,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 170.0,
+          "targetGmv": 170,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -627,28 +627,28 @@
       "date": "2026-09-08",
       "stores": [
         {
-          "name": "拼多多-水饮专卖店",
-          "platform": "拼多多",
-          "targetGmv": 18333.33,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "name": "百事天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 32667.2,
+          "paymentAmount": 48115.87,
+          "refundAmount": 5807.18,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0,
-          "newCustomers": 0
+          "visitors": 41828,
+          "buyers": 1466,
+          "salesCount": 1786,
+          "newCustomers": 1019
         },
         {
-          "name": "拼多多-劲爽专卖店",
-          "platform": "拼多多",
-          "targetGmv": 15000.0,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "name": "佳得乐天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 1612.9,
+          "paymentAmount": 1958.5,
+          "refundAmount": 1331.7,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0,
-          "newCustomers": 0
+          "visitors": 384,
+          "buyers": 14,
+          "salesCount": 35,
+          "newCustomers": 13
         },
         {
           "name": "C店-康智",
@@ -667,7 +667,7 @@
           "platform": "C店",
           "targetGmv": 24333.33,
           "paymentAmount": 29.9,
-          "refundAmount": 0.0,
+          "refundAmount": 0,
           "lastYearSame": 0,
           "visitors": 38,
           "buyers": 1,
@@ -675,21 +675,21 @@
           "newCustomers": 0
         },
         {
-          "name": "佳得乐天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 1612.9,
-          "paymentAmount": 1958.5,
-          "refundAmount": 1331.7,
+          "name": "拼多多-水饮专卖店",
+          "platform": "拼多多",
+          "targetGmv": 18333.33,
+          "paymentAmount": 41444.5,
+          "refundAmount": 0,
           "lastYearSame": 0,
-          "visitors": 384,
-          "buyers": 14,
-          "salesCount": 35,
-          "newCustomers": 13
+          "visitors": 9251,
+          "buyers": 1783,
+          "salesCount": 1853,
+          "newCustomers": 0
         },
         {
-          "name": "淘宝农场",
-          "platform": "淘宝",
-          "targetGmv": 170.0,
+          "name": "拼多多-劲爽专卖店",
+          "platform": "拼多多",
+          "targetGmv": 15000,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -699,16 +699,16 @@
           "newCustomers": 0
         },
         {
-          "name": "百事天猫旗舰店",
-          "platform": "天猫",
-          "targetGmv": 32667.2,
-          "paymentAmount": 48115.87,
-          "refundAmount": 5807.18,
+          "name": "淘宝农场",
+          "platform": "淘宝",
+          "targetGmv": 170,
+          "paymentAmount": 0,
+          "refundAmount": 0,
           "lastYearSame": 0,
-          "visitors": 41828,
-          "buyers": 1466,
-          "salesCount": 1786,
-          "newCustomers": 1019
+          "visitors": 0,
+          "buyers": 0,
+          "salesCount": 0,
+          "newCustomers": 0
         }
       ]
     },
@@ -730,7 +730,7 @@
         {
           "name": "拼多多-劲爽专卖店",
           "platform": "拼多多",
-          "targetGmv": 15000.0,
+          "targetGmv": 15000,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -778,7 +778,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 170.0,
+          "targetGmv": 170,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -819,7 +819,7 @@
         {
           "name": "拼多多-劲爽专卖店",
           "platform": "拼多多",
-          "targetGmv": 15000.0,
+          "targetGmv": 15000,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -867,7 +867,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 170.0,
+          "targetGmv": 170,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -908,7 +908,7 @@
         {
           "name": "拼多多-劲爽专卖店",
           "platform": "拼多多",
-          "targetGmv": 15000.0,
+          "targetGmv": 15000,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -956,7 +956,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 200.0,
+          "targetGmv": 200,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -997,7 +997,7 @@
         {
           "name": "拼多多-劲爽专卖店",
           "platform": "拼多多",
-          "targetGmv": 15000.0,
+          "targetGmv": 15000,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1045,7 +1045,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 200.0,
+          "targetGmv": 200,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1086,7 +1086,7 @@
         {
           "name": "拼多多-劲爽专卖店",
           "platform": "拼多多",
-          "targetGmv": 15000.0,
+          "targetGmv": 15000,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1134,7 +1134,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 200.0,
+          "targetGmv": 200,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1175,7 +1175,7 @@
         {
           "name": "拼多多-劲爽专卖店",
           "platform": "拼多多",
-          "targetGmv": 15000.0,
+          "targetGmv": 15000,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1223,7 +1223,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 200.0,
+          "targetGmv": 200,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1264,7 +1264,7 @@
         {
           "name": "拼多多-劲爽专卖店",
           "platform": "拼多多",
-          "targetGmv": 15000.0,
+          "targetGmv": 15000,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1312,7 +1312,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 200.0,
+          "targetGmv": 200,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1353,7 +1353,7 @@
         {
           "name": "拼多多-劲爽专卖店",
           "platform": "拼多多",
-          "targetGmv": 15000.0,
+          "targetGmv": 15000,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1401,7 +1401,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 200.0,
+          "targetGmv": 200,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1442,7 +1442,7 @@
         {
           "name": "拼多多-劲爽专卖店",
           "platform": "拼多多",
-          "targetGmv": 15000.0,
+          "targetGmv": 15000,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1490,7 +1490,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 200.0,
+          "targetGmv": 200,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1531,7 +1531,7 @@
         {
           "name": "拼多多-劲爽专卖店",
           "platform": "拼多多",
-          "targetGmv": 15000.0,
+          "targetGmv": 15000,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1579,7 +1579,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 200.0,
+          "targetGmv": 200,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1620,7 +1620,7 @@
         {
           "name": "拼多多-劲爽专卖店",
           "platform": "拼多多",
-          "targetGmv": 15000.0,
+          "targetGmv": 15000,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1668,7 +1668,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 300.0,
+          "targetGmv": 300,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1709,7 +1709,7 @@
         {
           "name": "拼多多-劲爽专卖店",
           "platform": "拼多多",
-          "targetGmv": 15000.0,
+          "targetGmv": 15000,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1757,7 +1757,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 300.0,
+          "targetGmv": 300,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1798,7 +1798,7 @@
         {
           "name": "拼多多-劲爽专卖店",
           "platform": "拼多多",
-          "targetGmv": 15000.0,
+          "targetGmv": 15000,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1846,7 +1846,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 300.0,
+          "targetGmv": 300,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1887,7 +1887,7 @@
         {
           "name": "拼多多-劲爽专卖店",
           "platform": "拼多多",
-          "targetGmv": 15000.0,
+          "targetGmv": 15000,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1935,7 +1935,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 300.0,
+          "targetGmv": 300,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -1976,7 +1976,7 @@
         {
           "name": "拼多多-劲爽专卖店",
           "platform": "拼多多",
-          "targetGmv": 15000.0,
+          "targetGmv": 15000,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2024,7 +2024,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 300.0,
+          "targetGmv": 300,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2065,7 +2065,7 @@
         {
           "name": "拼多多-劲爽专卖店",
           "platform": "拼多多",
-          "targetGmv": 15000.0,
+          "targetGmv": 15000,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2113,7 +2113,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 300.0,
+          "targetGmv": 300,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2154,7 +2154,7 @@
         {
           "name": "拼多多-劲爽专卖店",
           "platform": "拼多多",
-          "targetGmv": 15000.0,
+          "targetGmv": 15000,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2202,7 +2202,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 300.0,
+          "targetGmv": 300,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2243,7 +2243,7 @@
         {
           "name": "拼多多-劲爽专卖店",
           "platform": "拼多多",
-          "targetGmv": 15000.0,
+          "targetGmv": 15000,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2291,7 +2291,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 300.0,
+          "targetGmv": 300,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2332,7 +2332,7 @@
         {
           "name": "拼多多-劲爽专卖店",
           "platform": "拼多多",
-          "targetGmv": 15000.0,
+          "targetGmv": 15000,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2380,7 +2380,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 300.0,
+          "targetGmv": 300,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2392,7 +2392,7 @@
         {
           "name": "百事天猫旗舰店",
           "platform": "天猫",
-          "targetGmv": 11635.0,
+          "targetGmv": 11635,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2421,7 +2421,7 @@
         {
           "name": "拼多多-劲爽专卖店",
           "platform": "拼多多",
-          "targetGmv": 15000.0,
+          "targetGmv": 15000,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2469,7 +2469,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 300.0,
+          "targetGmv": 300,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2481,7 +2481,7 @@
         {
           "name": "百事天猫旗舰店",
           "platform": "天猫",
-          "targetGmv": 11635.0,
+          "targetGmv": 11635,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2510,7 +2510,7 @@
         {
           "name": "拼多多-劲爽专卖店",
           "platform": "拼多多",
-          "targetGmv": 15000.0,
+          "targetGmv": 15000,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2558,7 +2558,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 300.0,
+          "targetGmv": 300,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2570,7 +2570,7 @@
         {
           "name": "百事天猫旗舰店",
           "platform": "天猫",
-          "targetGmv": 11635.0,
+          "targetGmv": 11635,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2599,7 +2599,7 @@
         {
           "name": "拼多多-劲爽专卖店",
           "platform": "拼多多",
-          "targetGmv": 15000.0,
+          "targetGmv": 15000,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2647,7 +2647,7 @@
         {
           "name": "淘宝农场",
           "platform": "淘宝",
-          "targetGmv": 300.0,
+          "targetGmv": 300,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
@@ -2659,7 +2659,7 @@
         {
           "name": "百事天猫旗舰店",
           "platform": "天猫",
-          "targetGmv": 11635.0,
+          "targetGmv": 11635,
           "paymentAmount": 0,
           "refundAmount": 0,
           "lastYearSame": 0,
