@@ -921,22 +921,22 @@
           "name": "C店-康智",
           "platform": "C店",
           "targetGmv": 812.82,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 205.31,
+          "refundAmount": 59.8,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0,
-          "newCustomers": 0
+          "visitors": 1133,
+          "buyers": 8,
+          "salesCount": 8,
+          "newCustomers": 8
         },
         {
           "name": "C店-特好卖",
           "platform": "C店",
           "targetGmv": 24333.33,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 0.0,
+          "refundAmount": 11.0,
           "lastYearSame": 0,
-          "visitors": 0,
+          "visitors": 17,
           "buyers": 0,
           "salesCount": 0,
           "newCustomers": 0
@@ -945,13 +945,13 @@
           "name": "佳得乐天猫旗舰店",
           "platform": "天猫",
           "targetGmv": 1612.9,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 1026.2,
+          "refundAmount": 167.7,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0,
-          "newCustomers": 0
+          "visitors": 321,
+          "buyers": 14,
+          "salesCount": 18,
+          "newCustomers": 12
         },
         {
           "name": "淘宝农场",
@@ -969,13 +969,13 @@
           "name": "百事天猫旗舰店",
           "platform": "天猫",
           "targetGmv": 21973.43,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 33231.05,
+          "refundAmount": 3982.3700000000003,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0,
-          "newCustomers": 0
+          "visitors": 22219,
+          "buyers": 1123,
+          "salesCount": 1365,
+          "newCustomers": 745
         }
       ]
     },
