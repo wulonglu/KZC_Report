@@ -1099,37 +1099,37 @@
           "name": "C店-康智",
           "platform": "C店",
           "targetGmv": 812.82,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 340.7,
+          "refundAmount": 47.8,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0,
-          "newCustomers": 0
+          "visitors": 1064,
+          "buyers": 13,
+          "salesCount": 13,
+          "newCustomers": 12
         },
         {
           "name": "C店-特好卖",
           "platform": "C店",
           "targetGmv": 24333.33,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 164.6,
+          "refundAmount": 11.0,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0,
-          "newCustomers": 0
+          "visitors": 25,
+          "buyers": 2,
+          "salesCount": 4,
+          "newCustomers": 1
         },
         {
           "name": "佳得乐天猫旗舰店",
           "platform": "天猫",
           "targetGmv": 1612.9,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 1313.6000000000001,
+          "refundAmount": 163.7,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0,
-          "newCustomers": 0
+          "visitors": 279,
+          "buyers": 17,
+          "salesCount": 24,
+          "newCustomers": 14
         },
         {
           "name": "淘宝农场",
@@ -1147,13 +1147,13 @@
           "name": "百事天猫旗舰店",
           "platform": "天猫",
           "targetGmv": 21973.43,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 41174.31,
+          "refundAmount": 4100.6900000000005,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0,
-          "newCustomers": 0
+          "visitors": 19660,
+          "buyers": 1209,
+          "salesCount": 1567,
+          "newCustomers": 790
         }
       ]
     },
