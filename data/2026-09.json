@@ -1188,37 +1188,37 @@
           "name": "C店-康智",
           "platform": "C店",
           "targetGmv": 812.82,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 143.4,
+          "refundAmount": 23.9,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0,
-          "newCustomers": 0
+          "visitors": 1015,
+          "buyers": 6,
+          "salesCount": 6,
+          "newCustomers": 5
         },
         {
           "name": "C店-特好卖",
           "platform": "C店",
           "targetGmv": 24333.33,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 954.9,
+          "refundAmount": 0.0,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0,
-          "newCustomers": 0
+          "visitors": 22,
+          "buyers": 2,
+          "salesCount": 51,
+          "newCustomers": 2
         },
         {
           "name": "佳得乐天猫旗舰店",
           "platform": "天猫",
           "targetGmv": 1612.9,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 451.2,
+          "refundAmount": 111.8,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0,
-          "newCustomers": 0
+          "visitors": 222,
+          "buyers": 8,
+          "salesCount": 8,
+          "newCustomers": 7
         },
         {
           "name": "淘宝农场",
@@ -1236,13 +1236,13 @@
           "name": "百事天猫旗舰店",
           "platform": "天猫",
           "targetGmv": 21973.43,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 30627.82,
+          "refundAmount": 1820.03,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0,
-          "newCustomers": 0
+          "visitors": 23825,
+          "buyers": 1054,
+          "salesCount": 1243,
+          "newCustomers": 705
         }
       ]
     },
