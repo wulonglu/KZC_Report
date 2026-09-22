@@ -1111,12 +1111,12 @@
           "name": "C店-特好卖",
           "platform": "C店",
           "targetGmv": 24333.33,
-          "paymentAmount": 164.6,
+          "paymentAmount": 36564.6,
           "refundAmount": 11,
           "lastYearSame": 0,
-          "visitors": 25,
-          "buyers": 2,
-          "salesCount": 4,
+          "visitors": 28,
+          "buyers": 3,
+          "salesCount": 1404,
           "newCustomers": 1
         },
         {
