@@ -1378,12 +1378,12 @@
           "name": "C店-特好卖",
           "platform": "C店",
           "targetGmv": 24333.33,
-          "paymentAmount": 0,
+          "paymentAmount": 70200,
           "refundAmount": 29.9,
           "lastYearSame": 0,
-          "visitors": 10,
-          "buyers": 0,
-          "salesCount": 0,
+          "visitors": 11,
+          "buyers": 1,
+          "salesCount": 3400,
           "newCustomers": 0
         },
         {
