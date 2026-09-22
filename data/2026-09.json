@@ -844,12 +844,12 @@
           "name": "C店-特好卖",
           "platform": "C店",
           "targetGmv": 24333.33,
-          "paymentAmount": 29.9,
-          "refundAmount": 8,
+          "paymentAmount": 92429.9,
+          "refundAmount": 40708,
           "lastYearSame": 0,
-          "visitors": 25,
-          "buyers": 1,
-          "salesCount": 1,
+          "visitors": 26,
+          "buyers": 2,
+          "salesCount": 4401,
           "newCustomers": 0
         },
         {
