@@ -2078,37 +2078,37 @@
           "name": "C店-康智",
           "platform": "C店",
           "targetGmv": 812.82,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 88.81,
+          "refundAmount": 0.0,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0,
-          "newCustomers": 0
+          "visitors": 270,
+          "buyers": 3,
+          "salesCount": 3,
+          "newCustomers": 3
         },
         {
           "name": "C店-特好卖",
           "platform": "C店",
           "targetGmv": 24333.33,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 92.3,
+          "refundAmount": 0.0,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0,
-          "newCustomers": 0
+          "visitors": 15,
+          "buyers": 2,
+          "salesCount": 2,
+          "newCustomers": 2
         },
         {
           "name": "佳得乐天猫旗舰店",
           "platform": "天猫",
           "targetGmv": 1612.9,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 610.9,
+          "refundAmount": 0.0,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0,
-          "newCustomers": 0
+          "visitors": 125,
+          "buyers": 9,
+          "salesCount": 11,
+          "newCustomers": 5
         },
         {
           "name": "淘宝农场",
@@ -2126,13 +2126,13 @@
           "name": "百事天猫旗舰店",
           "platform": "天猫",
           "targetGmv": 18413.46,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 49295.46,
+          "refundAmount": 4105.96,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0,
-          "newCustomers": 0
+          "visitors": 14289,
+          "buyers": 1329,
+          "salesCount": 1824,
+          "newCustomers": 903
         }
       ]
     },
