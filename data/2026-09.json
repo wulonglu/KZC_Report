@@ -2256,37 +2256,37 @@
           "name": "C店-康智",
           "platform": "C店",
           "targetGmv": 812.82,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 142.60999999999999,
+          "refundAmount": 29.9,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0,
-          "newCustomers": 0
+          "visitors": 205,
+          "buyers": 5,
+          "salesCount": 5,
+          "newCustomers": 5
         },
         {
           "name": "C店-特好卖",
           "platform": "C店",
           "targetGmv": 24333.33,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 89.69999999999999,
+          "refundAmount": 0.0,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0,
-          "newCustomers": 0
+          "visitors": 9,
+          "buyers": 3,
+          "salesCount": 3,
+          "newCustomers": 2
         },
         {
           "name": "佳得乐天猫旗舰店",
           "platform": "天猫",
           "targetGmv": 1612.9,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 1197.8,
+          "refundAmount": 167.7,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0,
-          "newCustomers": 0
+          "visitors": 183,
+          "buyers": 19,
+          "salesCount": 22,
+          "newCustomers": 16
         },
         {
           "name": "淘宝农场",
@@ -2304,13 +2304,13 @@
           "name": "百事天猫旗舰店",
           "platform": "天猫",
           "targetGmv": 14848.87,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 58787.100000000006,
+          "refundAmount": 5983.91,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0,
-          "newCustomers": 0
+          "visitors": 14167,
+          "buyers": 1460,
+          "salesCount": 2134,
+          "newCustomers": 1045
         }
       ]
     },
