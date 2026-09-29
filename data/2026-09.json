@@ -2434,37 +2434,37 @@
           "name": "C店-康智",
           "platform": "C店",
           "targetGmv": 812.82,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 95.6,
+          "refundAmount": 0.0,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0,
-          "newCustomers": 0
+          "visitors": 213,
+          "buyers": 4,
+          "salesCount": 4,
+          "newCustomers": 3
         },
         {
           "name": "C店-特好卖",
           "platform": "C店",
           "targetGmv": 24333.33,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 345.77,
+          "refundAmount": 0.0,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0,
-          "newCustomers": 0
+          "visitors": 331,
+          "buyers": 11,
+          "salesCount": 21,
+          "newCustomers": 10
         },
         {
           "name": "佳得乐天猫旗舰店",
           "platform": "天猫",
           "targetGmv": 1612.9,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 662.8,
+          "refundAmount": 53.9,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0,
-          "newCustomers": 0
+          "visitors": 168,
+          "buyers": 11,
+          "salesCount": 12,
+          "newCustomers": 8
         },
         {
           "name": "淘宝农场",
@@ -2482,13 +2482,13 @@
           "name": "百事天猫旗舰店",
           "platform": "天猫",
           "targetGmv": 11635,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 36782.13,
+          "refundAmount": 3109.4399999999996,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0,
-          "newCustomers": 0
+          "visitors": 20993,
+          "buyers": 1173,
+          "salesCount": 1477,
+          "newCustomers": 815
         }
       ]
     },
