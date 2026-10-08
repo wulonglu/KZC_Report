@@ -449,6 +449,18 @@
       "date": "2026-10-06",
       "stores": [
         {
+          "name": "百事天猫旗舰店",
+          "platform": "天猫",
+          "targetGmv": 0,
+          "paymentAmount": 0,
+          "refundAmount": 0,
+          "lastYearSame": 0,
+          "visitors": 0,
+          "buyers": 0,
+          "salesCount": 0,
+          "newCustomers": 0
+        },
+        {
           "name": "佳得乐天猫旗舰店",
           "platform": "天猫",
           "targetGmv": 0,
@@ -483,6 +495,42 @@
           "buyers": 7,
           "salesCount": 10,
           "newCustomers": 4
+        },
+        {
+          "name": "拼多多-水饮专卖店",
+          "platform": "拼多多",
+          "targetGmv": 0,
+          "paymentAmount": 16460.5,
+          "refundAmount": 0,
+          "lastYearSame": 0,
+          "visitors": 4152,
+          "buyers": 721,
+          "salesCount": 732,
+          "newCustomers": 0
+        },
+        {
+          "name": "拼多多-劲爽专卖店",
+          "platform": "拼多多",
+          "targetGmv": 0,
+          "paymentAmount": 2248.92,
+          "refundAmount": 0,
+          "lastYearSame": 0,
+          "visitors": 444,
+          "buyers": 57,
+          "salesCount": 57,
+          "newCustomers": 0
+        },
+        {
+          "name": "淘宝农场",
+          "platform": "淘宝",
+          "targetGmv": 0,
+          "paymentAmount": 0,
+          "refundAmount": 0,
+          "lastYearSame": 0,
+          "visitors": 0,
+          "buyers": 0,
+          "salesCount": 0,
+          "newCustomers": 0
         }
       ]
     },
