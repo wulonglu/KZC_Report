@@ -1301,12 +1301,12 @@
           "name": "拼多多-水饮专卖店",
           "platform": "拼多多",
           "targetGmv": 15230.6,
-          "paymentAmount": 0,
+          "paymentAmount": 20239.9,
           "refundAmount": 0,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0,
+          "visitors": 4104,
+          "buyers": 874,
+          "salesCount": 905,
           "newCustomers": 0
         },
         {
