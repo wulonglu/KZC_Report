@@ -1313,12 +1313,12 @@
           "name": "拼多多-劲爽专卖店",
           "platform": "拼多多",
           "targetGmv": 12461.4,
-          "paymentAmount": 0,
+          "paymentAmount": 10547.08,
           "refundAmount": 0,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0,
+          "visitors": 2935,
+          "buyers": 379,
+          "salesCount": 386,
           "newCustomers": 0
         },
         {
