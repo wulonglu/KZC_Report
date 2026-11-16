@@ -1022,12 +1022,12 @@
           "name": "C店-特好卖",
           "platform": "C店",
           "targetGmv": 17333.33,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 125500.0,
+          "refundAmount": 0.0,
           "lastYearSame": 0,
-          "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0,
+          "visitors": 13,
+          "buyers": 1,
+          "salesCount": 6000,
           "newCustomers": 0
         },
         {
