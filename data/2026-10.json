@@ -2624,8 +2624,8 @@
           "name": "C店-特好卖",
           "platform": "C店",
           "targetGmv": 38709.68,
-          "paymentAmount": 0.0,
-          "refundAmount": 0.0,
+          "paymentAmount": 0,
+          "refundAmount": 0,
           "lastYearSame": 0,
           "visitors": 6,
           "buyers": 0,
@@ -2749,12 +2749,12 @@
           "name": "淘宝农场",
           "platform": "淘宝",
           "targetGmv": 180,
-          "paymentAmount": 0,
-          "refundAmount": 0,
+          "paymentAmount": 6164.82,
+          "refundAmount": 779.65,
           "lastYearSame": 0,
           "visitors": 0,
-          "buyers": 0,
-          "salesCount": 0,
+          "buyers": 180,
+          "salesCount": 250,
           "newCustomers": 0
         }
       ]
