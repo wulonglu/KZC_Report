@@ -1421,12 +1421,12 @@
           "name": "淘宝农场",
           "platform": "淘宝",
           "targetGmv": 200,
-          "paymentAmount": 1263.48,
-          "refundAmount": 189.64,
+          "paymentAmount": 0,
+          "refundAmount": 0,
           "lastYearSame": 0,
           "visitors": 0,
-          "buyers": 43,
-          "salesCount": 51,
+          "buyers": 0,
+          "salesCount": 0,
           "newCustomers": 0
         }
       ]
