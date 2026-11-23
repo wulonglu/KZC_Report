@@ -189,8 +189,8 @@ export default function DailyReport() {
               const dailyRows = metrics.map(m => [m.name, m.platform, fm(m.targetGmv), fm(m.paymentAmount), fm(m.refundAmount), fm(m.netGmv), fm((m as any)._lastYearNet || m.lastYearSame), m.yoyGrowth.toFixed(2)+'%', m.achievementRate.toFixed(2)+'%', fm(m.visitors), fm(m.buyers), fm(m.newCustomers), m.newCustomerRate.toFixed(2)+'%', fm(m.salesCount), fm(m.avgOrderValue), m.conversionRate.toFixed(2)+'%'])
               const mh = ['店铺','月累计支付','月累计退款','月累计去退GMV','去年同期','月累计同比']
               const mRows = monthCum.stores.map((s: any) => [s.name, fm(s.pay), fm(s.refund), fm(s.net), fm(s.lastYear), (s.lastYear>0?((s.net-s.lastYear)/s.lastYear*100):0).toFixed(2)+'%'])
-              const yh = ['店铺','年累计支付','年累计退款','年累计去退GMV','去年同期','年累计同比']
-              const yRows = yearCum.stores.map((s: any) => [s.name, fm(s.pay), fm(s.refund), fm(s.net), fm(s.lastYear), (s.lastYear>0?((s.net-s.lastYear)/s.lastYear*100):0).toFixed(2)+'%'])
+              const yh = ['店铺','年累计支付','年累计退款','年累计去退GMV','去年同期','年累计同比','占比']
+              const yRows = yearCum.stores.map((s: any) => [s.name, fm(s.pay), fm(s.refund), fm(s.net), fm(s.lastYear), (s.lastYear>0?((s.net-s.lastYear)/s.lastYear*100):0).toFixed(2)+'%', (yearCum.net>0?(s.net/yearCum.net*100):0).toFixed(2)+'%'])
               exportExcel([
                 { title: `店铺明细日报表 - ${viewDate}`, headers: h, rows: dailyRows },
                 { title: `月累计汇总 - ${viewDate.substring(0,7)}`, headers: mh, rows: mRows },
@@ -431,13 +431,14 @@ export default function DailyReport() {
                   <td style={{ textAlign: 'right' }} className={yoy >= 0 ? 'td-green' : 'td-red'}>
                     {formatPercent(yoy)}
                   </td>
+                  <td style={{ textAlign: 'right' }}>{yearCum.net > 0 ? formatPercent(s.net / yearCum.net * 100) : '-'}</td>
                 </tr>
               )}) : STORES.map((s, i) => (
                 <tr key={s.name}>
                   <td style={{ fontWeight: 500, color: '#fff' }}>
                     <span className={storeColor(s.platform).cls} style={{ fontSize: 10 }}>[{s.platform}]</span> {s.name}
                   </td>
-                  {Array(5).fill(null).map((_, j) => (
+                  {Array(6).fill(null).map((_, j) => (
                     <td key={j} style={{ textAlign: 'right', color: 'rgba(255,255,255,.08)' }}>-</td>
                   ))}
                 </tr>
@@ -473,7 +474,7 @@ export default function DailyReport() {
               <tr>
                 <th>店铺</th><th style={{ textAlign: 'right' }}>年累计支付</th><th style={{ textAlign: 'right' }}>年累计退款</th>
                 <th style={{ textAlign: 'right' }}>年累计去退GMV</th><th style={{ textAlign: 'right' }}>去年同期</th>
-                <th style={{ textAlign: 'right' }}>年累计同比</th>
+                <th style={{ textAlign: 'right' }}>年累计同比</th><th style={{ textAlign: 'right' }}>占比</th>
               </tr>
             </thead>
             <tbody>
@@ -513,6 +514,7 @@ export default function DailyReport() {
                   <td style={{ textAlign: 'right' }} className={yearCum.lastYear > 0 && ((yearCum.net - yearCum.lastYear) / yearCum.lastYear * 100) >= 0 ? 'td-green' : 'td-red'}>
                     {yearCum.lastYear > 0 ? formatPercent((yearCum.net - yearCum.lastYear) / yearCum.lastYear * 100) : '0.00'}
                   </td>
+                  <td style={{ textAlign: 'right' }}>{yearCum.net > 0 ? '100.00%' : '-'}</td>
                 </tr>
             </tfoot>
           </table>
