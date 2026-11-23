@@ -187,8 +187,8 @@ export default function DailyReport() {
               const fm = (n: number) => n.toLocaleString('zh-CN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
               const h = ['店铺','平台','目标GMV','支付金额','退款金额','去退GMV','去年同期','同比增长','达成率','访客数','买家数','新客数','新客占比','销售件数','客单价','转化率']
               const dailyRows = metrics.map(m => [m.name, m.platform, fm(m.targetGmv), fm(m.paymentAmount), fm(m.refundAmount), fm(m.netGmv), fm((m as any)._lastYearNet || m.lastYearSame), m.yoyGrowth.toFixed(2)+'%', m.achievementRate.toFixed(2)+'%', fm(m.visitors), fm(m.buyers), fm(m.newCustomers), m.newCustomerRate.toFixed(2)+'%', fm(m.salesCount), fm(m.avgOrderValue), m.conversionRate.toFixed(2)+'%'])
-              const mh = ['店铺','月累计支付','月累计退款','月累计去退GMV','去年同期','月累计同比']
-              const mRows = monthCum.stores.map((s: any) => [s.name, fm(s.pay), fm(s.refund), fm(s.net), fm(s.lastYear), (s.lastYear>0?((s.net-s.lastYear)/s.lastYear*100):0).toFixed(2)+'%'])
+              const mh = ['店铺','月累计支付','月累计退款','月累计去退GMV','去年同期','月累计同比','占比']
+              const mRows = monthCum.stores.map((s: any) => [s.name, fm(s.pay), fm(s.refund), fm(s.net), fm(s.lastYear), (s.lastYear>0?((s.net-s.lastYear)/s.lastYear*100):0).toFixed(2)+'%', (monthCum.net>0?(s.net/monthCum.net*100):0).toFixed(2)+'%'])
               const yh = ['店铺','年累计支付','年累计退款','年累计去退GMV','去年同期','年累计同比','占比']
               const yRows = yearCum.stores.map((s: any) => [s.name, fm(s.pay), fm(s.refund), fm(s.net), fm(s.lastYear), (s.lastYear>0?((s.net-s.lastYear)/s.lastYear*100):0).toFixed(2)+'%', (yearCum.net>0?(s.net/yearCum.net*100):0).toFixed(2)+'%'])
               exportExcel([
@@ -414,6 +414,7 @@ export default function DailyReport() {
                 <th>店铺</th><th style={{ textAlign: 'right' }}>月累计支付</th><th style={{ textAlign: 'right' }}>月累计退款</th>
                 <th style={{ textAlign: 'right' }}>月累计去退GMV</th><th style={{ textAlign: 'right' }}>去年同期</th>
                 <th style={{ textAlign: 'right' }}>月累计同比</th>
+                <th style={{ textAlign: 'right' }}>占比</th>
               </tr>
             </thead>
             <tbody>
@@ -431,6 +432,7 @@ export default function DailyReport() {
                   <td style={{ textAlign: 'right' }} className={yoy >= 0 ? 'td-green' : 'td-red'}>
                     {formatPercent(yoy)}
                   </td>
+                  <td style={{ textAlign: 'right' }} className="td-blue">{monthCum.net > 0 ? formatPercent(s.net / monthCum.net * 100) : '-'}</td>
                 </tr>
               )}) : STORES.map((s, i) => (
                 <tr key={s.name}>
@@ -453,6 +455,7 @@ export default function DailyReport() {
                   <td style={{ textAlign: 'right' }} className={monthCum.lastYear > 0 && ((monthCum.net - monthCum.lastYear) / monthCum.lastYear * 100) >= 0 ? 'td-green' : 'td-red'}>
                     {monthCum.lastYear > 0 ? formatPercent((monthCum.net - monthCum.lastYear) / monthCum.lastYear * 100) : '0.00'}
                   </td>
+                  <td style={{ textAlign: 'right' }}>{monthCum.net > 0 ? '100.00%' : '-'}</td>
                 </tr>
             </tfoot>
           </table>
