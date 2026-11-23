@@ -431,7 +431,6 @@ export default function DailyReport() {
                   <td style={{ textAlign: 'right' }} className={yoy >= 0 ? 'td-green' : 'td-red'}>
                     {formatPercent(yoy)}
                   </td>
-                  <td style={{ textAlign: 'right' }}>{yearCum.net > 0 ? formatPercent(s.net / yearCum.net * 100) : '-'}</td>
                 </tr>
               )}) : STORES.map((s, i) => (
                 <tr key={s.name}>
@@ -492,13 +491,14 @@ export default function DailyReport() {
                   <td style={{ textAlign: 'right' }} className={yoy >= 0 ? 'td-green' : 'td-red'}>
                     {formatPercent(yoy)}
                   </td>
+                  <td style={{ textAlign: 'right' }} className="td-blue">{yearCum.net > 0 ? formatPercent(s.net / yearCum.net * 100) : '-'}</td>
                 </tr>
               )}) : STORES.map((s, i) => (
                 <tr key={s.name}>
                   <td style={{ fontWeight: 500, color: '#fff' }}>
                     <span className={storeColor(s.platform).cls} style={{ fontSize: 10 }}>[{s.platform}]</span> {s.name}
                   </td>
-                  {Array(5).fill(null).map((_, j) => (
+                  {Array(6).fill(null).map((_, j) => (
                     <td key={j} style={{ textAlign: 'right', color: 'rgba(255,255,255,.08)' }}>-</td>
                   ))}
                 </tr>
